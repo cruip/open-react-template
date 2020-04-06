@@ -1,0 +1,314 @@
+html {
+	@include font-size(base);
+}
+
+body {
+	color: color(base);
+	font-size: 1rem;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	@include font-family(base);
+	@include font-weight(base);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	@include font-family(heading);
+	@include font-weight(heading);
+	clear: both;
+	color: color(heading);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+h1,
+.h1 {
+	@include font-size(h1);
+}
+
+h2,
+.h2 {
+	@include font-size(h2);
+}
+
+h3,
+.h3 {
+	@include font-size(h3);
+}
+
+h4,
+.h4 {
+	@include font-size(h4);
+}
+
+h5,
+.h5 {
+	@include font-size(base);
+}
+
+h6,
+.h6,
+small,
+.text-sm {
+	@include font-size(sm);
+}
+
+.text-xs {
+	@include font-size(xs);
+}
+
+.text-xxs {
+	@include font-size(xxs);
+}
+
+figcaption {
+	@include font-size(figcap);
+	@include font-weight(figcap);
+}
+
+a {
+
+	&:not(.button) {
+		@include anchor-aspect(main);
+		@include font-weight(link);
+	}
+
+	&.button-link {
+		@include anchor-aspect(button-link);
+		@include font-weight(button-link);
+		text-transform: $link-button--transform;
+	}
+
+	&.func-link {
+		@include anchor-aspect(func-link);
+		@include font-weight(func-link);
+		text-transform: $link-func--transform;		
+	}
+}
+
+h1,
+.h1 {
+	margin-top: $spacing--h1-t;
+	margin-bottom: $spacing--h1-b;
+}
+
+h2,
+.h2 {
+	margin-top: $spacing--h2-t;
+	margin-bottom: $spacing--h2-b;
+}
+
+h3,
+.h3 {
+	margin-top: $spacing--h3-t;
+	margin-bottom: $spacing--h3-b;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+	margin-top: $spacing--hx-t;
+	margin-bottom: $spacing--hx-b;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: $spacing--shared-v;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	@include font-size(bquote);
+	margin-top: $spacing--shared-v;
+	margin-bottom: $spacing--shared-v;
+	margin-left: $spacing--shared-h;
+
+	&::before {
+		content: "\201C";
+	}
+
+	&::after {
+		content: "\201D";
+	}
+
+	p {
+		display: inline;
+	}
+}
+
+address {
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: color-border(divider);
+	padding: $spacing--shared-v 0;
+	margin: 0 0 $spacing--shared-v;
+}
+
+pre,
+pre h1,
+pre h2,
+pre h3,
+pre h4,
+pre h5,
+pre h6,
+pre .h1,
+pre .h2,
+pre .h3,
+pre .h4,
+pre .h5,
+pre .h6  {
+	@include font-family(pre);
+}
+
+pre, code, kbd, tt, var {
+	background: color-bg(code);
+}
+
+pre {
+	@include font-size(pre);
+	max-width: 100%;
+	overflow: auto;
+	padding: $spacing--shared-v $spacing--shared-h;
+	margin-top: $spacing--shared-v;
+	margin-bottom: $spacing--shared-v;
+}
+
+code, kbd, tt, var {
+	@include font-family(code);
+	@include font-size(code);
+	padding: $spacing--code-v $spacing--code-h;
+}
+
+abbr, acronym {
+	cursor: help;
+}
+
+mark, ins {
+	text-decoration: none;
+}
+
+b,
+strong {
+	@include font-weight(strong);
+}
+
+.invert-color {
+	color: color(base-inverse);
+
+	a {
+
+		&:not(.button) {
+			@include anchor-aspect(main, inverse);
+		}
+
+		&.button-link {
+			@include anchor-aspect(button-link, inverse);
+		}
+
+		&.func-link {
+			@include anchor-aspect(func-link, inverse);
+		}		
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		color: color(heading-inverse);
+	}
+
+	address {
+		border-color: color-border(divider-inverse);
+	}
+
+	pre, code, kbd, tt, var {
+		background: color-bg(code-inverse);
+	}
+}
+
+@include media( '<=medium' ) {
+
+	.h1-mobile {
+		@include font-size(h1);
+	}
+
+	.h2-mobile {
+		@include font-size(h2);
+	}
+
+	.h3-mobile {
+		@include font-size(h3);
+	}
+
+	.h4-mobile {
+		@include font-size(h4);
+	}
+	
+	.h5-mobile {
+		@include font-size(base);
+	}
+	
+	.h6-mobile {
+		@include font-size(sm);
+	}
+}
+
+@include media( '>medium' ) {
+
+	html {
+		@include font-size(base-desktop);
+	}
+
+	h1,
+	.h1 {
+		@include font-size(h1-desktop);
+	}
+
+	h2,
+	.h2 {
+		@include font-size(h2-desktop);
+	}
+
+	h3,
+	.h3 {
+		@include font-size(h3-desktop);
+	}
+
+	h4,
+	.h4 {
+		@include font-size(h4-desktop);
+	}	
+
+	h5,
+	.h5 {
+		@include font-size(base-desktop);
+	}
+	
+	h6,
+	.h6,
+	small,
+	.text-sm {
+		@include font-size(sm-desktop);
+	}
+
+	.text-xs {
+		@include font-size(xs-desktop);
+	}
+
+	.text-xxs {
+		@include font-size(xxs-desktop);
+	}
+
+	figcaption {
+		@include font-size(figcap-desktop);
+	}
+
+	blockquote {
+		@include font-size(bquote-desktop);
+	}
+}

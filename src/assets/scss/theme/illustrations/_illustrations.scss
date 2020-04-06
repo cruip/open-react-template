@@ -1,0 +1,25 @@
+[class*=illustration-] {
+	position: relative;
+
+	&::after {
+		pointer-events: none;
+	}
+}
+
+[class*=illustration-element-]::after {
+	z-index: -1;
+}
+
+[class*=illustration-section-]::after {
+	z-index: -2;
+}
+
+// Hero illustration
+.illustration-section-01::after {
+	@include illustration('illustration-section-01.svg', 100%, 286px, top);
+}
+
+// Features illustration 02
+.illustration-section-02::after {
+	@include illustration('illustration-section-02.svg', 100%, 253px, null, null, 30px);
+}

@@ -1,0 +1,20 @@
+// Header (core/layout/_header.scss)
+
+// Background color
+$header--bg: (
+	header: 		null,
+	menu-mobile:	darken(get-color(dark, 1), 3%)
+);
+
+// More header settings
+$header-height__mobile: 		80px;		// header height (mobile)
+$header-height__desktop: 		null;		// header height (desktop)
+$header-nav--padding-h: 		32px;		// horizontal padding between header links (desktop)
+$header-nav--padding-v__mobile:	24px;		// vertical padding between header links (mobile)
+$header-hamburger--size: 		24px;		// hamburger button, width and height
+$header-hamburger--thickness: 	2px;		// hamburger button, stroke width
+$header-hamburger--radius: 		null;		// hamburger button, lines radius cap
+$header-hamburger--distance: 	7px;		// hamburger button, top and bottom lines distance from center
+
+// Don't change line below!
+$bg--color: map-push($bg--color, $header--bg);

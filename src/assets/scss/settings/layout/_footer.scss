@@ -1,0 +1,45 @@
+// Footer (core/layout/_footer.scss)
+
+// Color
+$footer--color: (
+	block-title:			get-color(light, 1),
+	block-title-inverse:	get-color(dark, 1)
+);
+
+// Background color
+$footer--bg: (
+	footer:	get-color(dark, 1)
+);
+
+// Font size
+$footer--size: (
+	block-title:	'theta'
+);
+
+// Font weight
+$footer--weight: (
+	block-title:	700
+);
+
+// More footer settings
+$footer--padding__mobile: 			48px;		// footer, top and bottom padding (mobile)
+$footer--padding__desktop:			64px;		// footer, top and bottom padding (desktop)
+$footer-inner--padding-v: 			24px;		// padding between top and bottom footer
+$footer-social--outer-padding-h:	8px;		// social links, outer padding (useful when icon has a background)
+$footer-social--inner-padding: 		8px;		// social links, inner padding
+$footer-nav--padding-h: 			12px;		// padding between footer nav links
+
+// Footer blocks
+$footer-blocks--padding: 			40px;		// footer block, bottom padding
+$footer-block--padding_v: 			24px;		// top and bottom padding between footer blocks
+$footer-block--padding_h: 			48px;		// left and right padding between footer blocks
+$footer-block--min-width: 			160px;		// footer block, minimum width
+$footer-block-title--transform: 	uppercase;	// footer block title text-transform property (null is allowed)
+$footer-block-title-padding:		8px;		// footer block title, bottom padding
+$footer-block-list-padding:			4px;		// spacing beetwen block lists
+
+// Don't change line below!
+$color: 		map-push($color, $footer--color);
+$bg--color: 	map-push($bg--color, $footer--bg);
+$font--size: 	map-push($font--size, $footer--size);
+$font--weight: 	map-push($font--weight, $footer--weight);

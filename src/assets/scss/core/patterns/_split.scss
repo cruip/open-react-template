@@ -1,0 +1,155 @@
+.split-wrap {
+	margin-top: -($split-item--padding-v__mobile / 2);
+
+	&:last-of-type {
+		margin-bottom: -($split-item--padding-v__mobile / 2);
+	}
+
+    &:not(:last-of-type) {
+        margin-bottom: $split-item--padding-v__mobile / 2;
+    }
+
+	.split-item {
+		padding-top: $split-item--padding-v__mobile / 2;
+		padding-bottom: $split-item--padding-v__mobile / 2;
+		display: flex;
+		flex-direction: column;
+
+		.split-item-image {
+			position: relative;
+			width: 100%;
+
+			img,
+			svg,
+			video {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				overflow: visible;
+			}
+
+			&.split-item-image-fill {
+
+				img,
+				svg,
+				video {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include media( '<=medium' ) {
+
+	.split-wrap {
+
+		.split-item {
+
+			.split-item-content {
+				margin-bottom: $split-item--inner-padding-v_mobile;
+			}
+		}
+
+		&.invert-mobile {
+
+			.split-item {
+
+				.split-item-content {
+					order: 1;
+					margin-bottom: 0 !important;
+				}
+
+				.split-item-image {
+					margin-bottom: $split-item--inner-padding-v_mobile;
+				}
+			}
+		}
+	}
+}
+
+@include media( '>medium' ) {
+
+	.split-wrap {
+		margin-top: -($split-item--padding-v__desktop / 2);
+
+		&:last-of-type {
+			margin-bottom: -($split-item--padding-v__desktop / 2);
+		}
+
+	    &:not(:last-of-type) {
+	        margin-bottom: $split-item--padding-v__desktop / 2;
+	    }
+
+		.split-item {
+			padding-top: $split-item--padding-v__desktop / 2;
+			padding-bottom: $split-item--padding-v__desktop / 2;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: flex-start;
+
+			.split-item-content {
+				flex-shrink: 0;
+				width: ($container--width-sm / 2) - $split-item-content--padding-h;
+				margin-bottom: 0;
+				margin-right: $split-item--inner-padding-h;
+			}
+
+			.split-item-image {
+				min-width: ($container--width-sm / 2) - $split-item-image--padding-h;
+			}
+		}
+
+		&:not(.invert-desktop) .split-item:nth-child(even),
+		&.invert-desktop .split-item:nth-child(odd) {
+			justify-content: flex-end;
+
+			.split-item-content {
+				order: 1;
+				margin-left: $split-item--inner-padding-h;
+				margin-right: 0;
+			}
+		}
+
+		&:not(.invert-desktop) .split-item:nth-child(odd),
+		&.invert-desktop .split-item:nth-child(even) {
+
+			.split-item-image {
+
+				img,
+				svg,
+				video {
+					margin-left: auto;
+				}
+			}
+		}
+
+		&.align-top {
+
+			.split-item {
+				align-items: flex-start;
+			}
+		}
+	}
+}
+
+@include media( '>large' ) {
+
+	.container {
+
+		.split-wrap {
+
+			.split-item {
+
+				.split-item-content {
+					width: ($container--width / 2) - $split-item-content--padding-h;
+				}
+
+				.split-item-image {
+					min-width: ($container--width / 2) - $split-item-image--padding-h;
+				}
+			}
+		}
+	}
+}

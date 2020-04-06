@@ -1,0 +1,150 @@
+.modal,
+.modal::before {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0
+}
+
+.modal {
+	display: none;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	position: fixed;
+	z-index: 40;
+
+	&.modal-video {
+
+		.modal-inner {
+			padding: 0;
+			max-width: $modal-video--max-width;
+		}
+	}
+
+	&::before,
+	.modal-inner  {
+		display: none;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-color: color-bg(modal-outer);
+	}
+
+	&.is-active {
+		display: flex;
+
+		&::before,
+		.modal-inner {
+			display: block;
+		}
+
+		.modal-inner {
+			animation: slideUpInModal .15s ease-in-out both;
+		}
+
+		&::before {
+			animation: slideUpInModalBg .15s ease-in-out both;
+		}
+	}
+}
+
+.modal-inner {
+	max-height: calc(100vh - #{$modal--outer-padding-v__mobile} * 2);
+	overflow: auto;
+	position: relative;
+	width: calc(100%  - ( #{$container--padding__mobile} * 2 ));
+	min-width: $modal--min-width;
+	max-width: $modal--max-width;
+	margin-left: $container--padding__mobile;
+	margin-right: $container--padding__mobile;
+	background: color-bg(modal);
+}
+
+.modal-content {
+	padding: $modal--inner-padding-v__mobile $modal--inner-padding-h__mobile;
+}
+
+.modal-close {
+	background: transparent;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
+	position: absolute;
+	right: $modal-close-position;
+	top: $modal-close-position;
+	width: $modal-close-icon--size;
+	height: $modal-close-icon--size;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -($modal-close-icon--thickness / 2);
+		margin-left: -($modal-close-icon--size / 2);
+		width: $modal-close-icon--size;
+		height: $modal-close-icon--thickness;
+		background: color-icon(modal);
+		border-radius: $modal-close-icon--radius;
+	}
+
+	&::before {
+		transform: rotate(225deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+
+	&:hover {
+
+		&::before,
+		&::after {
+			background: color-icon(modal-hover);
+		}
+	}
+}
+
+@include media( '>medium' ) {
+
+	.modal-inner {
+		margin: 0 auto;
+		max-height: calc(100vh - #{$modal--outer-padding-v__desktop} * 2);
+	}
+
+	.modal-content {
+		padding-top: $modal--inner-padding-v__desktop;
+		padding-bottom: $modal--inner-padding-v__desktop;
+		padding-left: $modal--inner-padding-h__desktop;
+		padding-right: $modal--inner-padding-h__desktop;
+	}
+}
+
+@keyframes slideUpInModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpInModalBg {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

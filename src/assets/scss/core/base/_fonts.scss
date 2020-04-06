@@ -1,0 +1,3 @@
+@if ( $font--provider == 'Google Fonts' ) {
+    @import url('https://fonts.googleapis.com/css?family=#{$font--import}&display=swap');
+}

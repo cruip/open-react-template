@@ -1,0 +1,37 @@
+.cta {
+
+	.section-inner {
+		padding-top: $cta--padding-t__mobile;
+		padding-bottom: $cta--padding-b__mobile;
+	}
+}
+
+.cta-slogan {
+	margin-bottom: $cta-slogan--padding-v__mobile;
+}
+
+@include media( '>medium' ) {
+
+	.cta {
+
+		.section-inner {
+			padding-top: $cta--padding-t__desktop;
+			padding-bottom: $cta--padding-b__desktop;
+		}
+	}
+
+	.cta-split {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.cta-slogan {
+		margin-bottom: $cta-slogan--padding-v__desktop;
+
+		.cta-split & {
+			margin-bottom: 0;
+			margin-right: $cta-slogan--padding-h__desktop;
+		}
+	}
+}
