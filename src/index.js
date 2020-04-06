@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
@@ -10,6 +11,13 @@ import * as serviceWorker from './serviceWorker';
 import './assets/scss/style.scss';
 
 const history = createBrowserHistory();
+
+// Initialize google analytics page view tracking
+ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
 
 ReactDOM.render(
   <Router history={history}>
