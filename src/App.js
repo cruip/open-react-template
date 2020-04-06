@@ -10,27 +10,31 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Home from './views/Home';
 
+// Initialize Google Analytics
+ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+
+const trackPage = page => {
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
+};
+
 class App extends React.Component {
 
   componentDidMount() {
+    const page = this.props.location.pathname;
     document.body.classList.add('is-loaded')
     this.refs.scrollReveal.init();
-    this.initAnalytics();    
+    trackPage(page); 
   }
 
   // Route change
   componentDidUpdate(prevProps) {
-    if (this.props.location.pathname !== prevProps.location.pathname) {
+    const currentPage = prevProps.location.pathname + prevProps.location.search;
+    const nextPage = this.props.location.pathname + this.props.location.search;    
+    if (currentPage !== nextPage) {
       this.refs.scrollReveal.init();
-      this.initAnalytics();  
+      trackPage(nextPage);
     }
-  }
-
-  initAnalytics = () => {
-    // Initialize google analytics page view tracking
-    ReactGA.initialize(process.env.REACT_APP_GA_CODE);
-    ReactGA.set({ page: this.props.location.pathname }); // Update the user's current page
-    ReactGA.pageview(this.props.location.pathname); // Record a pageview for the given page        
   }
 
   render() {
