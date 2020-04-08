@@ -1,4 +1,4 @@
-# Free React landing page template
+# Open 👉️ Free React landing page template
 
 ![Open React template preview](https://user-images.githubusercontent.com/2683512/78789364-545e7100-79ad-11ea-9e3c-9528c99cda8e.png)
 
@@ -6,7 +6,7 @@
 Use it for whatever you want, and be sure to reach us out on [Twitter](https://twitter.com/Cruip_com) if you build anything cool/useful with it.
 Created and maintained with ❤️ by [Cruip.com](https://cruip.com).
 
-### Live demo
+## Live demo
 
 Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.com/)
 
