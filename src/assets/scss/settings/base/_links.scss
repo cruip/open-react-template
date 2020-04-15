@@ -41,13 +41,13 @@ $link--weight: (
 );
 
 // Text decoration
-$link-main--decoration: 				underline;
-$link-main--decoration-hover: 			none;
-$link-header--decoration: 				none;
+$link-main--decoration: 				none;
+$link-main--decoration-hover: 			null;
+$link-header--decoration: 				null;
 $link-header--decoration-hover:			null;
-$link-footer--decoration: 				none;
+$link-footer--decoration: 				null;
 $link-footer--decoration-hover: 		null;
-$link-footer-block--decoration: 		none;
+$link-footer-block--decoration: 		null;
 $link-footer-block--decoration-hover:	null;
 $link-button--decoration: 				null;
 $link-button--decoration-hover: 		null;
