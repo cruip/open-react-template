@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
 
 const propTypes = {
-  active: PropTypes.bool,
   navPosition: PropTypes.string,
   hideNav: PropTypes.bool,
   hideSignin: PropTypes.bool,
@@ -14,7 +13,6 @@ const propTypes = {
 }
 
 const defaultProps = {
-  active: false,
   navPosition: '',
   hideNav: false,
   hideSignin: false,
@@ -22,124 +20,116 @@ const defaultProps = {
   bottomDivider: false
 }
 
-class Header extends React.Component {
+const Header = ({
+  className,
+  navPosition,
+  hideNav,
+  hideSignin,
+  bottomOuterDivider,
+  bottomDivider,
+  ...props
+}) => {
 
-  state = {
-    isActive: false
-  };
+  const [isActive, setIsactive] = useState(false);
 
-  nav = React.createRef();
-  hamburger = React.createRef();
+  const nav = useRef(null);
+  const hamburger = useRef(null);
 
-  componentDidMount() {
-    this.props.active && this.openMenu();
-    document.addEventListener('keydown', this.keyPress);
-    document.addEventListener('click', this.clickOutside);
-  }
+  useEffect(() => {
+    isActive && openMenu();
+    document.addEventListener('keydown', keyPress);
+    document.addEventListener('click', clickOutside);
+    return () => {
+      document.removeEventListener('keydown', keyPress);
+      document.addEventListener('click', clickOutside);
+      closeMenu();
+    };
+  });  
 
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.keyPress);
-    document.addEventListener('click', this.clickOutside);
-    this.closeMenu();
-  }
-
-  openMenu = () => {
+  const openMenu = () => {
     document.body.classList.add('off-nav-is-active');
-    this.nav.current.style.maxHeight = this.nav.current.scrollHeight + 'px';
-    this.setState({ isActive: true });
+    nav.current.style.maxHeight = nav.current.scrollHeight + 'px';
+    setIsactive(true);
   }
 
-  closeMenu = () => {
+  const closeMenu = () => {
     document.body.classList.remove('off-nav-is-active');
-    this.nav.current && (this.nav.current.style.maxHeight = null);
-    this.setState({ isActive: false });
+    nav.current && (nav.current.style.maxHeight = null);
+    setIsactive(false);
   }
 
-  keyPress = (e) => {
-    this.state.isActive && e.keyCode === 27 && this.closeMenu();
+  const keyPress = (e) => {
+    isActive && e.keyCode === 27 && closeMenu();
   }
 
-  clickOutside = (e) => {
-    if (!this.nav.current) return
-    if (!this.state.isActive || this.nav.current.contains(e.target) || e.target === this.hamburger.current) return;
-    this.closeMenu();
-  }
+  const clickOutside = (e) => {
+    if (!nav.current) return
+    if (!isActive || nav.current.contains(e.target) || e.target === hamburger.current) return;
+    closeMenu();
+  }  
 
-  render() {
-    const {
-      className,
-      active,
-      navPosition,
-      hideNav,
-      hideSignin,
-      bottomOuterDivider,
-      bottomDivider,
-      ...props
-    } = this.props;
+  const classes = classNames(
+    'site-header',
+    bottomOuterDivider && 'has-bottom-divider',
+    className
+  );
 
-    const classes = classNames(
-      'site-header',
-      bottomOuterDivider && 'has-bottom-divider',
-      className
-    );
-
-    return (
-      <header
-        {...props}
-        className={classes}
-      >
-        <div className="container">
-          <div className={
-            classNames(
-              'site-header-inner',
-              bottomDivider && 'has-bottom-divider'
-            )}>
-            <Logo />
-            {!hideNav &&
-              <React.Fragment>
-                <button
-                  ref={this.hamburger}
-                  className="header-nav-toggle"
-                  onClick={this.state.isActive ? this.closeMenu : this.openMenu}
-                >
-                  <span className="screen-reader">Menu</span>
-                  <span className="hamburger">
-                    <span className="hamburger-inner"></span>
-                  </span>
-                </button>
-                <nav
-                  ref={this.nav}
-                  className={
+  return (
+    <header
+      {...props}
+      className={classes}
+    >
+      <div className="container">
+        <div className={
+          classNames(
+            'site-header-inner',
+            bottomDivider && 'has-bottom-divider'
+          )}>
+          <Logo />
+          {!hideNav &&
+            <>
+              <button
+                ref={hamburger}
+                className="header-nav-toggle"
+                onClick={isActive ? closeMenu : openMenu}
+              >
+                <span className="screen-reader">Menu</span>
+                <span className="hamburger">
+                  <span className="hamburger-inner"></span>
+                </span>
+              </button>
+              <nav
+                ref={nav}
+                className={
+                  classNames(
+                    'header-nav',
+                    isActive && 'is-active'
+                  )}>
+                <div className="header-nav-inner">
+                  <ul className={
                     classNames(
-                      'header-nav',
-                      this.state.isActive && 'is-active'
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
                     )}>
-                  <div className="header-nav-inner">
-                    <ul className={
-                      classNames(
-                        'list-reset text-xs',
-                        navPosition && `header-nav-${navPosition}`
-                      )}>
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                    </li>
+                  </ul>
+                  {!hideSignin &&
+                    <ul
+                      className="list-reset header-nav-right"
+                    >
                       <li>
-                        <Link to="#0" onClick={this.closeMenu}>Documentation</Link>
+                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
                       </li>
-                    </ul>
-                    {!hideSignin &&
-                      <ul
-                        className="list-reset header-nav-right"
-                      >
-                        <li>
-                          <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={this.closeMenu}>Sign up</Link>
-                        </li>
-                      </ul>}
-                  </div>
-                </nav>
-              </React.Fragment>}
-          </div>
+                    </ul>}
+                </div>
+              </nav>
+            </>}
         </div>
-      </header>
-    )
-  }
+      </div>
+    </header>
+  );
 }
 
 Header.propTypes = propTypes;

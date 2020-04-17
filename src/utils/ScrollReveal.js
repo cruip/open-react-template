@@ -1,30 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect, useImperativeHandle } from 'react';
 import PropTypes from 'prop-types';
 import { throttle } from 'lodash';
 
-class ScrollReveal extends React.Component {
+const ScrollReveal = React.forwardRef((props, ref) => {
 
-  state = {
-    viewportHeight: window.innerHeight,
-    revealEl: []
+  const [viewportHeight, setViewportheight] = useState(window.innerHeight); 
+  const [revealEl, setRevealel] = useState([]);
+
+  const checkComplete = () => {
+    return revealEl.length <= document.querySelectorAll('[class*=reveal-].is-revealed').length;
   };
 
-  checkComplete = () => {
-    return this.state.revealEl.length <= document.querySelectorAll('[class*=reveal-].is-revealed').length;
+  const elementIsVisible = (el, offset) => {
+    return (el.getBoundingClientRect().top <= viewportHeight - offset);
   };
 
-  elementIsVisible = (el, offset) => {
-    return (el.getBoundingClientRect().top <= this.state.viewportHeight - offset);
-  };
-
-  revealElements = () => {
-    if (this.checkComplete()) return;
-    for (let i = 0; i < this.state.revealEl.length; i++) {
-      let el = this.state.revealEl[i];
+  const revealElements = () => {
+    if (checkComplete()) return;
+    for (let i = 0; i < revealEl.length; i++) {
+      let el = revealEl[i];
       let revealDelay = el.getAttribute('data-reveal-delay');
       let revealOffset = (el.getAttribute('data-reveal-offset') ? el.getAttribute('data-reveal-offset') : '200');
       let listenedEl = (el.getAttribute('data-reveal-container') ? el.closest(el.getAttribute('data-reveal-container')) : el);
-      if (this.elementIsVisible(listenedEl, revealOffset) && !el.classList.contains('is-revealed')) {
+      if (elementIsVisible(listenedEl, revealOffset) && !el.classList.contains('is-revealed')) {
         if (revealDelay && revealDelay !== 0) {
           setTimeout(function () {
             el.classList.add('is-revealed');
@@ -36,44 +34,50 @@ class ScrollReveal extends React.Component {
     }
   };
 
-  init = () => {
-    setTimeout(() => {
-      this.setState({ revealEl: document.querySelectorAll('[class*=reveal-]') }, () => {
-        if (!this.checkComplete()) {
-          window.addEventListener('scroll', this.handleScroll);
-          window.addEventListener('resize', this.handleResize);
-        }
-        this.revealElements();
-      });
-    }, 100);
+  useImperativeHandle(ref, () => ({
+    init() {
+      setRevealel(document.querySelectorAll('[class*=reveal-]'));
+    }
+  }));  
+
+  useEffect(() => {
+    if (typeof revealEl !== 'undefined' && revealEl.length > 0) {
+      if (!checkComplete()) {
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
+      }
+      revealElements();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [revealEl]);
+
+  const handleListeners = () => {
+    if (!checkComplete()) return;
+    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('resize', handleResize);
   };
 
-  handleListeners = () => {
-    if (!this.checkComplete()) return;
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.handleResize);
-  };
-
-  handleScroll = throttle(() => {
-    this.handleListeners();
-    this.revealElements();
+  const handleScroll = throttle(() => {
+    handleListeners();
+    revealElements();
   }, 30);
 
-  handleResize = throttle(() => {
-    this.setState({ viewportHeight: window.innerHeight }, () => {
-      this.handleListeners();
-      this.revealElements();
-    });
+  const handleResize = throttle(() => {
+    setViewportheight(window.innerHeight);
   }, 30);
 
-  render() {
-    return (
-      <React.Fragment>
-        {this.props.children()}
-      </React.Fragment>
-    );
-  }
-}
+  useEffect(() => {
+    handleListeners();
+    revealElements();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [viewportHeight]);  
+
+  return (
+    <>
+      {props.children()}
+    </>
+  );
+});
 
 ScrollReveal.propTypes = {
   children: PropTypes.func.isRequired

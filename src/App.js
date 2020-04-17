@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { withRouter, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
@@ -18,36 +18,29 @@ const trackPage = page => {
   ReactGA.pageview(page);
 };
 
-class App extends React.Component {
+const App = ({
+  ...props
+}) => {
 
-  componentDidMount() {
-    const page = this.props.location.pathname;
+  const childRef = useRef();
+
+  useEffect(() => {
+    const page = props.location.pathname;
     document.body.classList.add('is-loaded')
-    this.refs.scrollReveal.init();
-    trackPage(page); 
-  }
+    childRef.current.init();
+    trackPage(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // Route change
-  componentDidUpdate(prevProps) {
-    const currentPage = prevProps.location.pathname + prevProps.location.search;
-    const nextPage = this.props.location.pathname + this.props.location.search;    
-    if (currentPage !== nextPage) {
-      this.refs.scrollReveal.init();
-      trackPage(nextPage);
-    }
-  }
-
-  render() {
-    return (
-      <ScrollReveal
-        ref="scrollReveal"
-        children={() => (
-          <Switch>
-            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          </Switch>
-        )} />
-    );
-  }
+  return (
+    <ScrollReveal
+      ref={childRef}
+      children={() => (
+        <Switch>
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+        </Switch>
+      )} />
+  );
 }
 
 export default withRouter(props => <App {...props} />);

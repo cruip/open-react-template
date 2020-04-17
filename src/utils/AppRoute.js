@@ -7,7 +7,7 @@ const AppRoute = ({
   ...rest
 }) => {
 
-  Layout = (Layout === undefined) ? props => (<React.Fragment>{props.children}</React.Fragment>) : Layout;
+  Layout = (Layout === undefined) ? props => (<>{props.children}</>) : Layout;
 
   return (
     <Route

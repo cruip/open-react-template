@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -19,25 +19,31 @@ const defaultProps = {
   videoTag: 'iframe'
 }
 
-class Modal extends React.Component {
+const Modal = ({
+  className,
+  children,
+  handleClose,
+  show,
+  closeHidden,
+  video,
+  videoTag,
+  ...props
+}) => {
 
-  state = {};
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress);
+    document.addEventListener('click', stopProgagation);
+    return () => {
+      document.removeEventListener('keydown', keyPress);
+      document.removeEventListener('click', stopProgagation);
+    };    
+  });
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.keyPress);
-    document.addEventListener('click', this.stopProgagation);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.keyPress);
-    document.removeEventListener('click', this.stopProgagation);
-  }
-
-  componentDidUpdate(prevProps) {
-    (prevProps.show !== this.props.show) && this.handleBodyClass();
-  }
-
-  handleBodyClass = () => {
+  useEffect(() => {
+    handleBodyClass();
+  }, [props.show]); 
+  
+  const handleBodyClass = () => {
     if (document.querySelectorAll('.modal.is-active').length) {
       document.body.classList.add('modal-is-active');
     } else {
@@ -45,77 +51,64 @@ class Modal extends React.Component {
     }
   }
 
-  keyPress = (e) => {
-    e.keyCode === 27 && this.props.handleClose(e);
+  const keyPress = (e) => {
+    e.keyCode === 27 && handleClose(e);
   }
 
-  stopProgagation = (e) => {
+  const stopProgagation = (e) => {
     e.stopPropagation();
   }
 
-  render() {
-    const {
-      className,
-      children,
-      handleClose,
-      show,
-      closeHidden,
-      video,
-      videoTag,
-      ...props
-    } = this.props;
+  const classes = classNames(
+    'modal',
+    show && 'is-active',
+    video && 'modal-video',
+    className
+  );
 
-    const classes = classNames(
-      'modal',
-      show && 'is-active',
-      video && 'modal-video',
-      className
-    );
-
-    return (
-      <React.Fragment>
-        {show &&
-          <div
-            {...props}
-            className={classes}
-            onClick={handleClose}
-          >
-            <div className="modal-inner" onClick={this.stopProgagation}>
-              {video ?
-                <div className="responsive-video">
-                  {videoTag === 'iframe' ?
-                    <iframe
-                      title="video"
-                      src={video}
-                      frameBorder="0"
-                      allowFullScreen
-                    ></iframe> :
-                    <video
-                      v-else
-                      controls
-                      src={video}
-                    ></video>
-                  }
-                </div> :
-                <React.Fragment>
-                  {!closeHidden &&
-                    <button
-                      className="modal-close"
-                      aria-label="close"
-                      onClick={handleClose}
-                    ></button>
-                  }
-                  <div className="modal-content">
-                    {children}
-                  </div>
-                </React.Fragment>
-              }
-            </div>
+  return (
+    <>
+      {show &&
+        <div
+          {...props}
+          className={classes}
+          onClick={handleClose}
+        >
+          <div className="modal-inner" onClick={stopProgagation}>
+            {video ?
+              <div className="responsive-video">
+                {videoTag === 'iframe' ?
+                  <iframe
+                    title="video"
+                    src={video}
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe> :
+                  <video
+                    v-else
+                    controls
+                    src={video}
+                  ></video>
+                }
+              </div> :
+              <>
+                {!closeHidden &&
+                  <button
+                    className="modal-close"
+                    aria-label="close"
+                    onClick={handleClose}
+                  ></button>
+                }
+                <div className="modal-content">
+                  {children}
+                </div>
+              </>
+            }
           </div>
-        }
-      </React.Fragment>
-    )
-  }
+        </div>
+      }
+    </>
+  )
 }
 
 Modal.propTypes = propTypes;

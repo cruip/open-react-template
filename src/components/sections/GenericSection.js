@@ -13,49 +13,45 @@ const defaultProps = {
   ...SectionProps.defaults
 }
 
-class GenericSection extends React.Component {
+const GenericSection = ({
+  className,
+  children,
+  topOuterDivider,
+  bottomOuterDivider,
+  topDivider,
+  bottomDivider,
+  hasBgColor,
+  invertColor,
+  ...props
+}) => {
 
-  render() {
-    const {
-      className,
-      children,
-      topOuterDivider,
-      bottomOuterDivider,
-      topDivider,
-      bottomDivider,
-      hasBgColor,
-      invertColor,
-      ...props
-    } = this.props;
+  const outerClasses = classNames(
+    'section',
+    topOuterDivider && 'has-top-divider',
+    bottomOuterDivider && 'has-bottom-divider',
+    hasBgColor && 'has-bg-color',
+    invertColor && 'invert-color',
+    className
+  );
 
-    const outerClasses = classNames(
-      'section',
-      topOuterDivider && 'has-top-divider',
-      bottomOuterDivider && 'has-bottom-divider',
-      hasBgColor && 'has-bg-color',
-      invertColor && 'invert-color',
-      className
-    );
+  const innerClasses = classNames(
+    'section-inner',
+    topDivider && 'has-top-divider',
+    bottomDivider && 'has-bottom-divider'
+  );
 
-    const innerClasses = classNames(
-      'section-inner',
-      topDivider && 'has-top-divider',
-      bottomDivider && 'has-bottom-divider'
-    );
-
-    return (
-      <section
-        {...props}
-        className={outerClasses}
-      >
-        <div className="container">
-          <div className={innerClasses}>
-            {children}
-          </div>
+  return (
+    <section
+      {...props}
+      className={outerClasses}
+    >
+      <div className="container">
+        <div className={innerClasses}>
+          {children}
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
 
 GenericSection.propTypes = propTypes;

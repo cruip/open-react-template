@@ -56,7 +56,7 @@ const Select = ({
   );
 
   return (
-    <React.Fragment>
+    <>
       {label && <FormLabel labelHidden={labelHidden} id={props.id}>{label}</FormLabel>}
       <select
         {...props}
@@ -69,7 +69,7 @@ const Select = ({
         {children}
       </select>
       {hint && <FormHint status={status}>{hint}</FormHint>}
-    </React.Fragment>
+    </>
   );
 }
 

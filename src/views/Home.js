@@ -6,33 +6,17 @@ import FeaturesSplit from '../components/sections/FeaturesSplit';
 import Testimonial from '../components/sections/Testimonial';
 import Cta from '../components/sections/Cta';
 
-class Home extends React.Component {
+const Home = () => {
 
-  state = {
-    videoModalActive: false
-  }
-  openModal = (e) => {
-    e.preventDefault();
-    this.setState({ videoModalActive: true });
-  }
-
-  closeModal = (e) => {
-    e.preventDefault();
-    this.setState({ videoModalActive: false });
-  }
-
-  render() {
-
-    return (
-      <React.Fragment>
-        <Hero className="illustration-section-01" />
-        <FeaturesTiles />       
-        <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
-        <Testimonial topDivider />
-        <Cta split />
-      </React.Fragment>
-    );
-  }
+  return (
+    <>
+      <Hero className="illustration-section-01" />
+      <FeaturesTiles />
+      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
+      <Testimonial topDivider />
+      <Cta split />
+    </>
+  );
 }
 
 export default Home;

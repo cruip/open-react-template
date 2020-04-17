@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -15,27 +15,31 @@ const defaultProps = {
   alt: undefined
 }
 
-class Image extends React.Component {
+const Image = ({
+  className,
+  src,
+  width,
+  height,
+  alt,
+  ...props
+}) => {
 
-  state = {
-    isLoaded: false,
-  };
+  const image = useRef(null);
 
-  image = React.createRef();
-
-  componentDidMount() {
+  useEffect(() => {
     const placeholderImage = document.createElement('img');
-    this.handlePlaceholder(this.image.current, placeholderImage);
-  }
-
-  placeholderSrc = (w, h) => {
+    handlePlaceholder(image.current, placeholderImage);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  
+  const placeholderSrc = (w, h) => {
     return `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"%3E%3C/svg%3E`;
   }
 
-  handlePlaceholder = (img, placeholder) => {
+  const handlePlaceholder = (img, placeholder) => {
     img.style.display = 'none';
     img.before(placeholder);
-    placeholder.src = this.placeholderSrc(
+    placeholder.src = placeholderSrc(
       img.getAttribute('width') || 0,
       img.getAttribute('height') || 0
     );
@@ -47,34 +51,19 @@ class Image extends React.Component {
     img.addEventListener('load', () => {
       placeholder.remove();
       img.style.display = '';
-      this.setState({
-        isLoaded: true
-      })
     });
-  }
+  }  
 
-  render() {
-
-    const {
-      className,
-      src,
-      width,
-      height,
-      alt,
-      ...props
-    } = this.props;
-
-    return (
-      <img
-        {...props}
-        ref={this.image}
-        className={className}
-        src={src}
-        width={width}
-        height={height}
-        alt={alt} />
-    );
-  }
+  return (
+    <img
+      {...props}
+      ref={image}
+      className={className}
+      src={src}
+      width={width}
+      height={height}
+      alt={alt} />
+  );
 }
 
 Image.propTypes = propTypes;
