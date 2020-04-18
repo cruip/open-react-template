@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { withRouter, Switch } from 'react-router-dom';
+import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
@@ -11,26 +11,30 @@ import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize(process.env.REACT_APP_GA_CODE, { testMode: true });
+
+let prevPath = '';
 
 const trackPage = page => {
-  ReactGA.set({ page });
-  ReactGA.pageview(page);
+  if (prevPath !== page) {
+    ReactGA.set({ page });
+    ReactGA.pageview(page);
+    prevPath = page;
+  }
 };
 
-const App = ({
-  ...props
-}) => {
+const App = () => {
 
   const childRef = useRef();
+  let location = useLocation();
 
   useEffect(() => {
-    const page = props.location.pathname;
+    const page = location.pathname;
     document.body.classList.add('is-loaded')
     childRef.current.init();
     trackPage(page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [location]);
 
   return (
     <ScrollReveal
@@ -43,4 +47,4 @@ const App = ({
   );
 }
 
-export default withRouter(props => <App {...props} />);
+export default App;

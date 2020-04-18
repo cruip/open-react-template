@@ -2,7 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string
+  ]).isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
   alt: PropTypes.string
