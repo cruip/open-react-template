@@ -13,14 +13,9 @@ import Home from './views/Home';
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE, { testMode: true });
 
-let prevPath = '';
-
 const trackPage = page => {
-  if (prevPath !== page) {
-    ReactGA.set({ page });
-    ReactGA.pageview(page);
-    prevPath = page;
-  }
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
 };
 
 const App = () => {
