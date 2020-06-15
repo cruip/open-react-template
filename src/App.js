@@ -9,6 +9,10 @@ import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
 import Home from './views/Home';
+import Email from './views/Email';
+import Resume from './views/Resume';
+import Blog from './views/Blog';
+import BlogHelloWorld from './views/BlogHelloWorld';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -37,6 +41,10 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/Email" component={Email} layout={LayoutDefault} />
+          <AppRoute exact path="/Resume" component={Resume} layout={LayoutDefault} />
+          <AppRoute exact path="/Blog" component={Blog} layout={LayoutDefault} />
+          <AppRoute exact path="/BlogHelloWorld" component={BlogHelloWorld} layout={LayoutDefault} />
         </Switch>
       )} />
   );

@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@phuocng/react-pdf-viewer": "^1.6.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
+    "pdfjs-dist": "^2.4.456",
     "react": "^16.13.1",
+    "react-back2top": "^0.1.6",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
+    "react-pdf": "^4.1.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1"
   },

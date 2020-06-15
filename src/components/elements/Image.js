@@ -15,7 +15,8 @@ const defaultProps = {
   src: undefined,
   width: undefined,
   height: undefined,
-  alt: undefined
+  alt: undefined,
+  linkTo: undefined
 }
 
 const Image = ({
@@ -24,6 +25,7 @@ const Image = ({
   width,
   height,
   alt,
+  linkTo,
   ...props
 }) => {
 
@@ -58,14 +60,16 @@ const Image = ({
   }  
 
   return (
-    <img
-      {...props}
-      ref={image}
-      className={className}
-      src={src}
-      width={width}
-      height={height}
-      alt={alt} />
+    <a href={linkTo}>
+      <img
+        {...props}
+        ref={image}
+        className={className}
+        src={src}
+        width={width}
+        height={height}
+        alt={alt} />
+    </a>
   );
 }
 

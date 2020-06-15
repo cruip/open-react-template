@@ -13,7 +13,8 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  tag: 'h2'
+  tag: 'h2',
+  bruhMoment: null
 }
 
 const SectionHeader = ({
@@ -21,6 +22,7 @@ const SectionHeader = ({
   data,
   children,
   tag,
+  bruhMoment,
   ...props
 }) => {
 
@@ -49,6 +51,10 @@ const SectionHeader = ({
             }
             {data.paragraph &&
               <p className="m-0">{data.paragraph}</p>
+            }
+            <br></br>
+            {data.bruhMoment &&              
+              <i><p className="m-0">{data.bruhMoment}</p></i>
             }
           </div>
         </div>

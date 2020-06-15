@@ -112,7 +112,18 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      {/* <a href="https://github.com/TimothyLe/timothyle.github.io"></a> */}
+                      <Link to="#" onClick={closeMenu}>Feeling Lucky?</Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <a href="https://github.com/TimothyLe/timothyle.github.io">View on Github</a>
+                      {/* <Link to="#" onClick={closeMenu}>Feeling Lucky?</Link> */}
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -120,7 +131,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link to="Blog" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Visit Blog</Link>
                       </li>
                     </ul>}
                 </div>
