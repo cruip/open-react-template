@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionProps.types,

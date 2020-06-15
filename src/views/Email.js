@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Button from '../components/elements/Button';
+// import Button from '../components/elements/Button';
 
 const Email = ({
   className,
