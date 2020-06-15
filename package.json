@@ -5,7 +5,6 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.2",
-    "@phuocng/react-pdf-viewer": "^1.6.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "node-sass": "^4.14.1",
@@ -20,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
+    "url": "https://github.com/timothyle/open-react-template.git"
   },
   "scripts": {
     "start": "react-scripts start",
