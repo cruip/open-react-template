@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation, Switch } from 'react-router-dom';
+import { useLocation, Switch, HashRouter } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
@@ -36,17 +36,19 @@ const App = () => {
   }, [location]);
 
   return (
-    <ScrollReveal
-      ref={childRef}
-      children={() => (
-        <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path="/Email" component={Email} layout={LayoutDefault} />
-          <AppRoute exact path="/Resume" component={Resume} layout={LayoutDefault} />
-          <AppRoute exact path="/Blog" component={Blog} layout={LayoutDefault} />
-          <AppRoute exact path="/BlogHelloWorld" component={BlogHelloWorld} layout={LayoutDefault} />
-        </Switch>
-      )} />
+    <HashRouter>
+      <ScrollReveal
+        ref={childRef}
+        children={() => (
+          <Switch>
+            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+            <AppRoute exact path="/Email" component={Email} layout={LayoutDefault} />
+            <AppRoute exact path="/Resume" component={Resume} layout={LayoutDefault} />
+            <AppRoute exact path="/Blog" component={Blog} layout={LayoutDefault} />
+            <AppRoute exact path="/BlogHelloWorld" component={BlogHelloWorld} layout={LayoutDefault} />
+          </Switch>
+        )} />
+    </HashRouter>
   );
 }
 
