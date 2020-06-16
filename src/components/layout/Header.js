@@ -112,7 +112,6 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      {/* <a href="https://github.com/TimothyLe/timothyle.github.io"></a> */}
                       <Link to="#" onClick={closeMenu}>Feeling Lucky?</Link>
                     </li>
                   </ul>
@@ -122,8 +121,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <a href="https://github.com/TimothyLe/timothyle.github.io">View on Github</a>
-                      {/* <Link to="#" onClick={closeMenu}>Feeling Lucky?</Link> */}
+                      <a href="https://github.com/TimothyLe/open-react-template">View on Github</a>
                     </li>
                   </ul>
                   {!hideSignin &&

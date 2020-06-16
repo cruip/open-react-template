@@ -86,11 +86,11 @@ const Hero = ({
                   <Button tag="a" color="dark" wideMobile>
                     <Link to="Resume">Resume</Link>
                     </Button>
-                  <Button tag="a" color="light" wideMobile href="https://github.com/TimothyLe/">
-                    Github
-                  </Button>
                   <Button tag="a" color="secondary" wideMobile href="https://www.linkedin.com/in/thinh-le/">
                     Linkedin
+                  </Button>
+                  <Button tag="a" color="light" wideMobile href="https://github.com/TimothyLe/">
+                    Github
                   </Button>
                 </ButtonGroup>
               </div>
