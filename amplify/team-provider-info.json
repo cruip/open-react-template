@@ -1,0 +1,15 @@
+{
+    "de": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-open-react-template-de-204057-authRole",
+            "UnauthRoleArn": "arn:aws:iam::834787748158:role/amplify-open-react-template-de-204057-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::834787748158:role/amplify-open-react-template-de-204057-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-open-react-template-de-204057-deployment",
+            "UnauthRoleName": "amplify-open-react-template-de-204057-unauthRole",
+            "StackName": "amplify-open-react-template-de-204057",
+            "StackId": "arn:aws:cloudformation:eu-west-1:834787748158:stack/amplify-open-react-template-de-204057/c028a920-b3ee-11ea-89f6-026197c942fe",
+            "AmplifyAppId": "d3d8ck2o8r2mx6"
+        }
+    }
+}
