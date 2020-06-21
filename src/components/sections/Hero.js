@@ -61,11 +61,11 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Calculos <span className="text-color-primary">Fotovoltaica</span>
+            Instalaciones de <span className="text-color-primary">Energía Solar Fotovoltaica</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-               segun IDAE y REBT
+               generacion de informes
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 {/* <ButtonGroup>
