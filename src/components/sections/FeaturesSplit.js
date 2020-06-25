@@ -63,7 +63,7 @@ const FeaturesSplit = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
-            <a href="https://jvonl53naj.execute-api.eu-west-1.amazonaws.com/dev/">
+            <a href="https://562940r928.execute-api.eu-west-1.amazonaws.com/dev">
               <div className="split-item">
                 <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                   <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
