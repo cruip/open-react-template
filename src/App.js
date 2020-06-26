@@ -8,7 +8,9 @@ import ReactGA from 'react-ga';
 import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
-import Home from './views/Home';
+import InvestorHome from './views/Investors';
+import Student from './views/Student';
+import Contact from './views/Contact';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -36,7 +38,9 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/" component={InvestorHome} layout={LayoutDefault} />
+          <AppRoute exact path="/students" component={Contact} layout={LayoutDefault} />
+          <AppRoute exact path="/contact" component={Student} layout={LayoutDefault} />
         </Switch>
       )} />
   );
