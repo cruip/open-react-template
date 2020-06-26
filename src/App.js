@@ -8,7 +8,7 @@ import ReactGA from 'react-ga';
 import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
-import InvestorHome from './views/Investors';
+import Investors from './views/Investors';
 import Student from './views/Student';
 import Contact from './views/Contact';
 
@@ -38,7 +38,7 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={InvestorHome} layout={LayoutDefault} />
+          <AppRoute exact path="/" component={Investors} layout={LayoutDefault} />
           <AppRoute exact path="/students" component={Contact} layout={LayoutDefault} />
           <AppRoute exact path="/contact" component={Student} layout={LayoutDefault} />
         </Switch>
