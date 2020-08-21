@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -27,11 +27,12 @@ const Image = ({
   ...props
 }) => {
 
+  const [loaded, setLoaded] = useState(false);
+
   const image = useRef(null);
 
   useEffect(() => {
-    const placeholderImage = document.createElement('img');
-    handlePlaceholder(image.current, placeholderImage);
+    handlePlaceholder(image.current);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
@@ -39,22 +40,26 @@ const Image = ({
     return `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"%3E%3C/svg%3E`;
   }
 
-  const handlePlaceholder = (img, placeholder) => {
-    img.style.display = 'none';
-    img.before(placeholder);
-    placeholder.src = placeholderSrc(
-      img.getAttribute('width') || 0,
-      img.getAttribute('height') || 0
-    );
-    placeholder.width = img.getAttribute('width');
-    placeholder.height = img.getAttribute('height');
-    placeholder.style.opacity = '0';
-    img.className && placeholder.classList.add(img.className);
-
-    img.addEventListener('load', () => {
+  const handlePlaceholder = (img) => {
+    const placeholder = document.createElement('img');
+    if (!loaded) {
+      img.style.display = 'none';
+      img.before(placeholder);
+      placeholder.src = placeholderSrc(
+        img.getAttribute('width') || 0,
+        img.getAttribute('height') || 0
+      );
+      placeholder.width = img.getAttribute('width');
+      placeholder.height = img.getAttribute('height');
+      placeholder.style.opacity = '0';
+      img.className && placeholder.classList.add(img.className);
       placeholder.remove();
-      img.style.display = '';
-    });
+      img.style.display = '';      
+    }
+  }
+
+  function onLoad() {
+    setLoaded(true);
   }  
 
   return (
@@ -65,7 +70,8 @@ const Image = ({
       src={src}
       width={width}
       height={height}
-      alt={alt} />
+      alt={alt}
+      onLoad={onLoad} />
   );
 }
 
