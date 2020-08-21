@@ -1,4 +1,4 @@
-# React landing page template
+# Free React landing page template
 
 ![Open React template preview](https://user-images.githubusercontent.com/2683512/78789364-545e7100-79ad-11ea-9e3c-9528c99cda8e.png)
 
@@ -40,6 +40,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Available Scripts
 
 In the project directory, you can run:
+
+#### `npm install`
+To install the dependencies package.
 
 #### `npm start`
 
