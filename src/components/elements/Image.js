@@ -51,10 +51,10 @@ const Image = ({
     placeholder.style.opacity = '0';
     img.className && placeholder.classList.add(img.className);
 
-    img.addEventListener('load', () => {
+    img.onload = () => {
       placeholder.remove();
       img.style.display = '';
-    });
+    };
   }  
 
   return (
