@@ -12,6 +12,12 @@ Created and maintained with ❤️ by [Cruip.com](https://cruip.com).
 
 Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.com/)
 
+## Open PRO
+
+Looking for more pages and components? Have a look at the **premium version** here 👉️ [https://cruip.com/demos/open-pro/](https://cruip.com/demos/open-pro/)
+
+*The premium template is built on-the-top of [Tailwind CSS](https://tailwindcss.com/), and React components have been re-built from scratch.* 
+
 ## Table of contents
 
 * [Usage](#usage)
