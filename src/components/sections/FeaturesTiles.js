@@ -1,31 +1,31 @@
-import React from 'react'
-import classNames from 'classnames'
-import { SectionTilesProps } from '../../utils/SectionProps'
-import SectionHeader from './partials/SectionHeader'
-import Image from '../elements/Image'
-import { BiHandicap } from 'react-icons/bi'
-import { FaAddressCard } from 'react-icons/fa'
-import { GiHealthNormal } from 'react-icons/gi'
-import FeatureTile from './partials/FeatureTile'
+import React from 'react';
+import classNames from 'classnames';
+import { SectionTilesProps } from '../../utils/SectionProps';
+import SectionHeader from './partials/SectionHeader';
+import Image from '../elements/Image';
+import { BiHandicap } from 'react-icons/bi';
+import { FaAddressCard } from 'react-icons/fa';
+import { GiHealthNormal } from 'react-icons/gi';
+import FeatureTile from './partials/FeatureTile';
 
 const propTypes = {
-  ...SectionTilesProps.types,
+  ...SectionTilesProps.types
 }
 
 const defaultProps = {
-  ...SectionTilesProps.defaults,
+  ...SectionTilesProps.defaults
 }
 const FeaturesTiles = ({
-                         className,
-                         topOuterDivider,
-                         bottomOuterDivider,
-                         topDivider,
-                         bottomDivider,
-                         hasBgColor,
-                         invertColor,
-                         pushLeft,
-                         ...props
-                       }) => {
+   className,
+   topOuterDivider,
+   bottomOuterDivider,
+   topDivider,
+   bottomDivider,
+   hasBgColor,
+   invertColor,
+   pushLeft,
+   ...props
+ }) => {
 
   const outerClasses = classNames(
     'features-tiles section',
@@ -39,17 +39,17 @@ const FeaturesTiles = ({
   const innerClasses = classNames(
     'features-tiles-inner section-inner pt-0',
     topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider',
+    bottomDivider && 'has-bottom-divider'
   );
 
   const tilesClasses = classNames(
     'tiles-wrap center-content',
-    pushLeft && 'push-left',
+    pushLeft && 'push-left'
   )
 
   const sectionHeader = {
     title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.',
+    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
   }
 
   const tiles = [
