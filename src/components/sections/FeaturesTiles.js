@@ -16,16 +16,16 @@ const defaultProps = {
   ...SectionTilesProps.defaults
 }
 const FeaturesTiles = ({
-   className,
-   topOuterDivider,
-   bottomOuterDivider,
-   topDivider,
-   bottomDivider,
-   hasBgColor,
-   invertColor,
-   pushLeft,
-   ...props
- }) => {
+  className,
+  topOuterDivider,
+  bottomOuterDivider,
+  topDivider,
+  bottomDivider,
+  hasBgColor,
+  invertColor,
+  pushLeft,
+  ...props
+}) => {
 
   const outerClasses = classNames(
     'features-tiles section',
@@ -45,12 +45,12 @@ const FeaturesTiles = ({
   const tilesClasses = classNames(
     'tiles-wrap center-content',
     pushLeft && 'push-left'
-  )
+  );
 
   const sectionHeader = {
     title: 'Build up the whole picture',
     paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
-  }
+  };
 
   const tiles = [
     { id: 1, icon: <BiHandicap size={50} color={'white'}/>, iconType: 'ICON', title: 'Robust Workflow', details: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' },
@@ -83,7 +83,7 @@ const FeaturesTiles = ({
       iconType: 'IMAGE',
       title: 'Robust Workflow', details: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.',
     },
-  ]
+  ];
 
   return (
     <section
