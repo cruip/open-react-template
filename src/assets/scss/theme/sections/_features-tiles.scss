@@ -2,4 +2,12 @@
 	display: inline-flex;
 	border-radius: 50%;
 	background-color: get-color(primary, 3);
+	padding: 15px;
+}
+
+.features-tiles-item-image-alt {
+	display: inline-flex;
+	border-radius: 50%;
+	background-color: get-color(secondary, 3);
+	padding: 15px;
 }

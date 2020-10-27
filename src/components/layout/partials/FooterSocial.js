@@ -18,7 +18,7 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <a href="https://facebook.com/">
+          <a href="https://www.facebook.com/meriditytec" target="_blank">
             <svg
               width="16"
               height="16"
@@ -30,7 +30,7 @@ const FooterSocial = ({
             </svg>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="https://twitter.com/">
             <svg
               width="16"
@@ -60,7 +60,7 @@ const FooterSocial = ({
               </g>
             </svg>
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

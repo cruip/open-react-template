@@ -98,7 +98,7 @@ const Header = ({
                   <span className="hamburger-inner"></span>
                 </span>
               </button>
-              <nav
+              {/* <nav
                 ref={nav}
                 className={
                   classNames(
@@ -124,7 +124,7 @@ const Header = ({
                       </li>
                     </ul>}
                 </div>
-              </nav>
+              </nav> */}
             </>}
         </div>
       </div>

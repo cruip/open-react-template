@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.20.0",
     "classnames": "^2.2.6",
+    "cors": "^2.8.5",
+    "firebase": "^7.24.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
+    "react-responsive-modal": "^5.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1"
   },

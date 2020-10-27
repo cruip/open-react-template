@@ -43,10 +43,9 @@ const Footer = ({
             <Logo />
             <FooterSocial />
           </div>
-          <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            <div className="footer-copyright">Made by <a href="https://cruip.com">Cruip</a>. All right reserved</div>
-          </div>
+          <p className="m-0 text-sm">
+            Icons by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> @ <a href="https://www.flaticon.com/" title="Flaticon"> flaticon.com</a>
+          </p>
         </div>
       </div>
     </footer>
