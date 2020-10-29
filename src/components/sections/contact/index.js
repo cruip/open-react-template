@@ -2,16 +2,19 @@ import React, { useState } from 'react'
 import { Axios, db } from '../../../firebase/firebaseConfig'
 import './styled.scss'
 import Button from '../../elements/Button';
-import ButtonGroup from '../../elements/ButtonGroup';
-import { Link } from 'react-router-dom';
 
-const styleObject = {
-    "width" : "100%"
+function getMessagePlaceholderText(props) {
+    if (props.formVersion === 'help') {
+        return 'Describe the problem your having.';
+    } else {
+        return 'What do you need assistance with?';
+    }
 }
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     const [formData, setFormData] = useState({})
-
+    console.log("**Props**")
+    console.log(props);
     const updateInput = e => {
         setFormData({
         ...formData,
@@ -45,6 +48,8 @@ const ContactForm = () => {
         })
     }
 
+    var messagePlaceholderText = getMessagePlaceholderText(props);
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -65,18 +70,12 @@ const ContactForm = () => {
                 <textarea
                 type="text"
                 name="message"
-                placeholder="Message"
+                placeholder={messagePlaceholderText} 
                 onChange={updateInput}
                 value={formData.message || ''}
-                ></textarea>
-                <ButtonGroup>
-                    
-                    <Button tag="a" color="secondary" wideMobile  type="submit" style={styleObject}>Submit</Button>
-                    <Link to="./" >
-                        <Button tag="a" color="secondary" wideMobile style={styleObject}>Back</Button>
-                    </Link>
-                </ButtonGroup>
-                {/**<Button color="secondary" wideMobile  type="submit">Submit</Button>*/}
+                ></textarea>                  
+                
+                <Button tag="a" color="secondary" wideMobile  type="submit">Submit</Button>
             </form>
         </div>
     )

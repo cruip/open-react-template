@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+//import Image from '../elements/Image';
+//import Modal from '../elements/Modal';
+import HelpModal from '../elements/HelpModal';
+import StartedModal from '../elements/StartedModal';
 
 const propTypes = {
   ...SectionProps.types
@@ -29,16 +29,31 @@ const Hero = ({
   ...props
 }) => {
 
-  const [videoModalActive, setVideomodalactive] = useState(false);
+  //const [videoModalActive, setVideomodalactive] = useState(false);
+  
+  const [helpModalActive, setHelpmodalactive] = useState(false);
+  const [startedModalActive, setStartedmodalactive] = useState(false);
 
-  const openModal = (e) => {
+  /* const openModal = (e) => {
     e.preventDefault();
-    //setVideomodalactive(true);
+    setVideomodalactive(true);
+  } */
+
+  const openHelpModal = (e) => {
+    e.preventDefault();
+    setHelpmodalactive(true);    
+  }
+
+  const openStartedModal = (e) => {
+    e.preventDefault();
+    setStartedmodalactive(true);    
   }
 
   const closeModal = (e) => {
     e.preventDefault();
-    setVideomodalactive(false);
+    //setVideomodalactive(false);
+    setStartedmodalactive(false)
+    setHelpmodalactive(false);
   }   
 
   const outerClasses = classNames(
@@ -77,15 +92,20 @@ const Hero = ({
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="secondary" wideMobile 
-                      onClick={openModal}>
-                      Get started
-                    </Button>
-                  <Link to="./Contact">
-                      <Button tag="a" color="secondary" wideMobile >
-                        Get help
-                      </Button>
-                    </Link>                    
+                  <Button 
+                    tag="a" 
+                    color="secondary" 
+                    wideMobile 
+                    onClick={openStartedModal}>
+                    Get started
+                  </Button>
+                  <Button 
+                    tag="a" 
+                    color="secondary" 
+                    wideMobile 
+                    onClick={openHelpModal}>
+                    Get help
+                  </Button>
                 </ButtonGroup>
               </div>
             </div>
@@ -104,13 +124,24 @@ const Hero = ({
                 width={896}
                 height={504} />
             </a>
-          </div>*/}
+          </div>
           <Modal
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
             video="https://player.vimeo.com/video/174002812"
-            videoTag="iframe" /> 
+            videoTag="iframe" /> */}
+            <StartedModal
+            id="video-modal"
+            show={startedModalActive}
+            handleClose={closeModal}
+           />
+            <HelpModal
+            id="video-modal"
+            show={helpModalActive}
+            handleClose={closeModal}
+           />
+           
         </div>
       </div>
     </section>
