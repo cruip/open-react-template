@@ -65,8 +65,8 @@ const FeaturesTiles = ({
                     <Image
                       src={require('./../../assets/images/update.svg')}
                       alt="Features tile icon 01"
-                      width={50}
-                      height={50} />
+                      width={64}
+                      height={64} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
