@@ -135,13 +135,12 @@ const Hero = ({
             id="video-modal"
             show={startedModalActive}
             handleClose={closeModal}
-           />
+            />
             <HelpModal
             id="video-modal"
             show={helpModalActive}
             handleClose={closeModal}
-           />
-           
+            />
         </div>
       </div>
     </section>

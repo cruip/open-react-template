@@ -13,8 +13,8 @@ function getMessagePlaceholderText(props) {
 
 const ContactForm = (props) => {
     const [formData, setFormData] = useState({})
-    console.log("**Props**")
-    console.log(props);
+    const [confirmationActive, setConfirmationActive] = useState(false);
+
     const updateInput = e => {
         setFormData({
         ...formData,
@@ -29,7 +29,9 @@ const ContactForm = (props) => {
         email: '',
         message: '',
         })
+        setConfirmationActive(true);
     }
+
     const sendEmail = () => {
         Axios.post(
         'https://us-central1-emails-138ac.cloudfunctions.net/submit',
@@ -52,7 +54,7 @@ const ContactForm = (props) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <input
                 type="text"
                 name="name"
@@ -73,10 +75,19 @@ const ContactForm = (props) => {
                 placeholder={messagePlaceholderText} 
                 onChange={updateInput}
                 value={formData.message || ''}
-                ></textarea>                  
+                ></textarea>   
                 
-                <Button tag="a" color="secondary" wideMobile  type="submit">Submit</Button>
-            </form>
+                { confirmationActive ? <p>Thank you!</p> : null }
+
+                <Button 
+                    onClick={handleSubmit} 
+                    color="secondary" 
+                    wideMobile  
+                    outline="none" 
+                    type="submit"
+                    >Submit
+                </Button>
+                </form>
         </div>
     )
 }
