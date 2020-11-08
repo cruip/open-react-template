@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "classnames": "^2.2.6",
+    "cloudinary-react": "^1.6.7",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
+    "react-pdf": "^5.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1"
   },
