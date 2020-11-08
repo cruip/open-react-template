@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Redirect } from 'react-router'
 import Button from '@material-ui/core/Button';
 import CheckCircleTwoToneIcon from '@material-ui/icons/CheckCircleTwoTone';
 import LinearProgress from "@material-ui/core/es/LinearProgress/LinearProgress";
@@ -11,9 +11,11 @@ import ImageResponse from "./ImageResponse";
 import SelectFileButton from "./SelectFileButton";
 import FileManager from './FileHandler/FileManager';
 import FileUploader from './FileHandler/FileUploader';
+import { useHistory } from 'react-router-dom';
 
 const CLOUD_NAME = 'dpdenton';
 const CLOUD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/upload`;
+let COUNT = 0
 
 const styles = {
 
@@ -161,8 +163,15 @@ class ImageUploadDemo extends React.Component {
                     this.addTransitionState(event, FileUploader.UPLOAD_PROGRESS, file.key);
                 }}
                 onUploadComplete={event => {
+                    COUNT +=  1
                     this.addTransitionState(event, FileUploader.UPLOAD_COMPLETE, file.key);
-                    //  colocar o redirect aqui
+                    if (COUNT === this.state.files.length) {
+                        alert('Pronto! Seu imposto está sendo calculado!')
+                        setTimeout(function() {
+                            window.location.href = "/imposto";
+                        }, 5000);
+
+                    }
                 }}
                 onDownloadStart={event => {
                     this.addTransitionState(event, FileUploader.DOWNLOAD_START, file.key);
