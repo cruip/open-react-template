@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router'
 import Button from '@material-ui/core/Button';
 import CheckCircleTwoToneIcon from '@material-ui/icons/CheckCircleTwoTone';
 import LinearProgress from "@material-ui/core/es/LinearProgress/LinearProgress";
@@ -11,7 +10,6 @@ import ImageResponse from "./ImageResponse";
 import SelectFileButton from "./SelectFileButton";
 import FileManager from './FileHandler/FileManager';
 import FileUploader from './FileHandler/FileUploader';
-import { useHistory } from 'react-router-dom';
 
 const CLOUD_NAME = 'dpdenton';
 const CLOUD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/upload`;

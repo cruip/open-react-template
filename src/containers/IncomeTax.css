@@ -1,0 +1,9 @@
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 10000px 0;
+    height: 100vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+}

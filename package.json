@@ -8,6 +8,7 @@
     "classnames": "^2.2.6",
     "cloudinary-react": "^1.6.7",
     "lodash": "^4.17.15",
+    "material-table": "^1.69.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",

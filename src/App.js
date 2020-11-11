@@ -10,6 +10,7 @@ import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 import Login from './views/Login';
 import Uploadpdf from './views/Uploadpdf';
+import IncomeTax from './views/IncomeTax';
 
 const App = () => {
 
@@ -30,6 +31,7 @@ const App = () => {
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/login" component={Login} />
           <AppRoute exact path="/upload-pdf" component={Uploadpdf} />
+          <AppRoute exact path="/income-tax" component={IncomeTax} />
         </Switch>
       )} />
   );
