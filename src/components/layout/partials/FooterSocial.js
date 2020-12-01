@@ -1,6 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 
+const SOCIAL_LINKS = {
+  facebook: "https://facebook.com/",
+  twitter:  "https://twitter.com/",
+  instagram: "https://instagram.com/"
+}
+
 const FooterSocial = ({
   className,
   ...props
@@ -18,7 +24,7 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <a href="https://facebook.com/">
+          <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer">
             <svg
               width="16"
               height="16"
@@ -31,7 +37,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/">
+          <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">
             <svg
               width="16"
               height="16"
@@ -44,7 +50,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://google.com/">
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">
             <svg
               width="16"
               height="16"
