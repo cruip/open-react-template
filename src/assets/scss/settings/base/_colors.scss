@@ -81,5 +81,6 @@ $bg--color: (
 	bg-color: 		lighten(get-color(light, 1), 9%),			// .has-bg-color helper class
 	shadow: 		0 24px 64px rgba(get-color(dark, 1), .64),	// .has-shadow helper class
 	code: 			darken(get-color(dark, 1), 3%),
-	code-inverse:	darken(get-color(dark, 1), 3%)
+	code-inverse:	darken(get-color(dark, 1), 3%),
+	check-checked-inverse:	darken(get-color(dark, 1), 3%)
 );
