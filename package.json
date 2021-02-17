@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
+    "dart-sass": "^1.25.0",
     "firebase": "^7.24.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.14.1",
     "nodemailer": "^6.4.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -42,5 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sass": "^1.32.7"
+  }
 }
