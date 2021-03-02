@@ -1,0 +1,40 @@
+$white: #fff;
+$gray-100: #f8f9ff;
+$gray-200: #f4f5fd;
+$gray-300: #eeeff8;
+$gray-400: #e6e7f1;
+$gray-500: #dfe0ea;
+$gray-600: #d1d2db;
+$gray-700: #a6a6b9;
+$gray-800: #7a7b97;
+$gray-900: #3b3e66;
+$black: black;
+
+$border-width: 1px;
+$border-color: $gray-300;
+
+$border-radius: 0.65rem;
+$border-radius-lg: 0.75rem;
+$border-radius-sm: 0.29rem;
+$border-radius-xs: 0.2rem;
+
+$list-group-border-color: rgba($black, 0.125);
+
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;
+$transition-collapse: height 0.35s ease !default;
+
+$card-spacer-y: 0.75rem !default;
+$card-spacer-x: 1.25rem !default;
+$card-border-width: $border-width !default;
+$card-border-radius: $border-radius !default;
+$card-border-color: rgba($black, 0.125) !default;
+$card-inner-border-radius: subtract(
+  $card-border-radius,
+  $card-border-width
+) !default;
+$card-cap-bg: rgba($black, 0.03) !default;
+$card-cap-color: null !default;
+$card-height: null !default;
+$card-color: null !default;
+$card-bg: $white !default;

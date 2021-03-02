@@ -12,8 +12,7 @@ article,
 aside,
 footer,
 header,
-nav,
-section {
+nav {
   display: block;
 }
 
@@ -46,6 +45,10 @@ pre {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: white !important;
 }
 
 abbr[title] {

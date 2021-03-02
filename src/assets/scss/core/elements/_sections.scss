@@ -1,0 +1,48 @@
+@for $i from 1 through length($section--sizes) {
+  .section-padding-#{nth($section--sizes, $i)} {
+    padding: nth($section--sizes-value, $i) 5%;
+  }
+}
+
+@include media("<1000px") {
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-container {
+    margin-bottom: 4em;
+  }
+  .img-container {
+    width: 80%;
+  }
+  .button-group {
+    justify-content: center !important;
+  }
+  .text-align-start {
+    text-align: center;
+  }
+
+  @for $i from 1 through length($section--sizes) {
+    .section-padding-#{nth($section--sizes, $i)} {
+      padding: nth($section--sizes-value__mobile, $i) 2%;
+    }
+  }
+  .levels-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px !important;
+    margin-left: 0 !important;
+  }
+  .button {
+    align-self: center !important;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  .img-container {
+    width: 95%;
+  }
+}

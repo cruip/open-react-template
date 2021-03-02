@@ -1,0 +1,15 @@
+.text-align-center {
+  text-align: center;
+}
+.text-align-start {
+  text-align: start;
+}
+.text-align-end {
+  text-align: end;
+}
+
+@include media("<800px") {
+  .text-container {
+    width: 90% !important;
+  }
+}

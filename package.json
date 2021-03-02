@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "classnames": "^2.2.6",
-    "lodash": "^4.17.15",
+    "clsx": "^1.1.1",
+    "lodash": "^4.17.21",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.0",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "reactstrap": "^8.9.0"
   },
   "repository": {
     "type": "git",

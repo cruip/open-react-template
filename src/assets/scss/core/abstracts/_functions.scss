@@ -3,16 +3,28 @@
 // Used in _variables.scss --------------------------------------------
 // --------------------------------------------------------------------
 @function map-push($parent-map, $child-map) {
-	$result: $parent-map;
-	@each $key, $value in $child-map {
-		@if (not map-has-key($result, $key)) or (type-of(map-get($result, $key)) != type-of($value)) or (not (type-of(map-get($result, $key)) == map and type-of($value) == map)) {
-			$result: map-merge($result, ($key: $value));
-		}
-		@else {
-			$result: map-merge($result, ($key: map-push(map-get($result, $key), $value)));
-		}
-	}
-	@return $result;
+  $result: $parent-map;
+  @each $key, $value in $child-map {
+    @if (not map-has-key($result, $key)) or
+      (type-of(map-get($result, $key)) != type-of($value)) or
+      (not (type-of(map-get($result, $key)) == map and type-of($value) == map))
+    {
+      $result: map-merge(
+        $result,
+        (
+          $key: $value,
+        )
+      );
+    } @else {
+      $result: map-merge(
+        $result,
+        (
+          $key: map-push(map-get($result, $key), $value),
+        )
+      );
+    }
+  }
+  @return $result;
 }
 
 // --------------------------------------------------------------------
@@ -20,7 +32,7 @@
 // Used in _mixins.scss [@mixin font-family] --------------------------
 // --------------------------------------------------------------------
 @function get-font-family($elem) {
-	@return map-get($font--family, $elem);
+  @return map-get($font--family, $elem);
 }
 
 // --------------------------------------------------------------------
@@ -28,11 +40,11 @@
 // Used in _mixins.scss [@mixin font-family] --------------------------
 // --------------------------------------------------------------------
 @function get-font-size($elem) {
-	@if ( map-get($font--size, $elem) ) {
-		@return nth(map-get($font--scale, map-get($font--size, $elem)), 1);
-	} @else {
-		@return null;
-	}
+  @if (map-get($font--size, $elem)) {
+    @return nth(map-get($font--scale, map-get($font--size, $elem)), 1);
+  } @else {
+    @return null;
+  }
 }
 
 // --------------------------------------------------------------------
@@ -40,11 +52,11 @@
 // Used in _mixins.scss [@mixin font-size] ----------------------------
 // --------------------------------------------------------------------
 @function get-line-height($elem) {
-	@if ( map-get($font--size, $elem) ) {
-		@return nth(map-get($font--scale, map-get($font--size, $elem)), 2);
-	} @else {
-		@return null;
-	}
+  @if (map-get($font--size, $elem)) {
+    @return nth(map-get($font--scale, map-get($font--size, $elem)), 2);
+  } @else {
+    @return null;
+  }
 }
 
 // --------------------------------------------------------------------
@@ -52,11 +64,11 @@
 // Used in _mixins.scss [@mixin font-size] ----------------------------
 // --------------------------------------------------------------------
 @function get-kerning($elem) {
-	@if ( map-get($font--size, $elem) ) {
-		@return nth(map-get($font--scale, map-get($font--size, $elem)), 3);
-	} @else {
-		@return null;
-	}
+  @if (map-get($font--size, $elem)) {
+    @return nth(map-get($font--scale, map-get($font--size, $elem)), 3);
+  } @else {
+    @return null;
+  }
 }
 
 // --------------------------------------------------------------------
@@ -64,7 +76,7 @@
 // Used in _mixins.scss [@mixin font-weight] --------------------------
 // --------------------------------------------------------------------
 @function get-font-weight($elem) {
-	@return map-get($font--weight, $elem);
+  @return map-get($font--weight, $elem);
 }
 
 // --------------------------------------------------------------------
@@ -72,7 +84,7 @@
 // Usage: get-color(dark, 1) ------------------------------------------
 // --------------------------------------------------------------------
 @function get-color($elem, $variant) {
-	@return map-get(map-get($palette, $elem), $variant);
+  @return map-get(map-get($palette, $elem), $variant);
 }
 
 // --------------------------------------------------------------------
@@ -80,7 +92,7 @@
 // Usage: color(heading) -----------------------------------------
 // --------------------------------------------------------------------
 @function color($elem) {
-	@return map-get($color, $elem);
+  @return map-get($color, $elem);
 }
 
 // --------------------------------------------------------------------
@@ -88,7 +100,7 @@
 // Usage: color-border(divider) ---------------------------------------
 // --------------------------------------------------------------------
 @function color-border($elem) {
-	@return map-get($border--color, $elem);
+  @return map-get($border--color, $elem);
 }
 
 // --------------------------------------------------------------------
@@ -96,7 +108,7 @@
 // Usage: color-bg(code) ----------------------------------------------
 // --------------------------------------------------------------------
 @function color-bg($elem) {
-	@return map-get($bg--color, $elem);
+  @return map-get($bg--color, $elem);
 }
 
 // --------------------------------------------------------------------
@@ -104,53 +116,58 @@
 // Usage: color-icon(hamburger) ---------------------------------------
 // --------------------------------------------------------------------
 @function color-icon($elem) {
-	@return map-get($icon--color, $elem);
+  @return map-get($icon--color, $elem);
 }
 
 // --------------------------------------------------------------------
 // urlencode the svg string -------------------------------------------
 // --------------------------------------------------------------------
-@function str-replace($string, $search, $replace: '') {
-	$index: str-index($string, $search);
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-	@return $string;
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+  @return $string;
 }
 
 @function url-encode($string) {
-	$map: (
-	"%": "%25",
-	"<": "%3C",
-	">": "%3E",
-	" ": "%20",
-	"!": "%21",
-	"*": "%2A",
-	"'": "%27",
-	'"': "%22",
-	"(": "%28",
-	")": "%29",
-	";": "%3B",
-	":": "%3A",
-	"@": "%40",
-	"&": "%26",
-	"=": "%3D",
-	"+": "%2B",
-	"$": "%24",
-	",": "%2C",
-	"/": "%2F",
-	"?": "%3F",
-	"#": "%23",
-	"[": "%5B",
-	"]": "%5D"
-	);
-	$new: $string;
-	@each $search, $replace in $map {
-		$new: str-replace($new, $search, $replace);
-	}
-	@return $new;
+  $map: (
+    "%": "%25",
+    "<": "%3C",
+    ">": "%3E",
+    " ": "%20",
+    "!": "%21",
+    "*": "%2A",
+    "'": "%27",
+    '"': "%22",
+    "(": "%28",
+    ")": "%29",
+    ";": "%3B",
+    ":": "%3A",
+    "@": "%40",
+    "&": "%26",
+    "=": "%3D",
+    "+": "%2B",
+    "$": "%24",
+    ",": "%2C",
+    "/": "%2F",
+    "?": "%3F",
+    "#": "%23",
+    "[": "%5B",
+    "]": "%5D",
+  );
+  $new: $string;
+  @each $search, $replace in $map {
+    $new: str-replace($new, $search, $replace);
+  }
+  @return $new;
 }
 
 @function inline-svg($string) {
-	@return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
+  @return url("data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}");
 }
