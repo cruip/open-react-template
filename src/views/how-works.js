@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "../components/elements/Button";
+import React, { useContext } from "react";
+import { TFunction } from "../utils/Store";
 
 // Sections
 import FirstSection from "../components/sections/how-works/section_1";
@@ -9,13 +9,14 @@ import ForthSection from "../components/sections/how-works/section_4";
 import FifthSection from "../components/sections/how-works/section_5";
 
 export default function HowItWork() {
+  const t = useContext(TFunction);
   return (
     <>
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <ForthSection />
-      <FifthSection />
+      <FirstSection t={t} />
+      <SecondSection t={t} />
+      <ThirdSection t={t} />
+      <ForthSection t={t} />
+      <FifthSection t={t} />
     </>
   );
 }

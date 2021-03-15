@@ -1,5 +1,17 @@
 .efficacy-background {
-  background-image: url("../../../images/Baner.png");
+  background-image: url("../../../images/Banner.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
+  background-position: bottom;
+}
+@include media(">1550px") {
+  .efficacy-background {
+    background-size: cover;
+  }
+}
+
+@include media("<750px") {
+  .efficacy-background {
+    background-size: cover;
+  }
 }

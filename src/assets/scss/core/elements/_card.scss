@@ -5,3 +5,23 @@
   text-align: end;
   cursor: pointer;
 }
+
+.chevron-rotate {
+  transform: rotate(-180deg);
+}
+
+.transform {
+  transition: 0.3s;
+}
+#chevron-item1 {
+  width: 16px !important;
+  height: 16px !important;
+}
+#chevron-item2 {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#chevron-item3 {
+  width: 16px !important;
+}

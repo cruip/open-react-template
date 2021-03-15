@@ -128,12 +128,11 @@ td {
   }
 }
 
-.dir-rtl {
+.direction {
   direction: rtl;
-}
-
-.dir-ltr {
-  direction: ltr;
+  p {
+    font-size: 22px !important;
+  }
 }
 
 // media

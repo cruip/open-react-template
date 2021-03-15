@@ -1,20 +1,20 @@
 import React from "react";
 import Button from "../../elements/Button";
 
-export default function FirstSection() {
+export default function FirstSection({ t }) {
   return (
-    <section className="section-padding-l efficacy-background">
-      <div className="container container-flex">
-        <div className="third-section-content" style={{ textAlign: "end" }}>
-          <h1 className="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-            نقوم دائما بالمراجعة والتطوير والتحسين والتركيز التربوي لضمان جودة
-            الدورة
-          </h1>
-          <div className="container ce">
-            <Button tag="a" color="primary" wideMobile href="#">
-              أرغب في تعلم اللغة العربية
-            </Button>
-          </div>
+    <section className="section-padding-l efficacy-background pt-">
+      <div
+        className="text-align-start"
+        style={{ maxWidth: "800px", marginTop: "150px" }}
+      >
+        <h1 className="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
+          {t("efficacy_section_1_header")}
+        </h1>
+        <div>
+          <Button tag="a" color="primary" wideMobile href="#">
+            {t("efficacy_section_1_button")}
+          </Button>
         </div>
       </div>
     </section>

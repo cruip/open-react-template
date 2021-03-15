@@ -1,23 +1,21 @@
 import React from "react";
 
-export default function Home8() {
+export default function Home8({ t }) {
   return (
     <section className="section section-padding-l fl-ce ">
-      <div>
-        <div
-          className="text-container text-align-start"
-          // style={{ alignItems: "flex-start" }}
-        >
-          <h1 className="mt-0 mb-2 reveal-from-bottom" data-reveal-delay="200">
-            حقق هدفك
-          </h1>
-          <p className="m-0 mb-12 reveal-from-bottom" data-reveal-delay="400">
-            في كل مرة تكمل فيها درسًا صغيرًا، ستكسب نقاطًا وستشاهد سجلاً لتقدمك.
-          </p>
-        </div>
+      <div
+        className=" text-align-start"
+        // style={{ alignItems: "flex-start" }}
+      >
+        <h1 className="mt-0 mb-2 reveal-from-bottom" data-reveal-delay="200">
+          {t("home_section_8_header")}
+        </h1>
+        <p className="m-0 mb-12 reveal-from-bottom" data-reveal-delay="400">
+          {t("home_section_8_content")}
+        </p>
       </div>
       <div
-        className="fc reveal-from-bottom"
+        className="fl-ce reveal-from-bottom"
         data-reveal-delay="400"
         style={{ width: "70%", height: "100%", margin: 0 }}
       >

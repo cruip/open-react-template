@@ -7,9 +7,9 @@
     padding-top: $header-height__mobile;
   }
 
-  .brand {
-    margin-right: $header-nav--padding-h;
-  }
+  // .brand {
+  //   margin-right: $header-nav--padding-h;
+  // }
 }
 
 .site-header-inner {
@@ -17,6 +17,9 @@
   justify-content: space-between;
   align-items: center;
   height: $header-height__mobile;
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .header-nav {
@@ -79,7 +82,11 @@
   display: none;
 }
 
-@include media("<1030px") {
+@include media("<1230px") {
+  .dropdown {
+    margin: 0 !important;
+  }
+
   .header-nav-toggle {
     display: block;
 
@@ -104,6 +111,7 @@
       .header-nav-inner {
         flex-direction: column;
         padding: $header-nav--padding-v__mobile;
+        padding-bottom: 100px !important;
       }
 
       ul {

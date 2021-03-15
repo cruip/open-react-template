@@ -11,20 +11,21 @@ const propTypes = {
 const defaultProps = {
   ...SectionTilesProps.defaults,
 };
-const FeaturesTiles = () => {
+const FeaturesTiles = ({ t }) => {
   return (
     <section className="section section-padding-l fl-ce has-bottom-divider-short text-align-start">
       <div className="text-container" style={{ width: "50%" }}>
-        <div className="first-section-content text-align">
+        <div className="text-align">
           <h2 className="mt-0 mb-2 reveal-from-bottom" data-reveal-delay="200">
-            يبدأ كل شيء بالضغط على "إبدأ التعلم" في دورة اللغة العربية ستبدأ
-            بحوارات تعليمية قصيرة ، ستستمع بجزالة اللغة العربيةلتتعلم تعبيرات
-            المواقف اليومية
+            {t("home_section_3_header1")}
           </h2>
+          <p className="mt-0 mb-2 reveal-from-bottom" data-reveal-delay="200">
+            {t("home_section_3_header2")}
+          </p>
         </div>
       </div>
       <div
-        className="img-container reveal-from-bottom fc"
+        className="img-container reveal-from-bottom fl-ce"
         data-reveal-delay="400"
       >
         <img src={require("../../../assets/images/Laptopi.png")} alt="laptop" />

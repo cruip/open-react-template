@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TFunction } from "../utils/Store";
 
 import FistSection from "../components/sections/scheme/section_1";
 import SecondSection from "../components/sections/scheme/section_2";
@@ -9,15 +10,16 @@ import SixthSection from "../components/sections/scheme/section_6";
 import SeventhSection from "../components/sections/scheme/section_7";
 
 export default function Plans() {
+  const t = useContext(TFunction);
   return (
     <>
-      <FistSection />
-      <SecondSection />
-      <ThirdSection />
-      <ForthSection />
-      <FifthSection />
-      <SixthSection />
-      <SeventhSection />
+      <FistSection t={t} />
+      <SecondSection t={t} />
+      <ThirdSection t={t} />
+      <ForthSection t={t} />
+      <FifthSection t={t} />
+      <SixthSection t={t} />
+      <SeventhSection t={t} />
     </>
   );
 }

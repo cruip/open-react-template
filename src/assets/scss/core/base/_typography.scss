@@ -28,7 +28,7 @@ h6,
 .h5,
 .h6 {
   @include font-family(heading);
-  @include font-weight(heading);
+  // @include font-weight(heading);
   clear: both;
   color: color(heading);
   word-wrap: break-word;
@@ -50,7 +50,7 @@ h2,
 h3,
 .h3 {
   @include font-size(h3);
-  font-family: "Tajawal-Medium";
+  font-family: "Tajawal Medium";
 }
 
 h4,

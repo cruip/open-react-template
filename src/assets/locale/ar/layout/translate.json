@@ -1,0 +1,26 @@
+{
+    "header_how_it_works" : "طرِيقةُ العَملِ",
+    "header_levels" : "المستويَات",
+    "header_plans" : "الخُطّة",
+    "header_certificates": "الشَّهائِد",
+    "header_efficacy" : "الجَدوَى",
+    "login": "الدّخُول",
+    "register" : "التّسجِيل",
+
+    "login_login" : "الدُّخُولُ",
+    "login_email": "البَرِيدُ الالِكْترُونِي",
+    "login_password": "كَلِمَةُ المُرُورِ",
+    "login_forgot_pass": "نَسِتُ كَلِمَةَ المُرُورِ؟",
+
+
+    "register_register" : "قُمْ بِالتَّسْجِيلِ",
+    "register_name": "الاِسْمُ الأَوَّلُ",
+    "register_last_name": "اللَّقَبُ",
+    "register_email": "البَرِيدُ الالِكْترُونِي",
+    "register_password": "كَلِمَةُ المُرُورِ",
+    "register_confirm_password": "تَأْكِيدُ كَلِمَةِ المُرُورِ",
+
+    "forms_text_header_signup" : "الدُّخُولُ إِلَى دَورَةِ اللُّغَةِ العَرَبِيَّةِ",
+    "forms_text_header_signin" : "الدُّخُولُ إِلَى دَورَةِ اللُّغَةِ العَرَبِيَّةِ",
+    "forms_text_content" : "تَحَدَّثِ العَرَبِيَّةَ الفُصْحَى كَأَنَّكَ حَفِيدُ الأَصْمَعِيِّ"
+}

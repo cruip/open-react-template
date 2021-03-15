@@ -1,26 +1,22 @@
 import React from "react";
-import Button from "../../elements/Button";
 
-export default function SecondSection() {
+export default function SecondSection({ t }) {
   return (
     <section className="section-padding-xs" style={{ background: "#25282c" }}>
-      <div
-        className="container-xl container-flex"
-        style={{ justifyContent: "space-around" }}
-      >
-        <div className="first-section-content">
+      <div className="section container-xl fl fl-ju-co-sp-be">
+        <div className="item-mb">
           <h3 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-            شهادة اللسان العربية
+            {t("efficacy_section_2_item3")}
           </h3>
         </div>
-        <div className="first-section-content">
+        <div className="item-mb">
           <h3 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-            مخابر لغوية بحوث مستمرة
+            {t("efficacy_section_2_item2")}
           </h3>
         </div>
-        <div className="first-section-content">
+        <div>
           <h3 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-            جودة و فعالية
+            {t("efficacy_section_2_item1")}
           </h3>
         </div>
       </div>

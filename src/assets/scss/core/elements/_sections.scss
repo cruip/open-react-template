@@ -32,6 +32,7 @@
   .levels-container {
     width: 95%;
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 32px !important;
     margin-left: 0 !important;
@@ -44,5 +45,24 @@
   }
   .img-container {
     width: 95%;
+  }
+  .item-mb {
+    margin-bottom: 32px;
+  }
+  .brand img {
+    width: 54px;
+    height: 54px;
+  }
+  .image-disable {
+    display: none;
+  }
+  .plans-text-responsive {
+    width: auto;
+  }
+}
+
+@include media("<420px") {
+  .form-item {
+    flex-direction: column;
   }
 }

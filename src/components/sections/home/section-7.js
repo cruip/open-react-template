@@ -1,24 +1,24 @@
 import React from "react";
 
-export default function SeventhSection() {
+export default function SeventhSection({ t }) {
   return (
     <section
       className="section section-padding-s"
       style={{ background: "#25282c" }}
     >
-      <div className="text-container text-align-center">
+      <div className="container text-align-center">
         <h1 className="mt-0 mb-2 reveal-from-bottom" data-reveal-delay="200">
-          دروس مُصغّرة جديدة كل يوم
+          {t("home_section_7_header")}
         </h1>
-        <h3
-          className="mt-0 mb-32 reveal-from-bottom"
-          data-reveal-delay="200"
-          style={{ fontWeight: "lighter", textAlign: "center" }}
-        >
-          ستجد كل يوم اقتراحات محتوى جديدة لتتعلم شيئًا جديدًا في دقائق قليلة:
-          دروس مباشرة، مقاطع فيديو، بودكاست، مقابلات، مقالات، إلخ. سوف تكون
-          مدمنا على اللغة العربية. وكلما تدربت أكثر كلما ازددت شغفا بها.
-        </h3>
+        <p className="m-0 reveal-from-bottom" data-reveal-delay="400">
+          {t("home_section_7_content1")}
+        </p>
+        <p className="m-0 reveal-from-bottom" data-reveal-delay="400">
+          {t("home_section_7_content2")}
+        </p>
+        <p className="m-0 reveal-from-bottom" data-reveal-delay="400">
+          {t("home_section_7_content3")}
+        </p>
       </div>
     </section>
   );

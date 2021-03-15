@@ -1,26 +1,17 @@
 import React from "react";
 import Button from "../../elements/Button";
 
-export default function ThirdSection() {
+export default function ThirdSection({ t }) {
   return (
-    <>
-      <section className="section container-flex" style={{ height: "20em" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <h1 className="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-            هذه هي شهادات اللسان العربي التي يمكنك الحصول عليها
-          </h1>
-        </div>
-      </section>
-      <section className="section container-flex" style={{ height: "20em" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <h1 className="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-            قم بالتسجيل الآن وابدأ تعلم اللغة العربية
-          </h1>
-          <Button tag="a" color="primary" wideMobile href="#">
-            أرغب في تعلم اللغة العربية
-          </Button>
-        </div>
-      </section>
-    </>
+    <section className="section-padding-l fl-co-ce has-bottom-divider-short">
+      <div className="container-xl text-align-center">
+        <h1 className="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
+          {t("certificates_section_3_header")}
+        </h1>
+      </div>
+      <div className="mt-32 reveal-from-bottom" data-reveal-delay="400">
+        <img src={require("../../../assets/images/Font.png")} />
+      </div>
+    </section>
   );
 }

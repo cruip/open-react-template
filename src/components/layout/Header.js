@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Logo from "./partials/Logo";
+import { useTranslation } from "react-i18next";
+import LanguageSwitch from "./partials/LanguageSwitch";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -29,6 +31,8 @@ const Header = ({
   bottomDivider,
   ...props
 }) => {
+  const { t } = useTranslation();
+
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef(null);
@@ -72,97 +76,89 @@ const Header = ({
     closeMenu();
   };
 
-  const classes = classNames(
-    "site-header",
-    "dir-rtl",
-    bottomOuterDivider && "has-bottom-divider",
-    className
-  );
+  const classes = classNames("site-header", "fl-ce", "ml-0", className);
 
   return (
     <header {...props} className={classes}>
-      <div className="container">
-        <div
-          className={classNames(
-            "site-header-inner",
-            bottomDivider && "has-bottom-divider"
-          )}
-        >
-          <Logo />
-          {!hideNav && (
-            <>
-              <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
+      <div
+        className={classNames(
+          "site-header-inner",
+          bottomDivider && "has-bottom-divider"
+        )}
+      >
+        <Logo />
+        <>
+          <button
+            ref={hamburger}
+            className="header-nav-toggle"
+            onClick={isActive ? closeMenu : openMenu}
+          >
+            <span className="screen-reader">Menu</span>
+            <span className="hamburger">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
+          <nav
+            ref={nav}
+            className={classNames("header-nav", isActive && "is-active")}
+          >
+            <div className="header-nav-inner">
+              <ul
+                className={classNames(
+                  "list-reset text-xs",
+                  navPosition && `header-nav-${navPosition}`
+                )}
               >
-                <span className="screen-reader">Menu</span>
-                <span className="hamburger">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
-              <nav
-                ref={nav}
-                className={classNames("header-nav", isActive && "is-active")}
-              >
-                <div className="header-nav-inner">
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
+                <Link to="/how-it-works/" onClick={closeMenu}>
+                  {t("header_how_it_works")}
+                </Link>
+                <li>
+                  <Link to="/levels/" onClick={closeMenu}>
+                    {t("header_levels")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/certificates/" onClick={closeMenu}>
+                    {t("header_certificates")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/plans/" onClick={closeMenu}>
+                    {t("header_plans")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/efficacy/" onClick={closeMenu}>
+                    {t("header_efficacy")}
+                  </Link>
+                </li>
+              </ul>
+              <ul className="list-reset header-nav-right">
+                <li>
+                  <Link
+                    to="/login/"
+                    className="button button-dark button-wide-mobile button-sm"
+                    onClick={closeMenu}
                   >
-                    <Link to="/how-it-works/" onClick={closeMenu}>
-                      طريقة العمل
-                    </Link>
-                    <li>
-                      <Link to="/levels/" onClick={closeMenu}>
-                        المستويات
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/certificates/" onClick={closeMenu}>
-                        الشهائد
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/plans/" onClick={closeMenu}>
-                        الخطة
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/efficacy/" onClick={closeMenu}>
-                        الجدوى
-                      </Link>
-                    </li>
-                  </ul>
-                  {!hideSignin && (
-                    <ul className="list-reset header-nav-right">
-                      <li>
-                        <Link
-                          to="/login/"
-                          className="button button-dark button-wide-mobile button-sm"
-                          onClick={closeMenu}
-                        >
-                          الدخول
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/register/"
-                          className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
-                        >
-                          التسجيل
-                        </Link>
-                      </li>
-                    </ul>
-                  )}
-                </div>
-              </nav>
-            </>
-          )}
-        </div>
+                    {t("login")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/register/"
+                    className="button button-primary button-wide-mobile button-sm"
+                    onClick={closeMenu}
+                  >
+                    {t("register")}
+                  </Link>
+                </li>
+                <li>
+                  <LanguageSwitch />
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </>
       </div>
     </header>
   );

@@ -4,6 +4,9 @@ import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
 import ReactGA from "react-ga";
 
+// Store
+import Store from "../src/utils/Store";
+
 // Layouts
 import LayoutDefault from "./layouts/LayoutDefault";
 
@@ -16,6 +19,8 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import Efficacy from "./views/Efficacy";
 import Certificates from "./views/certificates";
+
+import "./utils/translation";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -38,56 +43,58 @@ const App = () => {
   }, [location]);
 
   return (
-    <ScrollReveal
-      ref={childRef}
-      children={() => (
-        <Switch>
-          <AppRoute
-            exact
-            path="/login"
-            component={Login}
-            layout={LayoutDefault}
-          />
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute
-            exact
-            path="/how-it-works"
-            component={HowItWork}
-            layout={LayoutDefault}
-          />
-          <AppRoute
-            exact
-            path="/levels"
-            component={Levels}
-            layout={LayoutDefault}
-          />
-          <AppRoute
-            exact
-            path="/Plans"
-            component={Plans}
-            layout={LayoutDefault}
-          />
-          <AppRoute
-            exact
-            path="/register"
-            component={Register}
-            layout={LayoutDefault}
-          />
-          <AppRoute
-            exact
-            path="/efficacy"
-            component={Efficacy}
-            layout={LayoutDefault}
-          />
-          <AppRoute
-            exact
-            path="/certificates"
-            component={Certificates}
-            layout={LayoutDefault}
-          />
-        </Switch>
-      )}
-    />
+    <Store>
+      <ScrollReveal
+        ref={childRef}
+        children={() => (
+          <Switch>
+            <AppRoute
+              exact
+              path="/login"
+              component={Login}
+              layout={LayoutDefault}
+            />
+            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+            <AppRoute
+              exact
+              path="/how-it-works"
+              component={HowItWork}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
+              path="/levels"
+              component={Levels}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
+              path="/Plans"
+              component={Plans}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
+              path="/register"
+              component={Register}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
+              path="/efficacy"
+              component={Efficacy}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
+              path="/certificates"
+              component={Certificates}
+              layout={LayoutDefault}
+            />
+          </Switch>
+        )}
+      />
+    </Store>
   );
 };
 

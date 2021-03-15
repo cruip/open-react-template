@@ -38,6 +38,10 @@
   }
 }
 
+.container-xxs {
+  max-width: $container--width-xxs;
+}
+
 .container-flex {
   display: flex;
   justify-content: center;
@@ -57,4 +61,8 @@
 
 .levels-container {
   width: 70%;
+}
+
+.plans-text-responsive {
+  width: 50%;
 }

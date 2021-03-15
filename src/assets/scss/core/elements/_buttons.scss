@@ -1,7 +1,7 @@
 .button {
   display: inline-flex;
-  @include font-size(button);
-  @include font-weight(button);
+  // @include font-size(button);
+  // @include font-weight(button);
   padding: (
       (
           $button-form--height - get-line-height(button) -
@@ -9,7 +9,7 @@
         ) / 2
     )
     ($button--padding-h - $button-form--border-width);
-  height: $button-form--height;
+  // height: $button-form--height;
   text-decoration: none !important;
   text-transform: $button--transform;
   color: color(button-light);
@@ -81,6 +81,7 @@
     )
     ($button-sm--padding-h - $button-form--border-width);
   height: $button-form-sm--height;
+  @include font-size(button);
 }
 
 .button-dark {
@@ -125,12 +126,12 @@
 
 .button-secondary {
   color: color(button-secondary);
-  background-color: color-bg(button-secondary);
-  border-color: color-border(button-secondary);
+  background-color: transparent !important;
+  // border-color: color-border(button-secondary);
 
   &:hover {
     background-color: color-bg(button-secondary-hover);
-    border-color: color-border(button-secondary-hover);
+    // border-color: color-border(button-secondary-hover);
   }
 
   &.is-loading {
@@ -175,6 +176,10 @@
   > [class*="button"] {
     margin: $button-group-padding / 2;
   }
+}
+
+.dropdown-menu {
+  min-width: 4rem !important;
 }
 
 @include media("<=medium") {

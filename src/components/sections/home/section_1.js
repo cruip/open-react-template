@@ -22,6 +22,8 @@ const Hero = ({
   bottomDivider,
   hasBgColor,
   invertColor,
+  data,
+  t,
   ...props
 }) => {
   const [videoModalActive, setVideomodalactive] = useState(false);
@@ -52,64 +54,49 @@ const Hero = ({
   );
 
   return (
-    <section
-      {...props}
-      className={outerClasses}
-      style={
-        {
-          /*paddingTop: "10em"*/
-        }
-      }
-    >
+    <section {...props} className={outerClasses}>
       <div
-        className="text-container hero-content text-align-start"
+        className='text-container hero-content text-align-start reveal-from-bottom'
+        data-reveal-delay='200'
         style={{ fontFamily: "Din Medium" }}
       >
-        <h1 className="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
-          اللِّسَانُ العَرَبِيُّ
-        </h1>
-        <div className="container-xs">
-          <p className="m-0 mb-12 reveal-from-bottom" data-reveal-delay="400">
-            تطبيق رقمي لتعليم اللغة العربية للناطقين بغيرها.
-          </p>
-          <p className="m-0 mb-12 reveal-from-bottom" data-reveal-delay="400">
-            اتجاه حديث في تعليم العربية
-          </p>
+        <h1 className='mt-0 mb-32'>{t("home_section_1_header")}</h1>
+        <div className='container-xs'>
+          <p className='m-0 mb-12'>{t("home_section_1_content")}</p>
+          <p className='m-0 mb-12'>{t("home_section_1_content1")}</p>
           <p
-            className="mb-32 reveal-from-bottom"
-            data-reveal-delay="400"
+            className='mb-32 reveal-from-bottom'
+            data-reveal-delay='400'
             style={{ color: "#f9a61a" }}
           >
-            "وَهَذَا لِسَانٌ عَرَبِيٌّ مُّبِينٌ"
+            {t("home_section_1_content2")}
           </p>
-          <div className="reveal-from-bottom" data-reveal-delay="600">
-            <ButtonGroup>
-              <Button tag="a" color="primary" wideMobile href="#">
-                إبدأ التعلم
-              </Button>
-            </ButtonGroup>
+          <div>
+            <Button tag='a' color='primary' wideMobile href='#'>
+              {t("home_section_1_button")}
+            </Button>
           </div>
         </div>
       </div>
       <div
-        className="img-container reveal-from-bottom illustration-element-01"
-        data-reveal-value="20px"
-        data-reveal-delay="400"
+        className='img-container reveal-from-bottom illustration-element-01'
+        data-reveal-value='20px'
+        data-reveal-delay='400'
       >
         <Image
-          className="has-shadow"
+          className='has-shadow'
           src={require("../../../assets/images/student.png")}
-          alt="Hero"
+          alt='Hero'
           width={896}
           height={504}
         />
       </div>
       <Modal
-        id="video-modal"
+        id='video-modal'
         show={videoModalActive}
         handleClose={closeModal}
-        video="https://player.vimeo.com/video/174002812"
-        videoTag="iframe"
+        video='https://player.vimeo.com/video/174002812'
+        videoTag='iframe'
       />
     </section>
   );
