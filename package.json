@@ -22,7 +22,9 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
     "react-select": "^4.1.0",
-    "reactstrap": "^8.9.0"
+    "react-slick": "^0.28.1",
+    "reactstrap": "^8.9.0",
+    "slick-carousel": "^1.8.1"
   },
   "repository": {
     "type": "git",

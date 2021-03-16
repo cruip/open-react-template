@@ -18,7 +18,7 @@ import Plans from "./views/Scheme";
 import Login from "./views/Login";
 import Register from "./views/Register";
 import Efficacy from "./views/Efficacy";
-import Certificates from "./views/certificates";
+import Certificates from "./views/Certificates";
 
 import "./utils/translation";
 
@@ -50,44 +50,44 @@ const App = () => {
           <Switch>
             <AppRoute
               exact
-              path="/login"
+              path='/login'
               component={Login}
               layout={LayoutDefault}
             />
-            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+            <AppRoute exact path='/' component={Home} layout={LayoutDefault} />
             <AppRoute
               exact
-              path="/how-it-works"
+              path='/how-it-works'
               component={HowItWork}
               layout={LayoutDefault}
             />
             <AppRoute
               exact
-              path="/levels"
+              path='/levels'
               component={Levels}
               layout={LayoutDefault}
             />
             <AppRoute
               exact
-              path="/Plans"
+              path='/Plans'
               component={Plans}
               layout={LayoutDefault}
             />
             <AppRoute
               exact
-              path="/register"
+              path='/register'
               component={Register}
               layout={LayoutDefault}
             />
             <AppRoute
               exact
-              path="/efficacy"
+              path='/efficacy'
               component={Efficacy}
               layout={LayoutDefault}
             />
             <AppRoute
               exact
-              path="/certificates"
+              path='/certificates'
               component={Certificates}
               layout={LayoutDefault}
             />

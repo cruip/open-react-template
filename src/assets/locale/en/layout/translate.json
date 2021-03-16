@@ -21,6 +21,12 @@
 
         "forms_text_header_signup" : "Sign up",
         "forms_text_header_signin" : "Sign in",
-        "forms_text_content" : "Speak classical Arabic as if you were the grandson of Al-Asma’i"
-
+        "forms_text_content" : "Speak classical Arabic as if you were the grandson of Al-Asma’i",
+          
+        "footer_support" : "Support",
+        "footer_faq": "FAQs",
+        "footer_about_us": "About us",
+        "footer_contact": "Contact",
+        "footer_all_rights": "All rights reserved. ©  2021 اللِّسَانُ العَرَبِيُّ"
+    
 }

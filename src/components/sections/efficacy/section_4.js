@@ -3,7 +3,7 @@ import Button from "../../elements/Button";
 
 export default function ForthSection({ t }) {
   return (
-    <section className='section-padding-l has-bottom-divider-short fc'>
+    <section className='section-padding-l has-bottom-divider-short fl fl-ju-co-sp-be'>
       <div className='container-xs container-flex'>
         <div className='text-align-start'>
           <h1 className='mt-0 mb-32 reveal-from-bottom' data-reveal-delay='200'>
@@ -24,6 +24,9 @@ export default function ForthSection({ t }) {
             </Button>
           </div>
         </div>
+      </div>
+      <div>
+        <img src={require("../../../assets/images/efficacy_lab.png")} />
       </div>
     </section>
   );

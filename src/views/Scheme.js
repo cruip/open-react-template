@@ -9,6 +9,8 @@ import FifthSection from "../components/sections/scheme/section_5";
 import SixthSection from "../components/sections/scheme/section_6";
 import SeventhSection from "../components/sections/scheme/section_7";
 
+import Decorator from "../layouts/decorator";
+
 export default function Plans() {
   const t = useContext(TFunction);
   return (
@@ -18,6 +20,7 @@ export default function Plans() {
       <ThirdSection t={t} />
       <ForthSection t={t} />
       <FifthSection t={t} />
+      <Decorator />
       <SixthSection t={t} />
       <SeventhSection t={t} />
     </>
