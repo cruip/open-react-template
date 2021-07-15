@@ -1,0 +1,38 @@
+{
+        "header_how_it_works" : "How it works",
+        "header_levels" : "Levels",
+        "header_plans" : "The plan",
+        "header_certificates": "Certificates",
+        "header_efficacy" : "Efficacy",
+        "login": "Sign in",
+        "register" : "Sign up",
+
+        "login_login" : "Login",
+        "login_email": "Email",
+        "login_password": "Password",
+        "login_forgot_pass": "Forgot password ?",
+
+        "coming_soon_header" : "اللِّسَانُ العَرَبِيُّ",
+     
+        "coming_soon_content" : "IS UNDER CONTRUCTION",
+        
+        "coming_soon_coming-soon" : "COMING SOON !!!",
+
+        "register_register" : "Register",
+        "register_name": "First Name",
+        "register_last_name": "Last Name",
+        "register_email": "Email",
+        "register_password": "Password",
+        "register_confirm_password": "Confirm Password",
+
+        "forms_text_header_signup" : "Sign up",
+        "forms_text_header_signin" : "Sign in",
+        "forms_text_content" : "Speak classical Arabic as if you were the grandson of Al-Asma’i",
+          
+        "footer_support" : "Support",
+        "footer_faq": "FAQs",
+        "footer_about_us": "About us",
+        "footer_contact": "Contact",
+        "footer_all_rights": "All rights reserved. ©  2021 اللِّسَانُ العَرَبِيُّ"
+    
+}

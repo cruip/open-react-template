@@ -1,7 +1,7 @@
 .button {
   display: inline-flex;
-  // @include font-size(button);
-  // @include font-weight(button);
+  font-size: 100%;
+  @extend .button-box-shadow;
   padding: (
       (
           $button-form--height - get-line-height(button) -
@@ -58,8 +58,8 @@
     }
   }
 
-  &[disabled] {
-    cursor: not-allowed;
+  &.disabled {
+    cursor: unset;
     color: color(button-disabled);
     background-color: color-bg(button-disabled) !important;
     border-color: color-border(button-disabled);
@@ -100,11 +100,24 @@
     }
   }
 }
-
+.button-light-grey {
+  background-color: color-bg(button-dark-hover);
+  border-color: color-border(button-dark-hover);
+  color: white;
+}
+.button-light-green {
+  background-color: color-bg(button-primary-hover);
+  border-color: color-border(button-primary-hover);
+  color: white;
+  &:hover {
+    background-color: color-bg(button-primary-hover);
+    // border-color: color-border(button-secondary-hover);
+  }
+}
 .button-primary {
-  color: color(button-primary);
-  background-color: color-bg(button-primary);
-  border-color: color-border(button-primary);
+  color: white;
+  background-color: color-bg(button-primary) !important;
+  border-color: color-border(button-primary) !important;
 
   &-login {
     background-color: transparent;
@@ -126,7 +139,7 @@
 
 .button-secondary {
   color: color(button-secondary);
-  background-color: transparent !important;
+  background-color:button--bg(button-secondary)
   // border-color: color-border(button-secondary);
 
   &:hover {
@@ -182,6 +195,107 @@
   min-width: 4rem !important;
 }
 
+.audio-button {
+  position: relative;
+  cursor: pointer;
+}
+
+.audio-button::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 51.4%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 81px;
+  height: 81px;
+  border: 2px solid #00c6c2;
+  border-radius: 50%;
+  -webkit-animation: 1.5s ease-out pulse-once;
+  animation: 1.5s ease-out pulse-once;
+  opacity: 0;
+}
+
+.practice-button {
+  padding: 2px 25px;
+  border-radius: 30px;
+  border: 3px solid #f8c5a6;
+  margin: 12px;
+}
+
+.button-box-shadow {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
+.img-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50em;
+  padding: 0;
+}
+
+@-webkit-keyframes pulse-once {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0)
+      scale(1.2);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes pulse-once {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0)
+      scale(1.2);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2);
+    opacity: 0;
+  }
+}
+
+// Keyboard buttons
+
+.hg-button {
+  color: rgb(30, 46, 46);
+  font-size: 1.3em;
+  height: 45px;
+}
+
+.simple-keyboard.hg-layout-default .hg-button:hover {
+  background-color: #f8c5a6;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.hg-text-big {
+  // background: rgb(255, 0, 0, 0.7);
+  // color: white;
+  font-size: 35px;
+  height: 50px !important;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.hg-text-small {
+  font-size: 24px;
+}
+
 @include media("<=medium") {
   .button-wide-mobile {
     width: 100%;
@@ -197,4 +311,12 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.selected-wrong {
+  opacity: 0.5;
+}
+
+.selected-correct {
+  box-shadow: 0px 0px 5px 2px rgb(10, 169, 121);
 }

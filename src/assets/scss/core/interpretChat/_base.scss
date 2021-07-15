@@ -1,0 +1,149 @@
+//  Core
+// Inner content layout
+
+.chat-wrapper .chat-item .chat-box {
+  position: relative;
+  opacity: 1;
+  border: 0;
+  padding: 0.8333333333rem 2rem;
+  border-radius: 1.5rem;
+  //   border-top-left-radius: 1.5rem;
+  border-top-left-radius: 0.29rem;
+  max-width: 50%;
+  min-width: 100%;
+  font-size: 0.875rem;
+
+  p {
+    margin-bottom: calc(1rem / 3);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.scrollbar-container {
+  position: relative;
+  height: 100%;
+}
+
+.app-inner-content-layout {
+  display: flex;
+  flex-direction: column;
+
+  //   @include media-breakpoint-up(lg) {
+  //     flex-direction: row;
+  //   }
+
+  &-fixed {
+    bottom: 0;
+    left: 0;
+
+    // @include media-breakpoint-up(lg) {
+    //   left: $sidebar-width-collapsed;
+    // }
+
+    right: 0;
+    // top: $header-height;
+    position: absolute;
+
+    .btn-md-pane {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      //   height: $btn-pane-height;
+    }
+  }
+}
+small,
+.small {
+  font-size: 12.8px !important;
+  font-weight: 400;
+}
+
+.text-black-50 {
+  color: rgba(59, 62, 102, 0.5) !important;
+}
+.mt-2,
+.my-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.opacity-5 {
+  opacity: 0.5 !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.chat-item-reverse {
+  .chat-box {
+    border-top-left-radius: 1.5rem !important;
+    border-top-right-radius: 0.29rem !important;
+  }
+
+  .avatar-icon-wrapper {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+  }
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+.mb-2,
+.my-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.align-box-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.text-second {
+  color: #070919 !important;
+}
+
+.bg-gray-400 {
+  background: #e6e7f1 !important;
+}
+
+.avatar-icon-wrapper {
+  display: inline-block;
+  margin-right: 0.25rem;
+  position: relative;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.avatar-icon-lg {
+  font-size: 1.2rem;
+}
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.avatar-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  border-radius: 50% !important;
+  overflow: hidden;
+}

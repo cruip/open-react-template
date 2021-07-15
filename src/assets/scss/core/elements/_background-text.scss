@@ -1,0 +1,18 @@
+.text-background {
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.text-background-green {
+  @extend .text-background;
+  background-color: #def7eb;
+  color: #2abb69;
+}
+
+.text-background-blue {
+  @extend .text-background;
+  background-color: #dff0ff;
+  color: #389fff;
+}

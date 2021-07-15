@@ -1,0 +1,25 @@
+{
+
+"sidebar.dashboard.listing": "Group classes",
+"sidebar.course": "Course",
+"sidebar.group-classes": "Group classes",
+"sidebar.profile": "Profile",
+"sidebar.need-help": "Need help",
+"sidebar.log-out": "Log out",
+"main.header.change-level": "Change level",
+"certificate-level.beginner": "A1. Beginner",
+"certificate-level.lower-intermediate": "A2. Lower Intermediate",
+"certificate-level.intermediate": "B1. Intermediate",
+"certificate-level.upper-intermediate": "B2. Upper Intermediate",
+"certificate-level.advanced": "B2-C1. Advanced",
+"certificate-level.bussiness": "C1. Business",
+"course.welcome": "Welcome",
+"course.certificate-level.beginner": "These are the first course units. Once you've completed them, you will have passed this level and will know how to introduce yourself, understand short sentences and communicate at a basic level.",
+"course.certificate-level.lower-intermediate": "In this level you'll learn how to communicate using simple sentences about topics relating to your interests, hobbies, work, family, etc.",
+"course.certificate-level.intermediate": "When you pass this level you'll be able to communicate in any English-speaking country as you'll learn essential expressions and vocabulary: transport, food, leisure, etc.",
+"course.certificate-level.upper-intermediate": "When you pass this level, you'll be able to communicate fluently with native speakers and will understand texts with complex ideas. It's a nice goal to have, right? Let's go for it!",
+"course.certificate-level.advanced": "When you complete this level, you'll have well-structured oral and written skills. You'll be able to communicate well in social, academic, and professional settings.",
+"course.certificate-level.bussiness": "When you complete this level, you'll understand everything you read and hear. You'll be able to communicate in a precise, spontaneous and fluent manner, and in any situation.",
+"course.level-certificate-text": "Level Certificate",
+"course.progress-text" : "Your course progress"
+}

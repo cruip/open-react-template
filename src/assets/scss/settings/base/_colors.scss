@@ -3,14 +3,17 @@
 // The color palette
 $palette: (
   light: (
-    1: #eceded,
-    2: #9ca9b3,
-    3: #717d86,
+    1: #f7f7f7,
+    2: #eceded,
+    3: #b3b7ba,
+    4: #f2f5f8,
+    5: #969697,
   ),
   dark: (
     1: #151719,
     2: #25282c,
     3: #33363a,
+    4: #21212114,
   ),
   primary: (
     1: #54ae6f,
@@ -34,8 +37,9 @@ $palette: (
 
 // Base typography: color
 $color: (
-  heading: get-color(light, 1),
-  base: get-color(light, 2),
+  heading: get-color(dark, 1),
+  base: get-color(light, 4),
+  base-text: get-color(light, 5),
   high-contrast: get-color(light, 1),
   mid-contrast: get-color(light, 2),
   low-contrast: get-color(light, 3),
@@ -54,7 +58,7 @@ $color: (
 
 // Borders and dividers: color
 $border--color: (
-  divider: get-color(dark, 2),
+  divider: get-color(dark, 4),
   divider-inverse: get-color(light, 1),
 );
 
@@ -81,12 +85,12 @@ $icon--color: (
   // accordion icon
   social-inverse: null,
   // social icons
-  social-hover-inverse: null // social icons (:hover),,
+  social-hover-inverse: null // social icons (:hover),,,,,,,,,,,,,,,,,
 );
 
 // Misc elements: background color
 $bg--color: (
-  body: get-color(dark, 1),
+  body: get-color(light, 4),
   body-shadow: 0 20px 48px rgba(get-color(dark, 1), 0.8),
   // body shadow when a boxed layout is used (set to null if don't want a shadow)
   body-outer: lighten(get-color(dark, 1), 2%),

@@ -18,7 +18,6 @@ nav {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 figcaption,
@@ -43,12 +42,12 @@ pre {
 }
 
 a {
-  background-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: white !important;
+  color: black;
 }
 
 abbr[title] {
@@ -121,7 +120,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-button,
 input,
 optgroup,
 select,
@@ -130,6 +128,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  border-radius: 4px !important;
 }
 
 button,

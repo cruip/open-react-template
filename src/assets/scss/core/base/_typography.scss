@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  color: color(base);
+  color: color(base-text);
   font-size: 1rem;
 }
 
@@ -13,6 +13,10 @@ input,
 select,
 textarea {
   @include font-weight(base);
+}
+
+.h1-white {
+  color: white !important;
 }
 
 h1,
@@ -27,10 +31,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-  @include font-family(heading);
+  // @include font-family(heading);
   // @include font-weight(heading);
   clear: both;
-  color: color(heading);
+  color: white;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -102,37 +106,36 @@ a {
   }
 }
 
-h1,
-.h1 {
-  margin-top: $spacing--h1-t;
-  margin-bottom: $spacing--h1-b;
-}
+// h1,
+// .h1 {
+//   margin-top: $spacing--h1-t;
+//   margin-bottom: $spacing--h1-b;
+// }
 
-h2,
-.h2 {
-  margin-top: $spacing--h2-t;
-  margin-bottom: $spacing--h2-b;
-}
+// h2,
+// .h2 {
+//   margin-top: $spacing--h2-t;
+//   margin-bottom: $spacing--h2-b;
+// }
 
-h3,
-.h3 {
-  margin-top: $spacing--h3-t;
-  margin-bottom: $spacing--h3-b;
-}
+// h3,
+// .h3 {
+//   margin-top: $spacing--h3-t;
+//   margin-bottom: $spacing--h3-b;
+// }
 
-h4,
-h5,
-h6,
-.h4,
-.h5,
-.h6 {
-  margin-top: $spacing--hx-t;
-  margin-bottom: $spacing--hx-b;
-}
+// h4,
+// h5,
+// h6,
+// .h4,
+// .h5,
+// .h6 {
+//   margin-top: $spacing--hx-t;
+//   margin-bottom: $spacing--hx-b;
+// }
 
 p {
-  margin-top: 0;
-  margin-bottom: $spacing--shared-v;
+  margin: 0;
   font-family: "Tajawal Light";
 }
 
@@ -171,22 +174,6 @@ address {
 }
 
 pre,
-pre h1,
-pre h2,
-pre h3,
-pre h4,
-pre h5,
-pre h6,
-pre .h1,
-pre .h2,
-pre .h3,
-pre .h4,
-pre .h5,
-pre .h6 {
-  @include font-family(pre);
-}
-
-pre,
 code,
 kbd,
 tt,
@@ -207,7 +194,6 @@ code,
 kbd,
 tt,
 var {
-  @include font-family(code);
   @include font-size(code);
   padding: $spacing--code-v $spacing--code-h;
 }
@@ -256,7 +242,7 @@ strong {
   .h4,
   .h5,
   .h6 {
-    color: color(heading-inverse);
+    color: white;
   }
 
   address {

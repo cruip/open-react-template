@@ -1,0 +1,106 @@
+.coming-soon {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.line {
+  width: 2em;
+  height: 3px;
+  background-color: #25282c;
+  display: inline-block;
+}
+
+.loading-bar {
+  margin: auto;
+  height: 10px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading-bar span {
+  width: 18%;
+  height: 10px;
+}
+
+.loading-bar span:nth-child(-n + 2) {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+    0px 0px 20px rgba(117, 182, 214, 0.5);
+}
+
+.loading-bar span:nth-child(n + 3) {
+  box-shadow: inset 0px 0px 10px 1px rgba(117, 182, 255, 0.4),
+    0px 0px 20px rgba(117, 182, 255, 0.1);
+}
+
+.loading-bar span:nth-child(2) {
+  animation: pulse 1s alternate infinite;
+  -webkit-animation: pulse 1s alternate infinite;
+  -moz-animation: pulse 1s alternate infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+      0px 0px 40px 2px rgba(105, 135, 255, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+      0px 0px 30px 2px rgba(105, 135, 255, 0.3);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+      0px 0px 40px 2px rgba(105, 135, 255, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+      0px 0px 30px 2px rgba(105, 135, 255, 0.3);
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+      0px 0px 40px 2px rgba(105, 135, 255, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: inset 0px 0px 10px 2px rgba(117, 182, 255, 0.5),
+      0px 0px 30px 2px rgba(105, 135, 255, 0.3);
+  }
+}
+
+@include media("<600px") {
+  .loading-bar li {
+    width: 50px;
+    height: 7px;
+  }
+}
+
+@include media("<500px") {
+  .loading-bar {
+    width: 400px;
+  }
+  .coming-soon {
+    font-size: 25px;
+  }
+}
+
+@include media("<420px") {
+  .loading-bar {
+    width: 96vw;
+  }
+  .coming-soon {
+    font-size: 25px;
+  }
+}

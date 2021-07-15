@@ -1,3 +1,13 @@
+.txt-al-ce {
+  text-align: center;
+}
+.txt-al-st {
+  text-align: start;
+}
+.txt-al-en {
+  text-align: end;
+}
+
 .text-align-center {
   text-align: center;
 }
@@ -12,4 +22,12 @@
   .text-container {
     width: 90% !important;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white !important;
 }

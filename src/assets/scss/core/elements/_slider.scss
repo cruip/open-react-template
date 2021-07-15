@@ -1,0 +1,18 @@
+.slick-slide {
+  text-align: center;
+  padding: 18px;
+  display: flex !important;
+  height: auto !important;
+  align-items: center; //optional
+  justify-content: center; //optiona
+}
+
+.slick-slide > div,
+.slick-slide > div > div {
+  height: 100%;
+  width: 100%;
+}
+
+.slick-track {
+  display: flex !important;
+}

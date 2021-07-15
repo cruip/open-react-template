@@ -1,0 +1,10 @@
+.main-content {
+  min-height: calc(100vh); // 134px
+  padding: 10px 65px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.wrapper {
+  flex: 1;
+  min-height: 100vh;
+}

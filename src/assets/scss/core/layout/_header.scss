@@ -1,8 +1,18 @@
 .site-header {
-  position: absolute !important;
+  position: relative;
   width: 100%;
   z-index: 10 !important;
+  background-color: white;
 
+  // min-height: 64px;
+
+  padding: 13px 36px;
+  // width: calc(100% - 304px);
+  // margin-left: auto;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  height: 114px;
   + .site-content {
     padding-top: $header-height__mobile;
   }
@@ -10,6 +20,23 @@
   // .brand {
   //   margin-right: $header-nav--padding-h;
   // }
+}
+
+.site-header-landing {
+  position: relative;
+  width: 100%;
+  z-index: 10 !important;
+
+  // min-height: 64px;
+
+  padding: 13px 36px;
+  // width: calc(100% - 304px);
+  // margin-left: auto;
+  transition: all 0.3s ease;
+  height: 114px;
+  + .site-content {
+    padding-top: $header-height__mobile;
+  }
 }
 
 .site-header-inner {

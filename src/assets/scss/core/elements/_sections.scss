@@ -11,9 +11,7 @@
     justify-content: center;
     align-items: center;
   }
-  .text-container {
-    margin-bottom: 4em;
-  }
+
   .img-container {
     width: 80%;
   }
@@ -43,16 +41,7 @@
   .reverse {
     flex-direction: column-reverse;
   }
-  .img-container {
-    width: 95%;
-  }
-  .item-mb {
-    margin-bottom: 32px;
-  }
-  .brand img {
-    width: 54px;
-    height: 54px;
-  }
+
   .image-disable {
     display: none;
   }
