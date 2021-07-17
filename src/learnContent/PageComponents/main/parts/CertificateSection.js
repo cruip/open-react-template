@@ -5,8 +5,6 @@ import IntlMessages from "../../../elements/IntlMessages";
 import Image from "../../../elements/Image";
 
 const UnitsSection = ({ units, userName }) => {
-  const [unitsData, setUnitsData] = useState([]);
-
   return (
     <>
       <div className='card mb-12 p-16 pb-32' style={{ width: "100%" }}>
@@ -74,17 +72,26 @@ const UnitsSection = ({ units, userName }) => {
                         <div className='fl mb-12'>
                           {progress &&
                             progress.map((exercise, index) => (
-                              <div key={index}>
-                                <Image
-                                  type='icon'
-                                  className='mr-8'
-                                  image={
-                                    exercise.finished
-                                      ? "checked_icon.svg"
-                                      : "unchecked_icon.svg"
-                                  }
-                                  width={18}
-                                />
+                              <div className='fl-ce' key={index}>
+                                {exercise.blocked ? (
+                                  <Image
+                                    type='icon'
+                                    style={{ marginBottom: 2 }}
+                                    image='padlock_icon.svg'
+                                    width={18}
+                                  />
+                                ) : (
+                                  <Image
+                                    type='icon'
+                                    className='mr-8'
+                                    image={
+                                      exercise.finished
+                                        ? "checked_icon.svg"
+                                        : "unchecked_icon.svg"
+                                    }
+                                    width={18}
+                                  />
+                                )}
                               </div>
                             ))}
                         </div>

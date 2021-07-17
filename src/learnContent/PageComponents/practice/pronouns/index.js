@@ -6,7 +6,9 @@ import PronounsPractice from "./MainComponent";
 import { fetchData } from "../../../reducers/PracticeState";
 
 const PronounsComponent = ({ fetchData, progress }) => {
-  useEffect(() => fetchData("pronouns"), []);
+  useEffect(() => {
+    fetchData("pronouns");
+  }, []);
   return (
     <>
       <PracticeHeader

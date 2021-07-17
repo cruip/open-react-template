@@ -23,8 +23,6 @@ const PracticeSection = ({
   const [currentAudio, setCurrentAudio] = useState();
   const [text, setText] = useState("");
 
-  console.log(practiceData);
-
   useEffect(() => {
     if (repeat) {
       setRepeat(false);
@@ -39,8 +37,7 @@ const PracticeSection = ({
       setPracticeFinished(true);
       return;
     }
-
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
     setCurrentAudio(practiceData[count].audio);
     setText(practiceData[count].text);
   }, [practiceData, count]);

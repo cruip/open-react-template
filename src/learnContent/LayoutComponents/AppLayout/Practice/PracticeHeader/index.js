@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Line } from "rc-progress";
-import { useRouter } from "next/router";
+import { useHistory } from "react-router-dom";
 import Image from "../../../../elements/Image";
 // import {
 //   DataToProgressContext,
@@ -16,6 +16,7 @@ const PracticeHeader = ({ title, description, progress }) => {
   // const [dataToProgress] = useContext(DataToProgressContext);
 
   const [unitID, setUnitID] = useState("");
+  const history = useHistory();
 
   useEffect(() => {
     setUnitID(window.location.pathname.split("/")[2]);
@@ -25,21 +26,25 @@ const PracticeHeader = ({ title, description, progress }) => {
     <section className='fl fl-ce p-32'>
       <div style={{ width: "43em" }}>
         <div className='fl fl-co'>
-          <div style={{ position: "relative" }}>
-            <a href={"/unit/" + unitID}>
-              <Image
-                type='icon'
-                image='left_icon.svg'
-                alt='arrow icon'
-                width={30}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  left: "-70px",
-                }}
-              />
-            </a>
+          <div
+            style={{ position: "relative" }}
+            onClick={() => {
+              history.push("/unit/" + unitID);
+            }}
+          >
+            <Image
+              type='icon'
+              image='left_icon.svg'
+              alt='arrow icon'
+              width={30}
+              style={{
+                position: "absolute",
+                top: "50%",
+                transform: "translateY(-50%)",
+                left: "-70px",
+              }}
+            />
+
             <h3 style={{ margin: 0, color: "black" }}>{title}</h3>
           </div>
           <p className='mb-16' style={{ color: "grey" }}>

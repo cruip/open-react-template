@@ -30,18 +30,25 @@ export const fetchData = (type) => {
         });
         setTimeout(() => dispatch(setLoading(false)), 300);
       })
-      .catch((err) =>
-        dispatch({ type: SET_ERROR, msg: "Unable to fetch data" })
+      .catch(
+        (err) => console.log(err)
+        // dispatch({ type: SET_ERROR, msg: "Unable to fetch data" })
       );
   };
 };
 
 export const SET_PROGRESS = "PRACTICE_STATE/SET_PROGRESS";
 
-export const setProgress = (progress) => ({
-  type: SET_PROGRESS,
-  progress,
-});
+export const setProgress = (count) => {
+  return (dispatch, getState) => {
+    const practiceData = getState().PracticeState.practiceData;
+    const progress = ((95 / practiceData.length) * count * 1.4).toFixed(2);
+
+    console.log(progress);
+
+    dispatch({ type: SET_PROGRESS, progress });
+  };
+};
 
 export const SET_PRACTICE_FINISHED = "PRACTICE_STATE/SET_PRACTICE_FINISHED";
 

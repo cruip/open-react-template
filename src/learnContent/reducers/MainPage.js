@@ -46,9 +46,21 @@ export const fetchData = () => {
           type: SET_NUMBER_UNITS,
           nrUnits: json.data.units.length,
         });
+
+        const unitsComplete = json.data.units
+          .map((unit) => {
+            return unit.completed;
+          })
+          .filter((item) => item === true);
+
+        const certificateProgress =
+          unitsComplete.length !== 0
+            ? ((100 / json.data.units.length) * unitsComplete.length).toFixed()
+            : 3;
+
         dispatch({
           type: SET_CERTIFICATE_PROGRESS,
-          certificateProgress: 12,
+          certificateProgress,
         });
         setTimeout(() => dispatch(setLoading(false)), 300);
       })
@@ -67,7 +79,7 @@ export default function reducer(
     units: null,
 
     // Certificate Progress
-    certificateProgress: 0,
+    certificateProgress: 2,
 
     // Loading Data
     loading: false,

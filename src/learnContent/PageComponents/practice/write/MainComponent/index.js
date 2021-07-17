@@ -26,7 +26,7 @@ const PracticeWrite = ({ practiceData }) => {
       setPracticeFinished(true);
       return;
     }
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
     setCurrentAudio(practiceData[count].audio);
   }, [practiceData, count]);
 

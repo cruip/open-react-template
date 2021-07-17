@@ -27,7 +27,7 @@ const PracticePronous = ({
       return;
     }
 
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
     setSentence(practiceData[count].text);
     setAnswer1(practiceData[count].answer[0].content);
     setAnswer2(practiceData[count].answer[1].content);

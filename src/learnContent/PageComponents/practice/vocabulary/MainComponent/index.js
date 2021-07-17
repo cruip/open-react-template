@@ -38,7 +38,7 @@ const PracticeVocabulary = ({
     setButton1("undefined");
     setButton2("undefined");
     setButton3("undefined");
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
     setImage(practiceData[count].image);
     setAudio(new Audio(practiceData[count].audio));
   }, [practiceData, count]);

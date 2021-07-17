@@ -13,6 +13,8 @@ const Unit = (props) => {
     unitData,
     extraActivityData,
     attachedExercise,
+    history,
+    location,
   } = props;
 
   const [unitID, setUnitID] = useState("");
@@ -51,9 +53,16 @@ const Unit = (props) => {
         }}
       >
         <div className='mb-32'>
-          {unitData.map(({ link, title, content, icon, finished }, index) => (
-            <a key={index} href={`/unit/${unitID}/practice` + link}>
-              <div className='mb-32'>
+          {unitData.map(
+            ({ link, title, content, icon, finished, blocked }, index) => (
+              <div
+                key={"unit " + index + 1}
+                className='mb-32'
+                style={{ opacity: (blocked && 0.6) || 1 }}
+                onClick={() => {
+                  if (!blocked) history.push(`/unit/${unitID}/practice` + link);
+                }}
+              >
                 <div className='card-transparent fl fl-al-it-ce fl-ju-co-sp-be practise-card-item'>
                   <div className='fl fl-al-it-ce'>
                     <Image
@@ -70,18 +79,22 @@ const Unit = (props) => {
                     </div>
                   </div>
                   <div>
-                    <Image
-                      type='icon'
-                      image={
-                        finished ? "checked_icon.svg" : "unchecked_icon.svg"
-                      }
-                      width={25}
-                    />
+                    {blocked ? (
+                      <Image type='icon' image='padlock_icon.svg' width={25} />
+                    ) : (
+                      <Image
+                        type='icon'
+                        image={
+                          finished ? "checked_icon.svg" : "unchecked_icon.svg"
+                        }
+                        width={25}
+                      />
+                    )}
                   </div>
                 </div>
               </div>
-            </a>
-          ))}
+            )
+          )}
         </div>
         <div
           className='pt-32 fl-co-ce'

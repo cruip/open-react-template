@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import { IconButton, Popover, useTheme } from "@material-ui/core";
 import Image from "../../../elements/Image";
 import { setLocale } from "../../../reducers/GlobalState";
+import { setLoading } from "../../../../appReducers/GlobalAppState";
 
-const Languages = ({ setLocale }) => {
+const Languages = ({ setLocale, setLoading }) => {
   // const [, updateLocale] = useContext(CurrentLanguageContext);
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -53,6 +54,7 @@ const Languages = ({ setLocale }) => {
                   locale: "ar",
                   name: "Arabic",
                 });
+                setLoading(true);
               }}
             >
               Arabic
@@ -69,6 +71,7 @@ const Languages = ({ setLocale }) => {
                   locale: "en",
                   name: "English",
                 });
+                setLoading(true);
               }}
             >
               English
@@ -84,8 +87,4 @@ const mapState = (state) => ({
   nrUnits: state.GlobalState.nrUnits,
 });
 
-const mapDis = (dispatch) => ({
-  setLocale: (enable) => dispatch(setLocale(enable)),
-});
-
-export default connect(mapState, mapDis)(Languages);
+export default connect(mapState, { setLocale, setLoading })(Languages);

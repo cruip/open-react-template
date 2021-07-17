@@ -32,8 +32,7 @@ const PracticeInterrogativeForm = ({
       setPracticeFinished(true);
       return;
     }
-
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
     setchoice1(practiceData[count].answer[0].content);
     setchoice2(practiceData[count].answer[1].content);
     setchoice3(practiceData[count].answer[2].content);

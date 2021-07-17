@@ -33,7 +33,7 @@ function PracticeMemorize({ practiceData, setProgress, setPracticeFinished }) {
       return;
     }
 
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
     setCurrentAudio(practiceData[count].audio);
     setText(practiceData[count].text);
   }, [practiceData, count]);

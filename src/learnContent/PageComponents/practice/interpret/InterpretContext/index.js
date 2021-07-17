@@ -61,7 +61,7 @@ function InterpretContext({
       return;
     }
 
-    setProgress(Math.floor(95 / (practiceData.length - count)));
+    count !== 0 && setProgress(count);
 
     setCount((prev) => prev + 1);
     setDataToShow((prev) => [...prev, practiceData[count]]);

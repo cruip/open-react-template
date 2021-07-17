@@ -5,7 +5,7 @@ import PracticeSpeak from "./MainComponent";
 
 import { fetchData } from "../../../reducers/PracticeState";
 
-function SpeakComponent({ fetchData, progress }) {
+function SpeakComponent({ fetchData, progress, location }) {
   useEffect(() => {
     fetchData("speak");
   }, []);
