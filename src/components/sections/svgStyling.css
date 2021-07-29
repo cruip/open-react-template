@@ -1,0 +1,4 @@
+.filter-white {
+  filter: invert(100%) sepia(14%) saturate(7440%) hue-rotate(210deg)
+    brightness(114%) contrast(115%);
+}
