@@ -35,3 +35,26 @@ $lesson-left-spacer: 35px;
     color: #878787;
   }
 }
+
+.hint::before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  border-top-color: transparent;
+  border-top-width: medium;
+  border-right-color: transparent;
+  border-right-width: medium;
+  border-bottom-color: transparent;
+  border-bottom-width: medium;
+  border-left-color: transparent;
+  border-left-width: medium;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(229, 232, 235, 0) white rgba(229, 232, 235, 0)
+    rgba(229, 232, 235, 0);
+  border-width: 8px;
+  margin-top: -7px;
+}

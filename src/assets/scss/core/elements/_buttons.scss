@@ -102,18 +102,27 @@
 }
 .button-light-grey {
   background-color: color-bg(button-dark-hover);
-  border-color: color-border(button-dark-hover);
   color: white;
 }
 .button-light-green {
   background-color: color-bg(button-primary-hover);
-  border-color: color-border(button-primary-hover);
   color: white;
   &:hover {
     background-color: color-bg(button-primary-hover);
     // border-color: color-border(button-secondary-hover);
   }
 }
+
+.button-light-red {
+  background-color: #ff6161;
+  border-color: #ff6161;
+  color: white;
+  &:hover {
+    background-color: #ff6161;
+    // border-color: color-border(button-secondary-hover);
+  }
+}
+
 .button-primary {
   color: white;
   background-color: color-bg(button-primary) !important;

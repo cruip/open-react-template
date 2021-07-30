@@ -13,10 +13,10 @@ import ReactGA from "react-ga";
 // Loading
 import PageLoader from "./globalUtils/PageLoader";
 
-import WWWContent from "./wwwContent";
-import LearnContent from "./learnContent";
+import Landing from "./landing";
+import Academy from "./academy";
 
-// import "./wwwContent/utils/translation";
+// import "./Landing/utils/translation";
 
 // Initialize Google Analytics
 // ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -36,12 +36,12 @@ const App = ({ auth, loading }) => {
           www: (
             <>
               {loading && <PageLoader />}
-              <WWWContent />
+              <Landing />
             </>
           ),
           learn: (
             <>
-              {loading && <PageLoader />} <LearnContent />
+              {loading && <PageLoader />} <Academy />
             </>
           ),
         }[subdomain]
