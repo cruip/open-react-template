@@ -26,7 +26,7 @@ const Unit = (props) => {
   useEffect(() => {
     const unitOnURL = window.location.pathname.split("/")[2];
     setUnitID(unitOnURL);
-    fetchUnitData();
+    // fetchUnitData();
   }, []);
 
   return (

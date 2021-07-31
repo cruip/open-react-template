@@ -109,7 +109,7 @@ const UnitsSection = ({ units, userName }) => {
 
 const mapState = (state) => ({
   units: state.MainPage.units,
-  userName: state.UserData.userName,
+  userName: state.DataGenerator.userName,
 });
 
 export default connect(mapState)(UnitsSection);

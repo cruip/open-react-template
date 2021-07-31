@@ -2,7 +2,7 @@ import GlobalState from "./GlobalState";
 import UnitData from "./UnitData";
 import PracticeState from "./PracticeState";
 import MainPage from "./MainPage";
-import UserData from "./UserData";
+import DataGenerator from "./DataGenerator";
 import Profile from "./Profile";
 
 export default {
@@ -10,6 +10,6 @@ export default {
   UnitData,
   PracticeState,
   MainPage,
-  UserData,
+  DataGenerator,
   Profile,
 };

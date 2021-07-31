@@ -29,17 +29,12 @@ export const setNrUnits = (nrUnits) => ({
 
 export const SET_ERROR = "MAIN_PAGE/SET_ERROR";
 
-export const fetchData = () => {
-  return (dispatch, getState) => {
-    const level = getState().GlobalState.level;
-    const locale = getState().GlobalState.locale;
-
+export const fetchData = (level, locale) => {
+  return (dispatch) => {
     axios
-      .get(
-        config.api_url +
-          `api/certificate/units?lvl=${level}&lg=${locale.locale}`,
-        { withCredentials: true }
-      )
+      .get(config.api_url + `api/certificate/units?lvl=${level}&lg=${locale}`, {
+        withCredentials: true,
+      })
       .then((json) => {
         dispatch({ type: SET_UNITS, units: json.data.units });
         dispatch({
@@ -62,6 +57,7 @@ export const fetchData = () => {
           type: SET_CERTIFICATE_PROGRESS,
           certificateProgress,
         });
+
         setTimeout(() => dispatch(setLoading(false)), 300);
       })
       .catch((err) => console.log(err));

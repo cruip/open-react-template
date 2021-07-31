@@ -7,13 +7,7 @@ import PracticeSection from "./PracticeSection";
 import ActionComponent from "./ActionComponent";
 import MainComponent from "./MainComponent";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-function InterpretComponent({ fetchData, progress }) {
-  useEffect(() => {
-    fetchData("interpret");
-  }, []);
-
+function InterpretComponent({ progress }) {
   return (
     <InterpretContext>
       <PracticeHeader
@@ -33,4 +27,4 @@ const mapState = (state) => ({
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(InterpretComponent);
+export default connect(mapState)(InterpretComponent);

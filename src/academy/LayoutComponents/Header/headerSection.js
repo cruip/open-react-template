@@ -8,9 +8,7 @@ export default function HeaderSection() {
       <div className='site-header fl fl-al-it-ce fl-ju-co-sp-be'>
         <div></div>
         <Levels />
-        <div>
-          <Languages />
-        </div>
+        <div>{/* <Languages />*/}</div>
       </div>
     </>
   );

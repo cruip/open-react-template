@@ -7,17 +7,13 @@ import config from "../../app.config.json";
 import { setLoading } from "../../appReducers/GlobalAppState";
 
 // Fetch data
-export const fetchUnitData = () => {
+export const fetchUnitData = (level, locale) => {
   return (dispatch, getState) => {
     const unitOnURL = window.location.pathname.split("/")[2];
 
-    const level = getState().GlobalState.level;
-    const locale = getState().GlobalState.locale;
-
     return axios
       .get(
-        config.api_url +
-          `api/lvl/unit?un=${level}_${unitOnURL}&lg=${locale.locale}`,
+        config.api_url + `api/lvl/unit?un=${level}_${unitOnURL}&lg=${locale}`,
         { withCredentials: true }
       )
       .then((json) => {

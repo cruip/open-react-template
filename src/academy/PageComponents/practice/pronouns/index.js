@@ -3,12 +3,7 @@ import { connect } from "react-redux";
 import PracticeHeader from "../../../LayoutComponents/AppLayout/Practice/PracticeHeader";
 import PronounsPractice from "./MainComponent";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-const PronounsComponent = ({ fetchData, progress }) => {
-  useEffect(() => {
-    fetchData("pronouns");
-  }, []);
+const PronounsComponent = ({ progress }) => {
   return (
     <>
       <PracticeHeader
@@ -26,4 +21,4 @@ const mapState = (state) => ({
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(PronounsComponent);
+export default connect(mapState)(PronounsComponent);

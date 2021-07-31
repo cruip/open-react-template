@@ -3,13 +3,7 @@ import { connect } from "react-redux";
 import PracticeHeader from "../../../LayoutComponents/AppLayout/Practice/PracticeHeader";
 import PracticeSpeak from "./MainComponent";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-function SpeakComponent({ fetchData, progress }) {
-  useEffect(() => {
-    fetchData("speak");
-  }, []);
-
+function SpeakComponent({ progress }) {
   return (
     <>
       <PracticeHeader
@@ -26,4 +20,4 @@ const mapState = (state) => ({
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(SpeakComponent);
+export default connect(mapState)(SpeakComponent);

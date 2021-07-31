@@ -4,13 +4,7 @@ import { connect } from "react-redux";
 import PracticeHeader from "../../../LayoutComponents/AppLayout/Practice/PracticeHeader";
 import PracticeVocabulary from "./MainComponent";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-const VocabularyComponent = ({ fetchData, progress }) => {
-  useEffect(() => {
-    fetchData("vocabulary");
-  }, []);
-
+const VocabularyComponent = ({ fetchPracticeData, progress }) => {
   return (
     <>
       <PracticeHeader
@@ -27,4 +21,4 @@ const mapState = (state) => ({
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(VocabularyComponent);
+export default connect(mapState)(VocabularyComponent);

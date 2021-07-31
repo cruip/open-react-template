@@ -41,7 +41,8 @@ const App = ({ auth, loading }) => {
           ),
           learn: (
             <>
-              {loading && <PageLoader />} <Academy />
+              {/* {loading && <PageLoader />} */}
+              <Academy />
             </>
           ),
         }[subdomain]

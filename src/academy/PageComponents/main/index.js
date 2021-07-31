@@ -8,14 +8,15 @@ import { fetchData } from "../../reducers/MainPage";
 import { setLoading } from "../../../appReducers/GlobalAppState";
 
 const Home = (props) => {
-  const { level, locale, fetchData, setLoading, units } = props;
+  const { level, locale, fetchData, setLoading, units, loading } = props;
 
   // useEffect(() => {
   //   units && setLoading(false);
   // }, [units]);
 
   useEffect(() => {
-    fetchData();
+    // console.log(loading);
+    // fetchData();
   }, [level, locale]);
 
   return (
@@ -29,6 +30,7 @@ const Home = (props) => {
 };
 
 const mapState = (state) => ({
+  loading: state.GlobalAppState.loading,
   locale: state.GlobalState.locale,
   level: state.GlobalState.level,
   units: state.MainPage.units,

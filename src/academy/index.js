@@ -28,22 +28,11 @@ import AssessmentComponent from "./PageComponents/practice/assesment";
 import Profile from "./PageComponents/profile/information";
 import Logout from "./PageComponents/logout";
 
-import { fetchUserData } from "./reducers/UserData";
+import DataLoader from "./DataLoader";
 
-import refreshToken from "./globals/RefreshToken";
-import SignupPopup from "./globals/SignupPopup";
-
-const Academy = ({ fetchUserData }) => {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    refreshToken();
-    fetchUserData();
-    setReady(true);
-  }, []);
-
+const Academy = () => {
   return (
-    ready && (
+    <DataLoader>
       <LanguageProvider>
         <div className='fl'>
           <Switch>
@@ -64,25 +53,25 @@ const Academy = ({ fetchUserData }) => {
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/speak'
+              path='/unit/:id/practice/speak'
               component={SpeakComponent}
               layout={PracticeLayout}
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/write'
+              path='/unit/:id/practice/write'
               component={WriteComponent}
               layout={PracticeLayout}
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/interpret'
+              path='/unit/:id/practice/interpret'
               component={InterpretComponent}
               layout={PracticeLayout}
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/memorize'
+              path='/unit/:id/practice/memorize'
               component={MemorizeComponent}
               layout={PracticeLayout}
             />
@@ -94,19 +83,19 @@ const Academy = ({ fetchUserData }) => {
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/vocabulary'
+              path='/unit/:id/practice/vocabulary'
               component={VocabularyComponent}
               layout={PracticeLayout}
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/interrogative-form'
+              path='/unit/:id/practice/interrogative-form'
               component={InterrogativeFormComponent}
               layout={PracticeLayout}
             />
             <AppRoute
               exact
-              path='/unit/:id/:type/pronouns'
+              path='/unit/:id/practice/pronouns'
               component={PronounsComponent}
               layout={PracticeLayout}
             />
@@ -130,8 +119,8 @@ const Academy = ({ fetchUserData }) => {
           </Switch>
         </div>
       </LanguageProvider>
-    )
+    </DataLoader>
   );
 };
 
-export default connect(null, { fetchUserData })(Academy);
+export default Academy;

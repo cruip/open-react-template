@@ -5,13 +5,7 @@ import WriteContext from "./WriteContext";
 import PracticeWrite from "./MainComponent";
 import Keyboard from "./Keyboard";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-const WriteComponent = ({ fetchData, progress }) => {
-  useEffect(() => {
-    fetchData("write");
-  }, []);
-
+const WriteComponent = ({ progress }) => {
   return (
     <>
       <WriteContext>
@@ -32,4 +26,4 @@ const mapState = (state) => ({
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(WriteComponent);
+export default connect(mapState)(WriteComponent);

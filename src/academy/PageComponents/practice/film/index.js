@@ -5,23 +5,17 @@ import "plyr-react/dist/plyr.css";
 import PracticeHeader from "../../../LayoutComponents/AppLayout/Practice/PracticeHeader";
 
 import { setLoading } from "../../../../appReducers/GlobalAppState";
-import {
-  fetchData,
-  setPracticeFinished,
-} from "../../../reducers/PracticeState";
+import { setPracticeFinished } from "../../../reducers/PracticeState";
 
-const FilmComponent = ({ setPracticeFinished, fetchData, practiceData }) => {
+const FilmComponent = ({ setPracticeFinished, practiceData }) => {
   const ref = useRef();
+
   useEffect(() => {
     ref.current &&
       ref.current.plyr.on("ended", () => {
         setPracticeFinished(true);
       });
   }, [ref.current]);
-
-  useEffect(() => {
-    fetchData("film");
-  }, []);
 
   const [videoSrc, setVideoSrc] = useState({});
 
@@ -60,5 +54,4 @@ const mapState = (state) => ({
 export default connect(mapState, {
   setLoading,
   setPracticeFinished,
-  fetchData,
 })(FilmComponent);

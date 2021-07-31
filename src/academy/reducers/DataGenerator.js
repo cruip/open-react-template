@@ -2,9 +2,26 @@ import axios from "axios";
 
 import config from "../../app.config.json";
 
+import { fetchData } from "./MainPage";
+import { fetchPracticeData } from "./PracticeState";
+import { fetchProfileData } from "./Profile";
+import { fetchUnitData } from "./UnitData";
+
+import { setLocale } from "./GlobalState";
+
 // Fetch data
-export const fetchUserData = () => {
+export const getData = () => {
   return (dispatch) => {
+    const unitOnURL = window.location.pathname.split("/")[2];
+    const practiceType = window.location.pathname.split("/")[4];
+
+    const appRoutes = {
+      mainPage: "/",
+      profile: "/profile/info",
+      unit: `/unit/${unitOnURL}`,
+      practice: `/unit/${unitOnURL}/practice/${practiceType}`,
+    };
+
     return axios
       .get(config.api_url + "api/unit/user", {
         withCredentials: true,
@@ -13,6 +30,27 @@ export const fetchUserData = () => {
         if (json.data.name === undefined)
           return (window.location.href = config.app_url + "login");
 
+        console.log(window.location.pathname === appRoutes.practice);
+
+        switch (window.location.pathname) {
+          case appRoutes.mainPage:
+            dispatch(fetchData(json.data.level, json.data.language));
+            break;
+
+          case appRoutes.profile:
+            dispatch(fetchProfileData());
+            break;
+
+          case appRoutes.unit:
+            dispatch(fetchUnitData(json.data.level, json.data.language));
+            break;
+
+          case appRoutes.practice:
+            dispatch(fetchPracticeData(practiceType));
+            break;
+        }
+
+        dispatch(setLocale({ locale: json.data.language }));
         dispatch({
           type: SET_USER_NAME,
           userName: json.data.name,

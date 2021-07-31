@@ -4,12 +4,7 @@ import { connect } from "react-redux";
 import PracticeHeader from "../../../LayoutComponents/AppLayout/Practice/PracticeHeader";
 import PracticeInterrogativeForm from "./MainComponent";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-const InterrogativeFormComponent = ({ fetchData, level, progress }) => {
-  useEffect(() => {
-    fetchData("interrogative-form");
-  }, []);
+const InterrogativeFormComponent = ({ progress }) => {
   return (
     <>
       <PracticeHeader
@@ -23,8 +18,7 @@ const InterrogativeFormComponent = ({ fetchData, level, progress }) => {
 };
 
 const mapState = (state) => ({
-  level: state.GlobalState.level,
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(InterrogativeFormComponent);
+export default connect(mapState)(InterrogativeFormComponent);

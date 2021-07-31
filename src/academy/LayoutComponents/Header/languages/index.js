@@ -50,9 +50,7 @@ const Languages = ({ setLocale, setLoading }) => {
             <span
               onClick={() => {
                 setLocale({
-                  languageId: "arabic",
                   locale: "ar",
-                  name: "Arabic",
                 });
                 setLoading(true);
               }}
@@ -67,9 +65,7 @@ const Languages = ({ setLocale, setLoading }) => {
             <span
               onClick={() => {
                 setLocale({
-                  languageId: "english",
                   locale: "en",
-                  name: "English",
                 });
                 setLoading(true);
               }}

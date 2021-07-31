@@ -3,13 +3,7 @@ import { connect } from "react-redux";
 import PracticeMemorize from "./MainComponent";
 import PracticeHeader from "../../../LayoutComponents/AppLayout/Practice/PracticeHeader";
 
-import { fetchData } from "../../../reducers/PracticeState";
-
-function MemorizeComponent({ fetchData, progress }) {
-  useEffect(() => {
-    fetchData("memorize");
-  }, []);
-
+function MemorizeComponent({ progress }) {
   return (
     <>
       <PracticeHeader
@@ -26,4 +20,4 @@ const mapState = (state) => ({
   progress: state.PracticeState.progress,
 });
 
-export default connect(mapState, { fetchData })(MemorizeComponent);
+export default connect(mapState)(MemorizeComponent);

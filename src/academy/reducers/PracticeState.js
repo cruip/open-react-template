@@ -9,7 +9,7 @@ import { setLoading } from "../../appReducers/GlobalAppState";
 export const SET_PRACTICE_DATA = "PRACTICE_STATE/SET_PRACTICE_DATA";
 export const SET_PRACTICE_TYPE = "PRACTICE_STATE/SET_PRACTICE_TYPE";
 
-export const fetchData = (type) => {
+export const fetchPracticeData = (type) => {
   return (dispatch, getState) => {
     const level = getState().GlobalState.level;
     const unitOnURL = window.location.pathname.split("/")[2];
