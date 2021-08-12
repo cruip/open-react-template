@@ -79,7 +79,7 @@ const Hero = ({
                     Entre em Contato
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    Conheça a e
+                    Conheça a equipe
                     </Button>
                 </ButtonGroup>
               </div>
