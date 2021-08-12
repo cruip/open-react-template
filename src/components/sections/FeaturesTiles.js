@@ -44,8 +44,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Aumente sua produção, Reduza seus custos',
+    paragraph: 'Economize até 98% de água, Produza até 225% mais rápido, Produza até 1000% mais no mesmo espaço. Veja abaixo mais vantagens em relação ao cultivo tradicional'
   };
 
   return (
@@ -70,12 +70,15 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                  <h4 className="mt-0 mb-16">
+                      Menor Custo de Manutenção
+                  </h4>
+                  <h6 className="mt-0 mb-8">
+                    Reduza as despesas por até 50%.
+                  </h6>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Como as plantas hidropônicas não precisam estar em constante contato com a solução nutritiva, há uma redução gasto com de nutrientes, pesticida e água.
+                  </p>
                 </div>
               </div>
             </div>
@@ -93,11 +96,14 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Mesmo Espaço, mais Plantas
+                  </h4>
+                  <h6 className="mt-0 mb-8">
+                    Aumente em até 10x o tamanho da plantação no mesmo espaço.
+                  </h6>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Como as plantas hidropônicas não dependem mais de solo, é possível expandir sua plantação verticalmente para aumentar resultados sem prejudicar tempo de colheita.
+                  </p>
                 </div>
               </div>
             </div>
@@ -115,11 +121,14 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Menos tempo de produção
+                  </h4>
+                  <h6 className="mt-0 mb-8">
+                    Produza até 2.25x mais rápido
+                  </h6>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Como as plantas hidropônicas estão em contato direto com a solução nutritiva, há um total controle do tempo de crescimento por parte do produtor, podendo agilizar ou reduzir tempo de produção conforme a demanda
+                  </p>
                 </div>
               </div>
             </div>
@@ -137,11 +146,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    Sem ervas daninhas
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Como as plantas hidropônicas estão em um ambiente isoladas, não possibilita o crescimento de plantas indesejadas, que competem os nutrientes e luz com a colheita.
+                  </p>
                 </div>
               </div>
             </div>
@@ -159,11 +168,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
+                    Reduza perdas
+                  </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Com o equipamento adequado de proteção, não se preocupe mais com perdas na produção por causa de pragas, aumento de água e mudança abrupta de temperatura.
+                  </p>
                 </div>
               </div>
             </div>

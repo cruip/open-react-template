@@ -61,19 +61,25 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              <span className="text-color-primary">Freya</span>
             </h1>
             <div className="container-xs">
+              <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+              Sistema de Hidrôponia Inteligente
+              </h2>
+              <h3 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+                Aumente sua produção da sua horta e reduza custos de manutenção.
+              </h3>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-                </p>
+                Somos uma empresa 100% brasileira que surgiu para facilitar a vida do pequeno e médio agricultor. Nós criamos um produto inovador e simples de usar.
+              </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
+                    Entre em Contato
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                    Conheça a e
                     </Button>
                 </ButtonGroup>
               </div>
@@ -81,7 +87,7 @@ const Hero = ({
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
-              data-video="https://player.vimeo.com/video/174002812"
+              data-video="https://www.youtube.com/watch?v=ojAAZiW3J-8"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
@@ -98,7 +104,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
+            video="https://www.youtube.com/watch?v=ojAAZiW3J-8"
             videoTag="iframe" />
         </div>
       </div>
