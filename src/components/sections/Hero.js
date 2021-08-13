@@ -75,10 +75,10 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
+                  <Button tag="a" color="primary" wideMobile href="https://api.whatsapp.com/send?phone=5519997109758">
                     Entre em Contato
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
+                  <Button tag="a" color="dark" wideMobile href="https://lucasnicolaudevelo.wixsite.com/freya/contato">
                     Conheça a equipe
                     </Button>
                 </ButtonGroup>

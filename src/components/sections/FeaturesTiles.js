@@ -190,11 +190,11 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    Sofra menos
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    Reduza seu trabalho e aumente sua produção utilizando Freya. Menos tempo ajustando o pH e mais tempo para passar com a sua família! 
+                  </p>
                 </div>
               </div>
             </div>
