@@ -19,16 +19,13 @@ const FooterNav = ({
     >
       <ul className="list-reset">
         <li>
-          <Link to="#0">Contact</Link>
+          <a href="https://lucasnicolaudevelo.wixsite.com/freya/o-que-%C3%A9-hidroponia">O que é Hidroponia?</a>
         </li>
         <li>
-          <Link to="#0">About us</Link>
+          <a href="https://lucasnicolaudevelo.wixsite.com/freya/contato">Contato</a>
         </li>
         <li>
-          <Link to="#0">FAQ's</Link>
-        </li>
-        <li>
-          <Link to="#0">Support</Link>
+          <a href="https://lucasnicolaudevelo.wixsite.com/freya/faq-s">Perguntas Frequentes</a>
         </li>
       </ul>
     </nav>

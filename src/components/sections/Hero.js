@@ -87,7 +87,7 @@ const Hero = ({
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
-              data-video="https://www.youtube.com/watch?v=ojAAZiW3J-8"
+              data-video="https://video.wixstatic.com/video/2a75ae_5956b9ae4b2d453fb3a0b94b43e304f3/720p/mp4/file.mp4"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
@@ -104,7 +104,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://www.youtube.com/watch?v=ojAAZiW3J-8"
+            video="https://video.wixstatic.com/video/2a75ae_5956b9ae4b2d453fb3a0b94b43e304f3/720p/mp4/file.mp4"
             videoTag="iframe" />
         </div>
       </div>
