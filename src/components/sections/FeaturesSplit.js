@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Veja a Freya em clientes',
-    paragraph: 'Somos uma empresa nova, porém super compromissadas com a qualidade e satisfação dos nossos clientes. Veja abaixo algumas instalações que fizemos de cliente.'
+    title: 'Conheça os produtos Freya',
+    paragraph: 'Somos uma empresa nova, porém super compromissadas com a qualidade e satisfação dos nossos clientes. Todos acompanham o selo: "Satisfação garantida ou seu dinheiro de volta"*.'
   };
 
   return (
