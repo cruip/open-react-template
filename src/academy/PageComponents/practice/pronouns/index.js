@@ -7,8 +7,8 @@ const PronounsComponent = ({ progress }) => {
   return (
     <>
       <PracticeHeader
-        title='Pronouns'
-        description='Choose the correct sentence.'
+        titleTextID='unit.pronouns'
+        descriptionTextID='unit.practice.pronouns'
         progress={progress}
       />
       <PronounsPractice />

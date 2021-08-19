@@ -21,38 +21,38 @@ export default function ThirdSection({ t }) {
             className='tiles-item reveal-from-bottom'
             data-reveal-delay='200'
           >
-            <img src={require("../../../assets/images/1.png")} alt='' />
+            <img src={require("../../../assets/images/1.png").default} alt='' />
           </div>
           <div
             className='tiles-item reveal-from-bottom'
             data-reveal-delay='200'
           >
-            <img src={require("../../../assets/images/5.png")} alt='' />
+            <img src={require("../../../assets/images/5.png").default} alt='' />
           </div>
           <div
             className='tiles-item reveal-from-bottom'
             data-reveal-delay='200'
           >
-            <img src={require("../../../assets/images/3.png")} alt='' />
+            <img src={require("../../../assets/images/3.png").default} alt='' />
           </div>
           <div
             className='tiles-item reveal-from-bottom'
             data-reveal-delay='200'
           >
-            <img src={require("../../../assets/images/2.png")} alt='' />
+            <img src={require("../../../assets/images/2.png").default} alt='' />
           </div>
           <div
             className='tiles-item reveal-from-bottom'
             data-reveal-delay='200'
           >
-            <img src={require("../../../assets/images/6.png")} alt='' />
+            <img src={require("../../../assets/images/6.png").default} alt='' />
           </div>
 
           <div
             className='tiles-item reveal-from-bottom'
             data-reveal-delay='200'
           >
-            <img src={require("../../../assets/images/4.png")} alt='' />
+            <img src={require("../../../assets/images/4.png").default} alt='' />
           </div>
         </div>
       </div>

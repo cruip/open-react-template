@@ -26,7 +26,7 @@ export default function ForthSection({ t }) {
         </div>
       </div>
       <div className='m-32'>
-        <img src={require("../../../assets/images/efficacy_lab.png")} />
+        <img src={require("../../../assets/images/efficacy_lab.png").default} />
       </div>
     </section>
   );

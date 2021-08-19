@@ -14,7 +14,7 @@ const LayoutDefault = ({ children }) => {
       <UnderContruction t={t} />
       <main className='site-content'>
         <img
-          src={require("../assets/images/layout.png")}
+          src={require("../assets/images/layout.png").default}
           alt='layout'
           style={{
             position: "fixed",

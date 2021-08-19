@@ -16,13 +16,25 @@ export const setLevel = (level) => ({
   level,
 });
 
+// Level
+
+// export const SET_DIRECTION = "GLOBAL_STATE/SET_DIRECTION";
+
+// export const setDirection = (direction) => ({
+//   type: SET_DIRECTION,
+//   direction,
+// });
+
 export default function reducer(
   state = {
     // Locale
-    locale: { languageId: "english", locale: "en", name: "English" },
+    locale: { value: "en", direction: "ltr" },
 
     // Level
     level: 1,
+
+    //Direction
+    // direction: "ltr",
   },
   action
 ) {
@@ -39,6 +51,12 @@ export default function reducer(
         ...state,
         level: action.level,
       };
+    // Level
+    // case SET_DIRECTION:
+    //   return {
+    //     ...state,
+    //     direction: action.direction,
+    //   };
 
     default:
       break;

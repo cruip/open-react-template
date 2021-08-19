@@ -25,9 +25,9 @@ const render = () => {
   console.log(cookies.get("user.id") === undefined);
 
   if (cookies.get("user.id") === undefined && subdomain === "learn") {
-    console.log("redirect --> www");
+    window.location.href = config.app_url + "login/";
   } else if (cookies.get("user.id") !== undefined && subdomain === "www") {
-    console.log("redirect --> learn");
+    window.location.href = config.redirect_url;
   } else {
     ReactDOM.render(
       <Provider store={store}>

@@ -100,7 +100,7 @@ const Header = ({
         )}
       >
         <Logo
-          source={require("../../assets/images/mainLogo1.svg")}
+          source={require("../../assets/images/mainLogo1.svg").default}
           width={70}
           height={120}
           className='brand'

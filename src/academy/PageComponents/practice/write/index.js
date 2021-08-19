@@ -10,8 +10,8 @@ const WriteComponent = ({ progress }) => {
     <>
       <WriteContext>
         <PracticeHeader
-          title='Write'
-          description='Listen and write. Don’t forget the capital letters, commas and the full stop at the end of the sentence.'
+          titleTextID='unit.write'
+          descriptionTextID='unit.practice.write'
           progress={progress}
         />
         <PracticeWrite />

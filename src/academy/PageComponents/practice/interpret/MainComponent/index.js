@@ -13,7 +13,7 @@ const MainComponent = () => {
   return (
     <section
       className='fl-co-ce pt-32'
-      style={{ maxHeight: "57vh", minHeight: "57vh" }}
+      style={{ maxHeight: "57vh", minHeight: "57vh", direction: "ltr" }}
     >
       <div
         className='fl fl-co'

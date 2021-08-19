@@ -7,8 +7,8 @@ function MemorizeComponent({ progress }) {
   return (
     <>
       <PracticeHeader
-        title='Memorize'
-        description='Listen and memorize, record yourself and compare your pronunciation with the original.'
+        titleTextID='unit.memorize'
+        descriptionTextID='unit.practice.memorize'
         progress={progress}
       />
       <PracticeMemorize />

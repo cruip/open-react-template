@@ -8,8 +8,8 @@ const InterrogativeFormComponent = ({ progress }) => {
   return (
     <>
       <PracticeHeader
-        title='Interrogative Form'
-        description='Complete the sentence choosing the write word.'
+        titleTextID='unit.interrogative-form'
+        descriptionTextID='unit.practice.interrogative-form'
         progress={progress}
       />
       <PracticeInterrogativeForm />

@@ -30,7 +30,8 @@ const refreshToken = () => {
         error.response.status === 401 &&
         originalRequest.url === config.api_url + "actions/token/refresh"
       ) {
-        window.location.href = config.app_url + "login/";
+        console.log("redirect from axios midd");
+        // window.location.href = config.app_url + "login/";
         return Promise.reject(error);
       }
       if (

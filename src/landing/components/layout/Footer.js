@@ -33,7 +33,7 @@ const Footer = ({ className, t, topOuterDivider, topDivider, ...props }) => {
         >
           <div className='footer-top space-between text-xxs'>
             <Logo
-              source={require("../../assets/images/mainLogo.svg")}
+              source={require("../../assets/images/mainLogo.svg").default}
               width={130}
             />
             <FooterSocial />

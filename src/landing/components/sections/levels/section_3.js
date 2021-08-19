@@ -30,7 +30,7 @@ export default function ThirdSection({ t }) {
                   "accordion1" === current && "chevron-rotate",
                   "transform"
                 )}
-                src={require("../../../assets/images/arrow-down.svg")}
+                src={require("../../../assets/images/arrow-down.svg").default}
                 width='17px'
               />
             </Accordion.Toggle>
@@ -63,7 +63,7 @@ export default function ThirdSection({ t }) {
                   "accordion2" === current && "chevron-rotate",
                   "transform"
                 )}
-                src={require("../../../assets/images/arrow-down.svg")}
+                src={require("../../../assets/images/arrow-down.svg").default}
                 width='17px'
               />
             </Accordion.Toggle>
@@ -95,7 +95,7 @@ export default function ThirdSection({ t }) {
                   "accordion3" === current && "chevron-rotate",
                   "transform"
                 )}
-                src={require("../../../assets/images/arrow-down.svg")}
+                src={require("../../../assets/images/arrow-down.svg").default}
                 width='17px'
               />
             </Accordion.Toggle>
@@ -123,7 +123,7 @@ export default function ThirdSection({ t }) {
             >
               {t("levels_section_3_item4_header")}
               <img
-                src={require("../../../assets/images/arrow-down.svg")}
+                src={require("../../../assets/images/arrow-down.svg").default}
                 width='17px'
                 className={className(
                   "accordion4" === current && "chevron-rotate",
@@ -156,7 +156,7 @@ export default function ThirdSection({ t }) {
               {t("levels_section_3_item5_header")}
 
               <img
-                src={require("../../../assets/images/arrow-down.svg")}
+                src={require("../../../assets/images/arrow-down.svg").default}
                 width='17px'
                 className={className(
                   "accordion5" === current && "chevron-rotate",
@@ -189,7 +189,7 @@ export default function ThirdSection({ t }) {
               {t("levels_section_3_item6_header")}
 
               <img
-                src={require("../../../assets/images/arrow-down.svg")}
+                src={require("../../../assets/images/arrow-down.svg").default}
                 width='17px'
                 className={className(
                   "accordion6" === current && "chevron-rotate",

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../../utils/SectionProps";
-import ButtonGroup from "../../elements/ButtonGroup";
 import Button from "../../elements/Button";
 import Image from "../../elements/Image";
-import Modal from "../../elements/Modal";
 
 const propTypes = {
   ...SectionProps.types,
@@ -84,8 +82,8 @@ const Hero = ({
         data-reveal-delay='400'
       >
         <Image
-          src={require("../../../assets/images/student.png")}
-          alt='Hero'
+          src={require("../../../assets/images/student.png").default}
+          alt=''
           width={896}
           height={504}
         />

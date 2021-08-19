@@ -1,6 +1,6 @@
-{   "app_url" : "http://www.localhost:3000/",
-      "redirect_url" : "http://learn.localhost:3000/",
+{   "app_url" : "https://www.arabiclocal.com:3000/",
+      "redirect_url" : "https://learn.arabiclocal.com:3000/",
       
       "api_url" : "http://localhost:4000/",
-    "app_domain" : "localhost"
+    "app_domain" : ".arabiclocal.com"
 }

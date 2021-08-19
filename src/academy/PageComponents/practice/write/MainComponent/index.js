@@ -58,11 +58,13 @@ const PracticeWrite = ({ practiceData, setPracticeFinished }) => {
   };
 
   return (
-    <section className='p-32'>
+    <section className='p-32' style={{ direction: "ltr" }}>
       <div className='fl-co-ce' style={{ margin: "auto", width: "25%" }}>
         <AudioPlayer
           style={{ padding: 17, background: "#00c6c2", borderRadius: "50em" }}
-          icon={require("../../../../assets/images/icons/sound_icon.svg")}
+          icon={
+            require("../../../../assets/images/icons/sound_icon.svg").default
+          }
           setAudio={currentAudio}
           onAudioEnd={() => setAudioChecked(true)}
           Animate

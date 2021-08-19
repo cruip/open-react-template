@@ -7,8 +7,8 @@ const AssessmentComponent = ({ progress }) => {
   return (
     <>
       <PracticeHeader
-        title='Assessment'
-        description="Check what you've learnt in the unit."
+        titleTextID='unit.assessment'
+        descriptionTextID='unit.practice.assessment'
         progress={progress}
       />
       <PracticeAssessment />

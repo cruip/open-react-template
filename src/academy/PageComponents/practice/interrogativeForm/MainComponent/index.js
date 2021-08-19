@@ -58,7 +58,7 @@ const PracticeInterrogativeForm = ({
           background: "#00c6c2",
           borderRadius: "50em",
         }}
-        icon={require("../../../../assets/images/icons/sound_icon.svg")}
+        icon={require("../../../../assets/images/icons/sound_icon.svg").default}
         setAudio={currentAudio}
         onAudioEnd={() => setBlockButtons(false)}
         Animate

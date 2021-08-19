@@ -11,7 +11,7 @@ export default function SixthSection({ t }) {
           <img
             className='reveal-from-bottom'
             data-reveal-delay='200'
-            src={require("../../../assets/images/dialog/1.png")}
+            src={require("../../../assets/images/dialog/1.png").default}
             alt='dialog'
           />
         </div>
@@ -19,19 +19,19 @@ export default function SixthSection({ t }) {
           <img
             className='reveal-from-bottom'
             data-reveal-delay='1000'
-            src={require("../../../assets/images/dialog/3.png")}
+            src={require("../../../assets/images/dialog/3.png").default}
             alt='dialog'
           />
           <img
             className='reveal-from-bottom'
             data-reveal-delay='1500'
-            src={require("../../../assets/images/dialog/4.png")}
+            src={require("../../../assets/images/dialog/4.png").default}
             alt='dialog'
           />
           <img
             className='reveal-from-bottom'
             data-reveal-delay='2000'
-            src={require("../../../assets/images/dialog/5.png")}
+            src={require("../../../assets/images/dialog/5.png").default}
             alt='dialog'
           />
         </div>
@@ -39,7 +39,7 @@ export default function SixthSection({ t }) {
           <img
             className='reveal-from-bottom'
             data-reveal-delay='200'
-            src={require("../../../assets/images/dialog/2.png")}
+            src={require("../../../assets/images/dialog/2.png").default}
             alt='dialog'
           />
         </div>

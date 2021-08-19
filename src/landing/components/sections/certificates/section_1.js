@@ -17,7 +17,9 @@ export default function FirstSection({ t }) {
         </div>
       </div>
       <div>
-        <img src={require("../../../assets/images/certificates_1.png")} />
+        <img
+          src={require("../../../assets/images/certificates_1.png").default}
+        />
       </div>
     </section>
   );

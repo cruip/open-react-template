@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { connect } from "react-redux";
 import { Line } from "rc-progress";
+import classNames from "classnames";
 import Image from "../../../elements/Image";
 import IntlMessages from "../../../elements/IntlMessages";
 import CertificateContent from "../../../globals/CertificateContent";
@@ -8,11 +9,23 @@ import CertificateContent from "../../../globals/CertificateContent";
 const CertificateSection = (props) => {
   const [checked, setChecked] = useState(false);
 
-  const { certificateProgress } = props;
+  const { certificateProgress, direction } = props;
 
   return (
-    <div className='fl lesson-container'>
-      <div className='lesson-container-icon'>
+    <div
+      className={classNames(
+        "fl lesson-container",
+        direction === "rtl" ? "lesson-container-right" : "lesson-container-left"
+      )}
+    >
+      <div
+        className={classNames(
+          "lesson-container-icon",
+          direction === "rtl"
+            ? "lesson-container-icon-right"
+            : "lesson-container-icon-left"
+        )}
+      >
         {checked && (
           <Image
             type='icon'
@@ -22,9 +35,23 @@ const CertificateSection = (props) => {
           />
         )}
       </div>
-      <div style={{ borderLeft: ".14rem solid transparent" }}>
-        <div className='lesson-spacer'>
-          <div className='card fl-ro fl-ju-co-en p-20' style={{ height: 200 }}>
+      <div
+        style={
+          direction === "ltr"
+            ? { borderLeft: ".14rem solid transparent" }
+            : { borderRight: ".14rem solid transparent" }
+        }
+      >
+        <div
+          className={classNames(
+            "lesson-spacer",
+            direction === "rtl" ? "lesson-spacer-right" : "lesson-spacer-left"
+          )}
+        >
+          <div
+            className='card fl-ro fl-ju-co-en p-20 text-align-start'
+            style={{ height: 200 }}
+          >
             <div className='lesson-img fl-ce'>
               <Image
                 type='certificate'
@@ -54,7 +81,8 @@ const CertificateSection = (props) => {
                       trailWidth='1.4'
                       strokeColor='#00c6c2'
                     />
-                    <span className='ml-12'>{certificateProgress}%</span>
+                    <div style={{ width: 12 }}></div>
+                    <span>{certificateProgress}%</span>
                   </div>
                 </div>
               </div>
@@ -69,6 +97,7 @@ const CertificateSection = (props) => {
 const mapState = (state) => ({
   locale: state.GlobalState.locale,
   level: state.GlobalState.level,
+  direction: state.GlobalState.direction,
 
   nrUnits: state.MainPage.nrUnits,
   units: state.MainPage.units,

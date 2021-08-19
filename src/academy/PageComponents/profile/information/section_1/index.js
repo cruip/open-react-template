@@ -2,13 +2,15 @@ import React from "react";
 
 const Section_1 = () => {
   return (
-    <div className='card-full fl fl-al-it-ce'>
-      <img
-        src={require("../../../../assets/images/protection.png")}
-        alt='protection icon'
-        className='mr-24'
-        width={105}
-      />
+    <div className='card-full fl fl-al-it-ce text-align-start'>
+      <div>
+        <img
+          src={require("../../../../assets/images/protection.png").default}
+          alt='protection icon'
+          width={105}
+        />
+      </div>
+      <div style={{ width: 24 }}></div>
       <div>
         <h1 className='mb-8' style={{ color: "black" }}>
           Personal Information

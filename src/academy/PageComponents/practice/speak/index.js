@@ -7,8 +7,8 @@ function SpeakComponent({ progress }) {
   return (
     <>
       <PracticeHeader
-        title='Speak'
-        description='Listen to the phrase, record yourself and compare your pronunciation with the original.'
+        titleTextID='unit.speak'
+        descriptionTextID='unit.practice.speak'
         progress={progress}
       />
       <PracticeSpeak />

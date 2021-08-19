@@ -30,11 +30,13 @@ import Logout from "./PageComponents/logout";
 
 import DataLoader from "./DataLoader";
 
-const Academy = () => {
+// import { setDirection } from "./reducers/GlobalState";
+
+const Academy = ({ locale }) => {
   return (
     <DataLoader>
       <LanguageProvider>
-        <div className='fl'>
+        <div className='fl' dir={locale.direction}>
           <Switch>
             <AppRoute exact path='/' component={Home} layout={AppLayout} />
 
@@ -72,7 +74,7 @@ const Academy = () => {
             <AppRoute
               exact
               path='/unit/:id/practice/memorize'
-              component={MemorizeComponent}
+              component={SpeakComponent}
               layout={PracticeLayout}
             />
             <AppRoute
@@ -123,4 +125,9 @@ const Academy = () => {
   );
 };
 
-export default Academy;
+const mapState = (state) => ({
+  // direction: state.GlobalState.direction,
+  locale: state.GlobalState.locale,
+});
+
+export default connect(mapState)(Academy);

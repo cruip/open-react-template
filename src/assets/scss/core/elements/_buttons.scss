@@ -24,7 +24,7 @@
   letter-spacing: inherit;
   white-space: nowrap;
   transition: background 0.15s ease;
-
+  outline: none !important;
   &:active {
     outline: 0;
   }

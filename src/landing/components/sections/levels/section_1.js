@@ -33,7 +33,7 @@ export default function FirstSection({ t }) {
         data-reveal-delay='400'
       >
         <img
-          src={require("../../../assets/images/baner_levels.png")}
+          src={require("../../../assets/images/baner_levels.png").default}
           alt='banner'
         />
       </div>

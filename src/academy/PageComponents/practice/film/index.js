@@ -35,8 +35,8 @@ const FilmComponent = ({ setPracticeFinished, practiceData }) => {
   return (
     <>
       <PracticeHeader
-        title='Film'
-        description='Press play to watch the film. Click on the CC icon to watch it with subtitles.'
+        titleTextID='unit.film'
+        descriptionTextID='unit.practice.film'
       />
       <section className='fl-ce'>
         <div style={{ width: "90%" }}>

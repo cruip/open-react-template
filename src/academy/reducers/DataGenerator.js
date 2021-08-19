@@ -50,7 +50,10 @@ export const getData = () => {
             break;
         }
 
-        dispatch(setLocale({ locale: json.data.language }));
+        // Related with locale
+        const direction = json.data.language === "ar" ? "rtl" : "ltr";
+
+        dispatch(setLocale({ value: json.data.language, direction }));
         dispatch({
           type: SET_USER_NAME,
           userName: json.data.name,

@@ -33,8 +33,8 @@ const VideoClassComponent = ({ setPracticeFinished, practiceData }) => {
   return (
     <>
       <PracticeHeader
-        title='Video Class'
-        description='Press play to understand the grammar. Click on the CC icon to watch it with subtitles.'
+        titleTextID='unit.video-class'
+        descriptionTextID='unit.practice.video-class'
       />
       <section className='fl-ce'>
         <div style={{ width: "90%" }}>

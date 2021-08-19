@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import classNames from "classnames";
 import CertificateContent from "../../../globals/CertificateContent";
 import IntlMessages from "../../../elements/IntlMessages";
 import Image from "../../../elements/Image";
 
-const UnitsSection = ({ units, userName }) => {
+const UnitsSection = ({ units, userName, locale }) => {
   return (
     <>
-      <div className='card mb-12 p-16 pb-32' style={{ width: "100%" }}>
+      <div
+        className='card mb-12 p-16 pb-32 text-align-start'
+        style={{ width: "100%" }}
+      >
         <span className='mb-8'>
           <IntlMessages id={"course.welcome"} /> {userName}!
         </span>
@@ -18,8 +22,23 @@ const UnitsSection = ({ units, userName }) => {
       <div className='fl-co'>
         {units &&
           units.map(({ title, unit, cover, content, completed, progress }) => (
-            <div className='fl lesson-container' key={unit}>
-              <div className='lesson-container-icon'>
+            <div
+              className={classNames(
+                "fl lesson-container",
+                locale.direction === "rtl"
+                  ? "lesson-container-right"
+                  : "lesson-container-left"
+              )}
+              key={unit}
+            >
+              <div
+                className={classNames(
+                  "lesson-container-icon",
+                  locale.direction === "rtl"
+                    ? "lesson-container-icon-right"
+                    : "lesson-container-icon-left"
+                )}
+              >
                 {completed && (
                   <Image
                     type='icon'
@@ -29,11 +48,24 @@ const UnitsSection = ({ units, userName }) => {
                   />
                 )}
               </div>
-              <div style={{ borderLeft: ".14rem solid #e8e8e8" }}>
-                <div className='lesson-spacer'>
+              <div
+                style={
+                  locale.direction === "ltr"
+                    ? { borderLeft: ".14rem solid #e8e8e8" }
+                    : { borderRight: ".14rem solid #e8e8e8" }
+                }
+              >
+                <div
+                  className={classNames(
+                    "lesson-spacer",
+                    locale.direction === "rtl"
+                      ? "lesson-spacer-right"
+                      : "lesson-spacer-left"
+                  )}
+                >
                   <a href={`/unit/${unit}`}>
                     <div
-                      className='card fl-ro fl-ju-co- p-20'
+                      className='card fl-ro fl-ju-co- p-20 text-align-start'
                       style={{ height: "100%" }}
                     >
                       <div className='lesson-img'>
@@ -110,6 +142,7 @@ const UnitsSection = ({ units, userName }) => {
 const mapState = (state) => ({
   units: state.MainPage.units,
   userName: state.DataGenerator.userName,
+  locale: state.GlobalState.locale,
 });
 
 export default connect(mapState)(UnitsSection);

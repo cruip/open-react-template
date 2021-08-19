@@ -57,7 +57,10 @@ function PracticeMemorize({ practiceData, setProgress, setPracticeFinished }) {
           <span>{text}</span>
           <AudioPlayer
             setAudio={currentAudio}
-            icon={require("../../../../assets/images/icons/speaker_icon.svg")}
+            icon={
+              require("../../../../assets/images/icons/speaker_icon.svg")
+                .default
+            }
           >
             <span
               className='ml-32'

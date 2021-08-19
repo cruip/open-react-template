@@ -2,11 +2,19 @@ import React, { useContext, useState } from "react";
 import { connect } from "react-redux";
 import { Popover } from "@material-ui/core";
 import { Line } from "rc-progress";
+import classNames from "classnames";
+import IntlMessages from "../../../elements/IntlMessages";
 import CertificateContent from "../../../globals/CertificateContent";
 import { setLevel } from "../../../reducers/GlobalState";
 import { setUnits } from "../../../reducers/MainPage";
 
-const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
+const Levels = ({
+  level,
+  setLevel,
+  certificateProgress,
+  setUnits,
+  direction,
+}) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -31,9 +39,10 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
           onClick={handleClick}
           style={{ color: "blue", width: "max-content" }}
         >
-          Change level
+          <IntlMessages id='course.change-level' />
         </div>
         <Popover
+          className={classNames(direction === "rtl" && "text-align-end")}
           open={open}
           anchorEl={anchorEl}
           onClose={handleClose}
@@ -46,7 +55,7 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
             horizontal: "left",
           }}
         >
-          <div className='p-16 fl-co'>
+          <div className='p-26 fl-co'>
             <div
               className='mb-12 p-0'
               style={{ padding: "10px 20px", cursor: "pointer" }}
@@ -54,7 +63,9 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
                 handleSelect(1);
               }}
             >
-              <span>A1. Beginner</span>
+              <span>
+                <IntlMessages id='certificate-level.beginner' />
+              </span>
             </div>
             <div
               className='mb-12  p-0'
@@ -63,7 +74,9 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
                 handleSelect(2);
               }}
             >
-              <span>A2. Lower Intermediate</span>
+              <span>
+                <IntlMessages id='certificate-level.lower-intermediate' />
+              </span>
             </div>
             <div
               className='mb-12  p-0'
@@ -72,7 +85,9 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
                 handleSelect(3);
               }}
             >
-              <span>B1. Intermediate</span>
+              <span>
+                <IntlMessages id='certificate-level.intermediate' />
+              </span>
             </div>
             <div
               className='mb-12  p-0'
@@ -81,7 +96,9 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
                 handleSelect(4);
               }}
             >
-              <span>B2. Upper Intermediate</span>
+              <span>
+                <IntlMessages id='certificate-level.upper-intermediate' />
+              </span>
             </div>
             <div
               className='mb-12  p-0'
@@ -90,7 +107,9 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
                 handleSelect(5);
               }}
             >
-              <span>B2-C1. Advanced</span>
+              <span>
+                <IntlMessages id='certificate-level.advanced' />
+              </span>
             </div>
             <div
               className='mb-12  p-0'
@@ -99,7 +118,9 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
                 handleSelect(6);
               }}
             >
-              <span>C1. Business</span>
+              <span>
+                <IntlMessages id='certificate-level.bussiness' />
+              </span>
             </div>
           </div>
         </Popover>
@@ -124,6 +145,7 @@ const Levels = ({ level, setLevel, certificateProgress, setUnits }) => {
 const mapState = (state) => ({
   level: state.GlobalState.level,
   certificateProgress: state.MainPage.certificateProgress,
+  direction: state.GlobalState.direction,
 });
 
 const mapDis = (dispatch) => ({

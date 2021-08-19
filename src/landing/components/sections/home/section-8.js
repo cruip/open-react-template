@@ -16,7 +16,10 @@ export default function Home8({ t }) {
         data-reveal-delay='400'
         style={{ width: "70%", height: "100%" }}
       >
-        <img src={require("../../../assets/images/Tablet.png")} alt='tableti' />
+        <img
+          src={require("../../../assets/images/Tablet.png").default}
+          alt=''
+        />
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ const GenericSection = ({ t }) => {
     >
       <div className='img-manage'>
         <img
-          src={require("../../../assets/images/Smartphoni.png")}
+          src={require("../../../assets/images/Smartphoni.png").default}
           alt='phone'
         />
       </div>

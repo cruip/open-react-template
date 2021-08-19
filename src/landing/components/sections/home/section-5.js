@@ -51,7 +51,7 @@ export default function FifthSection({ t }) {
           <div>
             <div className='slider-item'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 style={{ margin: "auto", height: "100%" }}
               />
             </div>
@@ -59,7 +59,7 @@ export default function FifthSection({ t }) {
           <div>
             <div className='slider-item'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 style={{ margin: "auto", height: "100%" }}
               />
             </div>
@@ -67,7 +67,7 @@ export default function FifthSection({ t }) {
           <div>
             <div className='slider-item'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 style={{ margin: "auto", height: "100%" }}
               />
             </div>
@@ -75,7 +75,7 @@ export default function FifthSection({ t }) {
           <div>
             <div className='slider-item'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 style={{ margin: "auto", height: "100%" }}
               />
             </div>

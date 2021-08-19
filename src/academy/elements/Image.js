@@ -13,19 +13,19 @@ const Image = ({
   const getSrc = () => {
     switch (type) {
       case "icon":
-        return require(`../assets/images/icons/${image}`);
+        return require(`../assets/images/icons/${image}`).default;
 
       case "cover":
-        return require(`../assets/images/covers/${image}`);
+        return require(`../assets/images/covers/${image}`).default;
 
       case "certificate":
-        return require(`../assets/images/certificates/${image}`);
+        return require(`../assets/images/certificates/${image}`).default;
 
       case "flag":
-        return require(`../assets/images/flags/${image}`);
+        return require(`../assets/images/flags/${image}`).default;
 
       case "custom":
-        return require(`../assets/images/${image}`);
+        return require(`../assets/images/${image}`).default;
 
       default:
         return image;

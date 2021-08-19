@@ -28,7 +28,10 @@ const FeaturesTiles = ({ t }) => {
         className='img-container reveal-from-bottom fl-ce'
         data-reveal-delay='400'
       >
-        <img src={require("../../../assets/images/Laptopi.png")} alt='laptop' />
+        <img
+          src={require("../../../assets/images/Laptopi.png").default}
+          alt='laptop'
+        />
       </div>
     </section>
   );

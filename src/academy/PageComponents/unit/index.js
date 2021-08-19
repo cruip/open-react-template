@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import axios from "axios";
 import Image from "../../elements/Image";
+import IntlMessages from "../../elements/IntlMessages";
 
 import SignupPopup from "../../globals/SignupPopup";
 
@@ -16,8 +16,13 @@ const Unit = (props) => {
     extraActivityData,
     attachedExercise,
     history,
-    location,
+    locale,
   } = props;
+
+  const backImageStyle = {
+    rtl: { right: 40, transform: "rotate(180deg)" },
+    ltr: { left: 40 },
+  };
 
   const [unitID, setUnitID] = useState("");
 
@@ -45,7 +50,12 @@ const Unit = (props) => {
       >
         <div className='fl-co-ce'>
           <div className='fl'>
-            <div style={{ position: "absolute", left: 40 }}>
+            <div
+              style={{
+                position: "absolute",
+                ...backImageStyle[locale.direction],
+              }}
+            >
               <a href='/'>
                 <Image type='icon' image='left-white_icon.svg' alt='Go back' />
               </a>
@@ -69,7 +79,10 @@ const Unit = (props) => {
       >
         <div className='mb-32'>
           {unitData.map(
-            ({ link, title, content, icon, finished, blocked }, index) => (
+            (
+              { link, titleTextID, contentTextID, icon, finished, blocked },
+              index
+            ) => (
               <div
                 key={"unit " + index + 1}
                 className='mb-32'
@@ -85,31 +98,36 @@ const Unit = (props) => {
               >
                 <div className='card-transparent fl fl-al-it-ce fl-ju-co-sp-be practise-card-item'>
                   <div className='fl fl-al-it-ce'>
-                    <Image
-                      className='mr-24'
-                      type='icon'
-                      image={icon}
-                      width={57}
-                    />
+                    <Image type='icon' image={icon} width={57} />
+                    <div style={{ width: 24 }}></div>
                     <div>
-                      <span style={{ fontSize: 23 }}>{title}</span>
+                      <span style={{ fontSize: 23 }}>
+                        <IntlMessages id={titleTextID} />
+                      </span>
                       <p className='m-0' style={{ fontSize: 16 }}>
-                        {content}
+                        <IntlMessages id={contentTextID} />
                       </p>
                     </div>
                   </div>
-                  <div>
-                    {blocked ? (
-                      <Image type='icon' image='padlock_icon.svg' width={25} />
-                    ) : (
-                      <Image
-                        type='icon'
-                        image={
-                          finished ? "checked_icon.svg" : "unchecked_icon.svg"
-                        }
-                        width={25}
-                      />
-                    )}
+                  <div className='fl'>
+                    <div>
+                      {blocked ? (
+                        <Image
+                          type='icon'
+                          image='padlock_icon.svg'
+                          width={25}
+                        />
+                      ) : (
+                        <Image
+                          type='icon'
+                          image={
+                            finished ? "checked_icon.svg" : "unchecked_icon.svg"
+                          }
+                          width={25}
+                        />
+                      )}
+                    </div>
+                    <div style={{ width: 30 }}></div>
                   </div>
                 </div>
               </div>
@@ -125,12 +143,11 @@ const Unit = (props) => {
             style={{ color: "white", width: "80%", textAlign: "center" }}
           >
             <p>
-              Was this unit a bit too short for you? Here, have a few more
-              minutes of fun.
+              <IntlMessages id='unit.extra-activity-text' />
             </p>
           </div>
           {extraActivityData.map(
-            ({ title, content, icon, id, link, finished }) => (
+            ({ titleTextID, contentTextID, icon, id, link, finished }) => (
               <div key={id}>
                 <a href={`/unit/1/extra${link}`}>
                   <div className='mb-32 mt-32'>
@@ -153,33 +170,38 @@ const Unit = (props) => {
                           fontSize: 12,
                         }}
                       >
-                        <span>EXTRA ACTIVITY</span>
+                        <span>
+                          <IntlMessages id='unit.extra-activity' />
+                        </span>
                       </div>
                       <div className='fl fl-al-it-ce'>
-                        <Image
-                          className='mr-24'
-                          type='icon'
-                          image={icon}
-                          width={57}
-                        />
+                        <Image type='icon' image={icon} width={57} />
+                        <div style={{ width: 24 }}></div>
                         <div>
-                          <span style={{ fontSize: 23 }}>{title}</span>
+                          <span style={{ fontSize: 23 }}>
+                            <IntlMessages id={titleTextID} />
+                          </span>
                           <p className='m-0' style={{ fontSize: 16 }}>
-                            {content}
+                            <IntlMessages id={contentTextID} />
                           </p>
                         </div>
                       </div>
-                      <div>
-                        <Image
-                          type='icon'
-                          image={
-                            finished ? "checked_icon.svg" : "unchecked_icon.svg"
-                          }
-                          width={25}
-                        />
+                      <div className='fl'>
+                        <div>
+                          <Image
+                            type='icon'
+                            image={
+                              finished
+                                ? "checked_icon.svg"
+                                : "unchecked_icon.svg"
+                            }
+                            width={25}
+                          />
+                        </div>
+                        <div style={{ width: 30 }}></div>
                       </div>
                     </div>
-                  </div>{" "}
+                  </div>
                 </a>
               </div>
             )
@@ -206,28 +228,38 @@ const Unit = (props) => {
                       fontSize: 12,
                     }}
                   >
-                    <span>DOWNLOAD</span>
+                    <span>
+                      {" "}
+                      <IntlMessages id='download.text' />
+                    </span>
                   </div>
                   <div className='fl fl-al-it-ce'>
                     <Image
-                      className='mr-24'
                       type='icon'
                       image='pdf-download_icon.svg'
                       width={57}
                     />
+                    <div style={{ width: 24 }}></div>
                     <div>
-                      <span style={{ fontSize: 23 }}>Attached Exercise</span>
+                      <span style={{ fontSize: 23 }}>
+                        <IntlMessages id='unit.attached-exercise' />
+                      </span>
                       <p className='m-0' style={{ fontSize: 16 }}>
-                        Writing
+                        <IntlMessages id='unit.writing' />
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <Image
-                      type='icon'
-                      image={false ? "checked_icon.svg" : "unchecked_icon.svg"}
-                      width={25}
-                    />
+                  <div className='fl'>
+                    <div>
+                      <Image
+                        type='icon'
+                        image={
+                          false ? "checked_icon.svg" : "unchecked_icon.svg"
+                        }
+                        width={25}
+                      />
+                    </div>
+                    <div style={{ width: 30 }}></div>
                   </div>
                 </div>
               </a>
@@ -245,6 +277,7 @@ const mapState = (state) => ({
   unitTitle: state.UnitData.unitTitle,
   extraActivityData: state.UnitData.extraActivityData,
   attachedExercise: state.UnitData.attachedExercise,
+  locale: state.GlobalState.locale,
 });
 
 export default connect(mapState, { fetchUnitData })(Unit);

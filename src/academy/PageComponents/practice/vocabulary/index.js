@@ -8,8 +8,8 @@ const VocabularyComponent = ({ fetchPracticeData, progress }) => {
   return (
     <>
       <PracticeHeader
-        title='Vocabulary'
-        description='Choose the word that matches the image.'
+        titleTextID='unit.vocabulary'
+        descriptionTextID='unit.practice.vocabulary'
         progress={progress}
       />
       <PracticeVocabulary />

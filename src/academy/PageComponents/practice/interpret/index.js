@@ -11,8 +11,8 @@ function InterpretComponent({ progress }) {
   return (
     <InterpretContext>
       <PracticeHeader
-        title='Interpret'
-        description='Pick a character and play their role.'
+        titleTextID='unit.interpret'
+        descriptionTextID='unit.practice.interpret'
         progress={progress}
       />
       <PracticeSection />

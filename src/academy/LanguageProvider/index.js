@@ -4,7 +4,7 @@ import { IntlProvider } from "react-intl";
 import AppLocale from "../assets/i18n";
 
 const LanguageProvider = ({ children, locale }) => {
-  const currentAppLocale = AppLocale[locale.locale];
+  const currentAppLocale = AppLocale[locale.value];
 
   return (
     <IntlProvider

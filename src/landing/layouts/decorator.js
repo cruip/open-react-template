@@ -7,7 +7,7 @@ export default function Decorator() {
       data-reveal-delay='200'
     >
       <img
-        src={require("../assets/images/decorator.png")}
+        src={require("../assets/images/decorator.png").default}
         alt='decorator'
         style={{ margin: "auto" }}
       />

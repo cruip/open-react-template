@@ -36,7 +36,10 @@ export default function TopFeatures({ t }) {
           <div className='features-tiles-item-header'>
             <div className='features-tiles-item-image mb-16'>
               <Image
-                src={require("../../../assets/images/tiles_comunicating_icon.svg")}
+                src={
+                  require("../../../assets/images/tiles_comunicating_icon.svg")
+                    .default
+                }
                 alt='Features tile icon 01'
                 width={80}
                 height={80}
@@ -55,7 +58,10 @@ export default function TopFeatures({ t }) {
           <div className='features-tiles-item-header'>
             <div className='features-tiles-item-image mb-16'>
               <Image
-                src={require("../../../assets/images/tiles_certificate_icon.svg")}
+                src={
+                  require("../../../assets/images/tiles_certificate_icon.svg")
+                    .default
+                }
                 alt='Features tile icon 02'
                 width={80}
                 height={80}
@@ -74,7 +80,9 @@ export default function TopFeatures({ t }) {
           <div className='features-tiles-item-header'>
             <div className='features-tiles-item-image mb-16'>
               <Image
-                src={require("../../../assets/images/tiles_edit_icon.svg")}
+                src={
+                  require("../../../assets/images/tiles_edit_icon.svg").default
+                }
                 alt='Features tile icon 01'
                 width={80}
                 height={80}

@@ -42,6 +42,7 @@ const LoginPage = ({ t, setAuth }) => {
           if (res.data.success) {
             cookies.set("user.id", res.data.user_id, {
               domain: config.app_domain,
+              path: "/",
             });
 
             window.location.href = config.redirect_url;
@@ -52,6 +53,7 @@ const LoginPage = ({ t, setAuth }) => {
         })
         .catch((e) => {
           setButtonLoading(false);
+
           if (e.response.status === 401) {
             return setValidated(true);
           } else {

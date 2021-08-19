@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 import IntlMessages from "../../../elements/IntlMessages";
 import Image from "../../../elements/Image";
@@ -8,62 +8,69 @@ import Image from "../../../elements/Image";
 import config from "../../../../app.config.json";
 
 const SidebarMenu = () => {
-  const link = useLocation().pathname;
+  const history = useHistory();
 
   const navigationItems = [
     {
       icon: "open-book_icon.svg",
       nav: "course",
-      content: <IntlMessages id={"sidebar.course"} />,
+      content: "sidebar.course",
       link: "/",
     },
     {
       icon: "group-classes_icon.svg",
       nav: "group-classes",
-      content: <IntlMessages id={"sidebar.dashboard.listing"} />,
+      content: "sidebar.dashboard.listing",
       link: "/group-classes",
     },
     {
       icon: "user_icon.svg",
       nav: "profile",
-      content: <IntlMessages id={"sidebar.profile"} />,
+      content: "sidebar.profile",
       link: "/profile/info",
     },
     {
       icon: "help_icon.svg",
       nav: "need-help",
-      content: <IntlMessages id={"sidebar.need-help"} />,
+      content: "sidebar.need-help",
       link: "/help/center",
     },
     {
       icon: "logout_icon.svg",
       nav: "logout",
-      content: <IntlMessages id={"sidebar.log-out"} />,
+      content: "sidebar.log-out",
       link: "/logout",
     },
   ];
 
+  const handleClick = (item) => {
+    history.push(item.link);
+  };
+
   return (
-    <div className='sidebar-menu'>
+    <div className='sidebar-menu text-align-start'>
       {navigationItems.map((item, index) => {
         return (
           <div key={index}>
-            <a
-              href={item.link}
-              className={classNames(
-                "nav-section fl fl-al-it-ce fl-ju-co-sp-be"
-              )}
+            <div
+              onClick={() => handleClick(item)}
+              className={classNames("nav-section")}
             >
-              <span>
-                <Image type='icon' image={item.icon} width={27} />
-              </span>
               <div
-                className={classNames(link === item.link && "active-link")}
-                style={{ width: "76%" }}
+                className='fl fl-al-it-ce fl-ju-co-sp-be'
+                style={{ cursor: "pointer" }}
               >
-                {item.content}
+                <span>
+                  <Image type='icon' image={item.icon} width={27} />
+                </span>
+                <div
+                  // className={classNames(link === item.link && "active-link")}
+                  style={{ width: "76%" }}
+                >
+                  <IntlMessages id={item.content} />
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         );
       })}

@@ -3,24 +3,40 @@ $lesson-left-spacer: 35px;
 .lesson-container {
   position: relative;
   width: 100%;
-  padding: 0 0 0 26px;
   color: rgba(0, 0, 0, 0.6) !important;
+
+  &-left {
+    padding: 0 0 0 26px;
+  }
+  &-right {
+    padding: 0 26px 0 0;
+  }
 }
 
 .lesson-spacer {
-  padding: $lesson-left-spacer 0 0 40px;
   height: 100%;
+  &-left {
+    padding: $lesson-left-spacer 0 0 40px;
+  }
+  &-right {
+    padding: $lesson-left-spacer 40px 0 0;
+  }
 }
 
 .lesson-container-icon {
   position: absolute;
-  left: 17px;
   top: $lesson-left-spacer;
   width: 21px;
   height: 21px;
   border-radius: 50em;
   background-color: #e8e8e8;
   box-shadow: color-bg(body) 0px 10px 0px 0px, color-bg(body) 0px -7px 0px 0px;
+  &-left {
+    left: 17px;
+  }
+  &-right {
+    right: 17px;
+  }
 }
 
 .lesson-img {

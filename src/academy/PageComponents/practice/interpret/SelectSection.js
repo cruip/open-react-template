@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import ImgButton from "../../../elements/ImgButton";
+import IntlMessages from "../../../elements/IntlMessages";
 import Image from "../../../elements/Image";
 import { SelectedActorContext } from "./InterpretContext";
 
@@ -14,10 +14,11 @@ const SelectSection = () => {
         width={100}
       />
       <div className='fl-co-ce' style={{ width: "40%" }}>
-        <h2 style={{ color: "black" }}>Who are you going to play?</h2>
+        <h2 style={{ color: "black" }}>
+          <IntlMessages id='unit.practice.interpret-first-text' />
+        </h2>
         <p className='txt-al-ce' style={{ color: "grey" }}>
-          You'll read their text out loud and will act out a real conversation.
-          Then, you'll be able to listen to yourself afterwards.
+          <IntlMessages id='unit.practice.interpret-second-text' />
         </p>
       </div>
       <div className='fl mt-20'>

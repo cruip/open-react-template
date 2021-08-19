@@ -49,7 +49,7 @@ const PracticeVocabulary = ({
 
   const answerCheck = (nr) => {
     const wrongAudioAnswer = new Audio(
-      require("../../../../assets/images/vocabulary/wrong.mp3")
+      require("../../../../assets/images/vocabulary/wrong.mp3").default
     );
     if (practiceData[count]?.answer[nr].correct) {
       nr === 0 && setButton1("true");

@@ -27,7 +27,7 @@ export default function FifthSection({ t }) {
           <div className='tiles-item-inner'>
             <div className='testimonial-item-header fl-ce'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 alt=''
               />
             </div>
@@ -45,7 +45,7 @@ export default function FifthSection({ t }) {
           <div className='tiles-item-inner'>
             <div className='testimonial-item-header fl-ce'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 alt=''
               />
             </div>
@@ -63,7 +63,7 @@ export default function FifthSection({ t }) {
           <div className='tiles-item-inner'>
             <div className='testimonial-item-header fl-ce'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 alt=''
               />
             </div>
@@ -81,7 +81,7 @@ export default function FifthSection({ t }) {
           <div className='tiles-item-inner'>
             <div className='testimonial-item-header fl-ce'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 alt=''
               />
             </div>
@@ -99,7 +99,7 @@ export default function FifthSection({ t }) {
           <div className='tiles-item-inner'>
             <div className='testimonial-item-header fl-ce'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 alt=''
               />
             </div>
@@ -118,7 +118,7 @@ export default function FifthSection({ t }) {
           <div className='tiles-item-inner'>
             <div className='testimonial-item-header fl-ce'>
               <img
-                src={require("../../../assets/images/Profesoret1.png")}
+                src={require("../../../assets/images/Profesoret1.png").default}
                 alt=''
               />
             </div>
