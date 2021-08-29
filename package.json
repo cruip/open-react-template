@@ -1,41 +1,71 @@
 {
-  "name": "open-react-template",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^2.7.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {}
+    "name": "open-react-template",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@emotion/react": "^11.4.1",
+        "@emotion/styled": "^11.3.0",
+        "@owaiswiz/use-in-view": "^1.0.16",
+        "@popperjs/core": "^2.9.3",
+        "@tailwindcss/forms": "^0.3.3",
+        "apollo-boost": "^0.4.9",
+        "axios": "^0.21.1",
+        "chart.js": "^3.5.1",
+        "classnames": "^2.2.6",
+        "dotenv": "^10.0.0",
+        "feather-icons": "^4.28.0",
+        "framer-motion": "^4.1.17",
+        "graphql": "^15.5.1",
+        "graphql-request": "^3.5.0",
+        "graphql-tag": "^2.12.5",
+        "lodash": "^4.17.15",
+        "node-sass": "^4.13.1",
+        "react": "^16.13.1",
+        "react-anchor-link-smooth-scroll": "^1.0.12",
+        "react-apollo": "^3.1.5",
+        "react-dom": "^16.13.1",
+        "react-ga": "^2.7.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "^3.4.1",
+        "react-slick": "^0.28.1",
+        "styled-components": "^5.3.1",
+        "tailwindcss": "^2.2.7",
+        "twin.macro": "^2.7.0"
+    },
+    "bableMacros": {
+        "twin" : {
+            "styled": "styled-components",
+            "config": "./tailwind.config.js",
+            "format": "auto"
+          }
+    },
+    "peerDependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cruip/open-react-template.git"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

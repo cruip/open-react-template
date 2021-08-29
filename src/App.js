@@ -6,9 +6,18 @@ import ReactGA from 'react-ga';
 
 // Layouts
 import LayoutDefault from './layouts/LayoutDefault';
+import AuthLayout from "./layouts/AuthLayout"
 
 // Views 
 import Home from './views/Home';
+import Blog from './views/Blog';
+import AboutUs from './views/AboutUs';
+import ContactUs from './views/ContactUs';
+import SignUp from './views/SignUp';
+import Login from './views/Login';
+import TermsOfService from './views/TermsOfService';
+import PrivacyPolicy from './views/PrivacyPolicy';
+import UserInfo from './views/UserInfo';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -37,6 +46,15 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path='/blog' component={Blog}
+          layout={LayoutDefault}/>
+          <AppRoute exact path="/about" component={AboutUs} layout={LayoutDefault}/>
+          <AppRoute exact path="/contact" component={ContactUs} layout={LayoutDefault}/>
+          <AppRoute exact path="/login" component={Login} layout={LayoutDefault}/>
+          <AppRoute exact path="/register" component={SignUp} layout={LayoutDefault}/>
+          <AppRoute exact path="/tos" component={TermsOfService} layout={LayoutDefault}/>
+          <AppRoute exact path="/privacy" component={PrivacyPolicy} layout={LayoutDefault}/>
+          <AppRoute exact path="/user/data" component={UserInfo} layout={AuthLayout}/>
         </Switch>
       )} />
   );

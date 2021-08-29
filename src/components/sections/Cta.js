@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
+import axios from 'axios';
 
 const propTypes = {
   ...SectionProps.types,
@@ -25,7 +26,7 @@ const Cta = ({
   split,
   ...props
 }) => {
-
+  const [email,setEmail] = useState('')
   const outerClasses = classNames(
     'cta section center-content-mobile reveal-from-bottom',
     topOuterDivider && 'has-top-divider',
@@ -41,7 +42,20 @@ const Cta = ({
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'
   );  
-
+    const handleChange = (e) => {
+      setEmail(e.target.value)
+    }
+    const handleSubmit = (e) =>{
+      
+      axios.post(process.env.REACT_APP_EMAIL_API, {email}).then(res=> {
+        console.log('ressss',res)
+        setEmail('')
+        alert(res.data.msg)  }
+      ).catch(err => {
+        console.log(err)
+      })
+    }
+    console.log(email)
   return (
     <section
       {...props}
@@ -57,11 +71,13 @@ const Cta = ({
               </h3>
           </div>
           <div className="cta-action">
-            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your best email">
+            <Input id="newsletter" type="email" label="Subscribe" labelHidden  placeholder="Your best email" onChange={handleChange} value={email}>
               <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
+                <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#8b2dd2" />
               </svg>
+             
             </Input>
+             <input type='submit' onClick={handleSubmit}/>
           </div>
         </div>
       </div>

@@ -7,13 +7,26 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //import './App.css';
+import 'tailwindcss/dist/base.min.css'
 import './assets/scss/style.scss';
+import dotenv from 'dotenv';
+
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
+dotenv.config();
+
+const apollo_client = new ApolloClient({
+  uri: process.env.REACT_APP_GCMS_URL
+});
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history}>
-    <App />
+    <ApolloProvider client={ apollo_client }>
+      <App />
+    </ApolloProvider>
   </Router>,
   document.getElementById('root')
 );
