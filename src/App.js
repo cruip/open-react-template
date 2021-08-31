@@ -18,6 +18,7 @@ import Login from './views/Login';
 import TermsOfService from './views/TermsOfService';
 import PrivacyPolicy from './views/PrivacyPolicy';
 import UserInfo from './views/UserInfo';
+import UserProfileView from './views/UserProfileView'
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -54,6 +55,8 @@ const App = () => {
           <AppRoute exact path="/register" component={SignUp} layout={LayoutDefault}/>
           <AppRoute exact path="/tos" component={TermsOfService} layout={LayoutDefault}/>
           <AppRoute exact path="/privacy" component={PrivacyPolicy} layout={LayoutDefault}/>
+          {/* auth routes */}
+          <AppRoute exact path="/user" component={UserProfileView} layout={AuthLayout}/>
           <AppRoute exact path="/user/data" component={UserInfo} layout={AuthLayout}/>
         </Switch>
       )} />

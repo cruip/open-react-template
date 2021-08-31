@@ -7,7 +7,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //import './App.css';
-import 'tailwindcss/dist/base.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import "tailwindcss/dist/base.css";
 import './assets/scss/style.scss';
 import dotenv from 'dotenv';
 

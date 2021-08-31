@@ -8,7 +8,7 @@ import logo from "../assets/images/logo.png";
 
 import { ReactComponent as SignUpIcon } from "feather-icons/dist/icons/user-plus.svg";
 
-const Container = tw(ContainerBase)`min-h-screen bg-secondary-600 text-black font-medium flex justify-center bg-opacity-0 -m-8 mt-12`;
+const Container = tw(ContainerBase)`min-h-screen bg-secondary-600 text-black font-medium flex justify-center bg-opacity-0 -m-8 mt-16`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white  shadow sm:rounded-lg flex justify-center flex-1`;
 const MainContainer = tw.div`lg:w-1/2 xl:w-5/12 p-6 sm:p-12 mt-12`;
 const LogoLink = tw.a``;

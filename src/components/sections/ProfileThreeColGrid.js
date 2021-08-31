@@ -15,8 +15,8 @@ const Heading = tw(SectionHeading)``
 const Subheading = tw(SubheadingBase)`text-center mb-3`
 const Description = tw(SectionDescription)`mx-auto text-center`
 
-const Cards = tw.div` `
-const Card = tw.div` `
+const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto`
+const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`
 const CardImage = styled.div`
   ${props => css`background-image: url("${props.imageSrc}");`}
   ${tw`w-64 h-64 bg-contain bg-center rounded`}
@@ -170,7 +170,6 @@ export default ({
           {heading && <Heading>{heading}</Heading> }
           {description && <Description>{description}</Description> }
         </HeadingContainer>
-        
         <Cards>
           {cards.map((card, index) => (
             <Card key={index}>
@@ -189,7 +188,6 @@ export default ({
             </Card>
           ))}
         </Cards>
-        
       </ContentWithPaddingXl>
     </Container>
   );
