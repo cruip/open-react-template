@@ -11,6 +11,7 @@ import AuthLayout from "./layouts/AuthLayout"
 // Views 
 import Home from './views/Home';
 import Blog from './views/Blog';
+import Blog2 from './views/Blog2';
 import AboutUs from './views/AboutUs';
 import ContactUs from './views/ContactUs';
 import SignUp from './views/SignUp';
@@ -58,6 +59,7 @@ const App = () => {
           {/* auth routes */}
           <AppRoute exact path="/user" component={UserProfileView} layout={AuthLayout}/>
           <AppRoute exact path="/user/data" component={UserInfo} layout={AuthLayout}/>
+          <AppRoute exact path="/blog2" component={Blog2} layout={AuthLayout}/>
         </Switch>
       )} />
   );

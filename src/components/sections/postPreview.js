@@ -2,8 +2,7 @@ import React from 'react';
 import ReadMore from './ReadMore.js'
 
 const PostPreview = ({post, noImage}) => {
-    console.log(noImage)
-    console.log("post",post)
+    
     return (
         <div className="post-preview">
             {
@@ -21,7 +20,7 @@ const PostPreview = ({post, noImage}) => {
             }
             
             <div>
-                <h5 className="title">{ post.title }</h5>
+                <h1 className="title">{ post.title }</h1>
                 <div className="text-center">
                     <span className="tag">Author</span> <span className="author">{ Array.isArray(post.author) ? post.author.join(", ") : post.author }</span>
                 </div>

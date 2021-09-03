@@ -6,8 +6,36 @@ module.exports = {
      width: {
        'ct': '1080px',
        'ct2': '67.5rem'
-     }
+     },
+     spacing: {
+      "72": "18rem",
+      "84": "21rem",
+      "96": "24rem"
     },
+    maxWidth: {
+      "1/4": "25%",
+      "1/2": "50%",
+      "3/4": "75%",
+      "9/10": "90%"
+    },
+    translate: {
+      double: "200%",
+      triple: "300%",
+      quad: "400%"
+    },
+    height: {
+      "2px": "2px"
+    },
+    inset: {
+      "24": "5rem", // not for real
+      "1/2": "50%",
+      full: "100%"
+    },
+    transitionProperty: {
+      width: "width"
+    }
+    },
+    
     screens: {
       sm: '640px',
       md: '768px',

@@ -1,24 +1,38 @@
-import React from 'react';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
+import React from "react"
+import {PrimaryButton} from '../elements/Buttons'
+import tw from 'twin.macro'
 
 
-const BetSlip = (props) => {
+function BetSlip({
+  className = "yoooooooooooo",
+  image = "",
+  title = "eeeeeeeeeeeeeeeeeeeeeeeeee",
+  text = "dasdasdasdasd",
+  buttonText = 'place bet',
+  buttonLink = "ffffffeeeee",
+  html = null,
+  ...newProps
+}) {
+  let finalClass = `${className} w-72 max-w-full border border-gray-300 rounded-sm bg-white`
   return (
-    <div>
-      <Card className='container'>
-        <CardImg top width="100%" src="/assets/318x180.svg" alt="Bet Image" />
-        <CardBody>
-          <CardTitle tag="h5">Bet Slip</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted"> Bet Name</CardSubtitle>
-          <CardText><p>text input token amount</p> <p>prize amount</p></CardText>
-          <Button>Place Bet</Button>
-        </CardBody>
-      </Card>
+    <div className={finalClass} tw="w-72 max-w-full border border-gray-300 rounded-sm bg-white">
+      {image && (
+        <div tw="w-full h-48">
+          <img src={image} tw="w-full h-full object-cover" />
+        </div>
+      )}
+      <div tw="p-6">
+        {title && <h5 tw="text-lg font-medium">{title}</h5>}
+        {text && <p className={`${title }`} tw='mt-2'>{text}</p>}
+        {html}
+        {buttonText && (
+          <div tw="mt-4 flex">
+            <PrimaryButton link={buttonLink}>{buttonText}</PrimaryButton>
+          </div>
+        )}
+      </div>
     </div>
-  );
-};
+  )
+}
 
 export default BetSlip;
