@@ -19,7 +19,6 @@ Looking for more pages and components? Have a look at the **premium version** he
 *The premium template is built on-the-top of [Tailwind CSS](https://tailwindcss.com/), and React components have been re-built from scratch.* 
 
 ## Table of contents
-
 * [Usage](#usage)
   * [Available Scripts](#available-scripts)
     * [npm start](#npm-start)
@@ -43,6 +42,7 @@ Looking for more pages and components? Have a look at the **premium version** he
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Be sure to switch your **node version** to 8 - 13, since [node-sass 4.13.1](https://www.npmjs.com/package/node-sass) is no longer supported in the newer versions.
 ### Available Scripts
 
 In the project directory, you can run:
