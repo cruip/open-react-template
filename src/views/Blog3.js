@@ -8,7 +8,7 @@ export class Blog3 extends Component {
        isLoaded: false
    }
  componentDidMount () {
-   axios.get('https://parlaycms.site.strattic.io/wp-json/wp/v2/posts')
+   axios.get('https://parlaycms.site.strattic.io/wp-json/wp/v2')
        .then(res => {
         console.log("ressy",res)
            this.setState({

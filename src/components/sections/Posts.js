@@ -20,23 +20,19 @@ export class Post extends Component {
       
          this.state.id  = this.props.match.params;
         
-       const getId = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
-      
-       const getImageUrl = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
-      
-       const getContent= axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
+       const getContent= axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts/${this.props.match.params.id}`);
        
-       const getAuthor = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
       
-       Promise.all([getImageUrl, getAuthor,getId, getContent]).then(res => {
-            console.log('ressszdsa', res[0].data._embedded['wp:featuredmedia'])
+      
+       Promise.all([getContent]).then(res => {
+            console.log('ressszdsa', res)
            this.setState({
             imgUrl: res[0].data.featured_media_src_url,
-            author: res[1].data.author,
+            author: res[0].data.author,
             isLoaded: true,
-            id:res[2].data.id,
-            content:res[3].data.content.rendered,
-            title: res[3].data.title.rendered
+            id:res[0].data.id,
+            content:res[0].data.content.rendered,
+            title: res[0].data.title.rendered
 
            } , () => {
                console.log("state again",this.state)
