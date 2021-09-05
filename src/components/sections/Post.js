@@ -16,17 +16,17 @@ export class Post extends Component {
    }
    componentDidMount () {
        const {featured_media, author} = this.props.post;
-       const getImageUrl = axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/media/${featured_media}`);
-       const getId = axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/blogs`);
+       const getImageUrl = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
+       const getId = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
        
     
-       const getAuthor = axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/users/${author}`);
+       const getAuthor = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
       
        Promise.all([getImageUrl, getAuthor,getId]).then(res => {
         console.log('Post', res[2].data.id)
            this.setState({
-               imgUrl: res[0].data.source_url,
-               author: res[1].data.name,
+               imgUrl: res[0].data.featured_media_src_url,
+               author: res[1].data.author,
                isLoaded: true,
                id:res[2].data.id
            });

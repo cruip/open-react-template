@@ -20,23 +20,23 @@ export class Post extends Component {
       
          this.state.id  = this.props.match.params;
         
-       const getId = axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/blogs`);
+       const getId = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
       
-       const getImageUrl = axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/blogs/${this.props.match.params.id}?_embed`);
+       const getImageUrl = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
       
-       const getContent= axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/blogs/${this.props.match.params.id}`);
+       const getContent= axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
        
-       const getAuthor = axios.get(`https://parlay-cms.netlify.app/wp-json/wp/v2/users/`);
+       const getAuthor = axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts`);
       
        Promise.all([getImageUrl, getAuthor,getId, getContent]).then(res => {
             console.log('ressszdsa', res[0].data._embedded['wp:featuredmedia'])
            this.setState({
-               imgUrl: res[0].data._embedded['wp:featuredmedia'][0].source_url,
-               author: res[1].data[0].name,
-               isLoaded: true,
-               id:res[2].data.id,
-               content:res[3].data.content.rendered,
-               title: res[3].data.title.rendered
+            imgUrl: res[0].data.featured_media_src_url,
+            author: res[1].data.author,
+            isLoaded: true,
+            id:res[2].data.id,
+            content:res[3].data.content.rendered,
+            title: res[3].data.title.rendered
 
            } , () => {
                console.log("state again",this.state)
