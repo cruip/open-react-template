@@ -41,6 +41,7 @@
     "file-loader": "4.3.0",
     "framer-motion": "^4.1.17",
     "fs-extra": "^8.1.0",
+    "gatsby": "^3.13.0",
     "graphql": "^15.5.1",
     "graphql-request": "^3.5.0",
     "graphql-tag": "^2.12.5",
@@ -88,7 +89,8 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.11.0",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
+    "wpapi": "^1.2.2"
   },
   "bableMacros": {
     "twin": {

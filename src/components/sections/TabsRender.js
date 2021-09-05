@@ -16,9 +16,9 @@ const TabsRender = () => (
   <Container tw=" max-w-contain m-auto ">
   <Tabs tw="justify-center" >
     <TabList tw=" flex justify-between  ">
-      <Tab ><img src={Val}/></Tab>
-      <Tab ><img src={Wz}/></Tab>
-      <Tab><img src={Fn}/></Tab>
+      <Tab ><img src={Val} alt="Valorant logo"/></Tab>
+      <Tab ><img src={Wz} alt="WarZone logo"/></Tab>
+      <Tab><img src={Fn} alt="Fortnite logo"/></Tab>
     </TabList>
     <div tw=' flex justify-center max-w-contain'>
     <div className='container'>

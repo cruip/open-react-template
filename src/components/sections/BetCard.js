@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import tw from 'twin.macro'
+
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 ;
 
@@ -17,90 +17,8 @@ const FlippyStyle = {
 }
 
 
-const DefaultCardContents = ({ children }) => (
-  <React.Fragment>
-    <FrontSide
-      style={{
-        backgroundColor: '#460fb3',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column'
-      }}
-     tw='bg-gradient-to-r from-primary-500'>
-      <img
-        src={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-and-morty-1604562846.jpg?crop=1.00xw:0.956xh;0,0.0218xh&resize=1200:*"}
-        style={{ maxWidth: '100%', maxHeight: '100%' }}
-      />
-      Bet Type
-      <span 
-        style={{
-          fontSize:'12px',
-          position: 'absolute',
-          bottom: '10px',
-          width: '100%'
-        }}><button type="button" onClick={() => this.flippyHorizontal.toggle()}>Toggle Me!</button>
-        {children}<br />
-        (FRONT SIDE)
-      </span>
-    </FrontSide>
-    <BackSide
-      style={{
-        backgroundColor: '#175852',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column'
-      }}>
-      bet description
-      
-      <span 
-        style={{
-          fontSize:'12px',
-          position: 'absolute',
-          bottom: '10px',
-          width: '100%'
-        }}>
-        {children}<br />
-        (BACK SIDE)
-      </span>
-    </BackSide>
-  </React.Fragment>);
 
-const FlippyOnHover = ({ flipDirection = 'vertical' }) => (
-  <Flippy
-    flipOnHover={true}
-    flipDirection={flipDirection}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents>
-    I flip {flipDirection}ly on hover
-    </DefaultCardContents>
-  </Flippy>
-);
 
-const FlippyOnClick = ({ flipDirection = 'vertical' }) => (
-  <Flippy
-    flipOnClick={true}
-    flipDirection={flipDirection}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents>
-      I flip {flipDirection}ly on click
-    </DefaultCardContents>
-  </Flippy>
-);
-
-const ControlledFlippy = ({ isFlipped })  => (
-  <Flippy
-    flipDirection="vertical"
-    isFlipped={isFlipped}
-    style={FlippyStyle}
-  >
-    <DefaultCardContents>
-      I flip vertically for every 3sec. I am controlling by a upper scope.
-    </DefaultCardContents>
-  </Flippy>
-);
 
 class BetCard extends Component {
   constructor(props) {
@@ -133,7 +51,7 @@ class BetCard extends Component {
       }}
      tw='bg-gradient-to-r from-primary-500'>
               <img
-        src={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-and-morty-1604562846.jpg?crop=1.00xw:0.956xh;0,0.0218xh&resize=1200:*"}
+        src={"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-and-morty-1604562846.jpg?crop=1.00xw:0.956xh;0,0.0218xh&resize=1200:*" } alt="bet type icon"
         style={{ maxWidth: '100%', maxHeight: '100%' }}
       />
       Bet Type

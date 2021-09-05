@@ -9,9 +9,9 @@ import LayoutDefault from './layouts/LayoutDefault';
 import AuthLayout from "./layouts/AuthLayout"
 
 // Views 
+import Posts from './components/sections/Posts';
 import Home from './views/Home';
-import Blog from './views/Blog';
-import Blog2 from './views/Blog2';
+import Blog3 from './views/Blog3';
 import AboutUs from './views/AboutUs';
 import ContactUs from './views/ContactUs';
 import SignUp from './views/SignUp';
@@ -48,8 +48,6 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path='/blog' component={Blog}
-          layout={LayoutDefault}/>
           <AppRoute exact path="/about" component={AboutUs} layout={LayoutDefault}/>
           <AppRoute exact path="/contact" component={ContactUs} layout={LayoutDefault}/>
           <AppRoute exact path="/login" component={Login} layout={LayoutDefault}/>
@@ -59,7 +57,8 @@ const App = () => {
           {/* auth routes */}
           <AppRoute exact path="/user" component={UserProfileView} layout={AuthLayout}/>
           <AppRoute exact path="/user/data" component={UserInfo} layout={AuthLayout}/>
-          <AppRoute exact path="/blog2" component={Blog2} layout={AuthLayout}/>
+          <AppRoute exact path="/blog" component={Blog3} layout={AuthLayout}/>
+          <AppRoute exact path="/blog/:id" component={Posts} layout={AuthLayout}/>
         </Switch>
       )} />
   );
