@@ -48,7 +48,7 @@ export class Post extends Component {
            
            <div tw='max-w-contain border-solid border-2 border-primary-500 rounded mt-16 mx-auto '> 
               {console.log("loggy", this.state)}
-              <img src={imgUrl} alt={title} tw='mx-auto object-cover'/>
+              <img src={imgUrl} alt={title} tw='mx-auto object-cover mt-2'/>
               
               <h2 tw='flex justify-center'>{title}</h2>
               <strong tw='flex justify-center'>{author}</strong><br/>
