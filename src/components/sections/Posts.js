@@ -20,12 +20,12 @@ export class Post extends Component {
       
          this.state.id  = this.props.match.params;
         
-       const getContent= axios.get(`https://parlaycms.site.strattic.io/wp-json/wp/v2/posts/${this.props.match.params.id}`);
+       const getContent= axios.get(`https://benber28.dreamhosters.com/wp-json/wp/v2/posts/${this.props.match.params.id}`);
        
       
       
        Promise.all([getContent]).then(res => {
-            console.log('ressszdsa', res)
+            
            this.setState({
             imgUrl: res[0].data.featured_media_src_url,
             author: res[0].data.author,
@@ -35,7 +35,7 @@ export class Post extends Component {
             title: res[0].data.title.rendered
 
            } , () => {
-               console.log("state again",this.state)
+               
            });
            
        });
@@ -46,7 +46,7 @@ export class Post extends Component {
        const {author, imgUrl} = this.state;
        return (
            
-           <div tw='max-w-contain border-solid border-2 border-primary-500 p-2 rounded mt-16 mx-auto'> 
+           <div tw='max-w-contain border-solid border-2 border-primary-500 rounded mt-16 mx-auto '> 
               {console.log("loggy", this.state)}
               <img src={imgUrl} alt={title} tw='mx-auto object-cover'/>
               

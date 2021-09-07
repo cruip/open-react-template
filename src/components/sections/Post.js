@@ -21,7 +21,7 @@ export class Post extends Component {
        
        return (
            
-           <div tw='max-w-contain border-solid border-2 border-primary-500 p-2 rounded'> 
+           <div tw='max-w-contain border-solid border-2 border-primary-500 p-2 rounded mt-4'> 
                         
               <img src={featured_media_src_url} alt={title.rendered} tw='mx-auto object-cover'/>
               <Link to={`/blog/${id}`}  ><div tw='flex justify-center'>
