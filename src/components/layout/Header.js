@@ -68,6 +68,9 @@ const Header = ({
     closeMenu();
   }  
 
+  const HighlightSignUp = (e) => {
+    document.getElementById('newsletter').focus()
+  }
   const classes = classNames(
     'site-header',
     bottomOuterDivider && 'has-bottom-divider',
@@ -122,7 +125,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/register" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <button  className="button button-primary button-wide-mobile button-sm" onClick={HighlightSignUp}>Sign up</button>
                       </li>
                     </ul>}
                 </div>

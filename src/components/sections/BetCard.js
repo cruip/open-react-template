@@ -27,17 +27,13 @@ class BetCard extends Component {
       isFlipped: false
     };
 
-    setInterval(() => {
-      this.setState({
-        isFlipped: !this.state.isFlipped
-      });
-    }, 3000);
+   
   }
 
   render() {
     return (
-      <div className="App" tw="max-w-contain  mx-auto">
-        <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }} tw=' max-w-contain ' >
+      <div  tw='mx-auto max-w-contain'>
+        
         <Flippy
               ref={(r) => this.flippyHorizontal = r}
               flipOnClick={false}
@@ -79,8 +75,9 @@ class BetCard extends Component {
           </Flippy>
          
          
+         
         </div>
-      </div>
+      
     );
   }
 }

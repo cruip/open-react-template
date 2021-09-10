@@ -113,7 +113,7 @@
 		padding: $footer-social--inner-padding;
 
 		svg {
-			fill: color-icon(social);
+			fill: #fff;
 			transition: fill .15s ease;
 
 			.invert-color & {
