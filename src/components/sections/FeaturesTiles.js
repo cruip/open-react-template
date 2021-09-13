@@ -63,29 +63,7 @@ const FeaturesTiles = ({
           <SectionHeader data={section2Header} className="center-content" />
           <div className={tilesClasses}>
 
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                  Incentives and Customized Progression
-                    </h4>
-                  <p className="m-0 text-sm">
-                  By incentivising the time spent playing games, once wasted time could become real cash. Make it more impactful and challenging, and expand your capacity. Stay in the moment, versus zoning out. Our progressive betting structure helps to avoid any bets that are too large too soon, in addition to keeping you aware of spend and win rate. This puts you behind the wheel and in control of your own experience.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+            <div className="tiles-item reveal-from-bottom" >
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
@@ -102,6 +80,28 @@ const FeaturesTiles = ({
                     </h4>
                   <p className="m-0 text-sm">
                   Take advantage of what could be decades of gaming experience under your belt. We constantly evolve to ensure that our users are matched accurately and fairly by using artificial intelligence and machine learning. Your experience is our priority.
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
+                      alt="Features tile icon 01"
+                      width={64}
+                      height={64} />
+                  </div>
+                </div>
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">
+                  Incentives and Customized Progression
+                    </h4>
+                  <p className="m-0 text-sm">
+                  By incentivising the time spent playing games, once wasted time could become real cash. Make it more impactful and challenging, and expand your capacity. Stay in the moment, versus zoning out. Our progressive betting structure helps to avoid any bets that are too large too soon, in addition to keeping you aware of spend and win rate. This puts you behind the wheel and in control of your own experience.
                     </p>
                 </div>
               </div>
