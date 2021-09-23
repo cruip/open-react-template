@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "./partials/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "../elements/Buttons.js";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 import {ReactComponent as SvgDotPattern } from "../../assets/images/dot-pattern.svg"
 
@@ -31,13 +30,12 @@ const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+)`mt-4 font-robotoCon  font-extrabold text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+const Description = tw.p`mt-4 text-center font-sans  md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-yellow-500`;
 
-const PrimaryButton = styled(PrimaryButtonBase)(props => [
-  tw`mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0`,
-  props.buttonRounded && tw`rounded-full`
-]);
+const Bold = tw.span`
+text-yellow-500
+`
 
 
 export default ({
@@ -48,8 +46,6 @@ export default ({
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -58,7 +54,12 @@ export default ({
   imageCss = null,
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
-  textOnLeft = true
+  textOnLeft = true,
+  bold1 = '',
+  bold2 = '',
+  heading2= '',
+  heading3= ''
+
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -72,7 +73,7 @@ export default ({
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
+            <Heading>{heading} <Bold>{bold1}</Bold> {heading2} <Bold>{bold2}</Bold> {heading3} </Heading>
             <Description>{description}</Description>
           </TextContent>
         </TextColumn>

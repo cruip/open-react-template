@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
-
+import tw from "twin.macro";
 const propTypes = {
   navPosition: PropTypes.string,
   hideNav: PropTypes.bool,
@@ -88,6 +88,8 @@ const Header = ({
             'site-header-inner',
             bottomDivider && 'has-bottom-divider'
           )}>
+            <Link tw="no-underline" to='/' >
+            <span tw="hidden md:flex text-4xl font-robotoCon font-hairline text-parlayPink">PARLAY</span></Link> 
           <Logo />
           {!hideNav &&
             <>

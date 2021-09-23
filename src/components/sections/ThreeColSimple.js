@@ -31,11 +31,11 @@ const Card = styled.a`
   }
 
   .title {
-    ${tw`mt-4 font-bold text-xl leading-none`}
+    ${tw`mt-4 font-bold text-xl text-white font-sans leading-none `}
   }
 
   .description {
-    ${tw`mt-4 text-sm font-medium text-secondary-300`}
+    ${tw`mt-4 text-sm font-medium text-white text-justify`}
   }
 
   .link {

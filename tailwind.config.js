@@ -3,6 +3,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      margin: {
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        xl: '48px',
+        9: '2.35rem'
+       },
      width: {
        'ct': '1080px',
        'ct2': '67.5rem'
@@ -35,7 +42,9 @@ module.exports = {
       width: "width"
     }
     },
-    
+    margin: {
+      9: '2.25rem'
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -113,7 +122,7 @@ module.exports = {
         200: '#fefcbf',
         300: '#faf089',
         400: '#f6e05e',
-        500: '#ecc94b',
+        500: '#faff14',
         600: '#d69e2e',
         700: '#b7791f',
         800: '#975a16',
@@ -299,19 +308,10 @@ module.exports = {
     fontFamily: {
       display: ['Inter', 'system-ui'],
       sans: [
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
         'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+      ],
+      robotoCon: [
+        '"Roboto Condensed"'
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
@@ -384,7 +384,7 @@ module.exports = {
         200: '#fefcbf',
         300: '#faf089',
         400: '#f6e05e',
-        500: '#ecc94b',
+        500: '#faff14',
         600: '#d69e2e',
         700: '#b7791f',
         800: '#975a16',
