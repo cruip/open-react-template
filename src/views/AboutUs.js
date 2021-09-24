@@ -36,7 +36,7 @@ const AboutUs = () => {
         heading="We aim to disrupt the design space."
         description='At Parlay, our team works to bring together two key things: GAMES that are fun, and require skill, and BETS that are fair, easy to create, change, and cash out. 
 
-        By combining collaboration with adrenaline, fun with benefits, and 
+        By combining collaboration with adrenaline, fun with benefits, and ?
         
         '
         primaryButtonText="Contact Us"
