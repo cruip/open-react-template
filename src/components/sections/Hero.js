@@ -59,27 +59,7 @@ const Hero = ({
     >
       <div className="container-sm">
         <div className={innerClasses}>
-          <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
-            </h1>
-            <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-                </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
-                    </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
-                    </Button>
-                </ButtonGroup>
-              </div>
-            </div>
-          </div>
-          <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
+          {/* <div className="hero-figure reveal-from-bottom illustration-element-01">
             <a
               data-video="https://player.vimeo.com/video/174002812"
               href="#0"
@@ -93,7 +73,32 @@ const Hero = ({
                 width={896}
                 height={504} />
             </a>
+          </div> */}
+          <div className="hero-content">
+            <h1 className="mt-0 mb-16 reveal-from-bottom">
+              Hi, my name is <span className="text-color-primary">Gonzalo</span>
+            </h1>
+            <div className="container-xs">
+              <p className="m-0 mb-32 reveal-from-bottom">
+              I am a Full-Stack Software Engineer who specializes in back-end development and structuring data, while still maintaining a deep passion for intuitive and appealing UI design. I am enthusiastic to work as a part of a team and tackle big problems in organized and creative ways. I want to take full advantage of my early introduction into the professional world and work on as many projects as possible in order to expand my software engineering skillset and create innovative code.
+                </p>
+              <div className="reveal-from-bottom">
+
+                <ButtonGroup>
+                  <Button tag="a" color="dark" wideMobile href="https://www.linkedin.com/in/gonzalo-meza-cabrera/">
+                    LinkedIn
+                    </Button>
+                  <Button tag="a" color="primary" wideMobile href="https://drive.google.com/file/d/1Dr_AztkJs4BndDF1-kMVW7RmWEK3pIyo/view?usp=sharing">
+                    My Resume
+                    </Button>
+                  <Button tag="a" color="dark" wideMobile href="https://github.com/gonzzoh">
+                    Github
+                    </Button>
+                </ButtonGroup>
+              </div>
+            </div>
           </div>
+          
           <Modal
             id="video-modal"
             show={videoModalActive}

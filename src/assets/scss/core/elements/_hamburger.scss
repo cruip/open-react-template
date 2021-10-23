@@ -24,7 +24,7 @@
 	width: $header-hamburger--size;
 	height: $header-hamburger--thickness;
 	position: absolute;
-	background: color-icon(hamburger);
+	background: red;
 	border-radius: $header-hamburger--radius;
 
 	.invert-color & {
