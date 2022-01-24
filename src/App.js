@@ -33,15 +33,15 @@ const App = () => {
   }, [location]);
 
   return (
-    <LayoutDefault>
     <ScrollReveal
       ref={childRef}
       children={() => (
-        <Routes>
-          <Route path="/" element={<Home/>} />
-        </Routes>
+        <LayoutDefault>
+            <Routes>
+              <Route path="/" element={<Home/>} />
+            </Routes>
+        </LayoutDefault>
       )} />
-      </LayoutDefault>
   );
 }
 

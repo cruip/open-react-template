@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Image from '../../elements/Image';
-import ImageSrc from '../../../assets/images/logo.svg';
+import LogoImageSrc from '../../../assets/images/logo.svg';
 
 const Logo = ({
   className,
@@ -22,7 +22,7 @@ const Logo = ({
       <h1 className="m-0">
         <Link to="/">
           <Image
-            src={ImageSrc}
+            src={LogoImageSrc}
             alt="Open"
             width={32}
             height={32} />
