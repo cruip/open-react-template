@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation, Switch } from 'react-router-dom';
-import AppRoute from './utils/AppRoute';
+import { useLocation, Routes, Route } from 'react-router-dom';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 
@@ -11,13 +10,15 @@ import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
-
+if(process.env.REACT_APP_GA_CODE) {
+  ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+}
 const trackPage = page => {
-  ReactGA.set({ page });
-  ReactGA.pageview(page);
+  if(process.env.REACT_APP_GA_CODE){
+    ReactGA.set({ page });
+    ReactGA.pageview(page);
+  }
 };
-
 const App = () => {
 
   const childRef = useRef();
@@ -32,13 +33,15 @@ const App = () => {
   }, [location]);
 
   return (
+    <LayoutDefault>
     <ScrollReveal
       ref={childRef}
       children={() => (
-        <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
       )} />
+      </LayoutDefault>
   );
 }
 
