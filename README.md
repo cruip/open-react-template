@@ -12,7 +12,9 @@ Created and maintained with ❤️ by [Cruip.com](https://cruip.com).
 
 Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.com/)
 
-[![Open Pro](https://user-images.githubusercontent.com/2683512/151177673-e56ade57-c98d-4c37-b315-d313bd14bb53.png)](https://cruip.com/demos/open-pro/)
+## Open PRO
+
+[![Open Pro](https://user-images.githubusercontent.com/2683512/151177673-e56ade57-c98d-4c37-b315-d313bd14bb53.png)](https://cruip.com/)
 
 *The premium template is built on-the-top of [Tailwind CSS](https://tailwindcss.com/), and React components have been re-built from scratch.* 
 
