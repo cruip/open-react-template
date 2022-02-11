@@ -11,16 +11,16 @@
 
 	.tiles-wrap {
 		@if ( $features-tiles-items--padding__mobile != null ) {
-			margin-right: -($features-tiles-items--padding__mobile / 2);
-			margin-left: -($features-tiles-items--padding__mobile / 2);
-			margin-top: -($features-tiles-items--padding__mobile / 2);
+			margin-right: -($features-tiles-items--padding__mobile * 0.5);
+			margin-left: -($features-tiles-items--padding__mobile * 0.5);
+			margin-top: -($features-tiles-items--padding__mobile * 0.5);
 
 			&:last-of-type {
-				margin-bottom: -($features-tiles-items--padding__mobile / 2);
+				margin-bottom: -($features-tiles-items--padding__mobile * 0.5);
 			}
 
 			&:not(:last-of-type) {
-				margin-bottom: ($features-tiles-items--padding__mobile / 2);
+				margin-bottom: ($features-tiles-items--padding__mobile * 0.5);
 			}
 		}
 
@@ -30,8 +30,8 @@
 				flex-basis: $features-tiles-item--width;
 				max-width: $features-tiles-item--width;
 				@if ( $features-tiles-items--padding__mobile != null ) {
-					padding-left: $features-tiles-items--padding__mobile / 2;
-					padding-right: $features-tiles-items--padding__mobile / 2;
+					padding-left: $features-tiles-items--padding__mobile * 0.5;
+					padding-right: $features-tiles-items--padding__mobile * 0.5;
 				}
 			}
 		}
@@ -41,7 +41,7 @@
 		flex-basis: $features-tiles-item--width;
 		max-width: $features-tiles-item--width;
 		@if ( $features-tiles-items--padding__mobile != null ) {
-			padding: $features-tiles-items--padding__mobile / 2;
+			padding: $features-tiles-items--padding__mobile * 0.5;
 		}
 	}
 
@@ -69,29 +69,29 @@
 		@if ( $features-tiles-items--padding__desktop != null ) {
 
 			.tiles-wrap {
-				margin-right: -($features-tiles-items--padding__desktop / 2);
-				margin-left: -($features-tiles-items--padding__desktop / 2);
-				margin-top: -($features-tiles-items--padding__desktop / 2);
+				margin-right: -($features-tiles-items--padding__desktop * 0.5);
+				margin-left: -($features-tiles-items--padding__desktop * 0.5);
+				margin-top: -($features-tiles-items--padding__desktop * 0.5);
 
 				&:last-of-type {
-					margin-bottom: -($features-tiles-items--padding__desktop / 2);
+					margin-bottom: -($features-tiles-items--padding__desktop * 0.5);
 				}
 
 				&:not(:last-of-type) {
-					margin-bottom: ($features-tiles-items--padding__desktop / 2);
+					margin-bottom: ($features-tiles-items--padding__desktop * 0.5);
 				}
 
 				&.push-left {
 
 					&::after {
-						padding-left: $features-tiles-items--padding__desktop / 2;
-						padding-right: $features-tiles-items--padding__desktop / 2;
+						padding-left: $features-tiles-items--padding__desktop * 0.5;
+						padding-right: $features-tiles-items--padding__desktop * 0.5;
 					}
 				}
 			}
 
 			.tiles-item {
-				padding: $features-tiles-items--padding__desktop / 2;
+				padding: $features-tiles-items--padding__desktop * 0.5;
 			}
 		}
 	}

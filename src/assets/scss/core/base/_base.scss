@@ -41,13 +41,13 @@ ol {
 li {
 
 	&:not(:last-child) {
-		margin-bottom: $spacing--shared-v / 2;
+		margin-bottom: $spacing--shared-v * 0.5;
 	}
 }
 
 li > ul,
 li > ol {
-	margin-top: $spacing--shared-v / 2;
+	margin-top: $spacing--shared-v * 0.5;
 	margin-bottom: 0;
 }
 

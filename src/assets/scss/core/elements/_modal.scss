@@ -87,8 +87,8 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		margin-top: -($modal-close-icon--thickness / 2);
-		margin-left: -($modal-close-icon--size / 2);
+		margin-top: -($modal-close-icon--thickness * 0.5);
+		margin-left: -($modal-close-icon--size * 0.5);
 		width: $modal-close-icon--size;
 		height: $modal-close-icon--thickness;
 		background: color-icon(modal);

@@ -2,16 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-	margin-right: -($tiles-items--padding__mobile / 2);
-	margin-left: -($tiles-items--padding__mobile / 2);
-	margin-top: -($tiles-items--padding__mobile / 2);
+	margin-right: -($tiles-items--padding__mobile * 0.5);
+	margin-left: -($tiles-items--padding__mobile * 0.5);
+	margin-top: -($tiles-items--padding__mobile * 0.5);
 
 	&:last-of-type {
-		margin-bottom: -($tiles-items--padding__mobile / 2);
+		margin-bottom: -($tiles-items--padding__mobile * 0.5);
 	}
 
 	&:not(:last-of-type) {
-		margin-bottom: ($tiles-items--padding__mobile / 2);
+		margin-bottom: ($tiles-items--padding__mobile * 0.5);
 	}
 
 	&.push-left {
@@ -21,8 +21,8 @@
 			flex-basis: $tiles-item--width;
 			max-width: $tiles-item--width;
 			box-sizing: content-box;
-			padding-left: $tiles-items--padding__mobile / 2;
-			padding-right: $tiles-items--padding__mobile / 2;
+			padding-left: $tiles-items--padding__mobile * 0.5;
+			padding-right: $tiles-items--padding__mobile * 0.5;
 			height: 0;
 		}
 	}
@@ -32,7 +32,7 @@
 	flex-basis: $tiles-item--width;
 	max-width: $tiles-item--width;
 	box-sizing: content-box;
-	padding: $tiles-items--padding__mobile / 2;
+	padding: $tiles-items--padding__mobile * 0.5;
 
 	* {
 		box-sizing: border-box;
@@ -52,29 +52,29 @@
 	@include media( '>medium' ) {
 
 		.tiles-wrap {
-			margin-right: -($tiles-items--padding__desktop / 2);
-			margin-left: -($tiles-items--padding__desktop / 2);
-			margin-top: -($tiles-items--padding__desktop / 2);
+			margin-right: -($tiles-items--padding__desktop * 0.5);
+			margin-left: -($tiles-items--padding__desktop * 0.5);
+			margin-top: -($tiles-items--padding__desktop * 0.5);
 
 			&:last-of-type {
-				margin-bottom: -($tiles-items--padding__desktop / 2);
+				margin-bottom: -($tiles-items--padding__desktop * 0.5);
 			}
 
 			&:not(:last-of-type) {
-				margin-bottom: ($tiles-items--padding__desktop / 2);
+				margin-bottom: ($tiles-items--padding__desktop * 0.5);
 			}
 
 			&.push-left {
 
 				&::after {
-					padding-left: $tiles-items--padding__desktop / 2;
-					padding-right: $tiles-items--padding__desktop / 2;
+					padding-left: $tiles-items--padding__desktop * 0.5;
+					padding-right: $tiles-items--padding__desktop * 0.5;
 				}
 			}
 		}
 
 		.tiles-item {
-			padding: $tiles-items--padding__desktop / 2;
+			padding: $tiles-items--padding__desktop * 0.5;
 		}
 	}
 }

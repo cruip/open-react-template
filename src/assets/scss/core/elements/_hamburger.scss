@@ -34,7 +34,7 @@
 
 .hamburger-inner {
 	top: 50%;
-	margin-top: -($header-hamburger--thickness / 2);
+	margin-top: -($header-hamburger--thickness * 0.5);
 	transition-duration: 0.22s;
 	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 

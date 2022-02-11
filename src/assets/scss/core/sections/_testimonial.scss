@@ -11,16 +11,16 @@
 
 	.tiles-wrap {
 		@if ( $testimonial-items--padding__mobile != null ) {
-			margin-right: -($testimonial-items--padding__mobile / 2);
-			margin-left: -($testimonial-items--padding__mobile / 2);
-			margin-top: -($testimonial-items--padding__mobile / 2);
+			margin-right: -($testimonial-items--padding__mobile * 0.5);
+			margin-left: -($testimonial-items--padding__mobile * 0.5);
+			margin-top: -($testimonial-items--padding__mobile * 0.5);
 
 			&:last-of-type {
-				margin-bottom: -($testimonial-items--padding__mobile / 2);
+				margin-bottom: -($testimonial-items--padding__mobile * 0.5);
 			}
 
 			&:not(:last-of-type) {
-				margin-bottom: ($testimonial-items--padding__mobile / 2);
+				margin-bottom: ($testimonial-items--padding__mobile * 0.5);
 			}
 		}
 
@@ -30,8 +30,8 @@
 				flex-basis: $testimonial-item--width;
 				max-width: $testimonial-item--width;
 				@if ( $testimonial-items--padding__mobile != null ) {
-					padding-left: $testimonial-items--padding__mobile / 2;
-					padding-right: $testimonial-items--padding__mobile / 2;
+					padding-left: $testimonial-items--padding__mobile * 0.5;
+					padding-right: $testimonial-items--padding__mobile * 0.5;
 				}
 			}
 		}
@@ -41,7 +41,7 @@
 		flex-basis: $testimonial-item--width;
 		max-width: $testimonial-item--width;
 		@if ( $testimonial-items--padding__mobile != null ) {
-			padding: $testimonial-items--padding__mobile / 2;
+			padding: $testimonial-items--padding__mobile * 0.5;
 		}
 	}
 
@@ -79,29 +79,29 @@
 		@if ( $testimonial-items--padding__desktop != null ) {
 
 			.tiles-wrap {
-				margin-right: -($testimonial-items--padding__desktop / 2);
-				margin-left: -($testimonial-items--padding__desktop / 2);
-				margin-top: -($testimonial-items--padding__desktop / 2);
+				margin-right: -($testimonial-items--padding__desktop * 0.5);
+				margin-left: -($testimonial-items--padding__desktop * 0.5);
+				margin-top: -($testimonial-items--padding__desktop * 0.5);
 
 				&:last-of-type {
-					margin-bottom: -($testimonial-items--padding__desktop / 2);
+					margin-bottom: -($testimonial-items--padding__desktop * 0.5);
 				}
 
 				&:not(:last-of-type) {
-					margin-bottom: ($testimonial-items--padding__desktop / 2);
+					margin-bottom: ($testimonial-items--padding__desktop * 0.5);
 				}
 
 				&.push-left {
 
 					&::after {
-						padding-left: $testimonial-items--padding__desktop / 2;
-						padding-right: $testimonial-items--padding__desktop / 2;
+						padding-left: $testimonial-items--padding__desktop * 0.5;
+						padding-right: $testimonial-items--padding__desktop * 0.5;
 					}
 				}
 			}
 
 			.tiles-item {
-				padding: $testimonial-items--padding__desktop / 2;
+				padding: $testimonial-items--padding__desktop * 0.5;
 			}
 		}
 	}

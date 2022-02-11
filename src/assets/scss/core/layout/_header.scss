@@ -120,15 +120,15 @@
 			    a:not(.button) {
 					display: inline-flex;
 			        @include anchor-aspect(header-mobile);
-					padding-top: $header-nav--padding-v__mobile / 2;
-					padding-bottom: $header-nav--padding-v__mobile / 2;
+					padding-top: $header-nav--padding-v__mobile * 0.5;
+					padding-bottom: $header-nav--padding-v__mobile * 0.5;
 			    }
 			}
 
 			a.button {
 				margin-left: 0;
-				margin-top: $header-nav--padding-v__mobile / 2;
-				margin-bottom: $header-nav--padding-v__mobile / 2;
+				margin-top: $header-nav--padding-v__mobile * 0.5;
+				margin-bottom: $header-nav--padding-v__mobile * 0.5;
 			}
 		}
 	}

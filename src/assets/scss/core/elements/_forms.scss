@@ -63,7 +63,7 @@ fieldset {
 	display: block;
 	@include font-size(input);
 	@include font-weight(input);
-	padding: (($button-form--height - get-line-height(input) - ($button-form--border-width * 2)) / 2) ($form--padding-h - $button-form--border-width);
+	padding: (($button-form--height - get-line-height(input) - ($button-form--border-width * 2)) * 0.5) ($form--padding-h - $button-form--border-width);
 	height: $button-form--height;
 	border-radius: $form--radius;
     color: color(input);
@@ -103,7 +103,7 @@ textarea.form-input {
 
 .form-select-sm,
 .form-input-sm {
-    padding: (($button-form-sm--height - get-line-height(input) - ($button-form--border-width * 2)) / 2) ($form-sm--padding-h - $button-form--border-width);
+    padding: (($button-form-sm--height - get-line-height(input) - ($button-form--border-width * 2)) * 0.5) ($form-sm--padding-h - $button-form--border-width);
 	height: $button-form-sm--height;
 }
 
@@ -184,7 +184,7 @@ textarea.form-input {
 	input {
 		position: absolute;
 		left: 0;
-		top: ( ( get-line-height(check-radio) - 16 ) / 2 ) - 1; // -1 is for optical adjustement
+		top: ( ( get-line-height(check-radio) - 16 ) * 0.5 ) - 1; // -1 is for optical adjustement
 		width: 16px;
 		height: 16px;
 		cursor: pointer;
@@ -295,8 +295,8 @@ textarea.form-input {
         border-radius: 3px;
         height: 6px;
         width: 100%;
-        margin-top: ($range-thumb-size - 6px) / 2;
-        margin-bottom: ($range-thumb-size - 6px) / 2;
+        margin-top: ($range-thumb-size - 6px) * 0.5;
+        margin-bottom: ($range-thumb-size - 6px) * 0.5;
         outline: none;
 
 		&::-webkit-slider-thumb {
