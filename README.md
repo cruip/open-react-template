@@ -18,6 +18,10 @@ Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.co
 
 *The premium template is built on-the-top of [Tailwind CSS](https://tailwindcss.com/), and React components have been re-built from scratch.* 
 
+## Design files
+
+If you need the design files, you can download them from Figma's Community 👉 https://bit.ly/3BjiEtQ
+
 ## Table of contents
 
 * [Usage](#usage)
