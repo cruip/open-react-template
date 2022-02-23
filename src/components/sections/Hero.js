@@ -4,6 +4,7 @@ import { SectionProps } from "../../utils/SectionProps";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Lottie from "react-lottie";
+import Image from "../elements/Image";
 
 const propTypes = {
   ...SectionProps.types,
@@ -67,20 +68,23 @@ const Hero = ({
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
-            <h1
-              className="mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="200"
-            >
-              Ambar
-              <span className="text-color-primary"> Systems</span>
-            </h1>
+            <Image
+              src={require("../../assets/images/Ambar_Logo_Full.png")}
+              alt="Full Logo"
+              width={400}
+              height={140}
+              style={{ borderRadius: "5px" }}
+              className="mb-32"
+            />
             <div className="container-xs">
               <p
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="300"
               >
-                Ambar Systems Ltd are specialists in electronic access control
-                solutions and Northern Ireland partners for Salto products.
+                Ambar Systems Ltd are accredited specialists in the field of
+                Fire Protection and Safety. We are a team of highly qualified
+                professionals with a strong track record of delivering high
+                quality products and services.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="350">
                 <ButtonGroup>
@@ -94,16 +98,6 @@ const Hero = ({
               </div>
             </div>
           </div>
-
-          <Lottie
-            options={defaultOptions}
-            height={isMobile ? 250 : 400}
-            width={isMobile ? 250 : 400}
-            style={{
-              paddingRight: !isMobile && "27px",
-              paddingTop: "10px",
-            }}
-          />
         </div>
       </div>
     </section>

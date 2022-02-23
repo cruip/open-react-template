@@ -43,9 +43,9 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: "What We Can Do For You",
+    title: "What We Offer",
     paragraph:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "At Ambar Systems we offer a wide range of services to our clients.",
   };
 
   return (
@@ -56,75 +56,144 @@ const FeaturesTiles = ({
           <div className={tilesClasses}>
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">Fire Systems</h4>
+                </div>
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require("./../../assets/images/feature-tile-icon-04.svg")}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64}
+                      src={require("./../../assets/images/weOffer/fire.jpg")}
+                      alt="Fire Systems"
+                      width={90}
+                      height={90}
+                      style={{
+                        borderRadius: "45px",
+                        borderWidth: "5px",
+                        borderStyle: "solid",
+                        borderColor: "white",
+                      }}
                     />
                   </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Example One</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
-                  </p>
                 </div>
               </div>
             </div>
 
-            <div
-              className="tiles-item reveal-from-bottom"
-              data-reveal-delay="200"
-            >
+            <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">Security</h4>
+                </div>
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require("./../../assets/images/feature-tile-icon-05.svg")}
-                      alt="Features tile icon 05"
-                      width={64}
-                      height={64}
+                      src={require("./../../assets/images/weOffer/security.jpg")}
+                      alt="Security"
+                      width={90}
+                      height={90}
+                      style={{
+                        borderRadius: "45px",
+                        borderWidth: "5px",
+                        borderStyle: "solid",
+                        borderColor: "white",
+                      }}
                     />
                   </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Example Two</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
-                  </p>
                 </div>
               </div>
             </div>
 
-            <div
-              className="tiles-item reveal-from-bottom"
-              data-reveal-delay="400"
-            >
+            <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">Access Control</h4>
+                </div>
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require("./../../assets/images/feature-tile-icon-06.svg")}
-                      alt="Features tile icon 06"
-                      width={64}
-                      height={64}
+                      src={require("./../../assets/images/weOffer/access.jpg")}
+                      alt="Access Control"
+                      width={90}
+                      height={90}
+                      style={{
+                        borderRadius: "45px",
+                        borderWidth: "5px",
+                        borderStyle: "solid",
+                        borderColor: "white",
+                      }}
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Example Three</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
-                  </p>
+                  <h4 className="mt-0 mb-8">Blank</h4>
+                </div>
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require("./../../assets/images/weOffer/blank.jpg")}
+                      alt="Blank"
+                      width={90}
+                      height={90}
+                      style={{
+                        borderRadius: "45px",
+                        borderWidth: "5px",
+                        borderStyle: "solid",
+                        borderColor: "white",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">CCTV</h4>
+                </div>
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require("./../../assets/images/weOffer/cctv.jpg")}
+                      alt="CCTV"
+                      width={90}
+                      height={90}
+                      style={{
+                        borderRadius: "45px",
+                        borderWidth: "5px",
+                        borderStyle: "solid",
+                        borderColor: "white",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">PA Systems</h4>
+                </div>
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require("./../../assets/images/weOffer/pa_systems.jpg")}
+                      alt="PA Systems"
+                      width={90}
+                      height={90}
+                      style={{
+                        borderRadius: "45px",
+                        borderWidth: "5px",
+                        borderStyle: "solid",
+                        borderColor: "white",
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
