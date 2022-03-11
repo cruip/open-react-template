@@ -35,8 +35,6 @@ const Hero = ({
     };
   }, []);
 
-  const isMobile = width <= 768;
-
   const outerClasses = classNames(
     "hero section center-content",
     topOuterDivider && "has-top-divider",
