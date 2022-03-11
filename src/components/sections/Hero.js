@@ -71,12 +71,12 @@ const Hero = ({
         style={{
           minWidth: "100%",
           height: "100vh",
-          opacity: "0.4",
+          opacity: "0.5",
           position: "absolute",
           zIndex: "-1000",
         }}
       />
-      <section {...props} className={outerClasses} style={{ height: "80vh" }}>
+      <section {...props} className={outerClasses} style={{ height: "78vh" }}>
         <div className="container-sm">
           <div className={innerClasses}>
             <div className="hero-content pull-left">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
@@ -11,7 +11,6 @@ import {
   CaseStudyTitleContainer,
   StyledSlider,
 } from "./styledComponents";
-import Button from "../elements/Button";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -51,9 +50,24 @@ const Testimonial = ({
 
   const sectionHeader = {
     title: "Case Studies",
+    //paragraph about case studies not lorem ipsum
     paragraph:
-      "Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.",
+      "Over the past few years, we have worked with some of the most creative and innovative companies in the world. We have seen the impact that they have had on our clients and the communities they have built.",
   };
+
+  const [widthState, setWidth] = useState(1920);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = widthState <= 768;
 
   return (
     <section {...props} className={outerClasses}>
@@ -62,13 +76,14 @@ const Testimonial = ({
           <SectionHeader data={sectionHeader} className="center-content" />
 
           <CarouselProvider
-            naturalSlideHeight={70}
-            naturalSlideWidth={100}
+            naturalSlideHeight={isMobile ? 10 : 70}
+            naturalSlideWidth={isMobile ? 10 : 100}
             totalSlides={8}
             isPlaying
-            visibleSlides={3}
-            infinite
+            visibleSlides={isMobile ? 2 : 3}
+            infinite={isMobile ? false : true}
             lockOnWindowScroll
+            orientation={isMobile ? "vertical" : "horizontal"}
           >
             <CaseStudyCarouselContainer>
               <StyledSlider>

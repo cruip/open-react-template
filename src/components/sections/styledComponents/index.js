@@ -44,7 +44,7 @@ export const StyledSlider = styled(Slider)`
 export const CaseStudyCarouselContainer = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #eaecee;
+  background-color: #ecf0f1;
   gap: 30px;
   width: 100%;
   height: 100%;

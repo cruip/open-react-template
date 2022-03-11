@@ -48,7 +48,7 @@ const Accreditations = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container-md">
+      <div className="container-md reveal-from-bottom" data-reveal-delay="350">
         <div className={innerClasses}>
           <div className={tilesClasses}>
             <div className="tiles-item">

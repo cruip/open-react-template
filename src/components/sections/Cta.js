@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import Input from "../elements/Input";
+import Button from "../elements/Button";
 
 const propTypes = {
   ...SectionProps.types,
@@ -52,7 +53,7 @@ const Cta = ({
             <Input
               id="newsletter"
               type="email"
-              label="Subscribe"
+              label="Email"
               placeholder="Your email"
             />
             <Input id="name" type="text" label="Name" placeholder="Your name" />
@@ -63,6 +64,7 @@ const Cta = ({
               placeholder="Your message"
               rows={3}
             />
+            <Button className="mt-16">Send Message</Button>
           </div>
         </div>
       </div>
