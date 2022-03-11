@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
-import { ButtonBack, CarouselProvider, Slide } from "pure-react-carousel";
+import { CarouselProvider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import {
   CaseStudyCarouselContainer,
@@ -46,13 +46,11 @@ const Testimonial = ({
     bottomDivider && "has-bottom-divider"
   );
 
-  const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
-
   const sectionHeader = {
     title: "Case Studies",
     //paragraph about case studies not lorem ipsum
     paragraph:
-      "Over the past few years, we have worked with some of the most creative and innovative companies in the world. We have seen the impact that they have had on our clients and the communities they have built.",
+      "Over the years, we have worked with some of the most innovative companies in the world. They have seen the impact of our work and are very satisfied with the results.",
   };
 
   const [widthState, setWidth] = useState(1920);

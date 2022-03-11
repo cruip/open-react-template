@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
-import SectionHeader from "./partials/SectionHeader";
 import Image from "../elements/Image";
 
 const propTypes = {
@@ -41,10 +40,6 @@ const Accreditations = ({
     "tiles-wrap center-content mt-16 mb-16",
     pushLeft && "push-left"
   );
-
-  const sectionHeader = {
-    title: "Accreditations",
-  };
 
   return (
     <section {...props} className={outerClasses}>

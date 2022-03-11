@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
-import Lottie from "react-lottie";
 import Image from "../elements/Image";
 
 const propTypes = {
@@ -12,16 +11,6 @@ const propTypes = {
 
 const defaultProps = {
   ...SectionProps.defaults,
-};
-
-const defaultOptions = {
-  loop: false,
-  autoplay: false,
-  animationData: require("../../assets/images/lottie/lock.json"),
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-  speed: 2,
 };
 
 const Hero = ({
