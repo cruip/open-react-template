@@ -23,18 +23,6 @@ const Hero = ({
   invertColor,
   ...props
 }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
   const outerClasses = classNames(
     "hero section center-content",
     topOuterDivider && "has-top-divider",
