@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import Image from "../elements/Image";
+import { OfferingContainer } from "./styledComponents";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -129,13 +130,13 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Blank</h4>
+                  <h4 className="mt-0 mb-8">Intruder</h4>
                 </div>
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
                       src={require("./../../assets/images/weOffer/blank.jpg")}
-                      alt="Blank"
+                      alt="Intruder"
                       width={90}
                       height={90}
                       style={{

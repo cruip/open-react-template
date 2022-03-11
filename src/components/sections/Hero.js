@@ -64,43 +64,56 @@ const Hero = ({
   );
 
   return (
-    <section {...props} className={outerClasses}>
-      <div className="container-sm">
-        <div className={innerClasses}>
-          <div className="hero-content">
-            <Image
-              src={require("../../assets/images/Ambar_Logo_Full.png")}
-              alt="Full Logo"
-              width={400}
-              height={140}
-              style={{ borderRadius: "5px" }}
-              className="mb-32"
-            />
-            <div className="container-xs">
-              <p
-                className="m-0 mb-32 reveal-from-bottom"
-                data-reveal-delay="300"
-              >
-                Ambar Systems Ltd are accredited specialists in the field of
-                Fire Protection and Safety. We are a team of highly qualified
-                professionals with a strong track record of delivering high
-                quality products and services.
-              </p>
-              <div className="reveal-from-bottom" data-reveal-delay="350">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="/">
-                    Get started
-                  </Button>
-                  <Button tag="a" color="dark" wideMobile href="/">
-                    Another Option
-                  </Button>
-                </ButtonGroup>
+    <>
+      <img
+        src={require("../../assets/images/Banner.jpg")}
+        alt="banner"
+        style={{
+          minWidth: "100%",
+          height: "100vh",
+          opacity: "0.4",
+          position: "absolute",
+          zIndex: "-1000",
+        }}
+      />
+      <section {...props} className={outerClasses} style={{ height: "80vh" }}>
+        <div className="container-sm">
+          <div className={innerClasses}>
+            <div className="hero-content pull-left">
+              <Image
+                src={require("../../assets/images/Ambar_Logo_Full.png")}
+                alt="Full Logo"
+                width={400}
+                height={140}
+                style={{ borderRadius: "5px" }}
+                className="mb-32"
+              />
+              <div className="container-xs">
+                <p
+                  className="m-0 mb-32 reveal-from-bottom"
+                  data-reveal-delay="300"
+                >
+                  Ambar Systems Ltd are accredited specialists in the field of
+                  Fire Protection and Safety. We are a team of highly qualified
+                  professionals with a strong track record of delivering high
+                  quality products and services.
+                </p>
+                <div className="reveal-from-bottom" data-reveal-delay="350">
+                  <ButtonGroup>
+                    <Button tag="a" color="primary" wideMobile href="/">
+                      Get started
+                    </Button>
+                    <Button tag="a" color="dark" wideMobile href="/">
+                      Another Option
+                    </Button>
+                  </ButtonGroup>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

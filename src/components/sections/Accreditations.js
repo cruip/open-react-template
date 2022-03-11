@@ -38,7 +38,7 @@ const Accreditations = ({
   );
 
   const tilesClasses = classNames(
-    "tiles-wrap center-content mt-0",
+    "tiles-wrap center-content mt-16 mb-16",
     pushLeft && "push-left"
   );
 
@@ -48,25 +48,17 @@ const Accreditations = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container-lg">
+      <div className="container-md">
         <div className={innerClasses}>
-          <SectionHeader
-            data={sectionHeader}
-            className="center-content reveal-from-bottom pb-24"
-            tag="h3"
-          />
           <div className={tilesClasses}>
-            <div className="tiles-item reveal-from-bottom">
+            <div className="tiles-item">
               <div className="tiles-item-inner">
-                <div className="features-tiles-item-content">
-                  <h5 className="mt-0 mb-8">Salto</h5>
-                </div>
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
                       src={require("./../../assets/images/awards/salto.png")}
                       alt="Salto Accreditation"
-                      width={130}
+                      width={65}
                       style={{
                         borderRadius: "2px",
                       }}
@@ -76,36 +68,13 @@ const Accreditations = ({
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom">
+            <div className="tiles-item">
               <div className="tiles-item-inner">
-                <div className="features-tiles-item-content">
-                  <h5 className="mt-0 mb-8">Auva</h5>
-                </div>
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
                       src={require("./../../assets/images/awards/auva.jpg")}
                       alt="Auva Accreditation"
-                      width={200}
-                      style={{
-                        borderRadius: "2px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-content">
-                  <h5 className="mt-0 mb-8">NSV</h5>
-                </div>
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/awards/nsv.jpg")}
-                      alt="NSV Accreditation"
                       width={100}
                       style={{
                         borderRadius: "2px",
@@ -116,17 +85,31 @@ const Accreditations = ({
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom">
+            <div className="tiles-item">
               <div className="tiles-item-inner">
-                <div className="features-tiles-item-content">
-                  <h5 className="mt-0 mb-8">Construction Line</h5>
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require("./../../assets/images/awards/nsv.jpg")}
+                      alt="NSV Accreditation"
+                      width={50}
+                      style={{
+                        borderRadius: "2px",
+                      }}
+                    />
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="tiles-item">
+              <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
                       src={require("./../../assets/images/awards/constructionLine.jpg")}
                       alt="Construction Line Accreditation"
-                      width={200}
+                      width={100}
                       style={{
                         borderRadius: "2px",
                       }}
