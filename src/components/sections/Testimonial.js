@@ -68,7 +68,7 @@ const Testimonial = ({
   const isMobile = widthState <= 768;
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...props} className={outerClasses} id="case-studies-scroll">
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

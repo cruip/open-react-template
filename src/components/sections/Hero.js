@@ -38,6 +38,9 @@ const Hero = ({
     bottomDivider && "has-bottom-divider"
   );
 
+  const anchorContact = document.querySelector("#contact-scroll");
+  const anchorCaseStudies = document.querySelector("#case-studies-scroll");
+
   return (
     <>
       <img
@@ -75,11 +78,31 @@ const Hero = ({
                 </p>
                 <div className="reveal-from-bottom" data-reveal-delay="350">
                   <ButtonGroup>
-                    <Button tag="a" color="primary" wideMobile href="/">
-                      Get started
+                    <Button
+                      tag="a"
+                      color="primary"
+                      wideMobile
+                      onClick={() => {
+                        anchorContact.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        });
+                      }}
+                    >
+                      Get in contact
                     </Button>
-                    <Button tag="a" color="dark" wideMobile href="/">
-                      Another Option
+                    <Button
+                      tag="a"
+                      color="dark"
+                      wideMobile
+                      onClick={() => {
+                        anchorCaseStudies.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        });
+                      }}
+                    >
+                      View our work
                     </Button>
                   </ButtonGroup>
                 </div>

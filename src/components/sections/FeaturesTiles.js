@@ -43,13 +43,13 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: "What We Offer",
+    title: "Services",
     paragraph:
       "At Ambar Systems we offer a wide range of services to our clients.",
   };
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...props} className={outerClasses} id="services-scroll">
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

@@ -43,11 +43,11 @@ const Cta = ({
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...props} className={outerClasses} id="contact-scroll">
       <div className="container">
         <div className={innerClasses}>
           <div className="cta-slogan">
-            <h3 className="m-0">Contact Form</h3>
+            <h3 className="m-0">Contact Us</h3>
           </div>
           <div className="cta-action">
             <Input

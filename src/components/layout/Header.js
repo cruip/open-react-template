@@ -78,6 +78,10 @@ const Header = ({
     className
   );
 
+  const anchor = document.querySelector("#case-studies-scroll");
+  const anchorServices = document.querySelector("#services-scroll");
+  const anchorContact = document.querySelector("#contact-scroll");
+
   return (
     <header {...props} className={classes}>
       <div className="container">
@@ -112,8 +116,31 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="#0" onClick={closeMenu}>
+                      <Link
+                        onClick={() => {
+                          anchor.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                            inline: "center",
+                          });
+                          closeMenu();
+                        }}
+                      >
                         Case Studies
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={() => {
+                          anchorServices.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                            inline: "center",
+                          });
+                          closeMenu();
+                        }}
+                      >
+                        Services
                       </Link>
                     </li>
                     <li>
@@ -128,7 +155,12 @@ const Header = ({
                         <Link
                           to="#0"
                           className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
+                          onClick={() => {
+                            anchorContact.scrollIntoView({
+                              behavior: "smooth",
+                              block: "center",
+                            });
+                          }}
                         >
                           Contact Us
                         </Link>
