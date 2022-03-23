@@ -6,12 +6,18 @@ import FeaturesSplit from "../components/sections/FeaturesSplit";
 import Testimonial from "../components/sections/Testimonial";
 import Cta from "../components/sections/Cta";
 import Accreditations from "../components/sections/Accreditations";
+import { FullScreenWrapper } from "./styles";
 
 const Home = () => {
   return (
     <>
-      <Hero className="illustration-section-01" />
-      <Accreditations />
+      <FullScreenWrapper>
+        <Hero className="illustration-section-01" />
+        <div style={{ marginTop: "2em" }}>
+          <Accreditations />
+        </div>
+      </FullScreenWrapper>
+
       <FeaturesTiles className="illustration-section-03" />
       {false && (
         <FeaturesSplit

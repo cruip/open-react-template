@@ -37,13 +37,13 @@ const Accreditations = ({
   );
 
   const tilesClasses = classNames(
-    "tiles-wrap center-content mt-16 mb-16",
+    "tiles-wrap center-content mt-2 mb-16",
     pushLeft && "push-left"
   );
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container-md reveal-from-bottom" data-reveal-delay="350">
+      <div className="container-lg reveal-from-bottom" data-reveal-delay="350">
         <div className={innerClasses}>
           <div className={tilesClasses}>
             <div className="tiles-item">
