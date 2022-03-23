@@ -31,17 +31,6 @@ const FeaturesTiles = ({
     className
   );
 
-  const innerClasses = classNames(
-    "features-tiles-inner section-inner pt-0",
-    topDivider && "has-top-divider",
-    bottomDivider && "has-bottom-divider"
-  );
-
-  const tilesClasses = classNames(
-    "tiles-wrap center-content",
-    pushLeft && "push-left"
-  );
-
   const sectionHeader = {
     title: "Services",
     paragraph:

@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import Image from "../elements/Image";
 import { ColumnList } from "./accreditationStyle";
-import { useMediaQuery } from "../../hooks/MediaHook";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -32,18 +31,6 @@ const Accreditations = ({
     className
   );
 
-  const innerClasses = classNames(
-    "features-tiles-inner section-inner pt-0",
-    topDivider && "has-top-divider",
-    bottomDivider && "has-bottom-divider"
-  );
-
-  const tilesClasses = classNames(
-    "tiles-wrap center-content mt-2 mb-16",
-    pushLeft && "push-left"
-  );
-
-  const isMobile = useMediaQuery();
   return (
     <section {...props} className={outerClasses}>
       <div

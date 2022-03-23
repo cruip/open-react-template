@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ImgOverlay } from "image-overlay-react";
 
 export const GalleryRow = styled.div`
   display: flex;

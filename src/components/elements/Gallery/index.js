@@ -5,15 +5,6 @@ import { ColumnList, ImageOverlayWrapper } from "./style";
 import { colours } from "../../theme/colors";
 import { useMediaQuery } from "../../../hooks/MediaHook";
 
-const Images = [
-  require("./../../../assets/images/weOffer/fire.jpg"),
-  require("./../../../assets/images/weOffer/security.jpg"),
-  require("./../../../assets/images/weOffer/access.jpg"),
-  require("./../../../assets/images/weOffer/intruder.jpg"),
-  require("./../../../assets/images/weOffer/cctv.jpg"),
-  require("./../../../assets/images/weOffer/pa_systems.jpg"),
-];
-
 export const Gallery = () => {
   const isMobile = useMediaQuery();
   return (
