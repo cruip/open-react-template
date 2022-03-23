@@ -8,6 +8,7 @@ export const CaseStudyContainer = styled.div`
   justify-content: center;
   background-color: #f5f5f5;
   border-radius: 2px;
+  padding-bottom: 0;
   max-width: 200px;
   min-width: 300px;
   box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.1);

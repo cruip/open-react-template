@@ -83,7 +83,15 @@ const Header = ({
   const anchorContact = document.querySelector("#contact-scroll");
 
   return (
-    <header {...props} className={classes}>
+    <header
+      {...props}
+      className={classes}
+      style={{
+        backgroundColor: "#fff",
+        boxShadow: "0px 0px 5px hsla(0, 0%, 0%, 0.5)",
+        zIndex: 100,
+      }}
+    >
       <div className="container">
         <div
           className={classNames(

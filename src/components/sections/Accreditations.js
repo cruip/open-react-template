@@ -47,7 +47,7 @@ const Accreditations = ({
   return (
     <section {...props} className={outerClasses}>
       <div
-        className="container-lg reveal-from-bottom center-content"
+        className="container reveal-from-bottom center-content"
         data-reveal-delay="350"
       >
         <ColumnList itemSize="150px">
