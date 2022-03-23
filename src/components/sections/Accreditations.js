@@ -2,6 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import Image from "../elements/Image";
+import { ColumnList } from "./accreditationStyle";
+import { useMediaQuery } from "../../hooks/MediaHook";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -41,80 +43,54 @@ const Accreditations = ({
     pushLeft && "push-left"
   );
 
+  const isMobile = useMediaQuery();
   return (
     <section {...props} className={outerClasses}>
-      <div className="container-lg reveal-from-bottom" data-reveal-delay="350">
-        <div className={innerClasses}>
-          <div className={tilesClasses}>
-            <div className="tiles-item">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/awards/salto.png")}
-                      alt="Salto Accreditation"
-                      width={65}
-                      style={{
-                        borderRadius: "2px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div
+        className="container-lg reveal-from-bottom center-content"
+        data-reveal-delay="350"
+      >
+        <ColumnList itemSize="150px">
+          <Image
+            src={require("./../../assets/images/awards/salto.png")}
+            alt="Salto Accreditation"
+            width={65}
+            style={{
+              borderRadius: "2px",
+              marginBottom: "1em",
+            }}
+          />
 
-            <div className="tiles-item">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/awards/auva.jpg")}
-                      alt="Auva Accreditation"
-                      width={100}
-                      style={{
-                        borderRadius: "2px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <Image
+            src={require("./../../assets/images/awards/auva.jpg")}
+            alt="Auva Accreditation"
+            width={100}
+            style={{
+              borderRadius: "2px",
+              marginBottom: "1em",
+            }}
+          />
 
-            <div className="tiles-item">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/awards/nsv.jpg")}
-                      alt="NSV Accreditation"
-                      width={50}
-                      style={{
-                        borderRadius: "2px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <Image
+            src={require("./../../assets/images/awards/nsv.jpg")}
+            alt="NSV Accreditation"
+            width={50}
+            style={{
+              borderRadius: "2px",
+              marginBottom: "1em",
+            }}
+          />
 
-            <div className="tiles-item">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/awards/constructionLine.jpg")}
-                      alt="Construction Line Accreditation"
-                      width={100}
-                      style={{
-                        borderRadius: "2px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <Image
+            src={require("./../../assets/images/awards/constructionLine.jpg")}
+            alt="Construction Line Accreditation"
+            width={100}
+            style={{
+              borderRadius: "2px",
+              marginBottom: "1em",
+            }}
+          />
+        </ColumnList>
       </div>
     </section>
   );

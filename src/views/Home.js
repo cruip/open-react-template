@@ -7,13 +7,15 @@ import Testimonial from "../components/sections/Testimonial";
 import Cta from "../components/sections/Cta";
 import Accreditations from "../components/sections/Accreditations";
 import { FullScreenWrapper } from "./styles";
+import { useMediaQuery } from "../hooks/MediaHook";
 
 const Home = () => {
+  const isMobile = useMediaQuery();
   return (
     <>
       <FullScreenWrapper>
         <Hero className="illustration-section-01" />
-        <div style={{ marginTop: "2em" }}>
+        <div style={{ marginTop: isMobile ? "-1em" : "2em" }}>
           <Accreditations />
         </div>
       </FullScreenWrapper>
