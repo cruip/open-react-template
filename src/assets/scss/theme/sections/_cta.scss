@@ -10,10 +10,10 @@
 	padding-left: 16px;
 	padding-right: 16px;
     background-color: get-color(primary, 3);
-	background-image: url(../../../images/cta-illustration.svg);
+	background-image: url(../../../images/montbel-drone.jpg);
 	background-repeat: no-repeat;
     background-size: cover;
-    background-position: right bottom;    
+    background-position: left bottom;    
 }
 
 @include media( '>medium' ) {
