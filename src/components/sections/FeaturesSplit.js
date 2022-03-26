@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Improving photos that works',
+    paragraph: 'As a real estate agent, equipped with a drone, I suggest that you take 4k (Ultra High Definition) photos of your property at a height between 15 meters and 120 meters from the ground, the height varies in order to perfect the angle of shot and to circumvent the various obstacles which may interfere with the view. '
   };
 
   return (
@@ -67,13 +67,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Sunshine weather is required
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  Summer time for great exposure
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Ask us to create some high definition image that fit the customer needs, you will be expected to reconsider about selling if the photos are awesome
                   </p>
               </div>
               <div className={
@@ -83,7 +83,8 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
+                  className="has-rounded2"
+                  src={require('./../../assets/images/lesmontsdolmes.jpg')}
                   alt="Features split 01"
                   width={528}
                   height={396} />
@@ -93,13 +94,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Great pin forest 
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  Nothing comparable
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Some of the best places in the world are located near a great green forest land, it takes a while to your visitors to come over but the pleasure to host in a such place cannot be revealed
                   </p>
               </div>
               <div className={
@@ -109,7 +110,8 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
+                className="has-rounded3"
+                  src={require('./../../assets/images/aude-ariège-limite.jpg')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -119,13 +121,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Things that will change the world
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  Panoramic view
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  The way it goes under your mind let you believe the world through your thoughts, it does make your feelings better about moving into a new home that gives you the pleasured to retired.
                   </p>
               </div>
               <div className={
@@ -135,7 +137,8 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
+                className="has-rounded4"
+                  src={require('./../../assets/images/lock-down.jpg')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
