@@ -39,3 +39,14 @@
 		max-width: $container--width-xs;
 	}
 }
+.center-content img.has-rounded{
+	border-radius: 10% 30% 50% 70%;
+}
+
+.split-item img.has-rounded2{
+	border-radius: 10% 30% 50% 70%;
+}
+.split-item img.has-rounded3{
+border-radius: 10% 30% 70% 50%;}
+.split-item img.has-rounded4{
+border-radius: 50% 20% / 10% 40%;}
