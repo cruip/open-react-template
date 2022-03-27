@@ -44,7 +44,7 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Build up the whole picture',
+    title: 'Real estate like you\'ve never seen it before',
     paragraph: 'Your property deserves to be seen from a better angle. '
   };
 
