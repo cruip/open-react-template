@@ -15,7 +15,7 @@ const defaultProps = {
   split: false,
 };
 
-const Cta = ({
+const ContactForm = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -72,7 +72,7 @@ const Cta = ({
   );
 };
 
-Cta.propTypes = propTypes;
-Cta.defaultProps = defaultProps;
+ContactForm.propTypes = propTypes;
+ContactForm.defaultProps = defaultProps;
 
-export default Cta;
+export default ContactForm;
