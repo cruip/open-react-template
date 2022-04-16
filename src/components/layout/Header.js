@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Logo from "./partials/Logo";
+import { Dropdown } from "../elements/Dropdown";
+import { DropdownOptions } from "../elements/Dropdown/options";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -138,22 +140,11 @@ const Header = ({
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        onClick={() => {
-                          anchorServices.scrollIntoView({
-                            behavior: "smooth",
-                            block: "center",
-                            inline: "center",
-                          });
-                          closeMenu();
-                        }}
-                      >
-                        Services
-                      </Link>
+                      <Dropdown title="Disciplines" options={DropdownOptions} />
                     </li>
                     <li>
                       <Link to="#1" onClick={closeMenu}>
-                        About
+                        Projects
                       </Link>
                     </li>
                   </ul>
