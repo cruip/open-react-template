@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import { Gallery } from "../elements/Gallery";
+import { ServicesOptions } from "../elements/Gallery/imageSets";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -41,7 +42,7 @@ const FeaturesTiles = ({
     <section {...props} className={outerClasses} id="services-scroll">
       <div className="container">
         <SectionHeader data={sectionHeader} className="center-content" />
-        <Gallery />
+        <Gallery imageSet={ServicesOptions} />
       </div>
     </section>
   );

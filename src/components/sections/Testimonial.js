@@ -2,17 +2,9 @@ import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
-import { CarouselProvider } from "pure-react-carousel";
-import { StyledSlide } from "./testimonialStyle";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import {
-  CaseStudyCarouselContainer,
-  CaseStudyContainer,
-  CaseStudyImage,
-  CaseStudyTitleContainer,
-  StyledSlider,
-} from "./styledComponents";
 import { useMediaQuery } from "../../hooks/MediaHook";
+import { Gallery } from "../elements/Gallery";
+import { ProjectsOptions } from "../elements/Gallery/imageSets";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -49,7 +41,7 @@ const Testimonial = ({
   );
 
   const sectionHeader = {
-    title: "Case Studies",
+    title: "Our Projects",
     //paragraph about case studies not lorem ipsum
     paragraph:
       "Over the years, we have worked with some of the most innovative companies in the world. They have seen the impact of our work and are very satisfied with the results.",
@@ -62,174 +54,7 @@ const Testimonial = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-
-          <CarouselProvider
-            naturalSlideHeight={isMobile ? 10 : 70}
-            naturalSlideWidth={isMobile ? 10 : 100}
-            totalSlides={8}
-            isPlaying
-            visibleSlides={isMobile ? 1 : 3}
-            infinite={true}
-            lockOnWindowScroll
-            orientation={"horizontal"}
-          >
-            <CaseStudyCarouselContainer>
-              <StyledSlider>
-                <StyledSlide index={0}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/Educational_London.jpg")}
-                      className="text-md mb-8"
-                      alt="Educational London"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Educational - London
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={1}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/Healthcare_Northern_Ireland.jpg")}
-                      className="text-md mb-8"
-                      alt="Healthcare_Northern_Ireland"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Healthcare - Northern Ireland
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={2}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/Leisure_centre_belfast.jpg")}
-                      className="text-md mb-8"
-                      alt="Educational London"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Leisure Centre - Belfast
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={3}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/Office_development_Derry.jpg")}
-                      className="text-md mb-8"
-                      alt="Office Development Derry"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Office Development - Derry
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={4}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/offices_Mid_ulster.jpg")}
-                      className="text-md mb-8"
-                      alt="Offices Mid Ulster"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Offices - Mid Ulster
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={5}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/Pump_station_dublin.jpg")}
-                      className="text-md mb-8"
-                      alt="Pump station dublin"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Pump Station - Dublin
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={6}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/Sports_grounds_Belfast.jpg")}
-                      className="text-md mb-8"
-                      alt="Sports grounds Belfast"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Sports Grounds - Belfast
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-                <StyledSlide index={7}>
-                  <CaseStudyContainer>
-                    <CaseStudyImage
-                      src={require("../../assets/images/caseStudies/student_accommodation_Bristol.jpg")}
-                      className="text-md mb-8"
-                      alt="Student Accommodation Bristol"
-                      style={{
-                        maxWidth: "300px",
-                        maxHeight: "200px",
-                        minHeight: "200px",
-                      }}
-                    />
-                    <CaseStudyTitleContainer>
-                      <p className="text-sm text-center mb-0">
-                        Student Accommodation - Bristol
-                      </p>
-                    </CaseStudyTitleContainer>
-                  </CaseStudyContainer>
-                </StyledSlide>
-              </StyledSlider>
-            </CaseStudyCarouselContainer>
-          </CarouselProvider>
+          <Gallery imageSet={ProjectsOptions} uniform={false} />
         </div>
       </div>
     </section>

@@ -136,7 +136,7 @@ const Header = ({
                           closeMenu();
                         }}
                       >
-                        Case Studies
+                        Projects
                       </Link>
                     </li>
                     <li>
