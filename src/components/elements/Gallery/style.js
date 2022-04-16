@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colours } from "../../theme/colors";
 
 export const GalleryRow = styled.div`
   display: flex;
@@ -30,4 +31,38 @@ export const ImageGrid = styled.div`
   line-height: 0;
   column-gap: 0.5rem;
   column-count: ${(props) => `${props.isMobile ? "2" : "4"}`};
+`;
+
+export const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+`;
+
+export const FloatingTextContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0em;
+  background-color: ${colours.blackOverlay};
+  z-index: 2;
+`;
+export const StyledImageWithText = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 1em;
+`;
+
+export const StyledTitle = styled.h6`
+  font-size: 0.9em;
+  word-wrap: break-all;
+  white-space: pre-wrap;
+  color: white;
+  margin: 0;
+  padding: 0;
 `;

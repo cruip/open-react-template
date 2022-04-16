@@ -47,14 +47,16 @@ const OurProjects = ({
       "Over the years, we have worked with some of the most innovative companies in the world. They have seen the impact of our work and are very satisfied with the results.",
   };
 
-  const isMobile = useMediaQuery();
-
   return (
     <section {...props} className={outerClasses} id="case-studies-scroll">
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-          <Gallery imageSet={ProjectsOptions} uniform={false} />
+          <Gallery
+            imageSet={ProjectsOptions}
+            uniform={false}
+            withOverlay={false}
+          />
         </div>
       </div>
     </section>
