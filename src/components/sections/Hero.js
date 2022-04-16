@@ -102,7 +102,7 @@ const Hero = ({
                         });
                       }}
                     >
-                      View our work
+                      Our Projects
                     </Button>
                   </ButtonGroup>
                 </div>
