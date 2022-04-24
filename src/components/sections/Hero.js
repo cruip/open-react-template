@@ -6,6 +6,7 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import Calendar from 'react-calendar';
+import TopK from '../../utils/TopKUtils';
 
 const propTypes = {
   ...SectionProps.types
@@ -65,6 +66,9 @@ const Hero = ({
                     Select a Date
                     </Button>
                 </ButtonGroup>
+                <div style={{ height: 600, width: 800 }}>
+                  <TopK country={"IN"} dateProvided={"01/02/2020"} />
+                </div>
               </div>
             </div>
           </div>
