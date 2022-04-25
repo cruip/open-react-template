@@ -67,13 +67,15 @@ const Hero = ({
                     Select a Date
                     </Button>
                 </ButtonGroup>
-                <div style={{ height: 600, width: 800 }}>
-                  <BarChart country={"IN"} dateProvided={"2020_02_01"} />
-                </div>
-                <div style={{ height: 600, width: 800 }}>
-                  <TopK country={"IN"} dateProvided={"01/02/2020"} />
-                </div>
               </div>
+              <div style={{ marginTop:"60px" }}>
+                  <div style={{ height: 600, width: 600 }}>
+                    <BarChart country={"IN"} dateProvided={"2020_02_01"} />
+                  </div>
+                  <div style={{ height: 600, width: 600 }} >
+                    <TopK country={"IN"} dateProvided={"01/02/2020"} />
+                  </div>
+                </div>
             </div>
           </div>
             <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-delay="500">

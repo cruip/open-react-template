@@ -1,8 +1,9 @@
 import React from 'react'
-import { Pie, defaults } from 'react-chartjs-2'
+import { defaults, Doughnut } from 'react-chartjs-2'
 import Papa from "papaparse";
+import 'chartjs-plugin-labels';
 
-defaults.global.tooltips.enabled = true
+defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
 
 const BarChart = (input) => {
@@ -31,12 +32,12 @@ const BarChart = (input) => {
 
   return (
     <div>
-      <Pie
+      <Doughnut
         data={{
           labels: ['Fear','Joy','Sadness','Surprise'],
           datasets: [
             {
-              label: '# of votes',
+              // label: '# of votes',
               data: percentageArr,
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -56,29 +57,23 @@ const BarChart = (input) => {
         }}
         height={400}
         width={600}
+        hoverOffset={8}
         options={{
           maintainAspectRatio: false,
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
           legend: {
             labels: {
-              fontSize: 25,
+              fontSize: 20,
             },
           },
           plugins: {
             labels: {
-              // render 'label', 'value', 'percentage', 'image' or custom function, default is 'percentage'
-              render: 'value',
-              fontColor: ['green', 'white', 'red'],
-              precision: 2
-          
+              render: function (args) {
+                return args.label + ': ' + (args.value * 100).toFixed(1) + '%';
+              },
+              fontColor: ['white'],
+              precision: 2,
+              fontSize: 18,
+              position: 'border',
             },
           }
         }}
