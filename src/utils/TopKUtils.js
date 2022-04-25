@@ -22,7 +22,6 @@ export const TopK = (input) => {
   };
 
   React.useEffect(() => {
-    console.log(input.country)
     Papa.parse(`/${input.country}_topk.csv`, {
       download: true,
       header: true,
