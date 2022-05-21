@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	color: color(base);
+	color: #FAD34D;
 	font-size: 1rem;
 }
 
@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6,
 	@include font-family(heading);
 	@include font-weight(heading);
 	clear: both;
-	color: color(heading);
+	color: #CBB465;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 }
