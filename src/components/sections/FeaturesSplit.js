@@ -67,7 +67,7 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Trying this edit to see if it works
                   </div>
                 <h3 className="mt-0 mb-12">
                   Data-driven insights
