@@ -1,5 +1,9 @@
 .hero {
 
+	background-image: url('../../../images/prueba.jpg');
+
+	height: 100vh;
+
 	.section-inner {
 		padding-top: $hero--padding-t__mobile;
 		padding-bottom: $hero--padding-b__mobile;
@@ -11,6 +15,7 @@
 	// Affects only hero full
 	> .hero-content + .hero-figure,
 	> .hero-figure + .hero-content {
+		
 		margin-top: $hero--inner-padding-v_mobile;
 	}
 

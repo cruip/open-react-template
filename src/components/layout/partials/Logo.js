@@ -18,15 +18,15 @@ const Logo = ({
       {...props}
       className={classes}
     >
-      <h1 className="m-0">
+      
         <Link to="/">
           <Image
-            src={require('./../../../assets/images/primeFoto.jpg')}
+            src={require('./../../../assets/images/primeLogo.png')}
             alt="Open"
             width={64}
             height={64} />
         </Link>
-      </h1>
+      
     </div>
   );
 }

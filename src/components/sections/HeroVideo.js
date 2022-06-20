@@ -14,7 +14,7 @@ const defaultProps = {
   ...SectionProps.defaults
 }
 
-const Hero = ({
+const HeroVideo = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -38,7 +38,7 @@ const Hero = ({
   }   
 
   const outerClasses = classNames(
-    'hero section center-content',
+    'features-tiles section',
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider',
     hasBgColor && 'has-bg-color',
@@ -47,7 +47,7 @@ const Hero = ({
   );
 
   const innerClasses = classNames(
-    'hero-inner section-inner',
+    'features-tiles-inner section-inner pt-0',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider'
   );
@@ -59,19 +59,10 @@ const Hero = ({
     >
       <div className="container-sm">
         <div className={innerClasses}>
-          <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              <span className="text-color-primary">PRIME</span>
-            </h1>
-            <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                No te rindas nunca.
-                </p>
-              
-            </div>
-          </div>
-          {/* <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
+        
+          <div className="hero-figure reveal-from-bottom illustration-element-02" data-reveal-value="20px" data-reveal-delay="800">
             <a
+              className='hero-content'
               data-video="https://player.vimeo.com/video/174002812"
               href="#0"
               aria-controls="video-modal"
@@ -82,7 +73,7 @@ const Hero = ({
                 src={require('./../../assets/images/video-placeholder.jpg')}
                 alt="Hero"
                 width={896}
-                height={504} />
+                height={200} />
             </a>
           </div>
           <Modal
@@ -90,14 +81,15 @@ const Hero = ({
             show={videoModalActive}
             handleClose={closeModal}
             video="https://player.vimeo.com/video/174002812"
-            videoTag="iframe" /> */}
+            videoTag="iframe" />
+            
         </div>
       </div>
     </section>
   );
 }
 
-Hero.propTypes = propTypes;
-Hero.defaultProps = defaultProps;
+HeroVideo.propTypes = propTypes;
+HeroVideo.defaultProps = defaultProps;
 
-export default Hero;
+export default HeroVideo;

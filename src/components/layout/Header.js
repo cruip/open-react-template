@@ -106,13 +106,49 @@ const Header = ({
                     isActive && 'is-active'
                   )}>
                 <div className="header-nav-inner">
+                <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0"  onClick={closeMenu}>Quienes Somos?</Link>
+                    </li>
+                  </ul>
                   <ul className={
                     classNames(
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Registrate Ya</Link>
+                      <Link to="#0"  onClick={closeMenu}>Nuestros Profesionales</Link>
+                    </li>
+                  </ul>
+                <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0"  onClick={closeMenu}>Blog</Link>
+                    </li>
+                  </ul>
+                <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0"  onClick={closeMenu}>FAQ</Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Registrate Ya</Link>
                     </li>
                   </ul>
                   {!hideSignin &&

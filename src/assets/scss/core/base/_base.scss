@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: linear-gradient(90deg, #F4FDD9,#fff,#eab676); /* Fallback for when there is no custom background color defined. */
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
@@ -66,14 +66,14 @@ dd {
 }
 
 img {
-	border-radius: $img-radius;
+	border-radius: 50%;
 }
 
 img,
 svg,
 video {
 	display: block;
-	height: auto; /* Make sure images are scaled correctly. */
+	height: 40%; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
 

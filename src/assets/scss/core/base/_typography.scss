@@ -3,8 +3,9 @@ html {
 }
 
 body {
-	color: #FAD34D;
+	color: #000;
 	font-size: 1rem;
+	letter-spacing: -.02rem;
 }
 
 body,
@@ -24,6 +25,7 @@ h1, h2, h3, h4, h5, h6,
 	color: #CBB465;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
+	
 }
 
 h1,
@@ -95,6 +97,7 @@ h1,
 .h1 {
 	margin-top: $spacing--h1-t;
 	margin-bottom: $spacing--h1-b;
+	
 }
 
 h2,
