@@ -64,7 +64,9 @@
 }
 
 .text-color-primary {
-	color: #76aaea;
+	background: linear-gradient(150deg,#eab676,#d2e1a4,);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .text-color-secondary {

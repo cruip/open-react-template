@@ -54,10 +54,10 @@
 
     a:not(.button) {
 		display: block;
-        @include anchor-aspect(header);
-		@include font-weight(header-link);
+		color: #CBB465;
+		@include font-weight(strong);
 		text-transform: $link-header--transform;
-        padding: 0 $header-nav--padding-h;
+        padding: 0 24px;
 
 		.invert-color & {
 			@include anchor-aspect(header, inverse);
