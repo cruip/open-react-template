@@ -1,4 +1,5 @@
 {
+  "homepage": "https://marwanelsadat.github.io/open-react-template/",
   "name": "open-react-template",
   "version": "0.1.0",
   "private": true,
@@ -18,6 +19,8 @@
     "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
