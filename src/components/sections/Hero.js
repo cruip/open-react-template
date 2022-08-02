@@ -61,18 +61,18 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              PABLO <span className="text-color-primary">WABO</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+                One of the most abundant Meme tokens ever to be created. Starting with an Initial supply of 1 Quadrillion, a total of 1 Quintillion tokens will be minted and distributed as the final total supply. 
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
+                    Get WABO
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
+                  <Button tag="a" color="dark" wideMobile href="https://github.com/sovachain/pablo-wabo-contracts">
                     View on Github
                     </Button>
                 </ButtonGroup>

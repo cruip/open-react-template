@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'All about the fun',
+    paragraph: 'Light hearted and forever fun! Unlike Shibu Inu and Doge, Pablo Wabo does not have dreams of reaching $1, This token intends to remain abundant and plentiful.'
   };
 
   return (
@@ -67,13 +67,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Native to Avalanche
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  A Meme token on the right network
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Pablo Wabo, while inspired by Doge and Shibi Inu has a mandate to only be native to the Avalanche network. Blazing fast and low cost transactions combined with an eco friendly proof of stake mechanism makes Avalanche the obvious choice for a Meme coin to remain light hearted and fun. Paying expensive gas fees to trade inexpensive Meme tokens is no fun at all. 
                   </p>
               </div>
               <div className={
@@ -93,13 +93,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Voting and Governance built  in
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  A Community DAO
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  An ERC20 token built with advanced features such as voting via the ERC20Votes OpenZeppelin contract. In the future, token holders will be able to stake their tokens in exchange for the ability to vote and create proposals on the DAO. In the beginning a centralized approach will be taken to prove out and battle test the governance system. Ultimately, the desire is that this DAO will become completely decentralized.
                   </p>
               </div>
               <div className={
@@ -119,13 +119,13 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  A desire to Help animals
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  Rescue Mission
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Pablo himself, as well as the creators of this project have a mandate to help animals. One of the requirements that is being built into the future staking plan will involve an allocation of tokens to be distributed to non profits. The selection of which non profits to donate to and the amount will be decided via governance that takes place within the DAO.
                   </p>
               </div>
               <div className={
