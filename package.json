@@ -1,9 +1,11 @@
 {
-  "name": "open-react-template",
+  "name": "pablo-wabo",
+  "homepage": "https://sovachain.github.io/pablo-wabo/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -14,11 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
+    "url": "https://github.com/sovachain/pablo-wabo.git"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
