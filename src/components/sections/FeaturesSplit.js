@@ -51,7 +51,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: 'All about the fun',
-    paragraph: 'Light hearted and forever fun! Unlike Shibu Inu and Doge, Pablo Wabo does not have dreams of reaching $1, This token intends to remain abundant and plentiful.'
+    paragraph: 'Light hearted and forever fun! Inspired by Shibu Inu and Doge, Pablo Wabo is meant for everyone and is here to stay. This token intends to remain abundant and plentiful for the foreseeable future.'
   };
 
   return (
