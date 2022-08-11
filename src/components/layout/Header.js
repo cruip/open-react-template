@@ -2,7 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import Logo from './partials/Logo';
+//import Logo from './partials/Logo';
+
+import Logo from './partials/WaboLogo';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -79,12 +81,13 @@ const Header = ({
       {...props}
       className={classes}
     >
-      <div className="container">
+      <div className="container" >
         <div className={
           classNames(
             'site-header-inner',
             bottomDivider && 'has-bottom-divider'
           )}>
+       
           <Logo />
           {!hideNav &&
             <>
