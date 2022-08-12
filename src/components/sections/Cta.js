@@ -53,7 +53,9 @@ const Cta = ({
         >
           <div className="cta-slogan">
             <h3 className="m-0">
-              Check back soon to participate in the upcoming Air Drop
+              Contract Address: 
+              <br />
+              0xdbb18c0a2b8a 41e40587923bd1 abed37c11c22fc
               </h3>
           </div>
           <div className="cta-action">
