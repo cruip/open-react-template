@@ -9,10 +9,12 @@ html {
 }
 
 body {
-	background: linear-gradient(90deg, #F4FDD9,#fff,#eab676); /* Fallback for when there is no custom background color defined. */
+	background: linear-gradient(90deg, #f4fdd9, #ebffe7, #e9fff3, #edfffc, #f6ffff, #eefaff, #f1f3ff, #fce9f9, #ffd7e6, #ffc6c5, #ffba9d, #eab676); /* Fallback for when there is no custom background color defined. */
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+
+// #F4FDD9,#fff,#eab676
 
 hr {
 	border: 0;

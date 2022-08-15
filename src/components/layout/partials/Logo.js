@@ -9,7 +9,7 @@ const Logo = ({
 }) => {
 
   const classes = classNames(
-    'brand',
+    
     className
   );
 
@@ -19,7 +19,7 @@ const Logo = ({
       className={classes}
     >
       
-        <Link to="/">
+        <Link>
           <Image
             src={require('./../../../assets/images/primeLogo.png')}
             alt="Open"

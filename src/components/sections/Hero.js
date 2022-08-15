@@ -67,8 +67,8 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 El lugar donde tu bienestar es nuestra prioridad.
                 </p>
-              <iframe src="https://player.vimeo.com/video/174002812" ></iframe>
             </div>
+            <iframe src="https://www.youtube.com/embed/KsTMBN99BUQ" style={{border:"0px #ffffff none;"}} name="myiFrame" scrolling="no" height="400px" width="600px" allowfullscreen></iframe>
           </div>
           {/* <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
