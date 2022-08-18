@@ -44,8 +44,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'An amazing journey',
-    paragraph: 'Pablo the dog (Above) is the face of the Pablo Wabo project. Join him as we journey into the future of web3 and beyond. Please check back often to be part of each and every step as we embrace decentralization together! Can I get a "Woof" "Woof"? Pablo is also the official mascot of SovaChain Labs.'
+    title: 'A dog with a plan',
+    paragraph: `This project has two objectives. To build a community and to help animals. Pablo (The dog above) is the face of this project and the official mascot of SovaChain Labs.`
   };
 
   return (

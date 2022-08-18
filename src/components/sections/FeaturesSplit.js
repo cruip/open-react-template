@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'All about the fun',
-    paragraph: 'Light hearted and forever fun! Inspired by Shibu Inu and Doge, Pablo Wabo is meant for everyone and is here to stay. This token intends to remain abundant and plentiful for the foreseeable future.'
+    title: 'Upcoming Air Drop',
+    paragraph: 'To participate in our air drop, you need to already be a user of the avalanche network and love animals. Air drop campaign is scheduled to begin Q4, 2022.'
   };
 
   return (
@@ -73,7 +73,7 @@ const FeaturesSplit = ({
                   A Meme token on the right network
                   </h3>
                 <p className="m-0">
-                  Pablo Wabo, while inspired by Doge and Shibi Inu has a mandate to only be native to the Avalanche network. Blazing fast and low cost transactions combined with an eco friendly proof of stake mechanism makes Avalanche the obvious choice for a Meme coin to remain light hearted and fun. Paying expensive gas fees to trade inexpensive Meme tokens is no fun at all. 
+                  Pablo Wabo, has a mandate to be native to the Avalanche network. <a href="https://www.avax.network/">Blazing fast</a> and <a href="https://www.avax.network/">low cost</a> transactions combined with an eco friendly <a href="https://www.avax.network/">proof of stake</a> mechanism makes Avalanche the obvious choice for a Meme coin to remain light hearted and <a href="https://www.avax.network/">fun.</a> No bridge required.
                   </p>
               </div>
               <div className={

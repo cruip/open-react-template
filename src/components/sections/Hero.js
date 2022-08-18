@@ -65,7 +65,7 @@ const Hero = ({
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                One of the most abundant Meme tokens ever to be created. Starting with an Initial supply of 1 Quadrillion, a total of 1 Quintillion tokens will be minted and distributed as the final total supply. 
+                One of the most abundant Meme tokens ever to be created. With over Three hundred <a href="https://www.google.com/search?q=quadrillion&oq=quadrillion&aqs=chrome..69i57j0i512l9.3401j0j15&sourceid=chrome&ie=UTF-8">Quadrillion</a> already distributed, a <a href="https://www.google.com/search?q=quintillion&oq=quintillion&aqs=chrome..69i57j0i512l6j46i512j0i512l2.4880j0j15&sourceid=chrome&ie=UTF-8">Quintillion tokens</a> will be minted as the final total supply.
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
