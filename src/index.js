@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import { MetaMaskProvider } from "metamask-react";
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -13,7 +14,9 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <HashRouter history={history}>
-    <App />
+    <MetaMaskProvider>
+      <App />
+    </MetaMaskProvider>
   </HashRouter>,
   document.getElementById('root')
 );

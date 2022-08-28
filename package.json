@@ -7,6 +7,7 @@
     "classnames": "^2.2.6",
     "gh-pages": "^4.0.0",
     "lodash": "^4.17.15",
+    "metamask-react": "^2.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
@@ -21,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build", 
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useMetaMask } from "metamask-react";
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
@@ -19,9 +20,29 @@ const trackPage = page => {
 };
 
 const App = () => {
-
-  const childRef = useRef();
+ 
+const childRef = useRef();
   let location = useLocation();
+
+const { status, connect, account, chainId, ethereum } = useMetaMask();
+//console.log("status", status); 
+
+//Needed to provide different instructions if you are on mobile
+
+//--------------------------------------------------------------------
+const deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        return "mobile";
+    }
+    return "desktop";
+};
+
+//--------------------------------------------------------------------
+
 
   useEffect(() => {
     const page = location.pathname;
@@ -36,7 +57,9 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} 
+          metamask={{status, connect, account, chainId, ethereum}}
+          />
         </Switch>
       )} />
   );

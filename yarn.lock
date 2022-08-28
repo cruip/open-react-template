@@ -6919,6 +6919,11 @@ merge2@^1.2.3:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
+metamask-react@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/metamask-react/-/metamask-react-2.4.0.tgz#5df0476a6df8fa6959c5253f2ee67c274453128d"
+  integrity sha512-dQDu8aop89iZjvjldCXnEEASgbACCeyBeylqVTPgqVurHIFB666NTNfteiQstzVYg0k3vyup+FNgqNF9g2/0WA==
+
 methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
