@@ -114,15 +114,15 @@ const Header = ({
                     isActive && 'is-active'
                   )}>
                 <div className="header-nav-inner">
-                  <ul className={
+                  {false ? <ul className={
                     classNames(
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>White Paper</Link>
+                      <Link to="#0" onClick={closeMenu}>White Paper2</Link>
                     </li>
-                  </ul>
+                  </ul> : <p></p>}
                   <ul className={
                     classNames(
                       'list-reset text-xs',
@@ -137,7 +137,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={status === 'notConnected' ? connect : ()=>{console.log("some other function");}}>{status === 'notConnected' ? "Connect" : "Disconnect"}</Link>
+                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={status === 'notConnected' || status === "unavailable" ? connect : ()=>{console.log("some other function");}}>{status === 'notConnected' ? "Connect" : "Connected"}</Link>
                       </li>
                     </ul>}
                 </div>
