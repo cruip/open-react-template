@@ -1,0 +1,23 @@
+name: "Deploy Website to S3 using GitHub Actions"
+
+on:
+  push:
+    branches: ["master", "develop"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build Website
+        run: npm run build
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-key-id: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Copy to S3    
+        run: aws s3 sync ./build/. s3://elasticsi-project-bucket
