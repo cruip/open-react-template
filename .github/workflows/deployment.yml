@@ -23,4 +23,4 @@ jobs:
       - name: Copy to S3    
         run: aws s3 sync ./build/. s3://www.elasticsi-project-bucket
       - name: Invalidating CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id E453NXHOSPBQ3
+        run: aws cloudfront create-invalidation --distribution-id E453NXHOSPBQ3 --paths "/*"
