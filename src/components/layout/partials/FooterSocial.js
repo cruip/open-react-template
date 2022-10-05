@@ -16,7 +16,7 @@ const FooterSocial = ({
       {...props}
       className={classes}
     >
-      <ul className="list-reset">
+      {/* <ul className="list-reset">
         <li>
           <a href="https://facebook.com/">
             <svg
@@ -61,7 +61,7 @@ const FooterSocial = ({
             </svg>
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }

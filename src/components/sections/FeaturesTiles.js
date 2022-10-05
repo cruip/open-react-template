@@ -44,9 +44,10 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Meet Tommy',
+    paragraph: 'Tommy is a first of its kind AI that is changing the way our clients view marketing.',
   };
+
 
   return (
     <section
@@ -55,9 +56,9 @@ const FeaturesTiles = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content"/>
+          <h2 className='center-content'>How Does It Work?</h2>
           <div className={tilesClasses}>
-
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -71,10 +72,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    First: The Search
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  Tommy asks Google for the top 1% of searches in your niche from those looking to buy.
                     </p>
                 </div>
               </div>
@@ -93,10 +94,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    Then: The Keywords
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  Then, Tommy asks Google for the top 1% of Keywords that are helping your competitors attract customers.
                     </p>
                 </div>
               </div>
@@ -115,16 +116,16 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    Finally: The Content
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  Last but not least, Tommy asks Google what content is ranking highest in your Niche and begins to prepare your sites.
                     </p>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom">
+            {/* <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
@@ -188,7 +189,7 @@ const FeaturesTiles = ({
                     </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>

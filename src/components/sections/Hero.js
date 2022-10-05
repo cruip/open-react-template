@@ -61,19 +61,19 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              Steal the spotlight with <span className="text-color-primary">Tommy</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+              Our Patented AI helps you 5x your Site Traffic in 6 weeks by intercepting organic searches for your product or service.
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
+                    AI ?  
                     </Button>
                   <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                    Book a Demo
                     </Button>
                 </ButtonGroup>
               </div>
@@ -81,14 +81,14 @@ const Hero = ({
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
-              data-video="https://player.vimeo.com/video/174002812"
+              data-video="https://www.youtube.com/embed/6FyAwB4t-Mk"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
             >
               <Image
                 className="has-shadow"
-                src={require('./../../assets/images/video-placeholder.jpg')}
+                src={require('./../../assets/images/video-placeholder-2.jpg')}
                 alt="Hero"
                 width={896}
                 height={504} />
@@ -98,8 +98,9 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
+            video="https://www.youtube.com/embed/6FyAwB4t-Mk"
             videoTag="iframe" />
+            {/* <iframe width="896" height="504" src="https://www.youtube.com/embed/6FyAwB4t-Mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
         </div>
       </div>
     </section>
