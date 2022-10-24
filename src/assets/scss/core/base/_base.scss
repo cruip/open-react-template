@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	background: color-bg(body); /* Fallback for when there is no custom background color defined. */
+	background: rgb(80,16,16);
+	background: linear-gradient(183deg, get-color(dark, 1) 0%, get-color(dark, 2) 3%,get-color(dark, 3) 200%);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }

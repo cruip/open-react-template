@@ -10,7 +10,9 @@
     "react-ga": "^2.7.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "react-markdown":"^8.0.0",
+    "contentful": "^9.0.0"
   },
   "repository": {
     "type": "git",

@@ -16,11 +16,11 @@ $button--color: (
 
 // Buttons: background color
 $button--bg: (
-	button-light: 			get-color(light, 1),
+	button-light: 			rgba(218, 218, 218, 0.06),
 	button-light-hover: 	darken(get-color(light, 1), 5%),
 	button-dark: 			get-color(dark, 2),
 	button-dark-hover: 		lighten(get-color(dark, 2), 2%),
-	button-primary: 		get-color(primary, 1),
+	button-primary: 		rgba(218, 218, 218, 0.06),
 	button-primary-hover: 	lighten(get-color(primary, 1), 2%),
 	button-secondary: 		get-color(secondary, 1),
 	button-secondary-hover:	lighten(get-color(secondary, 1), 2%),
@@ -55,7 +55,7 @@ $button--padding-h: 			32px;		// button, left and right padding
 $button-sm--padding-h:			24px;		// button (small), left and right padding
 $button-w-form--padding-h:		24px;		// button, left and right padding in a form group (.form-group) - Overrides button default padding
 $button-sm-w-form--padding-h:	null;		// button (small), left and right padding in a form group (.form-group) - Overrides button default padding
-$button--radius: 				2px;		// button radius (never use null)
+$button--radius: 				15px;		// button radius (never use null)
 $button--transform: 			null;	    // button text-transform property (null is allowed)
 $button--max-size-mobile: 		280px;		// button max width on mobile (.button-wide-mobile)
 $button-group-padding: 			16px;		// padding between sibling buttons (nested into .button-group)
