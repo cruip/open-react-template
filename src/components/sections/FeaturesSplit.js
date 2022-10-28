@@ -50,8 +50,10 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Research',
+    paragraph: `
+    Students can apply to get selected for our Research Analyst positions in our Research division. If selected, they will undergo an educational training program as an opportunity to analyze the emerging Web3 market as well as fundamental concepts in mechanism design and finance as applied to blockchain. The program is designed for those who are interested in being part of its research division and does not require previous experience. We seek a willingness to dive into the space at depth. Students are then invited to join committees, where upperclassmen guide members to develop skill sets in smart contract development, VC investment, DeFi/yield/MEV trading strategy, quantitative research, and governance.
+    `
   };
 
   return (
@@ -59,10 +61,10 @@ const FeaturesSplit = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div className="container" id="research">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-          <div className={splitClasses}>
+          {/* <div className={splitClasses}>
 
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
@@ -133,7 +135,7 @@ const FeaturesSplit = ({
               </div>
             </div>
 
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

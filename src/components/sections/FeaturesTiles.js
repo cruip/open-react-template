@@ -35,7 +35,7 @@ const FeaturesTiles = ({
   const innerClasses = classNames(
     'features-tiles-inner section-inner pt-0',
     topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
+    bottomDivider && 'has-bottom-divider',
   );
 
   const tilesClasses = classNames(
@@ -44,19 +44,24 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'About',
+    paragraph: `
+    UMass Blockchain Club is the place for all crypto-curious students to be part of a community that is passionate and enthusiastic about the Blockchain and Web3 space. As part of the Club, members can sign up for our newsletters to receive updates regarding the club's weekly meetings, seminars by distinguished speakers from the space, and for information on what’s going on in the space. 
+    Students who are interested in contributing to the Research initiatives of the club and being part of the team, are encouraged to apply for our Research Analyst positions. There are no specific skills or major requirements for this position. Selection will be purely based on the level of interest and commitment towards Research and the Club. 
+
+    `
   };
 
+  console.log(props)
   return (
     <section
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div className="container center" id = "about"style={{height: '90vh'}}>
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-          <div className={tilesClasses}>
+          {/* <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
@@ -190,7 +195,7 @@ const FeaturesTiles = ({
               </div>
             </div>
 
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -23,7 +23,16 @@
 			vertical-align: top;
 		}
 	}
+	vertical-align: middle;
 }
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	margin-bottom: 5vh;
+  }
 
 @include media( '<=medium' ) {
 

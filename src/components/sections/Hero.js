@@ -52,25 +52,26 @@ const Hero = ({
     >
       <div className="container-sm">
         <div className={innerClasses}>
-          <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              UMass Blockchain Club
-            </h1>
-            <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-                </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile>
-                    Apply Now
-                    </Button> 
-                </ButtonGroup>
+          <div className='center'>
+            <div className="hero-content">
+              <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+                UMass Blockchain Club
+              </h1>
+              <div className="container-xs">
+                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+                  We're a student-run organization that aims to educate and empower students on blockchain, crypto and the Web3.
+                  </p>
+                <div className="reveal-from-bottom" data-reveal-delay="600">
+                  <ButtonGroup>
+                    <Button tag="a" color="primary" wideMobile 
+                    onClick={
+                          () => {window.open("https://forms.gle/C8YkMdc5QuQDLpAaA","_blank").focus()}}>
+                      Apply Now
+                      </Button> 
+                  </ButtonGroup>
+                </div>
               </div>
             </div>
-          </div>
-          <div style = {{width:896, height:504}}>
-
           </div>
         </div>
       </div>

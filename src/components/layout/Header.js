@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import Logo from './partials/Logo';
 
 const propTypes = {
@@ -106,6 +106,15 @@ const Header = ({
                     isActive && 'is-active'
                   )}>
                 <div className="header-nav-inner">
+                <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link smooth to="/#about" onClick={closeMenu}>About</Link>
+                    </li>
+                  </ul>
                   <ul className={
                     classNames(
                       'list-reset text-xs',
@@ -115,12 +124,41 @@ const Header = ({
                       <Link to="#0" onClick={closeMenu}>Blog</Link>
                     </li>
                   </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link smooth to="/#research" onClick={closeMenu}>Research</Link>
+                    </li>
+                  </ul>
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link to="#0" onClick={closeMenu}>Events</Link>
+                    </li>
+                  </ul>
+                  
+                  <ul className={
+                    classNames(
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`
+                    )}>
+                    <li>
+                      <Link smooth to="/#team" onClick={closeMenu}>Team</Link>
+                    </li>
+                  </ul>
                   {!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Apply</Link>
+                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={
+                          () => {window.open("https://forms.gle/C8YkMdc5QuQDLpAaA","_blank").focus(); closeMenu()}}>Apply</Link>
                       </li>
                     </ul>}
                 </div>
