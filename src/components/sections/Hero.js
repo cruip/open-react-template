@@ -3,8 +3,6 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-import usePages from '../../custom-hooks/usepages'
-
 
 const propTypes = {
   ...SectionProps.types
@@ -42,15 +40,12 @@ const Hero = ({
     bottomDivider && 'has-bottom-divider'
   );
 
-  const [pages,] = usePages()
-
-  console.log(pages)
   return (
     <section
       {...props}
       className={outerClasses}
     >
-      <div className="container-sm">
+      <div className="container">
         <div className={innerClasses}>
           <div className='center'>
             <div className="hero-content">

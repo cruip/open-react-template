@@ -8,12 +8,14 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
+    "react-markdown": "^8.0.0",
     "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^2.4.0",
     "react-scripts": "^3.4.1",
+    "react-tsparticles": "^2.5.1",
     "sass": "^1.49.7",
-    "react-markdown":"^8.0.0",
-    "contentful": "^9.0.0",
-    "react-router-hash-link": "^2.4.0"
+    "tsparticles": "^2.5.1",
+    "tsparticles-preset-triangles": "^2.5.1"
   },
   "repository": {
     "type": "git",

@@ -49,21 +49,30 @@ const FeaturesSplit = ({
     alignTop && 'align-top'
   );
 
-  const sectionHeader = {
-    title: 'Research',
-    paragraph: `
-    Students can apply to get selected for our Research Analyst positions in our Research division. If selected, they will undergo an educational training program as an opportunity to analyze the emerging Web3 market as well as fundamental concepts in mechanism design and finance as applied to blockchain. The program is designed for those who are interested in being part of its research division and does not require previous experience. We seek a willingness to dive into the space at depth. Students are then invited to join committees, where upperclassmen guide members to develop skill sets in smart contract development, VC investment, DeFi/yield/MEV trading strategy, quantitative research, and governance.
-    `
-  };
-
   return (
     <section
       {...props}
       className={outerClasses}
     >
-      <div className="container" id="research">
+      <div className="container" id="joinus">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <div className="container-xs">
+            <h2 className='section-header center-content mt-0 mb-16'>
+              Join Us
+            </h2>
+            <p>Join us and become a part of the club to:</p>
+            <ul>
+              <li>Get involved in running the club</li>
+              <li>Access to resources, workshops, and seminars to learn more about the space</li>
+              <li>Networking opportunities to learn, research and build a career in this space.</li>
+              <li>Develop a specialized skill in the space in any of the following fields:</li>
+                <ul style={{"list-style-type": "lower-alpha"}}>
+                  <li>Finance: DeFi/Yield Farming, Cryptocurrencies trading, Tokenomics, VC, Real estate tokenization, Governance, Mining</li>
+                  <li>Economics and Law: Digital Currency and Regulations</li>
+                  <li>STEM: Quantitative Finance, Smart Contracts Auditing, Blockchain Development, etc.</li>
+                </ul>
+            </ul>
+          </div>
           {/* <div className={splitClasses}>
 
             <div className="split-item">

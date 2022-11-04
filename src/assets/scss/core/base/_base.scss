@@ -9,11 +9,12 @@ html {
 }
 
 body {
-	background: rgb(80,16,16);
-	background: linear-gradient(187deg, get-color(dark, 1) 0%, get-color(dark, 2) 5%,get-color(dark, 3) 200%);
+	// background: get-color(dark, 1);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+
+
 
 hr {
 	border: 0;

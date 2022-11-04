@@ -106,7 +106,7 @@ const Header = ({
                     isActive && 'is-active'
                   )}>
                 <div className="header-nav-inner">
-                <ul className={
+                  <ul className={
                     classNames(
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
@@ -115,31 +115,14 @@ const Header = ({
                       <Link smooth to="/#about" onClick={closeMenu}>About</Link>
                     </li>
                   </ul>
+
                   <ul className={
                     classNames(
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Blog</Link>
-                    </li>
-                  </ul>
-                  <ul className={
-                    classNames(
-                      'list-reset text-xs',
-                      navPosition && `header-nav-${navPosition}`
-                    )}>
-                    <li>
-                      <Link smooth to="/#research" onClick={closeMenu}>Research</Link>
-                    </li>
-                  </ul>
-                  <ul className={
-                    classNames(
-                      'list-reset text-xs',
-                      navPosition && `header-nav-${navPosition}`
-                    )}>
-                    <li>
-                      <Link to="#0" onClick={closeMenu}>Events</Link>
+                      <Link smooth to="/#joinus" onClick={closeMenu}>Join Us</Link>
                     </li>
                   </ul>
                   

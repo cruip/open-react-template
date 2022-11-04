@@ -45,7 +45,7 @@ const Testimonial = ({
 
   const sectionHeader = {
     title: 'Members',
-    paragraph: 'Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.'
+    paragraph: ''
   };
 
   return (
@@ -102,6 +102,37 @@ const Testimonial = ({
                 </div>
               </div>
             </div>
+
+            <div className="tiles-item reveal-from-right" >
+              <div className="tiles-item-inner">
+                
+                <div className="testimonial-item-footer">
+                  <span className="testimonial-item-name text-color-high">Roman Level</span>
+                </div>
+                <br></br>
+                <div>
+                  <p className="text-sm mb-0">
+                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                      </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="tiles-item reveal-from-right" >
+              <div className="tiles-item-inner">
+                
+                <div className="testimonial-item-footer">
+                  <span className="testimonial-item-name text-color-high">Roman Level</span>
+                </div>
+                <br></br>
+                <div>
+                  <p className="text-sm mb-0">
+                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                      </p>
+                </div>
+              </div>
+            </div>
+
 
           </div>
         </div>

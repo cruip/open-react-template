@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero/>
+      <Hero bottomDivider/>
       <FeaturesTiles />
       <FeaturesSplit invertMobile topDivider imageFill/>
       <Testimonial topDivider />

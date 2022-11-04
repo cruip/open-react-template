@@ -3,14 +3,14 @@
 // The color palette
 $palette: (
 	light: (
-		1: #ECEDED,
-		2: #9CA9B3,
-		3: #717D86
+		1: #E9E1E1,
+		2: #D3C3C3,
+		3: #968686
 	),
 	dark: (
-		1: rgba(80,16,16,1),
-		2: rgba(0,0,0,1),
-		3: rgb(80, 16, 16,1)
+		1: #571A1A,
+		2: #2B2B2B,//#662E2E,
+		3: #2C0D0D
 	),
 	primary: (
 		1: #8d2f2f,
@@ -53,7 +53,7 @@ $color: (
 
 // Borders and dividers: color
 $border--color: (
-	divider:			get-color(dark, 2),
+	divider:			get-color(light, 1),
 	divider-inverse:	get-color(light, 1)
 );
 

@@ -33,7 +33,7 @@ const FeaturesTiles = ({
   );
 
   const innerClasses = classNames(
-    'features-tiles-inner section-inner pt-0',
+    'features-tiles-inner section-inner',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
   );
@@ -43,24 +43,26 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
-  const sectionHeader = {
-    title: 'About',
-    paragraph: `
-    UMass Blockchain Club is the place for all crypto-curious students to be part of a community that is passionate and enthusiastic about the Blockchain and Web3 space. As part of the Club, members can sign up for our newsletters to receive updates regarding the club's weekly meetings, seminars by distinguished speakers from the space, and for information on what’s going on in the space. 
-    Students who are interested in contributing to the Research initiatives of the club and being part of the team, are encouraged to apply for our Research Analyst positions. There are no specific skills or major requirements for this position. Selection will be purely based on the level of interest and commitment towards Research and the Club. 
-
-    `
-  };
-
   console.log(props)
   return (
     <section
       {...props}
       className={outerClasses}
     >
-      <div className="container center" id = "about"style={{height: '90vh'}}>
+      <div className="container" id = "about"style={{height: '90vh'}}>
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <div className="container-xs">
+            <h2 className='section-header center-content mt-0 mb-16'>
+              About
+            </h2>
+            <p>UMass Blockchain is a student-run organization that aims to educate and empower students on blockchain, crypto and the Web3 space.</p>
+            <ul>
+              <li>Weekly Meetings: Cover basic topics for everyone to learn and gain foundational knowledge of the space.</li>
+              <li>Seminars: We invite distinguished speakers, alumni, and founders working in the space.</li>
+              <li>Networking: Meet like-minded and curious individuals to discuss and build excited projects.</li>
+            </ul>
+            <p>Students who are interested and enthusiastic to learn, research and even build in this space are encouraged to Join the Club Team.</p>
+          </div>
           {/* <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">
