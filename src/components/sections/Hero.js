@@ -60,9 +60,10 @@ const Hero = ({
                   <ButtonGroup>
                     <Button tag="a" color="primary" wideMobile 
                     onClick={
-                          () => {window.open("https://forms.gle/C8YkMdc5QuQDLpAaA","_blank").focus()}}>
-                      Apply Now
+                          () => {window.open("https://forms.gle/dEEc24fSYZsg5iQ99","_blank").focus()}}>
+                      Sign Up
                       </Button> 
+                    
                   </ButtonGroup>
                 </div>
               </div>

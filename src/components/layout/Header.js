@@ -141,7 +141,7 @@ const Header = ({
                     >
                       <li>
                         <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={
-                          () => {window.open("https://forms.gle/C8YkMdc5QuQDLpAaA","_blank").focus(); closeMenu()}}>Apply</Link>
+                          () => {window.open("https://forms.gle/dEEc24fSYZsg5iQ99","_blank").focus(); closeMenu()}}>Sign Up</Link>
                       </li>
                     </ul>}
                 </div>

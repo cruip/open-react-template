@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -72,6 +73,16 @@ const FeaturesSplit = ({
                   <li>STEM: Quantitative Finance, Smart Contracts Auditing, Blockchain Development, etc.</li>
                 </ul>
             </ul>
+            <div style ={{
+  "display": "flex",
+  "justify-content": "center",
+  "align-items": "center"}}>
+            <Button tag="a" color="primary" wideMobile 
+                    onClick={
+                          () => {window.open("https://forms.gle/C8YkMdc5QuQDLpAaA","_blank").focus()}}>
+                      Apply
+                      </Button> 
+                      </div>
           </div>
           {/* <div className={splitClasses}>
 

@@ -59,7 +59,7 @@ const FeaturesTiles = ({
             <ul>
               <li>Weekly Meetings: Cover basic topics for everyone to learn and gain foundational knowledge of the space.</li>
               <li>Seminars: We invite distinguished speakers, alumni, and founders working in the space.</li>
-              <li>Networking: Meet like-minded and curious individuals to discuss and build excited projects.</li>
+              <li>Networking: Meet like-minded and curious individuals to discuss and build exciting projects.</li>
             </ul>
             <p>Students who are interested and enthusiastic to learn, research and even build in this space are encouraged to Join the Club Team.</p>
           </div>
