@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
+import Image from '../elements/Image';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -44,9 +45,17 @@ const Testimonial = ({
   );
 
   const sectionHeader = {
-    title: 'Members',
+    title: 'Executive Board',
     paragraph: ''
   };
+
+  const memeber_links = {
+    mk: "https://www.linkedin.com/in/madhavkarwa/",
+    js: "https://www.linkedin.com/in/jdselvaraaj/",
+    sg: "https://www.linkedin.com/in/sean-gately/",
+    rg: "https://www.linkedin.com/in/ryan-m-gallagher00/",
+    lm: "https://www.linkedin.com/in/louismulliez/",
+  }
 
   return (
     <section
@@ -60,79 +69,100 @@ const Testimonial = ({
 
             <div className="tiles-item reveal-from-right" data-reveal-delay="200">
               <div className="tiles-item-inner">
-                
-                <div className="testimonial-item-footer">
-                  <span className="testimonial-item-name text-color-high">Roman Level</span>
-                </div>
+              <a href={memeber_links.mk}>
+                <Image
+                  src={require('./../../assets/images/members/madhav_karwa.jpg')}
+                  alt="Open"
+                  style={{"width":"auto", "height": "256px"}}
+                  />
+              </a>
                 <br></br>
-                <div>
-                  <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                      </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="tiles-item reveal-from-right" >
-              <div className="tiles-item-inner">
-                
-                <div className="testimonial-item-footer">
-                  <span className="testimonial-item-name text-color-high">Roman Level</span>
-                </div>
-                <br></br>
-                <div>
-                  <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                      </p>
+                <div className="testimonial-item-footer" style={{
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-items": "center"}}>
+                  <a href={memeber_links.mk}>Madhav Karwa</a>
                 </div>
               </div>
             </div>
 
             <div className="tiles-item reveal-from-right" data-reveal-delay="200">
               <div className="tiles-item-inner">
-                
-                <div className="testimonial-item-footer">
-                  <span className="testimonial-item-name text-color-high">Roman Level</span>
-                </div>
+              <a href={memeber_links.sg}>
+                <Image
+                  src={require('./../../assets/images/members/sean_gately.png')}
+                  alt="Open"
+                  style={{"width":"auto", "height": "256px"}}
+                  />
+              </a>
                 <br></br>
-                <div>
-                  <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                      </p>
+
+                <div className="testimonial-item-footer" style={{
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-items": "center"}}>
+                  <a href={memeber_links.sg}>Sean Gately</a>
                 </div>
               </div>
             </div>
-
-            <div className="tiles-item reveal-from-right" >
+            <div className="tiles-item reveal-from-right" data-reveal-delay="200">
               <div className="tiles-item-inner">
-                
-                <div className="testimonial-item-footer">
-                  <span className="testimonial-item-name text-color-high">Roman Level</span>
-                </div>
+              <a href={memeber_links.js}>
+                <Image
+                  src={require('./../../assets/images/members/joseph_selvaraaj.jpeg')}
+                  alt="Open"
+                  style={{"width":"auto", "height": "256px"}}
+                  />
+              </a>
                 <br></br>
-                <div>
-                  <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                      </p>
+
+                <div className="testimonial-item-footer" style={{
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-items": "center"}}>
+                  <a href={memeber_links.js}>Joseph Daniel Selvaraaj</a>
                 </div>
               </div>
             </div>
-
-            <div className="tiles-item reveal-from-right" >
+            <div className="tiles-item reveal-from-right" data-reveal-delay="200">
               <div className="tiles-item-inner">
-                
-                <div className="testimonial-item-footer">
-                  <span className="testimonial-item-name text-color-high">Roman Level</span>
-                </div>
+              <a href={memeber_links.rg}>
+                <Image
+                  src={require('./../../assets/images/members/ryan_gallagher.png')}
+                  alt="Open"
+                  style={{"width":"auto", "height": "256px"}}
+                  />
+              </a>
                 <br></br>
-                <div>
-                  <p className="text-sm mb-0">
-                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                      </p>
+
+                <div className="testimonial-item-footer" style={{
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-items": "center"}}>
+                  <a href={memeber_links.rg}>Ryan Gallagher</a>
                 </div>
               </div>
             </div>
+            <div className="tiles-item reveal-from-right" data-reveal-delay="200">
+              <div className="tiles-item-inner">
+              <a href={memeber_links.lm}>
+                <Image
+                  src={require('./../../assets/images/members/louis_mulliez.png')}
+                  alt="Open"
+                  style={{"width":"auto", "height": "256px"}}
+                  />
+              </a>
+                <br></br>
 
+                <div className="testimonial-item-footer" style={{
+                  "display": "flex",
+                  "justify-content": "center",
+                  "align-items": "center"}}>
+                  <a href={memeber_links.lm}>Louis Mulliez</a>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
