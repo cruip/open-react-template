@@ -79,7 +79,7 @@ const FeaturesSplit = ({
   "align-items": "center"}}>
             <Button tag="a" color="primary" wideMobile 
                     onClick={
-                          () => {window.open("https://forms.gle/C8YkMdc5QuQDLpAaA","_blank").focus()}}>
+                          () => {window.open("https://forms.gle/QgUWsWmorAAbjJ1q7","_blank").focus()}}>
                       Apply
                       </Button> 
                       </div>
