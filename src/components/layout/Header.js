@@ -1,138 +1,69 @@
-import React, { useState, useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import Logo from './partials/Logo';
+import React, {useEffect, useState} from 'react';
+import {Button, Modal} from 'semantic-ui-react';
+import BlokeDex from "./BlokeDex";
+import Web3 from "web3";
+import ABI from "../../mintAbi.json";
+import Bloke from "./Bloke";
 
-const propTypes = {
-  navPosition: PropTypes.string,
-  hideNav: PropTypes.bool,
-  hideSignin: PropTypes.bool,
-  bottomOuterDivider: PropTypes.bool,
-  bottomDivider: PropTypes.bool
-}
+function Header() {
+    /*const [nfts, setNfts] = useState([])
 
-const defaultProps = {
-  navPosition: '',
-  hideNav: false,
-  hideSignin: false,
-  bottomOuterDivider: false,
-  bottomDivider: false
-}
+    const showNfts = async () => {
+        const web3 = new Web3(window.ethereum);
+        const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts",
+        });
+        const contract = await new web3.eth.Contract(ABI, "0x931f88Fc7f13217ca30e5bd9AC9261a47A95DBd1");
+        const nftBalance = await contract.methods.balanceOf(accounts[0]).call();// get balance of id
+        let rows = []; // empty array;
+        for (let i = 0; i < nftBalance; i++) {
+            try {
+                let tokenId = await contract.methods.tokenOfOwnerByIndex(accounts[0], i).call();
+                let response = await fetch(`https://gateway.pinata.cloud/ipfs/QmcGUYsNBuuV7eFASQTeueHQiSDSZCxKxzqEH9uBMaB3z9/${tokenId}.json`)
+                let data = await response.json();
+                console.log(tokenId);
+                rows.push(data);
+            } catch (e) {
+                console.log(e);
+            }
 
-const Header = ({
-  className,
-  navPosition,
-  hideNav,
-  hideSignin,
-  bottomOuterDivider,
-  bottomDivider,
-  ...props
-}) => {
 
-  const [isActive, setIsactive] = useState(false);
+        }
 
-  const nav = useRef(null);
-  const hamburger = useRef(null);
+        setNfts(rows)
+    }*/
 
-  useEffect(() => {
-    isActive && openMenu();
-    document.addEventListener('keydown', keyPress);
-    document.addEventListener('click', clickOutside);
-    return () => {
-      document.removeEventListener('keydown', keyPress);
-      document.removeEventListener('click', clickOutside);
-      closeMenu();
-    };
-  });  
+    const [showModal, setShowModal] = useState(false);
 
-  const openMenu = () => {
-    document.body.classList.add('off-nav-is-active');
-    nav.current.style.maxHeight = nav.current.scrollHeight + 'px';
-    setIsactive(true);
-  }
-
-  const closeMenu = () => {
-    document.body.classList.remove('off-nav-is-active');
-    nav.current && (nav.current.style.maxHeight = null);
-    setIsactive(false);
-  }
-
-  const keyPress = (e) => {
-    isActive && e.keyCode === 27 && closeMenu();
-  }
-
-  const clickOutside = (e) => {
-    if (!nav.current) return
-    if (!isActive || nav.current.contains(e.target) || e.target === hamburger.current) return;
-    closeMenu();
-  }  
-
-  const classes = classNames(
-    'site-header',
-    bottomOuterDivider && 'has-bottom-divider',
-    className
-  );
-
-  return (
-    <header
-      {...props}
-      className={classes}
-    >
-      <div className="container">
-        <div className={
-          classNames(
-            'site-header-inner',
-            bottomDivider && 'has-bottom-divider'
-          )}>
-          <Logo />
-          {!hideNav &&
-            <>
-              <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-              >
-                <span className="screen-reader">Menu</span>
-                <span className="hamburger">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
-              <nav
-                ref={nav}
-                className={
-                  classNames(
-                    'header-nav',
-                    isActive && 'is-active'
-                  )}>
-                <div className="header-nav-inner">
-                  <ul className={
-                    classNames(
-                      'list-reset text-xs',
-                      navPosition && `header-nav-${navPosition}`
-                    )}>
-                    <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
-                    </li>
-                  </ul>
-                  {!hideSignin &&
-                    <ul
-                      className="list-reset header-nav-right"
-                    >
-                      <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
-                      </li>
-                    </ul>}
+    return (
+        <div>
+            <button onClick={() => setShowModal(true)}>Show Modal</button>
+            {showModal && (
+                <div className="ui modal">
+                    <div className="header">Modal Header</div>
+                    <div className="content">
+                        Modal content goes here.
+                    </div>
+                    <div className="actions">
+                        <button className="ui button" onClick={() => setShowModal(false)}>Close</button>
+                    </div>
                 </div>
-              </nav>
-            </>}
+            )}
         </div>
-      </div>
-    </header>
-  );
+    );
 }
-
-Header.propTypes = propTypes;
-Header.defaultProps = defaultProps;
 
 export default Header;
+/*
+       <div>
+            <Button onClick={showNfts} className="ui vertical animated button" tabIndex="0">
+                <div className="hidden content">Show</div>
+                <div className="visible content">
+                    <i className="eye icon"></i>
+                </div>
+            </Button>
+            <div className="ui modal">
+
+            </div>
+            <Bloke blokeData={nfts}></Bloke>
+        </div>*/

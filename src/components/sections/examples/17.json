@@ -1,0 +1,39 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "bruiser"
+    },
+    {
+      "trait_type": "HP",
+      "value": 65
+    },
+    {
+      "trait_type": "ATK",
+      "value": 51
+    },
+    {
+      "trait_type": "DEF",
+      "value": 85
+    },
+    {
+      "trait_type": "Special ATK",
+      "value": 71
+    },
+    {
+      "trait_type": "Special Defense",
+      "value": 51
+    },
+    {
+      "trait_type": "Speed",
+      "value": 57
+    },
+    {
+      "trait_type": "Total",
+      "value": 380
+    }
+  ],
+  "description": "1st gen bloke",
+  "image": "IPFS_PATH\/17.png",
+  "name": "charmchu"
+}

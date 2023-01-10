@@ -1,0 +1,39 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "normal"
+    },
+    {
+      "trait_type": "HP",
+      "value": 30
+    },
+    {
+      "trait_type": "ATK",
+      "value": 3
+    },
+    {
+      "trait_type": "DEF",
+      "value": 83
+    },
+    {
+      "trait_type": "Special ATK",
+      "value": 66
+    },
+    {
+      "trait_type": "Special Defense",
+      "value": 75
+    },
+    {
+      "trait_type": "Speed",
+      "value": 67
+    },
+    {
+      "trait_type": "Total",
+      "value": 324
+    }
+  ],
+  "description": "1st gen bloke",
+  "image": "IPFS_PATH\/3447.png",
+  "name": "amphoise"
+}
