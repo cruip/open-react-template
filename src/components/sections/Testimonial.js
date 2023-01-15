@@ -56,7 +56,7 @@ const Testimonial = ({
     const [accounts, setAccounts] = useState([]);
 
     const isConnected = Boolean(accounts[0]);
-
+    const [error, setError] = useState(null);
     async function handleMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -77,6 +77,7 @@ const Testimonial = ({
                     }
                 } catch (e) {
                     // we got the err meaning it does not exist add to arr
+
                     if (!arr.includes(nftId)) {
                         arr.push(nftId);
                     } else {
@@ -87,21 +88,19 @@ const Testimonial = ({
 
             }
 
-
-            console.log(arr);
-
-
             try {
                 const response = await contract.mint(arr, {
                     value: ethers.utils.parseEther((0.001 * arr.length).toString())
                 });
                 console.log("Response: ", response)
             } catch (err) {
-                console.log("Error: ", err)
+                setError(err['reason']);
             }
 
         }
     }
+
+    
 
     const handleDecrement = () => {
         if (mintAmount <= 1) return;
@@ -155,6 +154,15 @@ const Testimonial = ({
                         <button className="button button-primary button-wide-mobile button-sm"
                                 onClick={connectAccounts}>Connect Account</button>
                     )}
+                    <div>
+                        {error && <div className="ui negative message">
+
+                            <div className="header">
+                                {error}
+                            </div>
+                           </div>}
+
+                    </div>
                 </div>
             </div>
         </section>

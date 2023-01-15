@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -8,7 +8,7 @@ import BlokeExample from "../sections/examples/17.json";
 import BlokeExample1 from "../sections/examples/3447.json";
 import BlokeExampleImage from "../sections/examples/17.png";
 import BlokeExampleImage1 from "../sections/examples/3447.png";
-import { Rating} from "semantic-ui-react";
+import {Label, Rating} from "semantic-ui-react";
 const propTypes = {
   ...SectionSplitProps.types
 }
@@ -58,7 +58,7 @@ const FeaturesSplit = ({
     title: 'BLOKéMON',
     paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
   };
-
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <section
       {...props}
@@ -100,7 +100,66 @@ const FeaturesSplit = ({
                   imageFill && 'split-item-image-fill'
                 )}
                 data-reveal-container=".split-item">
+                <div className="ui card">
+                  <div className="extra content">
+                    <span>{BlokeExample1.attributes[0]['value'].toUpperCase()}</span>
 
+
+                    <strong style={{float: 'right'}}>{BlokeExample1.name.toUpperCase()}</strong>
+
+
+                  </div>
+                  <div className="image">
+                    <Image
+                        src={BlokeExampleImage1} alt="Features split 01"
+                        width={528}
+                        height={396}/>
+                  </div>
+                  <div className="content">
+                    <div className="extra content">
+                      <Rating
+
+                          icon="star"
+                          defaultRating={Math.floor(BlokeExample1.attributes[7]['value'] / 100)}
+                          maxRating={4}
+                          style={{cursor: 'pointer', width: 100}}
+                          disabled/>
+
+                      <Label style={{float: 'right'}} onClick={() => setIsVisible(!isVisible)}>{BlokeExample1.attributes[7]['value']}</Label>
+                      <div style={{color: 'black'}}>
+                        {isVisible && <div className="ui grid">
+                          <div className="three wide column"><i
+                              className="heart icon red"></i>{BlokeExample1.attributes[1]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="crosshairs icon green"></i>{BlokeExample1.attributes[2]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="shield icon black"></i>{BlokeExample1.attributes[3]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="lightning icon yellow"></i>{BlokeExample1.attributes[4]['value']}
+                          </div>
+                          <div className="three wide column">
+                            <i className="plus circle icon blue"></i>{BlokeExample1.attributes[5]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="shield alternate icon red"></i>{BlokeExample1.attributes[6]['value']}
+                          </div>
+                        </div>}
+
+                      </div>
+
+                    </div>
+
+                    <div className="meta">
+
+
+                    </div>
+
+                  </div>
+
+                </div>
 
               </div>
             </div>
@@ -123,7 +182,66 @@ const FeaturesSplit = ({
                   imageFill && 'split-item-image-fill'
                 )}
                 data-reveal-container=".split-item">
+                <div className="ui card">
+                  <div className="extra content">
+                    <span>{BlokeExample.attributes[0]['value'].toUpperCase()}</span>
 
+
+                    <strong style={{float: 'right'}}>{BlokeExample.name.toUpperCase()}</strong>
+
+
+                  </div>
+                  <div className="image">
+                    <Image
+                        src={BlokeExampleImage} alt="Features split 01"
+                        width={528}
+                        height={396}/>
+                  </div>
+                  <div className="content">
+                    <div className="extra content">
+                      <Rating
+
+                          icon="star"
+                          defaultRating={Math.floor(BlokeExample.attributes[7]['value'] / 100)}
+                          maxRating={4}
+                          style={{cursor: 'pointer', width: 100}}
+                          disabled/>
+
+                      <Label style={{float: 'right'}} onClick={() => setIsVisible(!isVisible)}>{BlokeExample.attributes[7]['value']}</Label>
+                      <div style={{color: 'black'}}>
+                        {isVisible && <div className="ui grid">
+                          <div className="three wide column"><i
+                              className="heart icon red"></i>{BlokeExample.attributes[1]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="crosshairs icon green"></i>{BlokeExample.attributes[2]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="shield icon black"></i>{BlokeExample.attributes[3]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="lightning icon yellow"></i>{BlokeExample.attributes[4]['value']}
+                          </div>
+                          <div className="three wide column">
+                            <i className="plus circle icon blue"></i>{BlokeExample.attributes[5]['value']}
+                          </div>
+                          <div className="three wide column"><i
+                              className="shield alternate icon red"></i>{BlokeExample.attributes[6]['value']}
+                          </div>
+                        </div>}
+
+                      </div>
+
+                    </div>
+
+                    <div className="meta">
+
+
+                    </div>
+
+                  </div>
+
+                </div>
 
               </div>
             </div>
