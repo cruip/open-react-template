@@ -1,40 +1,24 @@
 {
-  "name": "open-react-template",
+  "name": "open-pro-react",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "lodash": "^4.17.15",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^2.7.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "sass": "^1.49.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "aos": "^3.0.0-beta.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-transition-group": "^4.4.5"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.6",
+    "vite": "^4.1.1"
   }
 }
