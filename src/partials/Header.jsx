@@ -48,37 +48,6 @@ function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
 
-            {/* Desktop menu links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
-                <Link to="/features" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Blog</Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">About us</Link>
-              </li>
-              {/* 1st level: hover */}
-              <Dropdown title="Support">
-                {/* 2nd level: hover */}
-                <li>
-                  <Link to="/contact" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">Contact us</Link>
-                </li>
-                <li>
-                  <Link to="/help" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">Help center</Link>
-                </li>
-                <li>
-                  <Link to="/404" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">404</Link>
-                </li>
-              </Dropdown>
-            </ul>
-
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
@@ -107,32 +76,6 @@ function Header() {
             {/*Mobile navigation */}
             <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
               <ul className="bg-gray-800 px-4 py-2">
-                <li>
-                  <Link to="/features" className="flex text-gray-300 hover:text-gray-200 py-2">Features</Link>
-                </li>
-                <li>
-                  <Link to="/pricing" className="flex text-gray-300 hover:text-gray-200 py-2">Pricing</Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="flex text-gray-300 hover:text-gray-200 py-2">Blog</Link>
-                </li>
-                <li>
-                  <Link to="/about" className="flex text-gray-300 hover:text-gray-200 py-2">About us</Link>
-                </li>
-                <li className="py-2 my-2 border-t border-b border-gray-700">
-                  <span className="flex text-gray-300 py-2">Support</span>
-                  <ul className="pl-4">
-                    <li>
-                      <Link to="/contact" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">Contact us</Link>
-                    </li>
-                    <li>
-                      <Link to="/help" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">Help center</Link>
-                    </li>
-                    <li>
-                      <Link to="/404" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">404</Link>
-                    </li>
-                  </ul>
-                </li>
                 <li>
                   <Link to="/signin" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center">Sign in</Link>
                 </li>
