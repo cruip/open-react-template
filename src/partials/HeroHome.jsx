@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Modal from '../utils/Modal';
 
 import HeroImage from '../images/hero-image-01.jpg';
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const video = useRef(null);
+
+  useEffect(() => {
+    videoModalOpen ? video.current.play() : video.current.pause();
+  }, [videoModalOpen]);    
 
   return (
     <section>
@@ -93,7 +98,10 @@ function HeroHome() {
             {/* Modal */}
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
               <div className="relative pb-9/16">
-                <iframe className="absolute w-full h-full" src="https://player.vimeo.com/video/174002812" title="Video" allowFullScreen></iframe>
+                <video ref={video} className="absolute w-full h-full" width="1920" height="1080" loop autoPlay controls>
+                  <source src="../src/videos/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </Modal>
           </div>

@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [2.0.2] - 2023-03-28
+
+Add self-hosted video
+
 ## [2.0.1] - 2023-02-16
 
 Remove header links
