@@ -1,11 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import Banner from '../partials/Banner';
 
 function SignIn() {
+
+  let navigate = useNavigate()
+  let [singInData, setSignInData] = useState({email:"",password:""} )
+
+  // Getting data from local storage
+
+  let getLocalStorageData = localStorage.getItem("userData")
+  let parsedValues = JSON.parse(getLocalStorageData)
+
+  // checking the parsed Data value with the given cradentials
+
+  let singIn = (e)=>{
+    e.preventDefault();
+    if ((parsedValues.email == singInData.email) && (parsedValues.passWord == singInData.password)) {
+      navigate('/')
+    }else{
+      alert("Wrong Cradential")
+    }
+
+  }
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
 
@@ -49,17 +70,17 @@ function SignIn() {
                   <div className="text-gray-400">Or, sign in with your email</div>
                   <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
                 </div>
-                <form>
+                <form onSubmit={(e)=>singIn(e)}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Email</label>
-                      <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
+                      <input id="email" type="email" value={singInData.email} onChange={(e)=>setSignInData({...singInData, email:e.target.value})} className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password</label>
-                      <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
+                      <input id="password" type="password" value={singInData.password} onChange={(e)=>setSignInData({...singInData, password:e.target.value})} className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">

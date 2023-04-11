@@ -1,11 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { use, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import Banner from '../partials/Banner';
 
 function SignUp() {
+    
+  let navigate = useNavigate()
+  let [userData, setUserData] = useState({name:"", companyName:"",email:"",passWord:""})
+  
+  // providing a unique Id With User info and seting the all input value in local storage
+
+  let signUpClick = (e) =>{
+    e.preventDefault()  
+    let uinqueId = Math.floor(Math.random()*100000)
+    let stringifyData = JSON.stringify({id: uinqueId,...userData} )
+    localStorage.setItem("userData", stringifyData)
+    navigate("/signin")
+  }
+ 
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
 
@@ -49,29 +64,29 @@ function SignUp() {
                   <div className="text-gray-400">Or, register with your email</div>
                   <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
                 </div>
-                <form>
+                <form onSubmit={(e)=>signUpClick(e)}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="full-name">Full Name <span className="text-red-600">*</span></label>
-                      <input id="full-name" type="text" className="form-input w-full text-gray-300" placeholder="First and last name" required />
+                      <input id="full-name" type="text" value={userData.name} onChange={(e)=>setUserData({...userData, name:e.target.value})} className="form-input w-full text-gray-300" placeholder="First and last name" required />
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="company-name">Company Name <span className="text-red-600">*</span></label>
-                      <input id="company-name" type="text" className="form-input w-full text-gray-300" placeholder="Your company or app name" required />
+                      <input id="company-name" type="text" value={userData.companyName} onChange={(e)=>setUserData({...userData, companyName:e.target.value})} className="form-input w-full text-gray-300" placeholder="Your company or app name" required />
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Work Email <span className="text-red-600">*</span></label>
-                      <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
+                      <input id="email" type="email" value={userData.email} onChange={(e)=>setUserData({...userData, email:e.target.value})} className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password <span className="text-red-600">*</span></label>
-                      <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
+                      <input id="password" type="password" value={userData.passWord} onChange={(e)=>setUserData({...userData, passWord:e.target.value})} className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
                     </div>
                   </div>
                   <div className="text-sm text-gray-500 text-center">
@@ -79,7 +94,7 @@ function SignUp() {
                                 </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Sign up</button>
+                      <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full" >Sign up</button>
                     </div>
                   </div>
                 </form>
