@@ -1,24 +1,29 @@
 {
-  "name": "open-pro-react",
+  "name": "open-pro-next",
   "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.3",
+    "@headlessui/react": "^1.7.13",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.34",
+    "@types/react-dom": "18.0.11",
     "aos": "^3.0.0-beta.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1",
-    "react-transition-group": "^4.4.5"
+    "next": "^13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/aos": "^3.0.4",
+    "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6",
-    "vite": "^4.1.1"
+    "tailwindcss": "^3.3.1"
   }
 }
