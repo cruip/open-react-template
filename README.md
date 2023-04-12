@@ -19,6 +19,10 @@ Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.co
 
 [![Open Pro](https://user-images.githubusercontent.com/2683512/151177673-e56ade57-c98d-4c37-b315-d313bd14bb53.png)](https://cruip.com/)
 
+## Design files
+
+If you need the design files, you can download them from Figma's Community 👉 https://bit.ly/401KSUS
+
 ## Usage
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
