@@ -31,7 +31,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Ciellie | Solar Surveys</h1>
+            <h1 className="h1 mb-4" data-aos="fade-up">SolarSurvey.ai</h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">schedule, manage and collaborate on your team's solar surveys all in one place</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
