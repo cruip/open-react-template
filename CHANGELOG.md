@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [3.1.0] - 2023-05-07
+
+Modal video improvements
+
 ## [3.0.0] - 2023-04-12
 
 Conversion to Next.js
