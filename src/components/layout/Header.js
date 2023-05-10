@@ -35,7 +35,9 @@ const Header = ({
 
   console.log("metamask", metamask);
 
-  const {status, connect} = metamask;
+  const {status, connect, account, ethereum} = metamask;
+
+console.log("ethereum", ethereum);
 
   const [isActive, setIsactive] = useState(false);
 
@@ -81,6 +83,11 @@ const Header = ({
     className
   );
 
+
+
+console.log("accounts", account);
+
+
   return (
     <header
       {...props}
@@ -114,13 +121,13 @@ const Header = ({
                     isActive && 'is-active'
                   )}>
                 <div className="header-nav-inner">
-                  {false ? <ul className={
+                  {account ? <ul className={
                     classNames(
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>White Paper2</Link>
+                      <Link to="#0" onClick={closeMenu}>{account}</Link>
                     </li>
                   </ul> : <p></p>}
                   <ul className={

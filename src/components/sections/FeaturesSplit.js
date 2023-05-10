@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Upcoming Air Drop',
-    paragraph: 'To participate in our air drop, you need to already be a user of the avalanche network and love animals. Air drop campaign is scheduled to begin Q4, 2022.'
+    title: 'A dog with a plan',
+    paragraph: 'This project has two objectives. To build a community and to help animals. Pablo (The dog above) is the face of this project and the official mascot of SovaChain Labs.'
   };
 
   return (

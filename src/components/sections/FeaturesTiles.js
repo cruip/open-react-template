@@ -44,8 +44,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'A dog with a plan',
-    paragraph: `This project has two objectives. To build a community and to help animals. Pablo (The dog above) is the face of this project and the official mascot of SovaChain Labs.`
+    title: 'Trading Begins',
+    paragraph: `Liqudity pools estabiblished on Trader Joe, Pangolin and Yeti Swap. Trade on a popular Decentralized Exchange or directly from within Meta Mask.`
   };
 
   return (
@@ -118,7 +118,7 @@ const FeaturesTiles = ({
                     Distribution Strategy
                     </h4>
                   <p className="m-0 text-sm">
-                    Q3 2022. - Distribution plan and whitepaper are currently under development.
+                    Q2 2023. - Distribution plan and whitepaper created.
                     </p>
                 </div>
               </div>
