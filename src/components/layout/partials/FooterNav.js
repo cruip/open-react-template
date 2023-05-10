@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 import Image from '../../elements/Image';
 
 const FooterNav = ({
@@ -20,41 +19,41 @@ const FooterNav = ({
     >
       <ul className="list-reset">
         <li>
-          <Link to="#0">
+          <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">
             <Image
             src={require('./../../../assets/images/MetaMask.png')}
             alt="Open"
             width={64}
             height={64} />
-        </Link>
+        </a>
         </li>
        <li>
-          <Link to="#0">
+          <a href="https://app.pangolin.exchange/" target="_blank" rel="noopener noreferrer">
           <Image
             src={require('./../../../assets/images/pangolin.png')}
-            alt="Open"
+            alt="Pablo Wabo on Pangolin Exchange"
             width={64}
             height={64} />
-          </Link>
+          </a>
         </li>
        <li>
-          <Link to="#0">
+          <a href="https://traderjoexyz.com/avalanche" target="_blank" rel="noopener noreferrer">
           <Image
             src={require('./../../../assets/images/traderjoexyz.png')}
-            alt="Open"
+            alt="Pablo Wabo on Trader Joe"
             width={64}
             height={64} />
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link to="#0">
+          <a href="https://exchange.yetiswap.app" target="_blank" rel="noopener noreferrer">
           <Image
             src={require('./../../../assets/images/yetiswap.png')}
-            alt="Open"
+            alt="Pablo Wabo on Yeti Swap"
             width={180}
             height={64} />
-          </Link>
+          </a>
         </li>
        </ul>
     </nav>

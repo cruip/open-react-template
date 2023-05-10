@@ -30,6 +30,7 @@ const { status, connect, account, chainId, ethereum } = useMetaMask();
 //Needed to provide different instructions if you are on mobile
 
 //--------------------------------------------------------------------
+/*
 const deviceType = () => {
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -40,7 +41,7 @@ const deviceType = () => {
     }
     return "desktop";
 };
-
+*/
 //--------------------------------------------------------------------
 
 
