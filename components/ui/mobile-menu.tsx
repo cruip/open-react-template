@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 
+
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
 
@@ -33,13 +34,14 @@ export default function MobileMenu() {
   return (
     <div className="md:hidden">
       {/* Hamburger button */}
+      {/*
       <button
         ref={trigger}
         className={`hamburger ${mobileNavOpen && 'active'}`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
-      >
+      > 
         <span className="sr-only">Menu</span>
         <svg
           className="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out"
@@ -50,7 +52,7 @@ export default function MobileMenu() {
           <rect y="11" width="24" height="2" rx="1" />
           <rect y="18" width="24" height="2" rx="1" />
         </svg>
-      </button>
+      </button> */}
 
       {/*Mobile navigation */}
       <nav
@@ -73,7 +75,7 @@ export default function MobileMenu() {
               Sign up
             </Link>
           </li>
-        </ul>
+        </ul> 
       </nav>
     </div>
   )

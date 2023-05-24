@@ -31,19 +31,16 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">SolarSurvey.ai</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">schedule, manage and collaborate on your team's solar surveys all in one place</p>
+            <h1 className="h1 mb-4" data-aos="fade-up">Get a technician on-site as soon as tomorrow.</h1>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Ciellie streamlines your solar surveys by making it easy to schedule, manage and view surveys.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Explore for free</a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Book a Call</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="https://calendly.com/ciellie_15min/discover_ciellie">Schedule a Demo</a>
               </div>
             </div>
           </div>
 
-          {/* Hero image */}
+          {/* Hero image 
           <div>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
               <Image
@@ -66,7 +63,7 @@ export default function Hero() {
               </a>
             </div>
             
-            {/* Modal */}
+            {/* Modal 
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
               <div className="relative pb-9/16">
                 <video className="absolute w-full h-full" width="1920" height="1080" loop controls>
@@ -76,7 +73,7 @@ export default function Hero() {
               </div>
             </Modal>
 
-          </div>
+          </div>*/}
 
         </div>
 
