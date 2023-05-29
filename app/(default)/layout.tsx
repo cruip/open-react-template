@@ -1,39 +1,51 @@
-'use client'
+"use client";
 
-import { useEffect } from 'react'
+import { useEffect, useState } from "react";
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import PageIllustration from '@/components/page-illustration'
-import Footer from '@/components/ui/footer'
+import PageIllustration from "@/components/page-illustration";
+import Footer from "@/components/ui/footer";
+
+type EasingOption =
+    | "linear"
+    | "ease"
+    | "ease-in"
+    | "ease-out"
+    | "ease-in-out"
+    | "ease-out-sine";
+
+interface AosOptions {
+    once: boolean;
+    disable: "phone" | "tablet" | "mobile" | boolean;
+    duration: number;
+    easing: EasingOption;
+}
 
 export default function DefaultLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
-}) {  
+    children: React.ReactNode;
+}) {
+    const [aosData, setAosData] = useState<AosOptions>({
+        once: true,
+        disable: "phone",
+        duration: 600,
+        easing: "ease-out-sine",
+    });
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      disable: 'phone',
-      duration: 600,
-      easing: 'ease-out-sine',
-    })
-  })
+    AOS.init(aosData);
 
-  return (
-    <>
-      <main className="grow">
+    return (
+        <>
+            <main className="grow">
+                <PageIllustration />
 
-        <PageIllustration />
+                {children}
+            </main>
 
-        {children}
-
-      </main>
-
-      <Footer />
-    </>
-  )
+            <Footer />
+        </>
+    );
 }
