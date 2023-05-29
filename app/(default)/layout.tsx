@@ -32,10 +32,14 @@ export default function DefaultLayout({
         once: true,
         disable: "phone",
         duration: 600,
-        easing: "ease-out-sine",
+        easing: "ease-out",
     });
-
-    AOS.init(aosData);
+    useEffect(() => {
+        // AOS.init should only be called in a browser environment
+        if (typeof window !== "undefined") {
+            AOS.init(aosData);
+        }
+    }, []);
 
     return (
         <>
