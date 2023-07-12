@@ -32,11 +32,11 @@
 }
 
 .btn {
-    @apply px-8 py-3;
+    @apply px-8 py-3 rounded-md;
 }
 
 .btn-sm {
-    @apply px-4 py-2;
+    @apply px-6 py-2 rounded-md;
 }
 
 /* Forms */
