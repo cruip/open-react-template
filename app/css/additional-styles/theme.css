@@ -150,3 +150,7 @@
         transform: translate3d(10px, 0, 0) scale(1.2);
     }
 }
+
+.hidden {
+  display: none;
+}
