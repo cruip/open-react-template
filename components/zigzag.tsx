@@ -10,7 +10,11 @@ export default function Zigzag() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-800">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div
+            className="max-w-3xl mx-auto text-center pb-12 md:pb-16"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-yellow-600 bg-yellow-200 rounded-full mb-4">
               a brief overview
             </div>
@@ -18,14 +22,23 @@ export default function Zigzag() {
               Adeobajesu Aboluwade
             </h1>
             <p className="text-lg text-gray-400">
-              Adeobajesu is an award winning
-              social media professional with years
-              of experience managing, building,
-              and creating content for brand
-              social media accounts. He holds a
-              Bachelor's Degree in Philosophy. In
-              addition, he holds certification as
-              a Digital Ad Expert.
+              Adeobajesu is an{" "}
+              <strong>
+                {" "}
+                award winning social media
+                professional
+              </strong>{" "}
+              with years of experience managing,
+              building, and creating content for
+              brand social media accounts. He
+              holds a
+              <strong>
+                {" "}
+                Bachelor's Degree
+              </strong>{" "}
+              in Philosophy. In addition, he holds
+              certification as a{" "}
+              <strong> Digital Ad Expert.</strong>
             </p>
           </div>
 
@@ -37,6 +50,7 @@ export default function Zigzag() {
               <div
                 className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1"
                 data-aos="fade-up"
+                data-aos-delay="600"
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto rounded-md"
@@ -50,6 +64,7 @@ export default function Zigzag() {
               <div
                 className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 grid md:grid-cols-2 gap-8"
                 data-aos="fade-right"
+                data-aos-delay="400"
               >
                 {/* Values */}
                 <div

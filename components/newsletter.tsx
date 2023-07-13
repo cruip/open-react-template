@@ -9,6 +9,7 @@ export default function Newsletter() {
         <div
           className="relative bg-purple-900 py-10 px-8 md:py-16 md:px-12"
           data-aos="fade-up"
+          data-aos-delay="400"
         >
           {/* Background illustration */}
           <div

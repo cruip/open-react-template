@@ -16,6 +16,8 @@ export default function Header() {
               href="/"
               className="flex items-center"
               aria-label="Ade"
+              data-aos="fade-up"
+              data-aos-delay="400"
             >
               <Image
                 className="max-w-full mx-auto md:max-w-none h-auto"
