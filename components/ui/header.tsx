@@ -33,7 +33,7 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
+            {/* <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <a
                   href="#about"
@@ -51,10 +51,10 @@ export default function Header() {
                   Contact
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </nav>
 
-          <MobileMenu />
+          {/* <MobileMenu /> */}
         </div>
       </div>
     </header>

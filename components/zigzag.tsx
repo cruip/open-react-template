@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import FeatImage01 from "@/public/images/ade01.jpeg";
+import FeatImage01 from "@/public/images/dabira2.jpeg";
 import FeatImage02 from "@/public/images/features-03-image-02.png";
 import FeatImage03 from "@/public/images/features-03-image-03.png";
 
@@ -17,12 +17,15 @@ export default function Zigzag() {
             <h1 className="h2 mb-4">
               Adeobajesu Aboluwade
             </h1>
-            <p className="text-xl text-gray-400">
-              Want to know how top influencers
-              make the best of their online brand?{" "}
-              <br />
-              Schedule a call to discuss your
-              online/digital goals.
+            <p className="text-lg text-gray-400">
+              Adeobajesu is an award winning
+              social media professional with years
+              of experience managing, building,
+              and creating content for brand
+              social media accounts. He holds a
+              Bachelor's Degree in Philosophy. In
+              addition, he holds certification as
+              a Digital Ad Expert.
             </p>
           </div>
 
@@ -36,36 +39,27 @@ export default function Zigzag() {
                 data-aos="fade-up"
               >
                 <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
+                  className="max-w-full mx-auto md:max-w-none h-auto rounded-md"
                   src={FeatImage01}
-                  width={540}
-                  height={405}
+                  width={400}
+                  height={400}
                   alt="ade image"
                 />
               </div>
               {/* Content */}
               <div
-                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
+                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 grid md:grid-cols-2 gap-8"
                 data-aos="fade-right"
               >
+                {/* Values */}
                 <div
                   className="md:pr-4 lg:pr-12 xl:pr-16"
-                  id="about"
+                  id="values"
                 >
-                  <div className="font-architects-daughter text-xl text-purple-100 mb-2">
-                    Digital Consultant
-                  </div>
                   <h3 className="h3 mb-3">
-                    Brief Introduction
+                    My values
                   </h3>
-                  <p className="text-xl text-gray-400 mb-4">
-                    Adeobajesu is an award winning
-                    social media professional with
-                    years of experience managing,
-                    building, and creating content
-                    for brand social media
-                    accounts.
-                  </p>
+                  <p className="text-xl text-gray-400 mb-4"></p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
                       <svg
@@ -75,10 +69,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>
-                        Bachelor's Degree in
-                        Philosophy
-                      </span>
+                      <span>Integrity</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -88,10 +79,69 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>
-                        Certification as a Digital
-                        Ad Expert
-                      </span>
+                      <span>Drive</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-purple-100 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Excitement</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-purple-100 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Accomplishment</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-purple-100 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Humor</span>
+                    </li>
+                  </ul>
+                </div>
+                {/* Strenghts */}
+                <div
+                  className="md:pr-4 lg:pr-12 xl:pr-16"
+                  id="strengths"
+                >
+                  <h3 className="h3 mb-3">
+                    Strengths
+                  </h3>
+                  <p className="text-xl text-gray-400 mb-4"></p>
+                  <ul className="text-lg text-gray-400 -mb-2">
+                    <li className="flex items-center mb-2">
+                      <svg
+                        className="w-3 h-3 fill-current text-purple-100 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Communication</span>
+                    </li>
+                    <li className="flex items-center mb-2">
+                      <svg
+                        className="w-3 h-3 fill-current text-purple-100 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Empathy</span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -102,9 +152,18 @@ export default function Zigzag() {
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
                       <span>
-                        Digital/Online
-                        Consultation
+                        WOO (Winning Others Over)
                       </span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-purple-100 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Adaptability</span>
                     </li>
                   </ul>
                 </div>

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Ade Abo Digital",
+  title: "Adeoba Digital",
   description:
     "award winning social media professional",
 };
