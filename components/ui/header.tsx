@@ -1,5 +1,8 @@
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
+import Image from "next/image";
+
+import Logo from "@/public/images/ade_wht.png";
 
 export default function Header() {
   return (
@@ -11,10 +14,17 @@ export default function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="block"
-              aria-label="Cruip"
+              className="flex items-center"
+              aria-label="Ade"
             >
-              <h6 className="p-1 font-bold">
+              <Image
+                className="max-w-full mx-auto md:max-w-none h-auto"
+                src={Logo}
+                width={40}
+                height={40}
+                alt="ade image"
+              />
+              <h6 className="p-1 font-bold ml-2">
                 👋 Hello & welcome
               </h6>
             </Link>

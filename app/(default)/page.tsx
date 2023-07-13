@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Ade Abo Digital",
+  description:
+    "award winning social media professional",
 };
 
 import Hero from "@/components/hero";
