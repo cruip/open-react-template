@@ -62,7 +62,7 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Do you need assitance with your
+              Do you need assistance with your
               online image?
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">

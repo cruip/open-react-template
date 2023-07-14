@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import FeatImage01 from "@/public/images/dabira2.jpeg";
+import FeatImage01 from "@/public/images/dabira.jpeg";
 import FeatImage02 from "@/public/images/features-03-image-02.png";
 import FeatImage03 from "@/public/images/features-03-image-03.png";
 
@@ -15,9 +15,9 @@ export default function Zigzag() {
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-yellow-600 bg-yellow-200 rounded-full mb-4">
+            {/* <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-yellow-600 bg-yellow-200 rounded-full mb-4">
               a brief overview
-            </div>
+            </div> */}
             <h1 className="h2 mb-4">
               Adeobajesu Aboluwade
             </h1>

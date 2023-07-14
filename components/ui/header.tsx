@@ -27,7 +27,7 @@ export default function Header() {
                 alt="ade image"
               />
               <h6 className="p-1 font-bold ml-2">
-                👋 Hello & welcome
+                👋 Hello & Welcome
               </h6>
             </Link>
           </div>
