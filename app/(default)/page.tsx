@@ -9,15 +9,17 @@ import Features from "@/components/features";
 import Newsletter from "@/components/newsletter";
 import Zigzag from "@/components/zigzag";
 import Testimonials from "@/components/testimonials";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Zigzag />
+      {/* <Contact /> */}
       {/* <Features /> */}
       {/* <Testimonials /> */}
-      <Newsletter />
+      {/* <Newsletter /> */}
     </>
   );
 }
