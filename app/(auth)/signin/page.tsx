@@ -56,18 +56,18 @@ export default function SignIn() {
                       <input type="checkbox" className="form-checkbox" />
                       <span className="text-gray-400 ml-2">Keep me signed in</span>
                     </label>
-                    <Link href="/reset-password" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Forgot Password?</Link>
+                    <Link href="/reset-password" className="text-red-600 hover:text-gray-200 transition duration-150 ease-in-out">Forgot Password?</Link>
                   </div>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
                 <div className="w-full px-3">
-                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Sign in</button>
+                  <button className="btn text-white bg-red-600 hover:bg-red-700 w-full">Sign in</button>
                 </div>
               </div>
             </form>
             <div className="text-gray-400 text-center mt-6">
-              Don’t you have an account? <Link href="/signup" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign up</Link>
+              Don’t you have an account? <Link href="/signup" className="text-red-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign up</Link>
             </div>
           </div>
 
