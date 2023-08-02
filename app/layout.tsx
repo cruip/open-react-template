@@ -3,7 +3,6 @@ import './css/style.css'
 import { Inter, Architects_Daughter } from 'next/font/google'
 
 import Header from '@/components/ui/header'
-import Banner from '@/components/banner'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,7 +33,6 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen overflow-hidden">
           <Header />
           {children}
-          <Banner />
         </div>
       </body>
     </html>
