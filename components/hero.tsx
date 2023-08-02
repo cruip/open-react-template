@@ -24,14 +24,15 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Landing template for startups</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+            <h1 className="h1 mb-4" data-aos="fade-up">梦之彼方 - Fate Prologue</h1>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
+“一位名叫蓝原逸的少年，在多年之后重返家乡，转入了小镇唯一的学校，八年的时光，小镇的一切已经发生了翻天覆地的变化，那些遗失的美好，珍贵的回忆，慢慢苏醒……这就是所谓的奇迹吗？男孩显的有些疑惑。此后，他与自己的青梅竹马相逢，结识了文学部的众人，开始了一日日平凡的校园时光……”她，如此这样的说着。</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="https://space.bilibili.com/16531901" target="_blank">B站主页</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">STEAM商店</a>
               </div>
             </div>
           </div>
