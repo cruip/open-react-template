@@ -21,16 +21,24 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link
-                  href="/signin"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
+                <Link href="https://wpa.qq.com/msgrd?v=3&uin=2862824043"
+                  className="btn-sm text-white bg-gray-700 hover:bg-gray-800 ml-3"
+                  target="_blank">
+                  主策划QQ
                 </Link>
               </li>
               <li>
-                <Link href="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
-                  Sign up
+                <Link href="mailto:2862824043@qq.com"
+                  className="btn-sm text-white bg-gray-700 hover:bg-gray-800 ml-3"
+                  target="_blank">
+                  主策划邮箱
+                </Link>
+              </li>
+              <li>
+                <Link href="https://wpa.qq.com/msgrd?v=3&uin=2862824043"
+                  className="btn-sm text-white bg-gray-700 hover:bg-gray-800 ml-3"
+                  target="_blank">
+                  粉丝QQ群
                 </Link>
               </li>
             </ul>
