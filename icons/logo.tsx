@@ -4,13 +4,11 @@ const Logo = ({...props}) => {
       width="160"
       height="81.16216216216216"
       viewBox="0 0 370 70"
-      class="css-1j8o68f"
       {...props}
     >
       <defs id="SvgjsDefs1822"></defs>
       <g
         id="SvgjsG1823"
-        featurekey="symbolFeature-0"
         transform="matrix(0.7494646906852722,0,0,0.7494646906852722,-2.4732335305948543,-2.4732335305948543)"
         fill="#ffffff"
       >
@@ -23,7 +21,6 @@ const Logo = ({...props}) => {
       </g>
       <g
         id="SvgjsG1824"
-        featurekey="K5GtsI-0"
         transform="matrix(2.5184357166290283,0,0,2.5184357166290283,88.53962231230223,2.5945475626109893)"
         fill="#eeeeee"
       >
