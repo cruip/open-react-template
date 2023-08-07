@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Home - Open PRO',
-  description: 'Page description',
+  title: 'Emurgo Africa',
+  description: 'Emurgo Labs - Emurgo Africa building on Cardano'
 }
 
 import Hero from '@/components/hero'
