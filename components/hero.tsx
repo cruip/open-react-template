@@ -24,7 +24,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Landing template for startups</h1>
+            <h1 className="h1 mb-4" data-aos="fade-up">EMURGO Labs 💻</h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
@@ -36,14 +36,14 @@ export default function Hero() {
             </div>
           </div>
 
-          <ModalVideo
+          {/* <ModalVideo
             thumb={VideoThumb}
             thumbWidth={1024}
             thumbHeight={576}
             thumbAlt="Modal video thumbnail"
             video="/videos/video.mp4"
             videoWidth={1920}
-            videoHeight={1080} />
+            videoHeight={1080} /> */}
 
         </div>
 
