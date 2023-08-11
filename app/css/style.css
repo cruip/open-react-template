@@ -6,8 +6,31 @@
 @import 'additional-styles/range-slider.css';
 @import 'additional-styles/toggle-switch.css';
 @import 'additional-styles/theme.css';
+@import 'additional-styles/svg-animation.css';
+@import 'additional-styles/animations.css';
 
 @import 'tailwindcss/utilities';
+
+.hero-title {
+    font-family: var(--font-josefin);
+    font-size: 4.5em;
+}
+
+.feature-title {
+    font-family: var(--font-josefin);
+    
+}
+
+.head-shot {
+    position: relative;
+    top: 20px;
+    width: minmax(64px, 80vw, 120px);
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
 
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
 @layer utilities {
