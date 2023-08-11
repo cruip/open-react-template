@@ -1,0 +1,46 @@
+svg#animated-borders {
+  display: block;
+  font: 9.5em var(--font-inter);
+  /* width: 960px;
+  height: 300px; */
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: #00bdaa12;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 3px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+  -webkit-animation: stroke-offset 5.5s infinite linear;  
+}
+
+.text-copy:nth-child(1){
+stroke: #164d37;
+animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+stroke: #008084;
+animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+stroke: #00bdb0;
+animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+stroke: #00bdaa;
+animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+stroke: #3bfd31;
+animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+100% {stroke-dashoffset: -35%;}
+}
