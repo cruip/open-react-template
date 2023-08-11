@@ -4,7 +4,6 @@ const nextConfig = {
     serverActions: true,
     serverActionsBodySizeLimit: '2mb',
   },
-  distDir: "dist"
 }
 
 module.exports = nextConfig
