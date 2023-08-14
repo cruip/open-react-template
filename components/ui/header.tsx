@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import MobileMenu from './mobile-menu'
-import Logo from '@/icons/logo'
+import Link from "next/link";
+import MobileMenu from "./mobile-menu";
+import Logo from "@/icons/logo";
 
 export default function Header() {
   return (
@@ -8,37 +8,34 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
-          <div className="shrink-0 mr-4">
+          <div className="shrink-0 mr-16">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Logo/>
+              <Logo />
             </Link>
           </div>
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
-            {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
-                <Link
-                  href="/signin"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li>
-                <Link href="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
-                  Sign up
-                </Link>
-              </li>
+            <ul className="list-none flex gap-12">
+            <li>
+              <Link href={""}>Home</Link>
+            </li>
+            <li>
+              <Link href={""}>Solutions</Link>
+            </li>
+            <li>
+              <Link href={""}>About us</Link>
+            </li>
+            <li>
+              <Link href={""}>Contact us</Link>
+            </li>
             </ul>
           </nav>
-
+          
           <MobileMenu />
-
         </div>
       </div>
     </header>
-  )
+  );
 }

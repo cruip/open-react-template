@@ -1,11 +1,6 @@
-const Logo = ({...props}) => {
+const Logo = ({ ...props }) => {
   return (
-    <svg
-      width="160"
-      height="81.16216216216216"
-      viewBox="0 0 370 70"
-      {...props}
-    >
+    <svg width="160" height="81.16216216216216" viewBox="0 0 370 70" {...props}>
       <defs id="SvgjsDefs1822"></defs>
       <g
         id="SvgjsG1823"
@@ -30,4 +25,4 @@ const Logo = ({...props}) => {
   );
 };
 
-export default Logo
+export default Logo;
