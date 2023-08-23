@@ -1,5 +1,8 @@
 # CHANGELOG.md
 
+## [3.2.0] - 2023-08-23
+ added appropriate web addresses to the `href` attributes of the logos used within the project. This enhancement allows users to click on the logos and be directed to specific webpages, such as the official LinkedIn and Twitter profiles.
+
 ## [3.2.0] - 2023-05-31
 
 Update dependencies and fix some issues
@@ -31,3 +34,4 @@ Replace Cruip CSS with Tailwind CSS
 ## [1.0.0] - 2020-04-07
 
 First release
+
