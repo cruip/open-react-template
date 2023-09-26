@@ -4,37 +4,37 @@ import Image from "next/image";
 const data = [
   {
     id: 1,
-    img: "https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png",
-    title: " creative agency",
+    img: "/static/images/landing/landing-cs-creativeAgency.png",
+    title: "creative agency",
     desc: "Lorem ipsum dolor sit",
   },
   {
     id: 2,
-    img: "https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png",
+    img: "/static/images/landing/landing-cs-devops.png",
     title: "digital marketing",
     desc: "Lorem ipsum dolor sit",
   },
   {
     id: 3,
-    img: "https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png",
+    img: "/static/images/landing/landing-cs-digital-marketing.png",
     title: "digital agency",
     desc: "Lorem ipsum dolor sit",
   },
   {
     id: 4,
-    img: "https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png",
+    img: "/static/images/landing/landing-cs-plan-management.png",
     title: "plan management",
     desc: "Lorem ipsum dolor sit",
   },
   {
     id: 5,
-    img: "https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png",
+    img: "/static/images/landing/landing-cs-social-engagement.png",
     title: "social engagement",
     desc: "Lorem ipsum dolor sit",
   },
   {
     id: 6,
-    img: "https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png",
+    img: "/static/images/landing/landing-cs-web-application.png",
     title: "web application",
     desc: "Lorem ipsum dolor sit",
   },
@@ -46,7 +46,7 @@ const OurProjects = () => {
         <h6 className="text-orange-500 font-bold text-lg mb-2">
           Lorem ipsum dolor
         </h6>
-        <h4 className="text-3xl font-semibold capitalize w-full md:w-1/2 leading-snug mb-5">
+        <h4 className="text-white text-5xl font-semibold capitalize w-full md:w-1/2 leading-snug mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing
         </h4>
       </div>
@@ -67,20 +67,13 @@ const OurProjects = () => {
           {/* single item */}
           {data.map((val) => {
             return (
-              <div key={val.id} className="">
-                <div className="w-full h-[250px] md:h-[350px] relative mb-5">
-                  <Image
-                    src={val.img}
-                    alt=""
-                    fill={true}
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <div className="pl-5">
-                  <h4 className="text-2xl font-medium capitalize mb-2">
+              <div key={val.id} className="rounded-2xl overflow-hidden bg-[#202020]">
+                <img src={val.img} />
+                <div className="p-5">
+                  <h4 className="text-white text-2xl font-semibold capitalize mb-2">
                     {val.title}
                   </h4>
-                  <p className="text-sm text-slate-400">{val.desc}</p>
+                  <p className="text-sm text-slate-200">{val.desc}</p>
                 </div>
               </div>
             );

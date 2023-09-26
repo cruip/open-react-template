@@ -1,19 +1,16 @@
 import React from "react";
-import Image from "next/image";
 
 const Regime = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 px-6 md:px-40 py-5 md:py-20">
-      <div className="w-full h-[200px] md:h-[400px] relative order-2 md:order-1">
-        <Image
-          src="https://i.postimg.cc/SQ7nQrYW/Contact-desktop.png"
-          alt=""
-          fill={true}
-          style={{ objectFit: "cover" }}
-        />
+    <section className="flex flex-col sm:flex-row items-center gap-18 md:gap-32 px-6 md:px-40 py-5 md:py-20">
+      <div className="relative w-full sm:w-[40%]">
+      <div className="absolute left-0 w-full h-full rounded-full bg-[#188486c9] blur-[290px]">
+        
+        </div>
+        <img className="z-10 relative" src="/static/images/landing/blog_stockmarket.png" />
       </div>
-      <div className="order-1 md:order-2">
-        <h3 className="w-full md:w-3/4 text-3xl font-bold leading-snug mb-6 capitalize">
+      <div className="w-full sm:w-[40%] order-1 md:order-2">
+        <h3 className="text-white w-full md:w-3/4 text-3xl font-bold leading-snug mb-6 capitalize">
           Regime Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </h3>
         <p className="text-sm text-slate-400 leading-relaxed w-full mb-6">

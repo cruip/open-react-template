@@ -3,7 +3,7 @@ import Navbar from "../navbar/Navbar";
 
 const Hero = () => {
   return (
-    <section className="h-[70vw] sm:h-screen w-screen relative bg-[#00030A]">
+    <section className="h-[70vw] sm:h-screen w-screen relative">
       <div className="absolute translate-x-1/2 sm:translate-x-2/4 sm:translate-y-2/4 w-[50vw] h-[70vw] sm:h-[50vh] rounded-full blur-[290px] bg-teal-600 flex-shrink-0 flex"></div>
       <div className="absolute top-0 h-[70vw] w-screen sm:h-screen px-6 md:px-40 flex justify-center items-center z-[2]">
         <img

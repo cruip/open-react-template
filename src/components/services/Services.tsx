@@ -1,30 +1,32 @@
 import React from "react";
 import data from "./data";
 import RenderIcons from "../common/renderIcons";
+import ArrowRight from "@/icons/arrowRight";
+import Link from "next/link";
 
 const Services = () => {
   return (
-    <section className="px-6 py-5 md:px-80 md:py-10">
-      <h3 className="text-4xl md:text-5xl font-bold capitalize mb-12 text-center">
+    <section className="px-6 py-5 sm:px-52 sm:py-10">
+      <h3 className="text-white text-4xl sm:text-5xl font-bold capitalize mb-12 text-center">
         Services we can help with
       </h3>
-      {/* grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* single item */}
+      {/*  */}
+      <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6">
         {data.map((item) => {
           const { id, title, desc, iconType, iconProps } = item;
           return (
             <div
-              key={id}
-              className="rounded-3xl hover:bg-slate-500 grid grid-cols-1 gap-3 p-4 md:p-8 cursor-pointer"
+              key={`service-${id}`}
+              className="rounded-3xl bg-[#8ce2e333] p-8 w-full sm:w-[30%]"
             >
-              <button>
+              <div className="p-4 bg-gradient-to-r from-indigo-800 to-indigo-400 w-fit rounded-lg mb-12">
                 {RenderIcons({type: iconType, ...iconProps})}
-              </button>
-              <h5 className="text-2xl font-semibold capitalize mb-2">
+              </div>
+              <h5 className="text-white text-2xl font-bold capitalize mb-2">
                 {title}
               </h5>
-              <p className="text-xs md:text-sm text-slate-400 leading-snug">{desc}</p>
+              <p className="text-xs sm:text-sm text-white leading-snug mb-2">{desc}</p>
+              <Link className="flex items-center gap-2 text-white" href="">Know More <ArrowRight className="fill-white" /></Link>
             </div>
           );
         })}
