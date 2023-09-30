@@ -57,9 +57,8 @@ export default function Footer() {
 
             {/* Copyrights note */}
             <div className="text-gray-400 text-sm mr-4">&copy; KeithNickas.com. All rights reserved.</div>
-
           </div>
-
+          <div className="text-gray-400 text-sm mr-4">CI/CD Image by <a href="https://www.freepik.com/free-vector/infinity-symbols-collection-black-color_2563274.htm#query=devops&position=9&from_view=search&track=ais">Freepik</a></div>
         </div>
       </div>
     </footer>

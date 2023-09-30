@@ -56,7 +56,7 @@ export default function Hero() {
             >
               <svg id="animated-borders" viewBox="0 0 1100 200">
                 <symbol id="s-text">
-                  <text text-anchor="middle" x="50%" y="80%">
+                  <text textAnchor="middle" x="50%" y="80%">
                     Keith Nickas
                   </text>
                 </symbol>
