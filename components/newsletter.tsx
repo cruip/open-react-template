@@ -8,8 +8,9 @@ interface SendMeetRequestFormData extends FormData {
 }
 
 export default function Newsletter() {
-  async function sendMeetRequest(event: SendMeetRequestFormData) {
-    const {email, name, message} = event;
+  async function sendMeetRequest(data: SendMeetRequestFormData) {
+    console.log(data);
+    const {email, name, message} = data;
     const res = await fetch("/api/contact", {
       body: JSON.stringify({
         name,
@@ -60,7 +61,7 @@ export default function Newsletter() {
 
             {/* CTA form */}
             <form
-              action={(event) => sendMeetRequest(event)}
+              action={() => sendMeetRequest}
               id="meet-request-form"
               className="w-full lg:w-1/2 space-y-2"
             >
