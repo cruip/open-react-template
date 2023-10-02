@@ -256,7 +256,7 @@ export default function Zigzag() {
             </div>
             
             {/* Download Button */}
-            <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
+            <div className="flex items-center md:grid md:grid-cols-12 md:gap-6">
             <div
               className="max-w-xl md:max-w-none md:w-full mx-auto col-start-6 col-end-12"
               data-aos="fade-right"
