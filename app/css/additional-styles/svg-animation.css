@@ -6,41 +6,67 @@ svg#animated-borders {
   margin: 0 auto;
 }
 
-.text-copy {
-  fill: #00bdaa12;
-  stroke: white;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 3px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
-  -webkit-animation: stroke-offset 5.5s infinite linear;  
+@layer utilities {
+  .text-copy {
+    fill: #00bdaa12;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 3px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+    -webkit-animation: stroke-offset 5.5s infinite linear;
+  }
 }
 
-.text-copy:nth-child(1){
-stroke: #164d37;
-animation-delay: -1;
+@screen lg {
+  .lg\:text-copy {
+    @apply text-copy;
+  }
 }
 
-.text-copy:nth-child(2){
-stroke: #008084;
-animation-delay: -2s;
+@screen md {
+  .md\:text-copy {
+    @apply text-copy;
+  }
 }
 
-.text-copy:nth-child(3){
-stroke: #00bdb0;
-animation-delay: -3s;
+/* @screen sm {
+  .sm\:text-copy-static {
+    fill: #00bdaa55;
+  }
+} */
+
+.text-copy-static {
+  fill: #00bdaa55;
 }
 
-.text-copy:nth-child(4){
-stroke: #00bdaa;
-animation-delay: -4s;
+.text-copy:nth-child(1) {
+  stroke: #164d37;
+  animation-delay: -1;
 }
 
-.text-copy:nth-child(5){
-stroke: #3bfd31;
-animation-delay: -5s;
+.text-copy:nth-child(2) {
+  stroke: #008084;
+  animation-delay: -2s;
 }
 
-@keyframes stroke-offset{
-100% {stroke-dashoffset: -35%;}
+.text-copy:nth-child(3) {
+  stroke: #00bdb0;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #00bdaa;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #3bfd31;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
 }
