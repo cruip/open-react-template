@@ -29,7 +29,7 @@ export default function Zigzag() {
                 data-aos="fade-up"
               >
                 <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
+                  className="object-contain"
                   src={FeatImage01}
                   width={384}
                   height={330}
@@ -96,10 +96,11 @@ export default function Zigzag() {
             </div>
 
             {/* 2nd item */}
-            <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
+            {/* <div className="md:grid md:grid-cols-12 md:gap-6 items-center"> */}
+            <div className="flex flex-col-reverse md:grid md:grid-cols-10 md:gap-4 items-center">
               {/* Content */}
               <div
-                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
+                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-4"
                 data-aos="fade-left"
               >
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
@@ -164,7 +165,7 @@ export default function Zigzag() {
                 data-aos="fade-up"
               >
                 <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
+                  className="object-contain"
                   src={FeatImage02}
                   width={384}
                   height={330}
@@ -181,7 +182,7 @@ export default function Zigzag() {
                 data-aos="fade-up"
               >
                 <Image
-                  className="max-w-full mx-auto md:max-w-none h-auto"
+                  className="object-contain"
                   src={FeatImage03}
                   width={384}
                   height={330}
@@ -255,7 +256,7 @@ export default function Zigzag() {
             </div>
             
             {/* Download Button */}
-            <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
+            <div className="flex items-center md:grid md:grid-cols-12 md:gap-6">
             <div
               className="max-w-xl md:max-w-none md:w-full mx-auto col-start-6 col-end-12"
               data-aos="fade-right"
@@ -267,7 +268,7 @@ export default function Zigzag() {
                     id="download-resume"
 
                   >
-                    Download Full Resume
+                    Download Resume
                   </a>
             </div>
             </div>

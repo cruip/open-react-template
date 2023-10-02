@@ -3,8 +3,6 @@ export const metadata = {
   description: 'A personal website showcasing professional, and, personal works developed by Keith Nickas.',
 }
 
-import Hero from '@/components/hero'
-import Features from '@/components/features'
 import Contact from '@/components/contact'
 import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'

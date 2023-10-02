@@ -13,12 +13,18 @@
 
 .hero-title {
     font-family: var(--font-josefin);
-    font-size: 4.5em;
+    color: #fff;
+}
+
+@screen lg {
+    .lg\:hero-title {
+        font-family: var(--font-josefin);
+        font-size: 4.5em;
+    }
 }
 
 .feature-title {
     font-family: var(--font-josefin);
-    
 }
 
 .head-shot {

@@ -1,12 +1,25 @@
 .text-pop-up-br {
-  -webkit-animation: text-pop-up-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
+  -webkit-animation: text-pop-up-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: text-pop-up-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.text-flicker-in-glow {
-  -webkit-animation: text-flicker-in-glow 4s linear both;
-  animation: text-flicker-in-glow 4s linear both;
+@responsive {
+  .text-flicker {
+    -webkit-animation: text-flicker-in-glow 4s linear both;
+    animation: text-flicker-in-glow 4s linear both;
+  } 
+}
+
+@screen md {
+  .md\:text-flicker-in-glow {
+    @apply text-flicker
+  }
+}
+
+@screen lg {
+  .lg\:text-flicker-in-glow {
+    @apply text-flicker
+  }
 }
 
 @-webkit-keyframes text-pop-up-br {

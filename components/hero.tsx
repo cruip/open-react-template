@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4 hero-title text-flicker-in-glow" data-aos="fade-up">
+            <h1 className="h1 mb-4 hero-title lg:hero-title lg:text-flicker-in-glow lg:text-flicker-in-glow" data-aos="fade-up">
               Software Engineering
             </h1>
             <p
@@ -61,11 +61,11 @@ export default function Hero() {
                   </text>
                 </symbol>
                 <g className="g-ants">
-                  <use xlinkHref="#s-text" className="text-copy"></use>
-                  <use xlinkHref="#s-text" className="text-copy"></use>
-                  <use xlinkHref="#s-text" className="text-copy"></use>
-                  <use xlinkHref="#s-text" className="text-copy"></use>
-                  <use xlinkHref="#s-text" className="text-copy"></use>
+                  <use xlinkHref="#s-text" className="text-copy-static lg:text-copy"></use>
+                  <use xlinkHref="#s-text" className="text-copy-static lg:text-copy"></use>
+                  <use xlinkHref="#s-text" className="text-copy-static lg:text-copy"></use>
+                  <use xlinkHref="#s-text" className="text-copy-static lg:text-copy"></use>
+                  <use xlinkHref="#s-text" className="text-copy-static lg:text-copy"></use>
                 </g>
               </svg>
             </p>
