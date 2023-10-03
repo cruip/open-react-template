@@ -11,7 +11,7 @@ export default function Header() {
           {/* Site branding */}
           <div className="shrink-0 mr-4">
             {/* Logo */}
-            <Link href="/" className="block" aria-label="Cruip">
+            <Link href="/" className="block">
               <Image src={headshotAvatar} alt="Headshot: Keith Nickas" className="head-shot" />
             </Link>
           </div>

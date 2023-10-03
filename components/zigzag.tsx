@@ -33,7 +33,7 @@ export default function Zigzag() {
                   src={FeatImage01}
                   width={384}
                   height={330}
-                  alt="Features 02"
+                  alt="Athleta Spotlight component screenshot. Image of woman sitting on a wall with raised leg."
                 />
               </div>
               {/* Content */}
@@ -43,7 +43,7 @@ export default function Zigzag() {
               >
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2"></div>
-                  <h3 className="h3 mb-3">Gap, Inc., San Francisco, CA</h3>
+                  <h2 className="h3 mb-3">Gap, Inc., San Francisco, CA</h2>
                   <p className="text-xl text-gray-400 mb-4">
                     Senior Software Engineer - March 2021 to Present - Motion
                     Recruitment Partners, Contract
@@ -97,14 +97,14 @@ export default function Zigzag() {
 
             {/* 2nd item */}
             {/* <div className="md:grid md:grid-cols-12 md:gap-6 items-center"> */}
-            <div className="flex flex-col-reverse md:grid md:grid-cols-10 md:gap-4 items-center">
+            <div className="flex flex-col-reverse md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Content */}
               <div
-                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-4"
+                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
                 data-aos="fade-left"
               >
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <h3 className="h3 mb-3">Deem, Inc. Oakland, CA</h3>
+                  <h2 className="h3 mb-3">Deem, Inc. Oakland, CA</h2>
                   <p className="text-xl text-gray-400 mb-4">
                     Senior Software Engineer - July 2014 to May 2020
                   </p>
@@ -161,7 +161,7 @@ export default function Zigzag() {
               </div>
               {/* Image */}
               <div
-                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 rtl"
+                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0"
                 data-aos="fade-up"
               >
                 <Image
@@ -169,7 +169,7 @@ export default function Zigzag() {
                   src={FeatImage02}
                   width={384}
                   height={330}
-                  alt="Features 02"
+                  alt="Deem website screenshot. Caption: Finally, it's easier to travel anywhere."
                 />
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function Zigzag() {
                   src={FeatImage03}
                   width={384}
                   height={330}
-                  alt="Features 02"
+                  alt="Digistrive, Inc. Logo"
                 />
               </div>
               {/* Content */}
@@ -195,7 +195,7 @@ export default function Zigzag() {
                 data-aos="fade-right"
               >
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <h3 className="h3 mb-3">Digistrive, Inc. Atlanta, GA</h3>
+                  <h2 className="h3 mb-3">Digistrive, Inc. Atlanta, GA</h2>
                   <p className="text-xl text-gray-400 mb-4">
                     Software Engineer - June 2013 to July 2014
                   </p>
@@ -263,10 +263,10 @@ export default function Zigzag() {
             >
               <a
                     href="https://1drv.ms/w/s!AlNLwqrOUfGHjQ7VJVqkT-lHyXSd?e=SivKyi"
-                    className="p-4 bg-teal-300 text-white rounded-md border-transparent border hover:bg-transparent hover:border-teal-300 hover:border"
+                    className="p-4 bg-teal-400 text-white rounded-md border-transparent border hover:bg-transparent hover:border-teal-400 hover:border"
                     type="button"
                     id="download-resume"
-
+                    target="_blank"
                   >
                     Download Resume
                   </a>

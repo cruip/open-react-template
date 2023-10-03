@@ -69,7 +69,7 @@ export default function Features() {
             >
               <p className="text-lg text-gray-400 text-center">
                 Jenkins, Codefresh, Bitbucket, Github, Gitlab, Azure Cloud,
-                Figma, VMware Cloud Foundry
+                VMware Cloud Foundry, Applitools Visual Regression AI
               </p>
             </Block>
             {/* 4th item */}
@@ -78,7 +78,7 @@ export default function Features() {
               icon={<Notes backgroundColor="#164d37" />}
             >
               <p className="text-lg text-gray-400 text-center">
-                Agile/Scrum, Project Management, Team Leadership, Collaboration
+                Agile/Scrum, Project Management, Team Leadership, Collaboration, and Mentorship
               </p>
             </Block>
             {/* 5th item */}
@@ -98,7 +98,7 @@ export default function Features() {
             >
               <p className="text-lg text-gray-400 text-center">
                 Shell scripting, REST APIs, Customer Identity and Access
-                Management (CIAM), Photoshop, Illustrator, Figma
+                Management (CIAM), Photoshop, Illustrator, Figma, Adobe XD
               </p>
             </Block>
           </div>
