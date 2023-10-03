@@ -17,7 +17,7 @@ export const Block = ({
     data-aos-anchor="[data-aos-id-blocks]"
   >
     {icon}
-    <h4 className="h4 mb-2">{title}</h4>
+    <h2 className="h4 mb-2">{title}</h2>
     {children}
   </div>
 );

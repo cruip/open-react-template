@@ -54,7 +54,7 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <svg id="animated-borders" viewBox="0 0 1100 200">
+              <svg id="animated-borders" viewBox="0 0 1100 200" aria-label="Keith Nickas">
                 <symbol id="s-text">
                   <text textAnchor="middle" x="50%" y="80%">
                     Keith Nickas
