@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## [3.2.2] - 2023-10-04
+
+Update Twitter icon
+Update dependencies
+
 ## [3.2.0] - 2023-05-31
 
 Update dependencies and fix some issues
