@@ -10,10 +10,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Site branding */}
           <div className="shrink-0 mr-4">
-            {/* Logo */}
+            {/* Logo and Text */}
             <Link href="/" className="block" aria-label="Cruip">
+              <div className="flex items-center"> {/* Flex container for logo and text */}
                 {/* Use the Image component for optimized image loading */}
                 <Image src={logo} alt="Logo" width={48} height={48} />
+                <h4 className="ml-2 h4">AnswersAi</h4> {/* Added margin-left for spacing */}
+              </div>
             </Link>
           </div>
 
