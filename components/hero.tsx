@@ -1,5 +1,7 @@
 import VideoThumb from '@/public/images/hero-image-01.jpg'
 import ModalVideo from '@/components/modal-video'
+import mainImage from '@/public/images/mainAnswer.png'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -23,8 +25,8 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Answers in One Click. Everywhere.</h1>
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-12">
+            <h1 className="h1 mb-4" data-aos="fade-up">Get Answers in One Click. Everywhere.</h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Get detailed solutions directly on your assignment.<br /> AnswersAi
 is available on all platforms including Blackboard, Canvas, and mobile.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
@@ -37,14 +39,19 @@ is available on all platforms including Blackboard, Canvas, and mobile.</p>
             </div>
           </div>
 
-          <ModalVideo
-            thumb={VideoThumb}
+          {/* <ModalVideo
+            thumb={mainImage}
             thumbWidth={1024}
             thumbHeight={576}
             thumbAlt="Modal video thumbnail"
             video="/videos/video.mp4"
             videoWidth={1920}
-            videoHeight={1080} />
+            videoHeight={1080} /> */}
+          
+          {/* TODO: Put Carousel here? */}
+          <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="fade-up">
+                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={mainImage} width={800} height={450} alt="Answers Ai Main Image" />
+            </div>
 
         </div>
 
