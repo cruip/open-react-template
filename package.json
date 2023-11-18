@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@headlessui/react": "^1.7.14",
+    "@mui/material": "^5.14.18",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "aos": "^3.0.0-beta.6",
+    "mui": "^0.0.1",
     "next": "^13.4.4",
     "react": "18.2.0",
+    "react-countup": "^6.5.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.12.0",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
