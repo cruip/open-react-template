@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Open PRO',
+  title: 'AnswersAi',
   description: 'Page description',
 }
 
