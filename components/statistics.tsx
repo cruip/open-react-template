@@ -6,7 +6,7 @@ export default function Example() {
     ];
   
     return (
-      <div className="bg-gray-900 py-24 sm:py-32">
+      <div className="bg-gray-900 pt-24 pb-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3" data-aos-id-stats>
             {stats.map((stat) => (
