@@ -1,0 +1,11 @@
+.header-logo {
+    max-width: 150px; /* Default size */
+    height: auto;
+  }
+  
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .header-logo {
+      max-width: 75px; /* Smaller size on mobile */
+    }
+  }
+  

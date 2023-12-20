@@ -18,8 +18,13 @@
     "firebase-functions": "^4.5.0",
     "next": "^13.4.4",
     "react": "18.2.0",
+    "react-audio-player": "^0.17.0",
     "react-dom": "18.2.0",
-    "typescript": "^5.0.4"
+    "react-h5-audio-player": "^3.9.0",
+    "react-modern-audio-player": "^1.4.0-rc.2",
+    "react-wavesurfer.js": "^0.0.8",
+    "typescript": "^5.0.4",
+    "wavesurfer.js": "^7.5.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

@@ -1,30 +1,31 @@
-import Link from 'next/link'
-import MobileMenu from './mobile-menu'
-import logo3 from '@/public/images/logo3.png'
-import Image from 'next/image'
+import Link from 'next/link';
+import MobileMenu from './mobile-menu';
+import logo3 from '@/public/images/logo3.png';
+import Image from 'next/image';
 
 export default function Header() {
+  // Define logo size for mobile and desktop
+  const logoSize = {
+    width: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 150,
+    height: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 150,
+  };
+
   return (
     <header className="absolute w-full z-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6" data-aos="fade-up">
-        <div className="flex items-center justify between h-60">
+      <div data-aos="fade-up">
           {/* Site branding */}
-          <div className="shrink-0 mr-4">
+          <div className="shrink-0 ml-32 mt-8">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Image className="max-w-full mx-auto md:max-w-none h-auto" src={logo3} width={150} height={150} alt="Features 01" />
+              <Image 
+                src={logo3} 
+                width={logoSize.width} 
+                height={logoSize.height} 
+                alt="Logo" 
+                style={{ display: 'block' }} // Ensure the image is not inline
+              />
             </Link>
-          </div>
-
           {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
-            {/* Desktop sign-in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
-              
-            </ul>
-          </nav>
-
-          <MobileMenu />
         </div>
       </div>
     </header>
