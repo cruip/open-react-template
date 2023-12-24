@@ -2,13 +2,13 @@ import Image from "next/image";
 
 import FeatImage01 from "@/assets/sunrise_madinah.jpg";
 import FeatImage02 from "@/assets/DSC04987.jpg";
-import FeatImage03 from "@/public/images/features-03-image-03.png";
+import FeatImage03 from "@/assets/DSC04539 (2).jpg";
 
 export default function Zigzag() {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20 border-t border-gray-800">
+        <div className="py-12 md:py-20 border-t border-white">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">
@@ -50,9 +50,9 @@ export default function Zigzag() {
                   </div>
                   <h3 className="h3 mb-3">At the Prophet's ﷺ masjid</h3>
                   <p className="text-xl text-gray-400 mb-4">
-                    We bring the brothers to the rooftop of the Masjid
-                    approximately 1 hour before fajr - where they do various
-                    acts of worship till the sun has risen.
+                    We bring the brothers to the rooftop of Masjid Nabawi one
+                    hour before fajr - this is when the intimate connection with
+                    Allah begins.
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -179,13 +179,14 @@ export default function Zigzag() {
               >
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                    More speed. Less spend
+                    Start as strangers...
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
+                  <h3 className="h3 mb-3">Leave as brothers</h3>
                   <p className="text-xl text-gray-400 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    We've mastered the recipe of building a community, what
+                    we've put in place on our trips assure you that you'll leave
+                    Saudi Arabia with <span className="font-bold">lifelong friends</span> -
+                    inshaa'Allah!
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -196,7 +197,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
+                      <span>Meet likeminded brothers from different walks of life</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -206,7 +207,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Excepteur sint occaecat</span>
+                      <span>Feel a team bond as each day goes by on the trip</span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -216,7 +217,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Amet consectetur adipiscing elit</span>
+                      <span>Dab. And Then. Fruits</span>
                     </li>
                   </ul>
                 </div>

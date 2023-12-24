@@ -8,7 +8,7 @@ export default function Testimonials() {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20 border-t border-gray-800">
+        <div className="py-12 md:py-20 border-t border-white">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">Don't take our word for it</h2>
@@ -22,7 +22,7 @@ export default function Testimonials() {
           <div className="max-w-sm mx-auto grid gap-8 lg:grid-cols-3 lg:gap-6 items-start lg:max-w-none">
             {/* 1st testimonial */}
             <div
-              className="flex flex-col h-full p-6 bg-gray-800"
+              className="flex flex-col h-full p-6 bg-purple-200"
               data-aos="fade-up"
             >
               <div>
@@ -43,7 +43,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">
+              <blockquote className="text-lg text-white grow">
                 — Open PRO lets me quickly get the insights I care about so that
                 I can focus on my productive work. I've had Open PRO for about
                 24 hours now and I honestly don't know how I functioned without
@@ -63,7 +63,7 @@ export default function Testimonials() {
 
             {/* 2nd testimonial */}
             <div
-              className="flex flex-col h-full p-6 bg-gray-800"
+              className="flex flex-col h-full p-6 bg-purple-200"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -85,7 +85,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">
+              <blockquote className="text-lg text-white grow">
                 — Open PRO lets me quickly get the insights I care about so that
                 I can focus on my productive work. I've had Open PRO for about
                 24 hours now and I honestly don't know how I functioned without
@@ -105,7 +105,7 @@ export default function Testimonials() {
 
             {/* 3rd testimonial */}
             <div
-              className="flex flex-col h-full p-6 bg-gray-800"
+              className="flex flex-col h-full p-6 bg-purple-200"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -127,7 +127,7 @@ export default function Testimonials() {
                   </svg>
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-400 grow">
+              <blockquote className="text-lg text-white grow">
                 — Open PRO lets me quickly get the insights I care about so that
                 I can focus on my productive work. I've had Open PRO for about
                 24 hours now and I honestly don't know how I functioned without

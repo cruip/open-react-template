@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         gray: {
-          100: '#EBF1F5',
+          100: '#000',
           200: '#D9E3EA',
           300: '#C5D2DC',
           400: '#9BA9B4',
@@ -17,15 +17,15 @@ module.exports = {
           600: '#55595F',
           700: '#33363A',
           800: '#25282C',
-          900: '#151719',
+          900: '#043055', // Umrah Challenge Blue
         },
         purple: {
-          100: '#F4F4FF',
-          200: '#E2E1FF',
+          100: '#043055',
+          200: '#0462AF',
           300: '#CBCCFF',
           400: '#ABABFF',
           500: '#8D8DFF',
-          600: '#5D5DFF',
+          600: '#FDC53F', // Umrah Challenge Gold
           700: '#4B4ACF',
           800: '#38379C',
           900: '#262668',

@@ -6,7 +6,7 @@ export default function Newsletter() {
       <div className="max-w-6xl mx-auto px-4 sm:px-14">
         {/* CTA box */}
         <div
-          className="relative bg-purple-600 py-10 px-8 md:py-16 md:px-12"
+          className="relative bg-purple-200 py-10 px-8 md:py-16 md:px-12"
           data-aos="fade-up"
         >
           {/* Background illustration */}
@@ -46,14 +46,9 @@ export default function Newsletter() {
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
               <h3 className="h3 text-white mb-2">Stay in the loop</h3>
-              <p className="text-purple-200 text-lg">
-                Follow our social media to stay in touch 
-         
-              </p>
-              <p className="text-purple-200 text-lg mt-2">
-
-                Or message us directly
-                to find out when our next trip is!
+              <p className="text-white text-lg">
+                Follow our social media for more information on upcoming
+                trips/gameshows
               </p>
             </div>
 

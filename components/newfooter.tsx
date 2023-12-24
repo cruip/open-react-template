@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NewFooter() {
   return (
-    <div className="w-full lg:w-1/2">
+    <div className="w-full lg:w-1/2 ml-28">
       <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
         <li>
           <Link
