@@ -134,7 +134,7 @@ export default function Testimonials() {
                 it before.
               </blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
-                <cite className="text-gray-200 not-italic">Anastasia Dan</cite>{" "}
+                <cite className="text-gray-200 not-italic">Anastasia Fan</cite>{" "}
                 -{" "}
                 <a
                   className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out"
