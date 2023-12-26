@@ -7,6 +7,8 @@ import 'aos/dist/aos.css'
 
 import PageIllustration from '@/components/page-illustration'
 import Footer from '@/components/ui/footer'
+import { UserProvider } from '../contexts/UserContext';
+import Header from '@/components/ui/header'
 
 export default function DefaultLayout({
   children,
@@ -27,13 +29,13 @@ export default function DefaultLayout({
     <>
       <main className="grow">
 
-        <PageIllustration />
+        <Header />
 
         {children}
 
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

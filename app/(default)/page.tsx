@@ -2,6 +2,8 @@
 
 import dynamic from 'next/dynamic';
 import Features from '@/components/features'
+import Footer from '@/components/ui/footer'
+
 // Import the Hero component dynamically with SSR disabled
 const HeroClient = dynamic(() => import('@/components/Hero.client'), {
   ssr: false
@@ -41,6 +43,8 @@ export default function Home() {
         <div>
           <Instructions/>
         </div>
+        <Footer />
+
         {/* <Zigzag /> */}
         {/* <Testimonials />
       <Newsletter /> */}

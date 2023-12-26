@@ -26,7 +26,7 @@ export default function Demo() {
   // const [interfacePlacement, setInterfacePlacement] = useState<InterfaceGridTemplateArea<1>>();
   return (
     <section>
-      
+
       <div className="flex justify-center items-center" data-aos="fade-down" data-aos-delay="100">
         {/* <div className="image-container">
           <Link href="/" aria-label="Cruip">
@@ -39,7 +39,7 @@ export default function Demo() {
         </div>
       </div>
       <div className="max-w-3xl mx-auto text-center" data-aos="fade-down" data-aos-delay="100">
-        <h2 className="h2 mb-4">LISTEN TO TODAY'S BIT ON X, Y, Z</h2>
+        <h2 className="h2 mb-4">LISTEN TO TODAY'S BIT ON THE NBA, NFL, AND FASHION</h2>
       </div>
     </section>
   );

@@ -1,0 +1,96 @@
+.user-profile {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .preferences {
+    margin-top: 20px;
+  }
+  
+  .preferences h2 {
+    font-size: 20px;
+    color: #5e1aed;
+  }
+  
+  .preferences-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .preference-item {
+    background-color: #5e1aed; /* Purple background */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-size: 17px;
+    margin: 5px; 
+  }
+  
+  /* You can add media queries for responsiveness */
+  @media (max-width: 600px) {
+    .preferences-list {
+      justify-content: center;
+    }
+  }
+  .user-profile{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+  }
+
+  .profileMain{
+    height: 100vh;
+  }
+  .search-container{
+    height: 50%;
+    align-items: center;
+  }
+
+  .preferences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Add any additional styling such as width, height, etc. */
+}
+
+.preferences-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* If you want the preference items to be in a row instead of a column, 
+       you can change flex-direction to row and adjust accordingly. */
+}
+
+.preference-item {
+    /* Style your buttons as needed */
+    /* Adds space between buttons */
+    /* Additional styling */
+}
+  .user-profile .search-container .search-results {
+ 
+    max-height: 90%; /* Adjust as needed */
+    overflow-y: auto; /* Adds a scrollbar when content overflows */
+    border-top: 1px solid #eee;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color:black
+    /* height: 20%; */
+  }
+  
+
+  .user-profile .search-container .search-results div {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .user-profile .search-container .search-results div:hover {
+    background-color: #5e1aed; /* Purple background on hover */
+    color: white; /* White text on hover */
+  }
+  /* Add this CSS to your stylesheet */
+/*  */

@@ -72,12 +72,12 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ url }) => {
   };
 
   return (
-    <div>
-      <div id="waveform" ref={waveformRef} style={{ width: 800}} />
-      <button onClick={handlePlayPause}>
-        {isPlaying ? <FaPause /> : <FaPlay />}
-      </button>
-    </div>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <button onClick={handlePlayPause} style={{ marginRight: '10px' }}>
+      {isPlaying ? <FaPause /> : <FaPlay />}
+    </button>
+    <div id="waveform" ref={waveformRef} style={{ width: 800 }} />
+  </div>
   );
 };
 
