@@ -73,7 +73,7 @@ export default function Hero() {
             thumbWidth={1024}
             thumbHeight={576}
             thumbAlt="Modal video thumbnail"
-            video="https://www.youtube.com/embed/L298vM9vnd4?&autoplay=1"
+            video="https://www.youtube.com/embed/RHmUc0SM5Ag?&autoplay=1"
             videoWidth={1024}
             videoHeight={576}
           />
@@ -82,4 +82,3 @@ export default function Hero() {
     </section>
   );
 }
-
