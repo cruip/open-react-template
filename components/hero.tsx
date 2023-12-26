@@ -1,5 +1,5 @@
 import MainLogo from "@/assets/The Umrah Challenge_main.png";
-import WhiteLogo from "@/assets/The Umrah Challenge_white.png"
+import WhiteLogo from "@/assets/The Umrah Challenge_white.png";
 import VideoThumb from "@/assets/Mandem Madinah LIGHT.jpg";
 import ModalVideo from "@/components/modal-video";
 import Image from "next/image";
@@ -49,7 +49,6 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16 mt-0">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-12">
-          
             <Image
               className="mx-auto md:max-w-none h-auto mb-4"
               data-aos="fade-up"
@@ -59,11 +58,14 @@ export default function Hero() {
               height={405}
               alt="Features 01"
             />
-            
-            <h3 className="h3 mb-4 text-gray-400" data-aos="fade-up" data-aos-delay="200" >
+
+            <h3
+              className="h3 mb-4 text-gray-400"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Work, Play, Worship.
             </h3>
-           
           </div>
 
           <ModalVideo
@@ -71,7 +73,7 @@ export default function Hero() {
             thumbWidth={1024}
             thumbHeight={576}
             thumbAlt="Modal video thumbnail"
-            video="https://www.youtube.com/embed/RHmUc0SM5Ag?&autoplay=1"
+            video="https://www.youtube.com/embed/L298vM9vnd4?&autoplay=1"
             videoWidth={1024}
             videoHeight={576}
           />
@@ -80,3 +82,4 @@ export default function Hero() {
     </section>
   );
 }
+
