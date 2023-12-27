@@ -14,6 +14,7 @@
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "aos": "^3.0.0-beta.6",
+    "encoding": "^0.1.13",
     "firebase": "^10.5.2",
     "firebase-functions": "^4.5.0",
     "gapi-script": "^1.2.0",

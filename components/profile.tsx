@@ -2,11 +2,15 @@
 import React, { useState } from 'react';
 import './style.css';
 import PreferencesTab from './Prefs.Client';
+import MediaTab from './Media.Client';
+
 import whitelogo from '@/public/images/i.png';
 import Image from 'next/image';
 
-const UserProfile = ({ userEmail }) => {
-
+type ProfileTabProps = {
+  userEmail: string;
+};
+const UserProfile: React.FC<ProfileTabProps> = ({ userEmail }) => {
   // State to manage active tab
   const [activeTab, setActiveTab] = useState('Preferences');
 
@@ -36,7 +40,7 @@ const UserProfile = ({ userEmail }) => {
       {/* Main content */}
       <div className="flex-1 p-10" style={{ backgroundColor: 'white' }}>
         {activeTab === 'Preferences' && <PreferencesTab userEmail={userEmail} />}
-        {activeTab === 'Your Media' && <div>Your Media content</div>}
+        {activeTab === 'Your Media' &&  <MediaTab userEmail={userEmail} />}
         {activeTab === 'Friends' && <div>Friends content</div>}
       </div>
     </div>

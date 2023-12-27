@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import firebase from 'firebase/compat/app';
 import { doc, arrayUnion, arrayRemove, updateDoc, collection, onSnapshot } from "@firebase/firestore";
-import { getFirestore } from "@firebase/firestore"
+import { getFirestore, setDoc} from "@firebase/firestore"
 import { db } from '../firebase-config2'; // Adjust the path if necessary to correctly point to your firebase-config file
 type PreferencesTabProps = {
   userEmail: string;
@@ -56,7 +56,7 @@ const PreferencesTab: React.FC<PreferencesTabProps> = ({ userEmail }) => {
 
   const addPreferenceToUser = async (newPreference: unknown) => {
     try {
-      const userRef = doc(db, "varuntupuri123@gmail.com", "Preferences");
+      const userRef = doc(db, userEmail, "Preferences");
       await updateDoc(userRef, {
         prefs: arrayUnion(newPreference)
       });
@@ -67,7 +67,7 @@ const PreferencesTab: React.FC<PreferencesTabProps> = ({ userEmail }) => {
   };
 
   const removePreference = async (preference: any) => {
-    const preferencesRef = doc(db, "varuntupuri123@gmail.com", "Preferences");
+    const preferencesRef = doc(db, userEmail, "Preferences");
     try {
       await updateDoc(preferencesRef, {
         prefs: arrayRemove(preference)
@@ -78,7 +78,7 @@ const PreferencesTab: React.FC<PreferencesTabProps> = ({ userEmail }) => {
     }
   };
   useEffect(() => {
-    const preferencesRef = doc(db, "varuntupuri123@gmail.com", "Preferences");
+    const preferencesRef = doc(db, userEmail, "Preferences");
 
     // Listen for real-time updates
     const unsubscribe = onSnapshot(preferencesRef, (doc) => {
@@ -87,7 +87,12 @@ const PreferencesTab: React.FC<PreferencesTabProps> = ({ userEmail }) => {
         setPreferences(data.prefs || []); // Update state with new preferences
       } else {
         // Handle the case where the document does not exist
-        console.log("No preferences found!");
+        try {
+          setDoc(preferencesRef, { prefs: [] });
+          console.log("Document with initial preferences created.");
+        } catch (error) {
+          console.error("Error creating document: ", error);
+        }
       }
     });
 

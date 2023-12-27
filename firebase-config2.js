@@ -1,13 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "@firebase/firestore"
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { getAuth } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+const firebaseConfig2 = {
   apiKey: "AIzaSyAnUgvXSGkBcVnfpDFKQmilUN0HhA7ZNNM",
   authDomain: "podify-1b981.firebaseapp.com",
   databaseURL: "https://podify-1b981-default-rtdb.firebaseio.com",
@@ -19,7 +21,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig2, "users");
 const db = getFirestore(app)
-export {db}
+const storage = getStorage(app);
+const auth = getAuth(app);
+
+export {db, storage, auth}
 const analytics = getAnalytics(app);

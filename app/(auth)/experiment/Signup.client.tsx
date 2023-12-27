@@ -1,45 +1,74 @@
 'use client'
-import { MouseEvent, useEffect, useState} from 'react';
+import { MouseEvent, useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
 import Link from 'next/link';
 import UserProfile from "../../../components/profile";
+import { auth } from '../../../firebase-config2'; // Adjust the path if necessary to correctly point to your firebase-config file
+import { doc, arrayUnion, updateDoc, collection } from "@firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { error } from 'console';
 
 export default function SignUp() {
-    const [userEmail, setUserEmail] = useState(null);
+    const [userEmail, setUserEmail] = useState('');
+    const [email, setEmail] = useState('');
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState(null);
 
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: "370440719371-tp9fe3fj2gi823ii397eutpgnafhqnh2.apps.googleusercontent.com",
-        scope: 'email',
-      });
-    }
-  
-    gapi.load('client:auth2', start);
-  }, []);
-   
 
-  const handleSignIn = async (event: React.MouseEvent) => {
-    event.preventDefault();
+    useEffect(() => {
+        function start() {
+            gapi.client.init({
+                clientId: "370440719371-tp9fe3fj2gi823ii397eutpgnafhqnh2.apps.googleusercontent.com",
+                scope: 'email',
+            });
+        }
 
-    try {
-      const GoogleAuth = gapi.auth2.getAuthInstance();
-      const googleUser = await GoogleAuth.signIn();
+        gapi.load('client:auth2', start);
+    }, []);
 
-      const profile = googleUser.getBasicProfile();
-      const userEmail = profile.getEmail();
-      setUserEmail(userEmail);
+    const handleEmailSignUp = (event: React.MouseEvent) => {
+        event.preventDefault();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log("created user")
+                // Signed in
+                const user = userCredential.user;
+                const userEmail = user.email;
+                setUserEmail(userEmail!);
+                // Update user state or redirect
+            })
+            .catch((error) => {
+                // Handle Errors
+                const errorMessage = error.message;
+                setErrorMessage(errorMessage); // Set the error message
+                // Display error message
+            });
+    };
 
-      // Update user context or state as needed
 
-      // Redirect to preferences with the user's email as a query parameter
-      
-    } catch (error) {
-      console.error('Error during sign in', error);
-      // Handle sign-in errors
-    }
-  };
-    if (!userEmail) {
+    const handleSignIn = async (event: React.MouseEvent) => {
+        event.preventDefault();
+
+        try {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    // Signed in
+                    const user = result.user;
+                    const userEmail = user.email;
+                    setUserEmail(userEmail!);
+                })
+                .catch((error) => {
+                    console.log(error)
+                });
+
+
+        } catch (error) {
+            console.error('Error during sign in', error);
+        }
+    };
+    if (userEmail) {
         return (<UserProfile userEmail={userEmail} />)
     }
     return (
@@ -70,39 +99,65 @@ export default function SignUp() {
                         <div className="flex items-center my-6">
                             <div className="border-t border-gray-700 border-dotted grow mr-3" aria-hidden="true"></div>
                             <div className="text-gray-400">Or, register with your email</div>
+
                             <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
-                        </div>
+                        </div>                           
+                         <p className='text-center'>{errorMessage}</p>
+
                         <form>
                             <div className="flex flex-wrap -mx-3 mb-4">
                                 <div className="w-full px-3">
-                                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="full-name">Full Name <span className="text-red-600">*</span></label>
-                                    <input id="full-name" type="text" className="form-input w-full text-gray-300" placeholder="First and last name" required />
-                                </div>
+                                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="full-name">Email<span className="text-red-600">*</span></label>
+                                    <input
+                                        id="full-name"
+                                        type="text"
+                                        className="form-input w-full text-gray-300"
+                                        placeholder="First and last name"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />                                </div>
                             </div>
                             <div className="flex flex-wrap -mx-3 mb-4">
                                 <div className="w-full px-3">
                                     <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="company-name">User Name <span className="text-red-600">*</span></label>
-                                    <input id="company-name" type="text" className="form-input w-full text-gray-300" placeholder="Your UserName" required />
+                                    <input
+                                        id="company-name"
+                                        type="text"
+                                        className="form-input w-full text-gray-300"
+                                        placeholder="Your UserName"
+                                        required
+                                        value={userName}
+                                        onChange={(e) => setUserName(e.target.value)}
+                                    />
                                 </div>
                             </div>
 
                             <div className="flex flex-wrap -mx-3 mb-4">
                                 <div className="w-full px-3">
                                     <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password <span className="text-red-600">*</span></label>
-                                    <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        className="form-input w-full text-gray-300"
+                                        placeholder="Password (at least 10 characters)"
+                                        required
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
                                 </div>
                             </div>
                             <div className="text-sm text-gray-500 text-center">
-                                I agree to be contacted by Open PRO about this offer as per the Open PRO <Link href="#" className="underline text-gray-400 hover:text-gray-200 hover:no-underline transition duration-150 ease-in-out">Privacy Policy</Link>.
+                                I agree to be contacted by TunedIn about this offer as per the TunedIn <Link href="#" className="underline text-gray-400 hover:text-gray-200 hover:no-underline transition duration-150 ease-in-out">Privacy Policy</Link>.
                             </div>
                             <div className="flex flex-wrap -mx-3 mt-6">
                                 <div className="w-full px-3">
-                                    <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Sign up</button>
+                                    <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full" onClick={(e) => handleEmailSignUp(e)}>Sign up</button>
                                 </div>
                             </div>
                         </form>
                         <div className="text-gray-400 text-center mt-6">
-                            Already using Open PRO? <Link href="/signin" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign in</Link>
+                            Already using TunedIn? <Link href="/signin" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign in</Link>
                         </div>
                     </div>
 
