@@ -27,10 +27,30 @@
     font-size: 17px;
     margin: 5px; 
   }
+
+    
+  .media-generate {
+    background-color: #5e1aed; /* Purple background */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 17px;
+    position: 'relative';
+    top: 10px;
+    left: 10px;
+
+  }
   .audio-title {
     font-size: 2rem;
     color: #333; /* You can choose any color */
     text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  .feedback-title {
+    font-size: 2rem;
+    color: #333; /* You can choose any color */
+    text-align: left;
     margin-bottom: 30px;
     font-weight: bold;
   }

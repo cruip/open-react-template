@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { doc, arrayUnion, updateDoc, collection } from "@firebase/firestore";
-import {db} from '../firebase-config'; // Adjust the path if necessary to correctly point to your firebase-config file
+import { db } from '../firebase-config'; // Adjust the path if necessary to correctly point to your firebase-config file
 import logo3 from '@/public/images/homepage.png';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -62,7 +62,7 @@ export default function Hero() {
               </p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <form data-aos="fade-up" data-aos-delay="400" action="#0" method="post" className="w-full mb-4 sm:w-auto sm:mb-0" onSubmit={handleSubmit}>
-                  <input type="email" name="email" placeholder="Enter your email" required className="text-black bg-white-200 w-full sm:w-auto" onChange={handleEmailChange} value={email}/>
+                  <input type="email" name="email" placeholder="Enter your email" required className="text-black bg-white-200 w-full sm:w-auto" onChange={handleEmailChange} value={email} />
                   <button type="submit" className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4">Submit</button>
                 </form>
               </div>
@@ -72,16 +72,16 @@ export default function Hero() {
 
         {/* Success Message Modal */}
         {showSuccessMessage && (
-  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div className="bg-white p-6 rounded-lg shadow-xl transition duration-500 ease-in-out transform scale-105">
-      <h3 className="text-lg font-semibold text-center text-gray-800 mb-4">Success!</h3>
-      <p className="text-sm text-gray-600 text-center mb-6">Your email has been successfully submitted. Thank you for signing up!</p>
-      <div className="flex justify-center">
-        <button onClick={handleCloseSuccessMessage} className="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest active:bg-purple-800 focus:outline-none focus:border-purple-900 focus:ring focus:ring-purple-300 disabled:opacity-25 transition ease-in-out duration-150">Close</button>
-      </div>
-    </div>
-  </div>
-)}
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white p-6 rounded-lg shadow-xl transition duration-500 ease-in-out transform scale-105">
+              <h3 className="text-lg font-semibold text-center text-gray-800 mb-4">Success!</h3>
+              <p className="text-sm text-gray-600 text-center mb-6">Your email has been successfully submitted. Thank you for signing up!</p>
+              <div className="flex justify-center">
+                <button onClick={handleCloseSuccessMessage} className="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest active:bg-purple-800 focus:outline-none focus:border-purple-900 focus:ring focus:ring-purple-300 disabled:opacity-25 transition ease-in-out duration-150">Close</button>
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
     </section>

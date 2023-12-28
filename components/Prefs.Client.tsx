@@ -55,6 +55,8 @@ const PreferencesTab: React.FC<PreferencesTabProps> = ({ userEmail }) => {
   const [preferences, setPreferences] = useState([]);
 
   const addPreferenceToUser = async (newPreference: unknown) => {
+    if (!newPreference) return; // Prevent adding empty strings
+
     try {
       const userRef = doc(db, userEmail, "Preferences");
       await updateDoc(userRef, {
@@ -110,11 +112,16 @@ const PreferencesTab: React.FC<PreferencesTabProps> = ({ userEmail }) => {
           placeholder="Search preferences..."
           value={searchQuery}
           onChange={handleSearch}
+          style={{color:"black"}}
         />
         <div className="search-results">
           {filteredOptions.map(option => (
             <div key={option} onClick={() => addPreferenceToUser(option)}>{option}</div>
           ))}
+          {/* Allow adding the search query as a new preference if it's not in staticOptions */}
+          {searchQuery && !staticOptions.includes(searchQuery) && (
+            <div onClick={() => addPreferenceToUser(searchQuery)}>Add "{searchQuery}"</div>
+          )}
         </div>
       </div>
      

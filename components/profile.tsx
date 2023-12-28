@@ -31,9 +31,9 @@ const UserProfile: React.FC<ProfileTabProps> = ({ userEmail }) => {
           <button className={`w-full text-left px-6 py-2 hover:bg-purple-600 ${activeTab === 'Your Media' ? 'bg-purple-700' : ''}`} onClick={() => setActiveTab('Your Media')}>
             Your Media
           </button>
-          <button className={`w-full text-left px-6 py-2 hover:bg-purple-600 ${activeTab === 'Friends' ? 'bg-purple-700' : ''}`} onClick={() => setActiveTab('Friends')}>
+          {/* <button className={`w-full text-left px-6 py-2 hover:bg-purple-600 ${activeTab === 'Friends' ? 'bg-purple-700' : ''}`} onClick={() => setActiveTab('Friends')}>
             Friends
-          </button>
+          </button> */}
         </nav>
       </div>
 
@@ -41,7 +41,7 @@ const UserProfile: React.FC<ProfileTabProps> = ({ userEmail }) => {
       <div className="flex-1 p-10" style={{ backgroundColor: 'white' }}>
         {activeTab === 'Preferences' && <PreferencesTab userEmail={userEmail} />}
         {activeTab === 'Your Media' &&  <MediaTab userEmail={userEmail} />}
-        {activeTab === 'Friends' && <div>Friends content</div>}
+        {/* {activeTab === 'Friends' && <div>Friends content</div>} */}
       </div>
     </div>
   );
