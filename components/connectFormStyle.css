@@ -1,0 +1,35 @@
+.connectForm {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.formInput {
+    background-color: #151719;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.formBtn {
+    width: 100px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #5d5dff;
+}
+
+@media (max-width: 900px) {
+    .connectForm {
+        display: block;
+    }
+
+    .formInput {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .formBtn{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
