@@ -64,7 +64,7 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Work, Play, Worship.
+              Work, Play Harder!, Worship.
             </h3>
           </div>
 
