@@ -38,8 +38,25 @@
     position: 'relative';
     top: 10px;
     left: 10px;
-
   }
+
+  /* Existing styles... */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50vw; /* Adjust the width for smaller screens */
+  }
+
+  .sidebar-toggle-icon {
+    display: block; /* Show toggle icon on small screens */
+    cursor: pointer;
+  }
+}
+
+
+/* Other styles as required */
+
   .audio-title {
     font-size: 2rem;
     color: #333; /* You can choose any color */

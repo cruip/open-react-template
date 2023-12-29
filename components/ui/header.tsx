@@ -47,7 +47,7 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* <MobileMenu /> */}
+          <MobileMenu />
         </div>
       </div>
     </header>

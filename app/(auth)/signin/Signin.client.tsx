@@ -5,53 +5,68 @@ export const metadata = {
 }
 import UserProfile from "../../../components/profile";
 import Link from 'next/link'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { auth } from '../../../firebase-config2'; // Adjust the path if necessary
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useSearchParams, usePathname, useRouter} from 'next/navigation'
 
 export default function SignIn() {
   const [userEmail, setUserEmail] = useState('');
-
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const router = useRouter()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams)
+      params.set(name, value)
+
+      return params.toString()
+    },
+    [searchParams]
+  )
+
   const handleEmailSignIn = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-        const userEmail = user.email;
-        setUserEmail(userEmail!); // Set the user's email
-        // Redirect to dashboard or update UI
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      const userEmail = user.email;
+      setUserEmail(userEmail!); // Set the user's email
+      // Redirect to dashboard or update UI
     } catch (error) {
-        console.log(error);
-        // Handle error, display message
+      console.log(error);
+      // Handle error, display message
     }
-};
+  };
 
-const handleGoogleSignIn = async (event: { preventDefault: () => void; }) => {
+  const handleGoogleSignIn = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     try {
-        const provider = new GoogleAuthProvider();
+      const provider = new GoogleAuthProvider();
 
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-        const userEmail = user.email;
-        setUserEmail(userEmail!); // Set the user's email
-        // Redirect to dashboard or update UI
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      const userEmail = user.email;
+      setUserEmail(userEmail!); // Set the user's email
+
+      router.push("/web" + '?' + createQueryString('email', userEmail!))
+      // Redirect to dashboard or update UI
     } catch (error) {
-        console.log(error);
-        // Handle error, display message
+      console.log(error);
+      // Handle error, display message
     }
-};
+  };
 
 
   if (userEmail) {
-      return (<UserProfile userEmail={userEmail} />)
+    return (<UserProfile userEmail={userEmail} />)
   }
   return (
-    
+
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
@@ -81,7 +96,7 @@ const handleGoogleSignIn = async (event: { preventDefault: () => void; }) => {
               <div className="text-gray-400">Or, sign in with your email</div>
               <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
             </div>
-            <form  onSubmit={handleEmailSignIn}>
+            <form onSubmit={handleEmailSignIn}>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Email</label>
