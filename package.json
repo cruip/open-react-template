@@ -15,10 +15,12 @@
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.6.3",
     "mdb-react-ui-kit": "^7.0.0",
     "next": "^14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

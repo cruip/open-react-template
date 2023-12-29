@@ -11,11 +11,15 @@
     margin-right: 10px;
 }
 
-.formBtn {
+.formBtn{
     width: 100px;
     padding: 5px 20px;
     border-radius: 5px;
     background-color: #5d5dff;
+}
+
+.formBtn:hover {
+    opacity: 0.8;
 }
 
 @media (max-width: 900px) {
@@ -28,7 +32,7 @@
         margin-top: 15px;
     }
 
-    .formBtn{
+    .formBtn {
         width: 100%;
         margin-top: 20px;
     }
