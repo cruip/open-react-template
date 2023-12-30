@@ -53,6 +53,28 @@
     cursor: pointer;
   }
 }
+@media (max-width: 768px) {
+  .audio-title, .feedback-title {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .media-generate, .preferences-list, .user-profile {
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+
+  /* Adjust layout for smaller screens */
+  .profileMain, .search-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 100%; /* Full width on very small screens */
+  }
+
+  /* Further reduce font sizes and paddings as needed */
+}
 
 
 /* Other styles as required */
@@ -63,6 +85,9 @@
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
+  }
+  .profileMain {
+    overflow-x: scroll; /* Or 'scroll' if you always want to show the scrollbar */
   }
   .feedback-title {
     font-size: 2rem;

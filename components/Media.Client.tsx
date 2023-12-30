@@ -13,6 +13,8 @@ const MediaTab: React.FC<MediaTabProps> = ({ userEmail }) => {
     const [audioUrls, setAudioUrls] = useState<string[]>([]);
     const [feedback, setFeedback] = useState<string>('');
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [isGenerating, setIsGenerating] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const fetchAudioUrls = async () => {
         const storageRef = ref(storage);
@@ -31,7 +33,6 @@ const MediaTab: React.FC<MediaTabProps> = ({ userEmail }) => {
             // console.log(result)
             const urlPromises = matchingItems.map(itemRef => getDownloadURL(itemRef));
             const urls = await Promise.all(urlPromises);
-            console.log(urls)
             setAudioUrls(urls);
         } catch (error) {
             console.error("Error fetching audio URLs:", error);
@@ -71,6 +72,8 @@ const MediaTab: React.FC<MediaTabProps> = ({ userEmail }) => {
 
 
     const generatePodcast = async () => {
+        setIsGenerating(true); // Disable the button and change text
+
         try {
             console.log("generating podcast")
 
@@ -81,12 +84,23 @@ const MediaTab: React.FC<MediaTabProps> = ({ userEmail }) => {
                 },
                 body: JSON.stringify({ userId: userEmail })
             });
+            if (!response.ok) {
+                throw new Error('Rate limit hit'); // Example error message
+            }
             const data = await response.json();
+            
             console.log(data); // Print the response
             fetchAudioUrls();
 
         } catch (error) {
-            console.error("Error during API call:", error);
+            if (error instanceof Error) {
+                setErrorMessage(error.message); // Set the error message
+            }
+         
+
+        }
+        finally {
+            setIsGenerating(false); // Re-enable the button after the process is complete
         }
     };
 
@@ -107,9 +121,16 @@ const MediaTab: React.FC<MediaTabProps> = ({ userEmail }) => {
 
     return (
         <section>
-            <button className='media-generate' onClick={generatePodcast}>
-                Start Podcast Generation
+            <button 
+                className='media-generate' 
+                onClick={generatePodcast}
+                disabled={isGenerating}
+            >
+                {isGenerating ? "Generating..." : "Start Podcast Generation"}
             </button>
+            {errorMessage && (
+                <span style={{ marginLeft: '10px', color: 'red' }}>{errorMessage}</span>
+            )}
             <div style={{ display: 'flex', height: '100%' }}>
                 {/* Left Section */}
 

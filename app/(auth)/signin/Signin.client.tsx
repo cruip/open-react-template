@@ -62,9 +62,6 @@ export default function SignIn() {
   };
 
 
-  if (userEmail) {
-    return (<UserProfile userEmail={userEmail} />)
-  }
   return (
 
     <section className="relative">

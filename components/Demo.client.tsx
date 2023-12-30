@@ -39,7 +39,7 @@ export default function Demo() {
         </div>
       </div>
       <div className="max-w-3xl mx-auto text-center" data-aos="fade-down" data-aos-delay="100">
-        <h2 className="h2 mb-4">LISTEN TO TODAY'S BIT ON THE NBA, NFL, AND FASHION</h2>
+        <h2 className="h2 mb-4">LISTEN TO TODAY'S BIT ON POLITICS, WORLD NEWS, AND FINANCE</h2>
       </div>
     </section>
   );

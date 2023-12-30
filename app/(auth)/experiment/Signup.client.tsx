@@ -1,5 +1,5 @@
 'use client'
-import { MouseEvent, useEffect, useState } from 'react';
+import { MouseEvent, useEffect, useState, useCallback} from 'react';
 import { gapi } from 'gapi-script';
 import Link from 'next/link';
 import UserProfile from "../../../components/profile";
@@ -7,14 +7,27 @@ import { auth } from '../../../firebase-config2'; // Adjust the path if necessar
 import { doc, arrayUnion, updateDoc, collection } from "@firebase/firestore";
 import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { error } from 'console';
+import { useSearchParams, usePathname, useRouter} from 'next/navigation'
 
 export default function SignUp() {
+    const pathname = usePathname()
+    const searchParams = useSearchParams()
+    const router = useRouter()
     const [userEmail, setUserEmail] = useState('');
     const [email, setEmail] = useState('');
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null);
 
+    const createQueryString = useCallback(
+        (name: string, value: string) => {
+          const params = new URLSearchParams(searchParams)
+          params.set(name, value)
+    
+          return params.toString()
+        },
+        [searchParams]
+      )
 
     useEffect(() => {
         function start() {
@@ -31,7 +44,6 @@ export default function SignUp() {
         event.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log("created user")
                 // Signed in
                 const user = userCredential.user;
                 const userEmail = user.email;
@@ -58,6 +70,9 @@ export default function SignUp() {
                     const user = result.user;
                     const userEmail = user.email;
                     setUserEmail(userEmail!);
+
+                    router.push("/web" + '?' + createQueryString('email', userEmail!))
+
                 })
                 .catch((error) => {
                     console.log(error)
@@ -68,9 +83,7 @@ export default function SignUp() {
             console.error('Error during sign in', error);
         }
     };
-    if (userEmail) {
-        return (<UserProfile userEmail={userEmail} />)
-    }
+
     return (
         <section className="relative">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
