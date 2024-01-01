@@ -147,7 +147,10 @@ const MediaTab: React.FC<MediaTabProps> = ({ userEmail }) => {
 
                 {/* Right Section */}
                 <div style={{ flex: 1, padding: '20px', borderLeft: '1px solid #ccc' }}> {/* Adjust padding and border as needed */}
-                    <h2 className='feedback-title'>Feedback</h2>
+                    <h2 className='feedback-title' style={{ marginBottom: '5px' }}>Feedback</h2>
+                    <p style={{ fontSize: '14px', marginBottom: '10px', color: 'gray' }}>
+                        Help us shape the future of our app! Share your valuable feedback on our beta version to enhance your experience and make our app even better.
+                    </p>
                     <textarea
                         style={{ width: '100%', height: '100px', marginBottom: '10px', color: "black" }}
                         placeholder="Enter your feedback here"

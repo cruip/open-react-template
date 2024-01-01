@@ -27,7 +27,7 @@ const UserProfile: React.FC<ProfileTabProps> = ({ userEmail }) => {
           <div className="sidebar-toggle-icon px-6 py-2" onClick={toggleSidebar}>
             <Image src={toggleIcon} alt="Toggle Sidebar" className="h-6 w-6 ml-auto filter invert" />
           </div>
-          <div className="text-2xl text-leftfont-bold">TunedIn</div>
+          <div className="text-2xl text-leftfont-bold">TunedIn (beta)</div>
 
 
           {/* <Image src={whitelogo} alt="TunedIn Icon" className="h-12 w-12 mr-2" /> */}
