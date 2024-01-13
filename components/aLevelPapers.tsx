@@ -1,37 +1,21 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from "next/link";
 
-export default function Footer() {
+export default function aLevelPapers() {
   return (
-    <footer>
-      <div className="py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section>
+      <div className="max-w-6xl mx-auto px-4 mt-20 sm:px-6">
+        <div className="py-12 md:py-20">
 
-          {/* Top area: Blocks */}
-          <div className="flex gap-8 lg:gap-20 mb-8 md:mb-12">
-
-            {/* 1st block */}
-            <div className="">
-              <div className="mb-2">
-                {/* Logo */}
-                <Link href="/" className="inline-block" aria-label="Cruip">
-                  <svg className="w-8 h-8 fill-current text-purple-600" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M31.952 14.751a260.51 260.51 0 00-4.359-4.407C23.932 6.734 20.16 3.182 16.171 0c1.634.017 3.21.28 4.692.751 3.487 3.114 6.846 6.398 10.163 9.737.493 1.346.811 2.776.926 4.262zm-1.388 7.883c-2.496-2.597-5.051-5.12-7.737-7.471-3.706-3.246-10.693-9.81-15.736-7.418-4.552 2.158-4.717 10.543-4.96 16.238A15.926 15.926 0 010 16C0 9.799 3.528 4.421 8.686 1.766c1.82.593 3.593 1.675 5.038 2.587 6.569 4.14 12.29 9.71 17.792 15.57-.237.94-.557 1.846-.952 2.711zm-4.505 5.81a56.161 56.161 0 00-1.007-.823c-2.574-2.054-6.087-4.805-9.394-4.044-3.022.695-4.264 4.267-4.97 7.52a15.945 15.945 0 01-3.665-1.85c.366-3.242.89-6.675 2.405-9.364 2.315-4.107 6.287-3.072 9.613-1.132 3.36 1.96 6.417 4.572 9.313 7.417a16.097 16.097 0 01-2.295 2.275z" />
-                  </svg>
-                </Link>
-              </div>
-              <div className="text-gray-400">We are here to provide you with more resources, to help you achieve the best grades possible.</div>
-            </div>
-
-            
-
+          {/* Section header */}
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-14">
+            <h2 className="h2 mb-4">A Level Past Papers and Answers</h2>
+            <p className="text-xl text-gray-800">We are currently in the process of making some walkthrough videos for both OCR and AQA. It should be available within the end of next month.</p>
           </div>
-
-          {/* Bottom area */}
-          <div className="md:flex md:items-center md:justify-between">
-
-            {/* Social links */}
-            <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
+          <div className="mb-3">
+          <h1 className="text-lg text-center text-red-600">Drop a follow to know when the page is ready!</h1>
+          </div>
+          
+          <ul className="flex items-center justify-center mb-4 md:order-1 md:ml-4 md:mb-0">
             <li>
               <Link href="https://youtube.com/@TheGCSEComputerScienceTutor?feature=shared" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center text-purple-600 bg-gray-800 hover:text-gray-100 hover:bg-purple-600 rounded-full transition duration-150 ease-in-out" aria-label="YouTube">
                 <svg className="w-8 h-8 fill-current" viewBox="0 -3 70 80" xmlns="http://www.w3.org/2000/svg">
@@ -55,15 +39,14 @@ export default function Footer() {
                 </svg>
               </Link>
             </li>
-            </ul>
-
-            {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4">&copy; thegcsecomputersciencetutor.co.uk. All rights reserved.</div>
-
-          </div>
+            
+          </ul>
+          {/* Items */}
+          
+          
 
         </div>
       </div>
-    </footer>
+    </section>
   )
 }

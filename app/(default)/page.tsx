@@ -1,9 +1,11 @@
 export const metadata = {
-  title: 'Home - Open PRO',
+  title: 'The GCSE Computer Science Tutor',
   description: 'Page description',
 }
 
 import Hero from '@/components/hero'
+import GCSEpaper from '@/components/gcsePapers'
+import ALevelpaper from '@/components/aLevelPapers'
 import Features from '@/components/features'
 import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
@@ -13,10 +15,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <Zigzag />
-      <Testimonials />
-      <Newsletter />
+      <GCSEpaper />
+
+      
     </>
   )
 }
