@@ -14,7 +14,10 @@
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
+    "fetch-headers": "^3.0.1",
+    "firebase": "^10.7.1",
     "next": "^14.0.4",
+    "node-fetch": "^3.3.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "^5.3.3"

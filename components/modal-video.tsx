@@ -29,7 +29,6 @@ export default function ModalVideo({
 
   return (
     <div>
-
       {/* Video thumbnail */}
       <div>
         <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">

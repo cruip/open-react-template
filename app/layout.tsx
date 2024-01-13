@@ -1,9 +1,9 @@
 import './css/style.css'
-
 import { Inter, Architects_Daughter } from 'next/font/google'
-
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
+
+import { initializeApp } from "firebase/app"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,6 +28,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const firebaseConfig = {
+  };
+
+  const app = initializeApp(firebaseConfig);
+
   return (
     <html lang="en">
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
@@ -40,4 +46,3 @@ export default function RootLayout({
     </html>
   )
 }
- 
