@@ -1,5 +1,8 @@
 import React from 'react'
-
+export const metadata = {
+    title: 'The GCSE Computer Science Tutor',
+    description: 'Page description',
+  }
 function page() {
   return (
     <>

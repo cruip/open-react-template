@@ -2,7 +2,7 @@ export const metadata = {
   title: 'The GCSE Computer Science Tutor',
   description: 'Page description',
 }
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Hero from '@/components/hero'
 import GCSEpaper from '@/components/gcsePapers'
 import ALevelpaper from '@/components/aLevelPapers'
