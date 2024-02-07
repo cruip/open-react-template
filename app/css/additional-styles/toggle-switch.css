@@ -19,7 +19,7 @@
 }
 
 .form-switch input[type="checkbox"]:checked+label {
-    @apply bg-purple-600;
+    @apply bg-red-100;
 }
 
 .form-switch input[type="checkbox"]:checked+label>span:first-child {

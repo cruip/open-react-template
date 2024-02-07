@@ -75,5 +75,5 @@
 
 .form-checkbox,
 .form-radio {
-    @apply text-purple-600;
+    @apply text-red-100;
 }
