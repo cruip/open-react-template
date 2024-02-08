@@ -28,11 +28,20 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2">
-              <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Your best email…" aria-label="Your best email…" />
-                <a className="btn text-red-100 bg-white hover:bg-white shadow" href="#0">Subscribe</a>
-              </div>
+            <form className="w-full lg:w-1/2 flex flex-col gap-2">
+              <p className="text-xl text-white-100 -mb-2">Name:</p>
+              <input className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Your name..." aria-label="Your name..." />
+              <p className="text-xl text-white-100 -mb-2">Email:</p>
+              <input type="email" className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Your best email…" aria-label="Your best email…" />
+              <p className="text-xl text-white-100 -mb-2">Function:</p>
+              <label className="w-full lg:w-1/2 flex flex-col-2 items-center gap-2">
+                <input type="Radio" value="Player" name="Function" /> Player
+                <input className="ml-8" type="Radio" value="Game Studio" name="Function" /> Studio
+              </label>
+
+              <p className="text-xl text-white-100 -mb-2">Message:</p>
+              <textarea className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white resize-y" placeholder="I love your product..." aria-label="I love your product..." ></textarea>
+              <a className="btn text-red-100 bg-white hover:bg-white shadow" href="#0">Submit</a>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
             </form>
