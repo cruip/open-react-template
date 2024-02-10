@@ -1,6 +1,6 @@
 import './css/style.css'
 
-import { Inter, Architects_Daughter } from 'next/font/google'
+import { Inter, Architects_Daughter, Zen_Dots } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 
@@ -13,6 +13,13 @@ const inter = Inter({
 const architects_daughter = Architects_Daughter({
   subsets: ['latin'],
   variable: '--font-architects-daughter',
+  weight: '400',
+  display: 'swap'
+})
+
+const zen_dots = Zen_Dots({
+  subsets: ['latin'],
+  variable: '--font-zen-dots',
   weight: '400',
   display: 'swap'
 })

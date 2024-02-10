@@ -1,6 +1,6 @@
-export default function Newsletter() {
+export default function ContactUs() {
   return (
-    <section>
+    <section id="contact-us">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* CTA box */}
@@ -24,26 +24,40 @@ export default function Newsletter() {
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
               <h3 className="h3 text-white mb-2">Contact Us</h3>
-              <p className="text-white-100/75 text-lg">Got questions? We'd love to hear from you. Reach out to us and let's start the conversation.</p>
+              <p className="text-white-100/75 text-lg">Got questions? We'd love to hear from you. Reach out and let's start the conversation.</p>
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2 flex flex-col gap-2">
-              <p className="text-xl text-white-100 -mb-2">Name:</p>
-              <input className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Your name..." aria-label="Your name..." />
-              <p className="text-xl text-white-100 -mb-2">Email:</p>
-              <input type="email" className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Your best email…" aria-label="Your best email…" />
-              <p className="text-xl text-white-100 -mb-2">Function:</p>
-              <label className="w-full lg:w-1/2 flex flex-col-2 items-center gap-2">
-                <input type="Radio" value="Player" name="Function" /> Player
-                <input className="ml-8" type="Radio" value="Game Studio" name="Function" /> Studio
-              </label>
-
-              <p className="text-xl text-white-100 -mb-2">Message:</p>
-              <textarea className="w-full appearance-none bg-gray-600/75 border border-gray-800/75 focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white resize-y" placeholder="I love your product..." aria-label="I love your product..." ></textarea>
-              <a className="btn text-red-100 bg-white hover:bg-white shadow" href="#0">Submit</a>
-              {/* Success message */}
-              {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
+            <form className="bg-black px-3 py-4 w-full">
+              <div className="flex flex-wrap -mx-3 mb-4">
+                <div className="w-full px-3">
+                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="full-name">Full Name <span className="text-red-600">*</span></label>
+                  <input id="full-name" type="text" className="form-input w-full text-gray-300" placeholder="First and last name" required />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-4">
+                <div className="w-full px-3">
+                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="company-name">Company Name </label>
+                  <input id="company-name" type="text" className="form-input w-full text-gray-300" placeholder="Your company or app name" />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-4">
+                <div className="w-full px-3">
+                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Work Email <span className="text-red-600">*</span></label>
+                  <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-4">
+                <div className="w-full px-3">
+                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Message </label>
+                  <textarea className="form-input w-full text-gray-300" placeholder="Your message here" ></textarea>
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mt-6">
+                <div className="w-full px-3">
+                  <button className="btn text-white bg-red-100 hover:bg-red-100/75 w-full">Submit</button>
+                </div>
+              </div>
             </form>
 
           </div>

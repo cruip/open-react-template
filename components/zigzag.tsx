@@ -11,15 +11,14 @@ export default function Zigzag() {
         <div className="py-12 md:py-20 border-t border-gray-800">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">How It Works</h1>
-            <p className="text-xl text-gray-400">Here's why both players and game developers benefit from using Cycle. </p>
+          <div className="max-w-3xl mx-auto text-center pb-8 md:pb-12">
+            <h1 className="h2">How It Works</h1>
           </div>
 
           {/* Items */}
           <div className="grid gap-20">
 
-          <div className=" h4 font-semibold text-center py-1 px-3 m-2 text-red-100 bg-red-100/40 rounded-full mb-4">For Players</div>
+          <div className=" h3 font-semibold text-center py-1 px-3 m-2 text-white bg-gradient-to-r from-red-100/0 via-red-100 to-red-100/0 mb-4">For Players</div>
             {/* 1st item */}
             <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Image */}
@@ -29,7 +28,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-architects-daughter text-xl text-red-100 mb-2">Better feedback. Less friction.</div>
+                  <div className="font-architects-daughter text-xl text-red-100 mb-2" >Better feedback. Less friction.</div>
                   <h3 className="h3 mb-3">Play & Easily Share your Experience</h3>
                   <p className="text-xl text-gray-400 mb-4">Play your favorite games as you normally would. Whenever you have a thought that would make your player experience better, or want to share your positive thoughts about recent changes, start a session with Cycle in-game or on the web (”web” hyperlinks to the MVP chatbot).</p>
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -86,7 +85,7 @@ export default function Zigzag() {
               </div>
             </div>
 
-            <div className=" h4 font-semibold text-center py-1 px-3 m-2 text-red-100 bg-red-100/40 rounded-full mb-4">For Game Studios</div>
+            <div className=" h3 font-semibold text-center py-1 px-3 m-2 text-white bg-gradient-to-r from-red-100/0 via-red-100 to-red-100/0 mb-4">For Game Studios</div>
             {/* 3rd item */}
             <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
               {/* Image */}
@@ -96,7 +95,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-architects-daughter text-xl text-red-100 mb-2">MLess Pain. More Alignment.</div>
+                  <div className=" text-xl text-red-100 mb-2">MLess Pain. More Alignment.</div>
                   <h3 className="h3 mb-3">Shape the Future with Better Questions</h3>
                   <p className="text-xl text-gray-400 mb-4">Through intelligent, conversational feedback gathering, Cycle gathers deep insights on gameplay, bugs, balance changes, and more. We drill down to the “why” of product feedback, and make the feedback cycle process 10x more valuable.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -132,7 +131,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <div className="font-architects-daughter text-xl text-red-100 mb-2">Build player delight. Reduce development missteps.</div>
+                  <div className=" text-xl text-red-100 mb-2">Build player delight. Reduce development missteps.</div>
                   <h3 className="h3 mb-3">Less Mistakes. Shorter Cycles.</h3>
                   <p className="text-xl text-gray-400 mb-4">When shipping changes, Cycle's tooling let's your game directors and product managers change your CycleBot to ask about recent changes. Hear what players like about recent changes, what they don't, and why. Less community backlash, more of what players like.</p>
                   <ul className="text-lg text-gray-400 -mb-2">

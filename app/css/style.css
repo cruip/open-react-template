@@ -9,6 +9,8 @@
 
 @import 'tailwindcss/utilities';
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Zen+Dots&display=swap');
+
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
 @layer utilities {
     .rtl {

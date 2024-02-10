@@ -43,7 +43,8 @@ module.exports = {
       },
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],
-        'architects-daughter': ['var(--font-architects-daughter)', 'sans-serif']
+        'architects-daughter': ['var(--font-architects-daughter)', 'sans-serif'],
+        'Zen-Dots': ['"Zen Dots"', 'sans-serif']
       },
       fontSize: {
         xs: '0.75rem',
@@ -74,6 +75,9 @@ module.exports = {
       scale: {
         '98': '.98'
       },
+      backgroundImage: {
+        'hero-pattern' : "url('/public/images/hero-background.jpeg')"
+      }
     },
   },
   plugins: [
