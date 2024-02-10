@@ -18,9 +18,9 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16 ">
             <h1 className="h1 mb-4" data-aos="fade-up">Welcome to Cycle</h1>
             <p className="text-xl text-gray-400" data-aos="fade-up" data-aos-delay="200">At Cycle, we're not just changing the game; we're redefining the way game studios interact with their most valuable asset - </p>
-            <p className="text-xl text-red-100 font-bold" data-aos="fade-up" data-aos-delay="200">us,</p>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">the players!</p>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Our feedback tool overhauls the feedback cycle, and uses AI to bridge the gap between gamers and developers like never before. We ensure that your valuable feedback for the game doesn't just get heard: it gets understood.</p>
+            <p className="text-xl text-red-100 font-bold" data-aos="fade-up" data-aos-delay="200">us</p>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">the players.</p>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">We overhaul the feedback cycle, and use AI to bridge the gap between gamers and developers. Cycle makes sure valuable feedback doesn't just get heard: it gets understood.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-red-100 hover:bg-red-100/75 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Try Demo</a>
