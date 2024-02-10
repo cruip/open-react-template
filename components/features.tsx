@@ -26,7 +26,7 @@ export default function Features() {
                 </defs>
               </svg>
               <h4 className="h4 mb-2">Targeted Questioning</h4>
-              <p className="text-lg text-gray-400 text-center">Our generative AI technology doesn't just collect one-way feedback; it engages in meaningful conversations. By asking targeted, context-aware questions, we dive deeper into your gaming experience to uncover the insights that matter most. Chat about recent balance changes, upcoming map patches, and plans for future expansions.</p>
+              <p className="text-lg text-gray-400 text-center">Cycle is better than the status quo one-way feedback; it engages in meaningful conversations. By asking targeted, context-aware questions, we dive deeper into your gaming experience to uncover the insights that matter most. Chat about recent balance changes, upcoming map patches, and plans for future expansions.</p>
             </div>
 
             {/* 2nd item */}
@@ -71,7 +71,7 @@ export default function Features() {
               </svg>
 
               <h4 className="h4 mb-2 text-center">Actionable Insights for Developers</h4>
-              <p className="text-lg text-gray-400 text-center">We translate your feedback into actionable insights for game studios. This means your specific feedback doesn't stay stuck in forums to comb through -  it's transformed into weekly reports for developers to know how recent game changes have influenced players.  We specialize in shrinking the gap between the playerbase and game studios.</p>
+              <p className="text-lg text-gray-400 text-center">Your feedback doesn't stay stuck in forums to comb through -  it's transformed into  reports for developers to know how recent game changes have influenced players.  We specialize in shrinking the gap between the playerbase and game studios.</p>
             </div>
 
             {/* 4th item */}

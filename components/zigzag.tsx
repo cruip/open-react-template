@@ -42,7 +42,7 @@ export default function Zigzag() {
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Optionally connect your game account </span>
+                      <span>Optionally connect with your in-game account </span>
                     </li>
                   </ul>
                 </div>
@@ -60,7 +60,7 @@ export default function Zigzag() {
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
                   <div className="font-architects-daughter text-xl text-red-100 mb-2">Win win. For players and studios.</div>
                   <h3 className="h3 mb-3">Converse, Contribute and Receive</h3>
-                  <p className="text-xl text-gray-400 mb-4">Get in-game rewards for making the game better. Be heard by game developers, and help developers on their most pressing changes. Contribute more than a “Contact Us Page” that goes nowhere.</p>
+                  <p className="text-xl text-gray-400 mb-4">Get in-game rewards for making the game better. Be heard by game developers, and help them decide on their most pressing changes. Contribute more than a “Contact Us Page” that goes nowhere.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +95,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className=" text-xl text-red-100 mb-2">MLess Pain. More Alignment.</div>
+                  <div className=" text-xl text-red-100 mb-2">Less User Pain. More Alignment.</div>
                   <h3 className="h3 mb-3">Shape the Future with Better Questions</h3>
                   <p className="text-xl text-gray-400 mb-4">Through intelligent, conversational feedback gathering, Cycle gathers deep insights on gameplay, bugs, balance changes, and more. We drill down to the “why” of product feedback, and make the feedback cycle process 10x more valuable.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -103,7 +103,7 @@ export default function Zigzag() {
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Pointed questions, the product team selects</span>
+                      <span>Product team selects pressing feedback priorities</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@ export default function Zigzag() {
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Isolate player pain points</span>
+                      <span>Isolate user pain points</span>
                     </li>
                   </ul>
                 </div>
@@ -131,27 +131,27 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <div className=" text-xl text-red-100 mb-2">Build player delight. Reduce development missteps.</div>
-                  <h3 className="h3 mb-3">Less Mistakes. Shorter Cycles.</h3>
-                  <p className="text-xl text-gray-400 mb-4">When shipping changes, Cycle's tooling let's your game directors and product managers change your CycleBot to ask about recent changes. Hear what players like about recent changes, what they don't, and why. Less community backlash, more of what players like.</p>
+                  <div className=" text-xl text-red-100 mb-2">Improve player delight. Reduce development missteps.</div>
+                  <h3 className="h3 mb-3">Less Mistakes. Tighter Cycles.</h3>
+                  <p className="text-xl text-gray-400 mb-4">When shipping changes, Cycle's company tooling let's your game directors and product managers change your CycleBot to ask about the studios KPI's. Hear what players like about recent changes, what they don't, and why. Less community backlash, more of what players like.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Quickly recognize improper changes</span>
+                      <span>Quickly recognize update impacts</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Lean into what consistently pleases your customers</span>
+                      <span>Lean into what consistently pleases your users</span>
                     </li>
                     <li className="flex items-center">
                       <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Find novel areas for change.</span>
+                      <span>Find novel areas for change</span>
                     </li>
                   </ul>
                 </div>
