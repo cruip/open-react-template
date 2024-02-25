@@ -21,20 +21,14 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link
-                  href="/signin"
+                <a
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  href="https://chat.whatsapp.com/KiUPGNefJ9AGngLgO69cGr"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Donate / Contribute
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/signup"
-                  className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3"
-                >
-                  Join Us
-                </Link>
+                  Join Whatsapp
+                </a>
               </li>
             </ul>
           </nav>

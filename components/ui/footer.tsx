@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/images/logo.png";
+import Tooltip from "../Tooltip";
 
 export default function Footer() {
   return (
@@ -31,15 +32,8 @@ export default function Footer() {
                 <h6 className="text-gray-200 font-medium mb-1">Donate</h6>
                 <ul>
                   <li className="mb-1">
-                    <a
-                      href="https://www.amazon.com/?&_encoding=UTF8&tag=imaan0bd-20&linkCode=ur2&linkId=c88e3ca8a369dd52a5e841cb314bc535&camp=1789&creative=9325"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                      target="_blank"
-                    >
-                      By Shopping on Amazon
-                    </a>
+                    <p>Zelle: 929-301-6487</p>
                   </li>
-
                   <li className="mb-1">
                     <a
                       href="https://www.zeffy.com/en-US/donation-form/7ee3d4a2-6e81-471d-8255-06f0d1f9be08"
@@ -47,6 +41,15 @@ export default function Footer() {
                       target="_blank"
                     >
                       Support with Zeffy
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      href="https://www.amazon.com/?&_encoding=UTF8&tag=imaan0bd-20&linkCode=ur2&linkId=c88e3ca8a369dd52a5e841cb314bc535&camp=1789&creative=9325"
+                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
+                      target="_blank"
+                    >
+                      By Shopping on Amazon
                     </a>
                   </li>
                   <li className="mb-1">
@@ -66,44 +69,49 @@ export default function Footer() {
                 <h6 className="text-gray-200 font-medium mb-1">Resources</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Aqeedah Class
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="relative inline-block">
+                        <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                          Aqeedah Class
+                        </div>
+                      </div>
+                    </Tooltip>
                   </li>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Islamic Classes For Kids
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="relative inline-block">
+                        <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                          Islamic Classes For Kids
+                        </div>
+                      </div>
+                    </Tooltip>
                   </li>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Qur'an Class
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="relative inline-block">
+                        <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                          Qur'an Classes
+                        </div>
+                      </div>
+                    </Tooltip>
                   </li>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Arabic Class
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="relative inline-block">
+                        <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                          Arabic Classes
+                        </div>
+                      </div>
+                    </Tooltip>
                   </li>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      Books
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="relative inline-block">
+                        <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                          Books
+                        </div>
+                      </div>
+                    </Tooltip>
                   </li>
                 </ul>
               </div>
@@ -113,28 +121,30 @@ export default function Footer() {
                 <h6 className="text-gray-200 font-medium mb-1">Company</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      The Origin Story
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="relative inline-block">
+                        <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                          The Origin Story
+                        </div>
+                      </div>
+                    </Tooltip>
                   </li>
                   <li className="mb-1">
-                    <Link
-                      href="/"
-                      className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
-                    >
-                      The Shura
-                    </Link>
+                    <Tooltip content="Coming Soon">
+                      <div className="text-gray-800 hover:text-gray-100 transition duration-150 ease-in-out cursor-not-allowed">
+                        Meet The Shura
+                      </div>
+                    </Tooltip>
                   </li>
                   <li className="mb-1">
-                    <Link
-                      href="/"
+                    <a
+                      href="https://maps.app.goo.gl/8Jn9t21YQ51UicqH8"
                       className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Location
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -154,7 +164,7 @@ export default function Footer() {
                   <svg viewBox="0 0 32 32" className="w-8 h-8 fill-current">
                     <path
                       d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     ></path>
                   </svg>
                 </a>

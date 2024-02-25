@@ -11,23 +11,17 @@ export default function Banner() {
         <div className="fixed bottom-0 right-0 w-full md:bottom-8 md:right-12 md:w-auto z-50">
           <div className="bg-slate-800 text-slate-50 text-sm p-3 md:rounded shadow-lg flex justify-between">
             <div className="text-slate-500 inline-flex">
-              <a
-                className="font-medium hover:underline text-slate-50"
-                href="https://github.com/cruip/open-react-template"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit us
-                <span className="hidden sm:inline"> at Melissa, Texas</span>
-              </a>{" "}
+              <p className="font-medium hover:underline text-slate-50">
+                Visit us at Melissa, Texas
+              </p>{" "}
               <span className="italic px-1.5">or</span>{" "}
               <a
                 className="font-medium hover:underline text-emerald-400"
-                href="https://cruip.com/open-pro/"
+                href="https://chat.whatsapp.com/KiUPGNefJ9AGngLgO69cGr"
                 target="_blank"
                 rel="noreferrer"
               >
-                Join Whatsapp Community
+                Join Community
               </a>
             </div>
             <button
