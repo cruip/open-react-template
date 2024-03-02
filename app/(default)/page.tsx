@@ -10,14 +10,19 @@ import Features from '@/components/features'
 import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
 import Testimonials from '@/components/testimonials'
+import Blocks from "@/components/blocks"
+import Cheatsheets from "@/components/cheatsheets"
+import GCSEPredicted from "@/components/gcsePredicted"
 
 export default function Home() {
   return (
     <>
       <Hero />
       <GCSEpaper />
-
-      
+      <Blocks/>
+      <Cheatsheets/>
+      <GCSEPredicted/>
+      <Zigzag/>
     </>
   )
 }

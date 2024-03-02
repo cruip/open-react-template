@@ -1,4 +1,7 @@
 import React from 'react'
+import Requestatopic from '@/components/requestatopic'
+
+
 export const metadata = {
     title: 'The GCSE Computer Science Tutor',
     description: 'Page description',
@@ -6,7 +9,7 @@ export const metadata = {
 function page() {
   return (
     <>
-        <h1>Coming Soon</h1>
+        <Requestatopic/>
     </>
   )
 }

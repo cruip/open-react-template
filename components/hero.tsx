@@ -26,14 +26,14 @@ export default function Hero() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4 text-purple-600" data-aos="fade-up">The GCSE Computer Science Tutor</h1>
-            <p className="text-xl text-blue-800 mb-8" data-aos="fade-up" data-aos-delay="200">I am a Computer Science Student at University and the aim of this website is to give away resources, free of charge!
-              It will give me absolute pleasure to know that I have contributed to the education of computer science and to the development of upcoming computer scientists. Drop a follow to help me out!</p>
+            <p className="text-xl text-blue-800 mb-8" data-aos="fade-up" data-aos-delay="200">I am a Computer Science and Mathematics Student at University.
+              I know hard it can be with teachers not teaching properly, from experience, hence why I have started this to help as many computer science students as I can. Drop a follow to help me out! Lets get the tiktok to 10k 🎯</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="https://www.tiktok.com/@gcse_computerscience" target='_blank'>Watch some Tutorials</a>
+                <a className="btn text-white bg-purple-600 rounded-full hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="https://www.tiktok.com/@gcse_computerscience" target='_blank'>Watch some Tutorials</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-blue-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
+                <a className="btn text-white bg-blue-700 rounded-full hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="/A-Level-Resources">A Level Resources</a>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function Hero() {
               </Link>
             </li>
             <li className="ml-4">
-              <Link href="https://www.tiktok.com/@gcse_computerscience"  target="_blank" rel="noopener noreferrer" className="flex justify-center items-center text-purple-600 bg-gray-800 hover:text-gray-100 hover:bg-purple-600 rounded-full transition duration-150 ease-in-out" aria-label="TikTok">
+              <Link href="https://www.tiktok.com/@gcse_computerscience" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center text-purple-600 bg-gray-800 hover:text-gray-100 hover:bg-purple-600 rounded-full transition duration-150 ease-in-out" aria-label="TikTok">
                 <svg className="w-8 h-8 fill-current" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 23.773438 12 C 12.855437 12 12 12.854437 12 23.773438 L 12 40.226562 C 12 51.144563 12.855438 52 23.773438 52 L 40.226562 52 C 51.144563 52 52 51.145563 52 40.226562 L 52 23.773438 C 52 12.854437 51.145563 12 40.226562 12 L 23.773438 12 z M 21.167969 16 L 42.832031 16 C 47.625031 16 48 16.374969 48 21.167969 L 48 42.832031 C 48 47.625031 47.624031 48 42.832031 48 L 21.167969 48 C 16.374969 48 16 47.624031 16 42.832031 L 16 21.167969 C 16 16.374969 16.374969 16 21.167969 16 z M 32.740234 19.693359 L 32.740234 36.294922 C 32.740234 38.576922 30.756031 39.755859 29.332031 39.755859 C 28.259031 39.755859 25.818359 38.914578 25.818359 36.267578 C 25.818359 33.488578 28.095422 32.779297 29.357422 32.779297 C 30.092422 32.779297 30.380859 32.9375 30.380859 32.9375 L 30.380859 28.507812 C 30.380859 28.507813 29.830172 28.425781 29.201172 28.425781 C 24.682172 28.425781 21.464844 32.083578 21.464844 36.267578 C 21.464844 39.802578 24.229297 44.082031 29.279297 44.082031 C 34.658297 44.082031 37.121094 39.595969 37.121094 36.292969 L 37.121094 28.058594 C 37.121094 28.058594 39.518422 29.736328 42.732422 29.736328 L 42.732422 25.541016 C 39.045422 25.278016 37.0745 22.801359 36.9375 19.693359 L 32.740234 19.693359 z"></path>
                 </svg>
@@ -55,14 +55,21 @@ export default function Hero() {
             <li className="ml-4">
               <Link href="https://www.instagram.com/thegcsecomputersciencetutor?igsh=dTBvZW0yZHBhanl2&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center text-purple-600 bg-gray-800 hover:text-gray-100 hover:bg-purple-600 rounded-full transition duration-150 ease-in-out" aria-label="Instagram">
                 <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20.145" cy="11.892" r="1" />
-                    <path d="M16 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" />
-                    <path d="M20 24h-8c-2.056 0-4-1.944-4-4v-8c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zm-8-14c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2v-8c0-.935-1.065-2-2-2h-8z" />
+                  <circle cx="20.145" cy="11.892" r="1" />
+                  <path d="M16 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" />
+                  <path d="M20 24h-8c-2.056 0-4-1.944-4-4v-8c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zm-8-14c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2v-8c0-.935-1.065-2-2-2h-8z" />
                 </svg>
               </Link>
             </li>
-            
+
           </ul>
+          <div className=''> 
+          <iframe className='mx-auto mt-10 h-96 w-[350px] md:w-[550px]'  src="https://www.youtube.com/embed/mKGYn5qU3N0" title="How to get GRADE 9 for GCSE Computer Science"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            
+          </iframe>
+
+          </div>
+          
 
         </div>
 

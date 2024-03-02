@@ -21,9 +21,9 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link href="/A-Level-Resources" className="text-blue-600 ml-3">
+                {/* <Link href="/A-Level-Resources" className="text-blue-600 ml-3">
                   A Level Resources
-                </Link>
+                </Link> */}
                 <Link href="/Request-a-Topic" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
                   Request a Topic
                 </Link>

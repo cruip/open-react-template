@@ -13,7 +13,7 @@ export default function Banner() {
             <div className="text-slate-500 inline-flex">
               <a
                 className="font-medium hover:underline text-slate-50"
-                href=""
+                href="https://www.tiktok.com/@gcse_computerscience"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -21,7 +21,7 @@ export default function Banner() {
               </a>{' '}
               <span className="italic px-1.5">or</span>{' '}
               <a className="font-medium hover:underline text-emerald-400" href="https://www.tiktok.com/@gcse_computerscience" target="_blank" rel="noreferrer">
-                Check out my Tiktok
+                Follow my Tiktok
               </a>
             </div>
             <button className="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-gray-700" onClick={() => setBannerOpen(false)}>

@@ -20,7 +20,7 @@ export default function Footer() {
                   </svg>
                 </Link>
               </div>
-              <div className="text-gray-400">We are here to provide you with more resources, to help you achieve the best grades possible.</div>
+              <div className="text-gray-400">We are here to provide you with more resources, to help you achieve the best grades possible for computer science.</div>
             </div>
 
             
