@@ -21,7 +21,7 @@ function gcsePredicted() {
 
         </div>
         <div className='w-fit mx-auto'>
-        <Link href="/Request-a-Topic" className="btn-sm rounded-full text-white bg-blue-700 mb-10 hover:bg-purple-700 ">
+        <Link href="https://www.tiktok.com/@gcse_computerscience" className="btn-sm rounded-full text-white bg-blue-700 mb-10 hover:bg-purple-700 ">
                   Drop a follow!
                 </Link>
 

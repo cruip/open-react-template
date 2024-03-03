@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4 text-purple-600" data-aos="fade-up">The GCSE Computer Science Tutor</h1>
             <p className="text-xl text-blue-800 mb-8" data-aos="fade-up" data-aos-delay="200">I am a Computer Science and Mathematics Student at University.
-              I know hard it can be with teachers not teaching properly, from experience, hence why I have started this to help as many computer science students as I can. Drop a follow to help me out! Lets get the tiktok to 10k 🎯</p>
+              I know how hard it can be with teachers not teaching properly, from experience, hence why I have started this to help as many computer science students as I can. Drop a follow to help me out! Lets get the tiktok to 10k 🎯</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-purple-600 rounded-full hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="https://www.tiktok.com/@gcse_computerscience" target='_blank'>Watch some Tutorials</a>
