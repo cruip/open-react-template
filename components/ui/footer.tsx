@@ -58,7 +58,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4">&copy; thegcsecomputersciencetutor.co.uk. All rights reserved.</div>
+            <div className="text-gray-400 text-sm mr-4">&copy; gcsecomputersciencetutor.vercel.app All rights reserved.</div>
 
           </div>
 
