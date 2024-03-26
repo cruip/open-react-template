@@ -64,8 +64,7 @@ export default function Hero() {
 
           </ul>
           <div className=''> 
-          <iframe className='mx-auto mt-10 h-96 w-[350px] md:w-[550px]'  src="https://www.youtube.com/embed/mKGYn5qU3N0" title="How to get GRADE 9 for GCSE Computer Science"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-            
+          <iframe className='mx-auto mt-10 h-96 w-[350px] md:w-[550px]' src="https://www.youtube.com/embed/BrSea_7feao" title="60 Days until GCSEs 2024: How to go from Grade 5 to Grade 9 in Computer Science" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
           </iframe>
 
           </div>

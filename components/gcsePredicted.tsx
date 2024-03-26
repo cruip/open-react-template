@@ -10,10 +10,10 @@ function gcsePredicted() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-8 md:pb-16">
             <h2 className="h2 mb-4">Predicted Papers</h2>
-            <p className="text-xl text-gray-500">Coming very soon. Let's get the tiktok page to 10k followers to help as many people out as possible!</p>
+            <p className="text-xl text-gray-500">Let's get the tiktok page to 10k followers to help as many people out as possible! Paper 2 coming soon. I won't be uploading a markscheme but will instead go through this paper LIVE and also upload a walkthrough on my youtube channel. So go subscribe and drop a follow!!!!!</p>
           </div>
             <div className='flex flex-col'>
-                <a href="https://www.tiktok.com/@gcse_computerscience" target="_blank" className='w-fit mx-auto' rel="noopener noreferrer">Predicted Paper 1 - OCR SPEC</a>
+                <a href="/PredictedPapers/OCR Predicted Paper 1 2024.pdf" target="_blank" className='w-fit mx-auto' rel="noopener noreferrer">Predicted Paper 1 - OCR SPEC</a>
             </div>
 
             
