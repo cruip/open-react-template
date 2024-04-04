@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'brand-gold': '#FDDF93',
         gray: {
           100: '#EBF1F5',
           200: '#D9E3EA',
