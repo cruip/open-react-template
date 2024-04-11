@@ -12,12 +12,20 @@ import {auth} from "@/utils/firebase";
 import {User, createUserWithEmailAndPassword} from "firebase/auth";
 import {User as UserDb} from "../../types/UserDataModels";
 import Link from "next/link";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {useSearchParams} from "next/navigation";
 
 export default function SignUp() {
-  const search = useSearchParams();
-  const paymentLink = search.get("paymentLink");
+  const [paymentLink, setPaymentLink] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const link = params.get('paymentLink');
+    if (link) {
+      setPaymentLink(link);
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
