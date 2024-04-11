@@ -10,6 +10,7 @@ import {createUserInDb} from "@/app/services/firestore/userDataAccess";
 import {createOrUpdateBrevoContact} from "@/app/services/brevo/brevo";
 import {auth} from "@/utils/firebase";
 import {User, createUserWithEmailAndPassword} from "firebase/auth";
+import {User as UserDb} from "../../types/UserDataModels";
 import Link from "next/link";
 import {useState} from "react";
 import {useSearchParams} from "next/navigation";
@@ -33,7 +34,7 @@ export default function SignUp() {
     7, // List ID for the "Website" list
   ];
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; type: any; checked: any; }; }) => {
     const {name, value, type, checked} = e.target;
     if (type === "checkbox" && name === "newsletter") {
       setIsNewsletterSubscribed(checked);
@@ -46,7 +47,7 @@ export default function SignUp() {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
@@ -54,9 +55,9 @@ export default function SignUp() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
 
-      const newUser: User = {
+      const newUser: UserDb = {
         userId: userCredential.user.uid,
-        email: userCredential.user.email,
+        email: userCredential.user.email || '', // If email is null, assign an empty string
         properties: [],
         isSubscribed: false,
       };
@@ -84,7 +85,7 @@ export default function SignUp() {
         // TODO: Redirect to the dashboard after successful sign-up
       }
     } catch (error) {
-      setError(error.message);
+      setError((error as Error).message);
     } finally {
       setIsLoading(false);
     }

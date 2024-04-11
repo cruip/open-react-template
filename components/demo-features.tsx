@@ -3,29 +3,29 @@ import ModalVideo from "@/components/modal-video";
 import VideoThumb from "@/public/images/video-thumb.png";
 
 interface VideoProps {
-  video: string;
-  thumb: string;
-  thumbWidth: number;
-  thumbHeight: number;
-  thumbAlt: string;
-  videoWidth: number;
-  videoHeight: number;
-  heading: string;
-  paragraph: string;
-  buttonText: string;
+  // video: string;
+  // thumb: string;
+  // thumbWidth: number;
+  // thumbHeight: number;
+  // thumbAlt: string;
+  // videoWidth: number;
+  // videoHeight: number;
+  // heading: string;
+  // paragraph: string;
+  // buttonText: string;
 }
 
 const VideoComponent: React.FC<VideoProps> = ({
-  video,
-  thumb,
-  thumbWidth,
-  thumbHeight,
-  thumbAlt,
-  videoWidth,
-  videoHeight,
-  heading,
-  paragraph,
-  buttonText,
+  // video,
+  // thumb,
+  // thumbWidth,
+  // thumbHeight,
+  // thumbAlt,
+  // videoWidth,
+  // videoHeight,
+  // heading,
+  // paragraph,
+  // buttonText,
 }) => {
   return (
     <div className="bg-white items-center">
