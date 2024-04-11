@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    eslint: {
+        quiet: true,
+      },
+}
 
 module.exports = nextConfig
