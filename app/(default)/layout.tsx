@@ -27,13 +27,13 @@ export default function DefaultLayout({
     <>
       <main className="grow">
 
-        <PageIllustration />
+        {/* <PageIllustration /> */}
 
         {children}
 
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

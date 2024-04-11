@@ -7,13 +7,16 @@
 // }
 
 import {createUserInDb} from "@/app/services/firestore/userDataAccess";
-import { createOrUpdateBrevoContact } from "@/app/services/brevo/brevo";
+import {createOrUpdateBrevoContact} from "@/app/services/brevo/brevo";
 import {auth} from "@/utils/firebase";
 import {User, createUserWithEmailAndPassword} from "firebase/auth";
 import Link from "next/link";
 import {useState} from "react";
+import {useSearchParams} from "next/navigation";
 
 export default function SignUp() {
+  const search = useSearchParams();
+  const paymentLink = search.get("paymentLink");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -28,10 +31,10 @@ export default function SignUp() {
   const listIds = [
     4, // List ID for the "Main" list
     7, // List ID for the "Website" list
-  ]
+  ];
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const {name, value, type, checked} = e.target;
     if (type === "checkbox" && name === "newsletter") {
       setIsNewsletterSubscribed(checked);
     } else {
@@ -47,7 +50,7 @@ export default function SignUp() {
     e.preventDefault();
     setIsLoading(true);
     setError("");
-  
+
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
 
@@ -63,7 +66,23 @@ export default function SignUp() {
       if (isNewsletterSubscribed) {
         listIds.push(6);
       }
-      await createOrUpdateBrevoContact(formData.email, userCredential.user.uid, listIds);
+      await createOrUpdateBrevoContact(formData.email, listIds, userCredential.user.uid);
+      if (paymentLink) {
+        const url = new URL(paymentLink);
+        // Get the existing search parameters or create a new URLSearchParams object
+        const params = url.searchParams || new URLSearchParams();
+
+        // Add the email parameter
+        params.set("prefilled_email", formData.email);
+
+        // Update the search parameters of the URL
+        url.search = params.toString();
+
+        // Redirect to the updated URL
+        window.location.href = url.toString();
+      } else {
+        // TODO: Redirect to the dashboard after successful sign-up
+      }
     } catch (error) {
       setError(error.message);
     } finally {
@@ -72,12 +91,14 @@ export default function SignUp() {
   };
 
   return (
-    <section className="relative">
+    <section className="relative bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Page header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h1 className="h1">Welcome. We exist to make entrepreneurship easier.</h1>
+            <h1 className="h1 text-black">
+              Simplified <br></br>Real Estate Investing
+            </h1>
           </div>
 
           {/* Form */}
@@ -85,7 +106,7 @@ export default function SignUp() {
             <form>
               <div className="flex flex-wrap -mx-3">
                 <div className="w-full px-3">
-                  <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center">
+                  <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 rounded-xl w-full relative flex items-center">
                     <svg
                       className="w-4 h-4 fill-current text-white opacity-75 shrink-0 mx-4"
                       viewBox="0 0 16 16"
@@ -118,7 +139,7 @@ export default function SignUp() {
                     id="full-name"
                     name="full-name"
                     type="text"
-                    className="form-input w-full text-gray-300"
+                    className="form-input w-full text-gray-300 rounded-xl"
                     placeholder="First and last name"
                     required
                     onChange={handleChange}
@@ -134,7 +155,7 @@ export default function SignUp() {
                     id="email"
                     name="email"
                     type="email"
-                    className="form-input w-full text-gray-300"
+                    className="form-input w-full text-gray-300 rounded-xl"
                     placeholder="you@yourcompany.com"
                     required
                     onChange={handleChange}
@@ -150,7 +171,7 @@ export default function SignUp() {
                     id="password"
                     name="password"
                     type="password"
-                    className="form-input w-full text-gray-300"
+                    className="form-input w-full text-gray-300 rounded-xl"
                     placeholder="Password (at least 10 characters)"
                     required
                     onChange={handleChange}
@@ -159,16 +180,16 @@ export default function SignUp() {
               </div>
               {/* Assuming isSubscribed is a checkbox for newsletter subscription, for example */}
               <div className="text-center mb-4">
-              <label className="inline-flex items-center">
-              <input
-                type="checkbox"
-                name="isSubscribed"
-                className="form-checkbox"
-                onChange={handleChange}
-                checked={formData.isSubscribed}
-              />
-              <span className="ml-2 text-gray-400">Subscribe to premium?</span>
-            </label>
+                <label className="inline-flex items-center">
+                  <input
+                    type="checkbox"
+                    name="isSubscribed"
+                    className="form-checkbox"
+                    onChange={handleChange}
+                    checked={formData.isSubscribed}
+                  />
+                  <span className="ml-2 text-gray-400">Get our real estate market newsletter</span>
+                </label>
               </div>
               {error && <div className="text-red-500 text-center mb-4">{error}</div>}
               <div className="flex flex-wrap -mx-3 mt-6">
@@ -176,7 +197,7 @@ export default function SignUp() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`btn text-white bg-purple-600 hover:bg-purple-700 w-full ${
+                    className={`btn text-white bg-emerald-500 hover:bg-emerald-800 w-full ${
                       isLoading ? "opacity-50 cursor-not-allowed" : ""
                     }`}
                   >
@@ -186,7 +207,7 @@ export default function SignUp() {
               </div>
             </form>
             <div className="text-gray-400 text-center mt-6">
-              Already using Open PRO?{" "}
+              Already a member?{" "}
               <Link href="/signin" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">
                 Sign in
               </Link>

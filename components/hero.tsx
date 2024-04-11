@@ -1,10 +1,10 @@
-import VideoThumb from "@/public/images/video-thumb.png";
-import ModalVideo from "@/components/modal-video";
+import AppAdvert from "@/public/images/app_advert_img.png";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section>
+    <section className="bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Illustration behind hero content */}
         <div
@@ -30,8 +30,8 @@ export default function Hero() {
                 y2="577.921"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#5D5DFF" stopOpacity=".01" />
-                <stop offset="1" stopColor="#5D5DFF" stopOpacity=".32" />
+                <stop stopColor="#FDDF93" stopOpacity=".01" />
+                <stop offset="1" stopColor="#FDDF93" stopOpacity=".32" />
               </linearGradient>
             </defs>
             <path
@@ -44,20 +44,24 @@ export default function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
+        <div className="relative pt-32 md:pt-40  md:grid-cols-2 md:grid md:space-x-10">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">
-              Keep your <span className="text-brand-gold">Real Estate Investements Sorted.</span>
+          <div className="max-w-3xl md:mt-16 pb-12 md:pb-16">
+            <h1 className="h1 mb-4 text-zinc-800" data-aos="fade-up">
+              Keep your{" "}          <br />
+              <span className="text-white p-1 rounded-lg bg-emerald-600">
+      
+                Real Estate <br /> Investements Sorted.
+              </span>
             </h1>{" "}
-            <p className="md:text-xl text-lg text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
+            <p className="md:text-xl text-lg text-zinvqw00 mb-8 text-black" data-aos="fade-up" data-aos-delay="200">
               With Property-Easy, tracking your rent, loans, and expenses is a breeze. See all your investment numbers
               in one place. Perfect for beginners and pros alike!
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <Link
-                  href="/auth/signup/page"
+                  href="/signup"
                   className="btn text-white font-bold rounded-2xl bg-gradient-to-r from-teal-500 to-emerald-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
                 >
                   Invest Smartly Now
@@ -65,15 +69,14 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
+          <Image
+            src={AppAdvert}
+            alt="App advert"
+            width={600}
+            height={600}
+            className=""
+            data-aos="fade-up"
+            data-aos-delay="600"
           />
         </div>
       </div>
