@@ -1,8 +1,8 @@
 export default function Features() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 bg">
+        <div className="pb-8 md:pb-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">
@@ -54,8 +54,8 @@ export default function Features() {
               </svg>
               <h4 className="h4 mb-2">Unique meditations</h4>
               <p className="text-lg text-gray-400 text-center">
-                Let Ascend know about an obstacle you're facing or goal you'd
-                like to achieve, and it will create a meditation just for you.
+                Ascend will make personalized, unique guided meditations just
+                for whatever you need.
               </p>
             </div>
 
@@ -94,8 +94,8 @@ export default function Features() {
               </svg>
               <h4 className="h4 mb-2">Calming experience</h4>
               <p className="text-lg text-gray-400 text-center">
-                Ascend will guide you through your meditation, with a soothing
-                selection of voices and sounds.
+                With a wide range of soothing voices and calming sounds to
+                choose, Ascend is the perfect meditation companion.
               </p>
             </div>
 
@@ -143,10 +143,10 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Personalized guru</h4>
+              <h4 className="h4 mb-2">Personal guru</h4>
               <p className="text-lg text-gray-400 text-center">
-                Ascend learns from your feedback and will adjust meditations to
-                suit your preferences.
+                Ascend learns with you and adapts to your meditation
+                preferences.
               </p>
             </div>
 
@@ -187,11 +187,9 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Voice activated</h4>
               <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+                Just chat with Ascend about how you'd like to meditate.
               </p>
             </div>
 
@@ -229,11 +227,10 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Learns from you</h4>
               <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+                One meditation missed the mark? Ascend will learn from your
+                feedback.
               </p>
             </div>
 
@@ -278,11 +275,10 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Share your meditations</h4>
               <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+                Share meditations that you find particularly helpful with your
+                friends.
               </p>
             </div>
           </div>
