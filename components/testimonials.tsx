@@ -53,7 +53,7 @@ export default function Testimonials() {
                   className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out"
                   href="#0"
                 >
-                  Student athlete
+                  Student Athlete
                 </a>
               </div>
             </div>

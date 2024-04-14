@@ -1,8 +1,10 @@
 import Image from "next/image";
 
-import FeatImage01 from "@/public/images/features-03-image-01.png";
-import FeatImage02 from "@/public/images/features-03-image-02.png";
-import FeatImage03 from "@/public/images/features-03-image-03.png";
+import Meditator from "@/public/images/meditator.jpg";
+import Galaxy from "@/public/images/galaxy.avif";
+import Galaxy2 from "@/public/images/galaxy2.jpg";
+
+import Balance from "@/public/images/balance.jpg";
 
 export default function Zigzag() {
   return (
@@ -32,10 +34,10 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage01}
+                  src={Meditator}
                   width={540}
                   height={405}
-                  alt="Features 01"
+                  alt="Meditator"
                 />
               </div>
               {/* Content */}
@@ -102,10 +104,10 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage02}
+                  src={Balance}
                   width={540}
                   height={405}
-                  alt="Features 02"
+                  alt="Balance"
                 />
               </div>
               {/* Content */}
@@ -174,10 +176,10 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage03}
+                  src={Galaxy2}
                   width={540}
                   height={405}
-                  alt="Features 03"
+                  alt="Meditator 2"
                 />
               </div>
               {/* Content */}
@@ -227,7 +229,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Amet consectetur adipiscing elit</span>
+                      <span>
+                        Embrace the limitless potential of your mind and spirit
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -243,7 +247,7 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage02}
+                  src={Galaxy}
                   width={540}
                   height={405}
                   alt="Features 02"

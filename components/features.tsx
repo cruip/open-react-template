@@ -52,11 +52,11 @@ export default function Features() {
                   strokeWidth="2"
                 />
               </svg>
-              <h4 className="h4 mb-2">Manifest Your Dreams</h4>
+              <h4 className="h4 mb-2">Personal Guru</h4>
               <p className="text-lg text-gray-400 text-center">
-                Harness the power of visualization and intention-setting to
-                manifest your aspirations and goals through guided meditation
-                exercises.
+                Receive personalized guidance and support from your A.I. guide
+                who understands your meditation journey and provides tailored
+                advice.
               </p>
             </div>
 
@@ -279,11 +279,11 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Personal Guru</h4>
+              <h4 className="h4 mb-2">Manifest Your Dreams</h4>
               <p className="text-lg text-gray-400 text-center">
-                Receive personalized guidance and support from your A.I. guide
-                who understands your meditation journey and provides tailored
-                advice.
+                Harness the power of visualization and intention-setting to
+                manifest your aspirations and goals through guided meditation
+                exercises.
               </p>
             </div>
           </div>
