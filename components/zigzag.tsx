@@ -5,6 +5,7 @@ import Galaxy from "@/public/images/galaxy.avif";
 import Galaxy2 from "@/public/images/galaxy2.jpg";
 
 import Balance from "@/public/images/balance.jpg";
+import Women from "@/public/images/women.jpg";
 
 export default function Zigzag() {
   return (
@@ -176,7 +177,7 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={Galaxy2}
+                  src={Women}
                   width={540}
                   height={405}
                   alt="Meditator 2"
