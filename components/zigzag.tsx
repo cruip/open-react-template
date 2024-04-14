@@ -177,7 +177,7 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={Women}
+                  src={Galaxy}
                   width={540}
                   height={405}
                   alt="Meditator 2"
@@ -248,7 +248,7 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={Galaxy}
+                  src={Women}
                   width={540}
                   height={405}
                   alt="Features 02"
