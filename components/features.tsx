@@ -52,10 +52,11 @@ export default function Features() {
                   strokeWidth="2"
                 />
               </svg>
-              <h4 className="h4 mb-2">Unique meditations</h4>
+              <h4 className="h4 mb-2">Manifest Your Dreams</h4>
               <p className="text-lg text-gray-400 text-center">
-                Ascend will make personalized, unique guided meditations just
-                for whatever you need.
+                Harness the power of visualization and intention-setting to
+                manifest your aspirations and goals through guided meditation
+                exercises.
               </p>
             </div>
 
@@ -92,10 +93,10 @@ export default function Features() {
                   strokeLinecap="square"
                 />
               </svg>
-              <h4 className="h4 mb-2">Calming experience</h4>
+              <h4 className="h4 mb-2">Unique Meditations</h4>
               <p className="text-lg text-gray-400 text-center">
-                With a wide range of soothing voices and calming sounds to
-                choose, Ascend is the perfect meditation companion.
+                Discover a diverse range of meditation styles and themes
+                tailored to cater to your various preferences and needs.
               </p>
             </div>
 
@@ -143,10 +144,10 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Personal guru</h4>
+              <h4 className="h4 mb-2">Calming Experience</h4>
               <p className="text-lg text-gray-400 text-center">
-                Ascend learns with you and adapts to your meditation
-                preferences.
+                Immerse yourself in a tranquil atmosphere designed to evoke a
+                sense of peace and relaxation during each meditation session.
               </p>
             </div>
 
@@ -187,9 +188,11 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Voice activated</h4>
+              <h4 className="h4 mb-2">Voice Activated</h4>
               <p className="text-lg text-gray-400 text-center">
-                Just chat with Ascend about how you'd like to meditate.
+                Enjoy hands-free control over your meditation experience through
+                seamless voice commands, enhancing convenience and
+                accessibility.
               </p>
             </div>
 
@@ -227,10 +230,11 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Learns from you</h4>
+              <h4 className="h4 mb-2">Learns From You</h4>
               <p className="text-lg text-gray-400 text-center">
-                One meditation missed the mark? Ascend will learn from your
-                feedback.
+                Adapt and evolve your meditation practice as the app learns from
+                your feedback and adjust sessions to better suit your
+                preferences over time.
               </p>
             </div>
 
@@ -275,10 +279,11 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Share your meditations</h4>
+              <h4 className="h4 mb-2">Personal Guru</h4>
               <p className="text-lg text-gray-400 text-center">
-                Share meditations that you find particularly helpful with your
-                friends.
+                Receive personalized guidance and support from your A.I. guide
+                who understands your meditation journey and provides tailored
+                advice.
               </p>
             </div>
           </div>

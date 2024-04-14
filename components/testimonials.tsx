@@ -48,7 +48,7 @@ export default function Testimonials() {
                 focused on my goals so I can surpass my limits.
               </blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700 flex justify-between">
-                <cite className="text-gray-200 not-italic">Person one</cite> -{" "}
+                <cite className="text-gray-200 not-italic">Stacy Taylor</cite>
                 <a
                   className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out"
                   href="#0"
@@ -88,12 +88,12 @@ export default function Testimonials() {
                 me build my confidence and feel like I belong in my field.
               </blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700 flex justify-between">
-                <cite className="text-gray-200 not-italic">Person two</cite> -{" "}
+                <cite className="text-gray-200 not-italic">James Anderson</cite>
                 <a
                   className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out"
                   href="#0"
                 >
-                  Consultant
+                  Software Engineer
                 </a>
               </div>
             </div>
@@ -125,11 +125,11 @@ export default function Testimonials() {
               <blockquote className="text-lg text-gray-400 grow">
                 — I was feeling overwhelmed with my courses and amount of work I
                 had to do. It felt like anxiety and stress were taking over my
-                life. I started using Ascend and feel like college is manageable
+                life. I started using Ascend and feel like school is manageable
                 again.
               </blockquote>
               <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700 flex justify-between">
-                <cite className="text-gray-200 not-italic">Person three</cite>
+                <cite className="text-gray-200 not-italic">Tim Williams</cite>
                 <a
                   className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out"
                   href="#0"
