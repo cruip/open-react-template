@@ -93,7 +93,7 @@ export default function BlankFooter() {
 
             {/* Copyrights note */}
             <div className="text-gray-400 text-sm mr-4">
-              &copy; Ascendmeditations.com. All rights reserved.
+              &copy; Ascendmeditations.app. All rights reserved.
             </div>
           </div>
         </div>
