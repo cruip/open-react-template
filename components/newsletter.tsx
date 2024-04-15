@@ -1,4 +1,59 @@
+"use client";
+import { useState, FormEvent } from "react";
+import {
+  doc,
+  getFirestore,
+  setDoc,
+  serverTimestamp,
+  collection,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
+import { app } from "../app/firebase/firebase";
+
 export default function Newsletter() {
+  //state for email signup
+  const [email, setEmail] = useState<string>("");
+  const [subscribed, setSubscribed] = useState<boolean>(false);
+
+  //initialize firestore
+  const db = getFirestore(app);
+  //submit form function
+  const submitForm = async (e: FormEvent<HTMLFormElement>) => {
+    console.log("submitting form");
+    e.preventDefault();
+    //check if email is valid
+    if (!email) {
+      alert("Please enter an email address");
+      return;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+      alert("Please enter a valid email address");
+      return;
+    }
+    //check if email is already subscribed
+    const listMembersRef = collection(db, "leads");
+    const q = query(listMembersRef, where("email", "==", email));
+    const querySnapshot = await getDocs(q);
+    if (querySnapshot.size > 0) {
+      //if email is already subscribed, alert user
+      alert("This email is already in our system");
+      return;
+    } else {
+      //subscribe email
+      await setDoc(doc(db, "leads", email), {
+        email: email,
+        timestamp: serverTimestamp(),
+      });
+
+      //reset email state
+      setEmail("");
+      //set subscribed state to true
+      setSubscribed(true);
+    }
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -50,20 +105,29 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2">
+            <form className="w-full lg:w-1/2" onSubmit={(e) => submitForm(e)}>
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
                 <input
+                  name="email"
                   type="email"
-                  className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400"
+                  autoComplete="email"
+                  className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400 "
                   placeholder="Your best email…"
                   aria-label="Your best email…"
+                  value={email}
+                  onChange={(e) => {
+                    const newEmail = e.target.value;
+                    setEmail(newEmail);
+                    console.log("newEmail: ", newEmail);
+                    console.log("email: ", email);
+                  }}
                 />
-                <a
+                <input
+                  name="submit"
                   className="btn text-purple-600 bg-purple-100 hover:bg-white shadow"
-                  href="#0"
-                >
-                  Subscribe
-                </a>
+                  value="Subscribe"
+                  type="submit"
+                ></input>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
