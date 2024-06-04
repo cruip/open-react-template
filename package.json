@@ -17,19 +17,21 @@
     "@types/react-dom": "^18.2.4",
     "aos": "^3.0.0-beta.6",
     "form-data": "^4.0.0",
-    "mailgun": "^0.5.0",
-    "next": "^13.5.2",
+    "highlight.js": "^11.9.0",
+    "next": "^14.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.6",
+    "tw-elements-react": "^1.0.0-alpha-end",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@types/aos": "^3.0.4",
     "autoprefixer": "^10.4.14",
+    "classnames": "^2.5.1",
     "eslint": "8.50.0",
-    "eslint-config-next": "13.5.3",
+    "eslint-config-next": "^14.1.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
   }

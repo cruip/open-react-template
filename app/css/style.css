@@ -8,6 +8,7 @@
 @import 'additional-styles/theme.css';
 @import 'additional-styles/svg-animation.css';
 @import 'additional-styles/animations.css';
+@import 'additional-styles/variables.css';
 
 @import 'tailwindcss/utilities';
 
@@ -36,6 +37,14 @@
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
     -o-border-radius: 60px;
+}
+
+.hover\:btn-lift:hover {
+    transform: var(--btnHover-transform);
+    box-shadow: var(--btnHover-boxShadow);
+}
+.hover\:btn-lift {
+    transition: 0.3s all ease-in-out;
 }
 
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */

@@ -4,6 +4,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './node_modules/tw-elements-react/dist/js/**/*.js',
   ],
   theme: {
     extend: {
@@ -78,6 +79,8 @@ module.exports = {
     },
   },
   plugins: [
+    require("tw-elements-react/dist/plugin.cjs"),
     require('@tailwindcss/forms'),
   ],
+  darkMode: "class",
 }

@@ -25,8 +25,6 @@ export function AnimatedBackground() {
         style={{ width: "100%", height: "50%" }}
         direction="1"
         mode="normal"
-        loop
-        autoplay
       ></lottie-player>
     </div>
   );

@@ -1,0 +1,6 @@
+:root {
+  --sampleArea-w-210: 210px;
+  --sampleArea-h-330: 330px;
+  --btnHover-boxShadow: 3px 3px 0 0 rgb(10, 133, 123);
+  --btnHover-transform: translate(-2px, -2px);
+}

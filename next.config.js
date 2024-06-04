@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -7,9 +8,13 @@ const nextConfig = {
       port: "",
     }]
   },
-  experimental: {
-    serverActions: true,
-    serverActionsBodySizeLimit: '2mb',
+  webpack: (config, { isServer }) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "tw-elements":
+        "tw-elements/js/tw-elements.umd.min.js",
+    };
+    return config;
   },
 }
 
