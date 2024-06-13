@@ -1,7 +1,9 @@
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import MobileMenu from './mobile-menu'
 import headshotAvatar from '@/public/images/headshot-avatar.webp'
+import HeaderTitle from '../header-title'
 
 export default function Header() {
   return (
@@ -14,8 +16,9 @@ export default function Header() {
             <Link href="/" className="block">
               <Image src={headshotAvatar} alt="Headshot: Keith Nickas" className="head-shot" />
             </Link>
+            
           </div>
-
+          <HeaderTitle />
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}

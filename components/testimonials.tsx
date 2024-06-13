@@ -31,7 +31,8 @@ export default function Testimonials() {
               </div>
               <blockquote className="text-lg text-grey-100 grow">Keith has saved the day for our team more times than I can remember. He has a deep understanding of many of the technologies we use day to day, but more importantly, he has intimate knowledge on how those things are configured and used for our project.  If it weren’t for his expertise on these topics our team would’ve certainly missed important deployment deadlines.</blockquote>
               <div className="text-gray-100 font-medium mt-6 pt-5 border-t border-gray-700">
-                <cite className="text-gray-100 not-italic">Lisa L.</cite> - <a className="text-teal-100 hover:text-gray-200 transition duration-150 ease-in-out" href="https://www.linkedin.com/in/lisalehrman/">Linkedin</a>
+              <cite className="text-gray-100 not-italic">Lisa L.</cite> 
+              {/* <a className="text-teal-100 hover:text-gray-200 transition duration-150 ease-in-out" href="https://www.linkedin.com/in/lisalehrman/">Linkedin</a> */}
               </div>
             </div>
 
