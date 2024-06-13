@@ -1,8 +1,7 @@
 import Image from 'next/image'
 
-import TestimonialImage01 from '@/public/images/testimonial-01.jpg'
-import TestimonialImage02 from '@/public/images/testimonial-02.jpg'
-import TestimonialImage03 from '@/public/images/testimonial-03.jpg'
+import johnRizzo from '@/public/images/john-f-rizzo-profile-avatar.jpg'
+import jamesPark from '@/public/images/james-park-profile-avatar.jpg'
 
 export default function Testimonials() {
   return (
@@ -23,7 +22,6 @@ export default function Testimonials() {
             <div className="flex flex-col h-full p-6 bg-gray-800" data-aos="fade-up">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
-                  <Image className="rounded-full" src="https://media.licdn.com/dms/image/C4E03AQFkGBtjPcYqKA/profile-displayphoto-shrink_400_400/0/1566838837755?e=1701302400&v=beta&t=UT4wFVgvhvGOkYikk1JbLyxRy0NXkjC-tamPsBcIDx8" width={48} height={48} alt="Lisa L." />
                   <svg className="absolute top-0 right-0 -mr-3 w-6 h-5 fill-current text-teal-300" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 13.517c0-2.346.611-4.774 1.833-7.283C3.056 3.726 4.733 1.648 6.865 0L11 2.696C9.726 4.393 8.777 6.109 8.152 7.844c-.624 1.735-.936 3.589-.936 5.56v4.644H0v-4.531zm13 0c0-2.346.611-4.774 1.833-7.283 1.223-2.508 2.9-4.586 5.032-6.234L24 2.696c-1.274 1.697-2.223 3.413-2.848 5.148-.624 1.735-.936 3.589-.936 5.56v4.644H13v-4.531z" />
                   </svg>
@@ -40,8 +38,8 @@ export default function Testimonials() {
             <div className="flex flex-col h-full p-6 bg-gray-800" data-aos="fade-up" data-aos-delay="200">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
-                  <Image className="rounded-full" src="https://media.licdn.com/dms/image/D5603AQHllFsM2CMX4Q/profile-displayphoto-shrink_100_100/0/1681853265957?e=1701302400&v=beta&t=NBlVCH2vDNFdYa0G985u7y0Q7f3MRbAudjOPS_YzfZ8" width={48} height={48} alt="Testimonial 02" />
-                  <svg className="absolute top-0 right-0 -mr-3 w-6 h-5 fill-current text-teal-300" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                <Image className="rounded-full" src={johnRizzo} width={48} height={48} alt="John F. Rizzo" />
+                  <svg className="absolute top-0 right-0 -mr-6 w-6 h-5 fill-current text-teal-300" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 13.517c0-2.346.611-4.774 1.833-7.283C3.056 3.726 4.733 1.648 6.865 0L11 2.696C9.726 4.393 8.777 6.109 8.152 7.844c-.624 1.735-.936 3.589-.936 5.56v4.644H0v-4.531zm13 0c0-2.346.611-4.774 1.833-7.283 1.223-2.508 2.9-4.586 5.032-6.234L24 2.696c-1.274 1.697-2.223 3.413-2.848 5.148-.624 1.735-.936 3.589-.936 5.56v4.644H13v-4.531z" />
                   </svg>
                 </div>
@@ -56,8 +54,8 @@ export default function Testimonials() {
             <div className="flex flex-col h-full p-6 bg-gray-800" data-aos="fade-up" data-aos-delay="400">
               <div>
                 <div className="relative inline-flex flex-col mb-4">
-                  <Image className="rounded-full" src="https://media.licdn.com/dms/image/C4E03AQE6tUoSsPLJFw/profile-displayphoto-shrink_100_100/0/1516157045430?e=1701302400&v=beta&t=-KrEY25Qt_XW1zvwyY8VDewPwfGdoy2dhYdrP500c6c" width={48} height={48} alt="Testimonial 03" />
-                  <svg className="absolute top-0 right-0 -mr-3 w-6 h-5 fill-current text-teal-300" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                  <Image className="rounded-full" src={jamesPark} width={48} height={48} alt="Testimonial 03" />
+                  <svg className="absolute top-0 right-0 -mr-6 w-6 h-5 fill-current text-teal-300" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 13.517c0-2.346.611-4.774 1.833-7.283C3.056 3.726 4.733 1.648 6.865 0L11 2.696C9.726 4.393 8.777 6.109 8.152 7.844c-.624 1.735-.936 3.589-.936 5.56v4.644H0v-4.531zm13 0c0-2.346.611-4.774 1.833-7.283 1.223-2.508 2.9-4.586 5.032-6.234L24 2.696c-1.274 1.697-2.223 3.413-2.848 5.148-.624 1.735-.936 3.589-.936 5.56v4.644H13v-4.531z" />
                   </svg>
                 </div>

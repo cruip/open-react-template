@@ -61,7 +61,7 @@ const ResumeComponent = () => {
               <GapInc />
             </div>
             <div className="md:w-2/3">
-              <h3 className="text-lg text-gray-500 font-semibold mb-2">
+              <h3 className="text-lg text-gray-600 font-semibold mb-2">
                 Senior Software Engineer – Full Stack & Brand Technical Lead
               </h3>
               <p className="text-gray-600 mb-4">

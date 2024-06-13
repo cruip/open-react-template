@@ -173,6 +173,7 @@ export default function SpotlightImage() {
           height="100%"
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FpI3hmMyRy36GTRTHXu9g9P%2FDesigns%3Fnode-id%3D331-3%26t%3DT1jYHDAVltAAtZRp-1"
           allowFullScreen
+          title="Gap wireframe for Spotlight Image/Video React component"
         ></iframe>
       </div>
       <div className="flex lg:my-20 max-lg:my-6 flex-col">
