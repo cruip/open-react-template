@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
+
 /* Additional styles */
 @import 'additional-styles/utility-patterns.css';
 @import 'additional-styles/range-slider.css';
@@ -8,6 +9,17 @@
 @import 'additional-styles/theme.css';
 
 @import 'tailwindcss/utilities';
+
+.metre-sh{
+    background-color: black;
+    color: white;
+    transition: all 0.6s ease-in-out;
+}
+.shekhar{
+    background-color: white;
+    color: black;
+    transition: all 0.6s ease-in-out;
+}
 
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
 @layer utilities {
