@@ -8,7 +8,6 @@ export default function Features() {
             <h2 className="h2 mb-4" style={{ color: "black" }}>
               Most of our clients struggle to grasp their workflows.
             </h2>
-            <h1>ranjan</h1>
             <p className="text-xl text-gray-400" style={{ color: "black" }}>
               Many clients find it challenging to grasp the intricacies of their
               workflows, often needing expert guidance to streamline operations
@@ -53,11 +52,15 @@ export default function Features() {
                   strokeWidth="2"
                 />
               </svg>
-              <h4 className="h4 mb-2">Web Development</h4>
-              <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+              <h4 className="h4 mb-2" style={{ color: "black" }}>
+                Web Development
+              </h4>
+              <p
+                className="text-lg text-gray-400 text-center"
+                style={{ color: "black" }}
+              >
+                From concept to deployment, we craft responsive, scalable web
+                solutions tailored to your business needs.
               </p>
             </div>
 
@@ -94,11 +97,15 @@ export default function Features() {
                   strokeLinecap="square"
                 />
               </svg>
-              <h4 className="h4 mb-2">Salesforce B2C</h4>
-              <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+              <h4 className="h4 mb-2" style={{ color: "black" }}>
+                Salesforce B2C
+              </h4>
+              <p
+                className="text-lg text-gray-400 text-center"
+                style={{ color: "black" }}
+              >
+                Enhance customer engagement and sales efficiency with our
+                tailored Salesforce solutions for B2C businesses.
               </p>
             </div>
 
@@ -146,11 +153,15 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">AWS,Azure & GCP setup</h4>
-              <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+              <h4 className="h4 mb-2" style={{ color: "black" }}>
+                AWS,Azure & GCP setup
+              </h4>
+              <p
+                className="text-lg text-gray-400 text-center"
+                style={{ color: "black" }}
+              >
+                Leverage the power of cloud computing with expert setup and
+                management of AWS, Azure, and Google Cloud platforms.
               </p>
             </div>
 
@@ -191,11 +202,15 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Sharepoint Developmet</h4>
-              <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+              <h4 className="h4 mb-2" style={{ color: "black" }}>
+                Sharepoint Developmet
+              </h4>
+              <p
+                className="text-lg text-gray-400 text-center"
+                style={{ color: "black" }}
+              >
+                Streamline collaboration and document management with our
+                SharePoint development services tailored to your business needs.
               </p>
             </div>
 
@@ -233,11 +248,15 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">App Development</h4>
-              <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+              <h4 className="h4 mb-2" style={{ color: "black" }}>
+                App Development
+              </h4>
+              <p
+                className="text-lg text-gray-400 text-center"
+                style={{ color: "black" }}
+              >
+                Create engaging and innovative mobile and web applications that
+                drive business growth and user satisfaction.
               </p>
             </div>
 
@@ -282,11 +301,15 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Devops</h4>
-              <p className="text-lg text-gray-400 text-center">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat.
+              <h4 className="h4 mb-2" style={{ color: "black" }}>
+                Devops
+              </h4>
+              <p
+                className="text-lg text-gray-400 text-center"
+                style={{ color: "black" }}
+              >
+                Accelerate your software delivery pipeline with our DevOps
+                expertise, ensuring reliability, scalability, and security.
               </p>
             </div>
           </div>
