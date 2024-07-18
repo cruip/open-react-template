@@ -50,11 +50,12 @@ export default function Zigzag() {
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
                     More speed. Less spend
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
-                  <p className="text-xl text-gray-400 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                  <h3 className="h3 mb-3 text-black">Speed and Efficiency</h3>
+                  <p className="text-xl text-black mb-4">
+                    Enhance project delivery and efficiency with cutting-edge
+                    technologies and agile methodologies. Our solutions are
+                    crafted to keep your projects on track and deliver superior
+                    results.
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -65,7 +66,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
+                      <span className="text-black">
+                        Boost productivity and collaboration
+                      </span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -75,7 +78,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Excepteur sint occaecat</span>
+                      <span className="text-black">
+                        Ensure scalability and future-proof solutions
+                      </span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -85,7 +90,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Amet consectetur adipiscing elit</span>
+                      <span className="text-black">
+                        Deliver exceptional user experiences
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -114,13 +121,16 @@ export default function Zigzag() {
               >
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                    More speed. Less spend
+                    Innovative Solutions
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
-                  <p className="text-xl text-gray-400 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                  <h3 className="h3 mb-3 text-black">
+                    Keep projects on schedule
+                  </h3>
+                  <p className="text-xl text-black mb-4">
+                    Utilize advanced technologies to create immersive web
+                    experiences. From frontend design to backend development,
+                    our solutions are tailored to elevate your online presence
+                    and engage your audience effectively.
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -131,7 +141,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
+                      <span className="text-black">
+                        Create responsive and mobile-friendly designs
+                      </span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -141,7 +153,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Excepteur sint occaecat</span>
+                      <span className="text-black">
+                        Integrate robust security measures
+                      </span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -151,7 +165,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Amet consectetur adipiscing elit</span>
+                      <span className="text-black">
+                        Optimize performance and load times
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -180,13 +196,16 @@ export default function Zigzag() {
               >
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                    More speed. Less spend
+                    Tailored Solutions
                   </div>
-                  <h3 className="h3 mb-3">Keep projects on schedule</h3>
-                  <p className="text-xl text-gray-400 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                  <h3 className="h3 mb-3 text-black">
+                    Customize for Your Needs
+                  </h3>
+                  <p className="text-xl text-black mb-4">
+                    From concept to deployment, our solutions are designed to
+                    meet your unique requirements. We provide comprehensive web
+                    development services that ensure your project is a success,
+                    delivering value and innovation at every step.
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -197,7 +216,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Duis aute irure dolor in reprehenderit</span>
+                      <span className="text-black">
+                        Collaborate with expert developers
+                      </span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -207,7 +228,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Excepteur sint occaecat</span>
+                      <span className="text-black">
+                        Ensure seamless integration and deployment
+                      </span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -217,7 +240,9 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Amet consectetur adipiscing elit</span>
+                      <span className="text-black">
+                        Provide ongoing support and maintenance
+                      </span>
                     </li>
                   </ul>
                 </div>
