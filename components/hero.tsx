@@ -46,7 +46,11 @@ export default function Hero() {
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">
+            <h1
+              className="h1 mb-4"
+              data-aos="fade-up"
+              style={{ color: "black" }}
+            >
               "Crafting Digital Experiences: Your Premier Web Design Partner"
             </h1>
             <p
@@ -61,17 +65,22 @@ export default function Hero() {
               <div data-aos="fade-up" data-aos-delay="400">
                 <a
                   className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
-                  href="#0"
+                  href="https://api.whatsapp.com/send?phone=8076868474"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Start free trial
+                  Connect on WhatsApp
                 </a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
                 <a
-                  className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
-                  href="#0"
+                  className="btn text-white bg-gray-700 hover:bg-gray-800 flex items-center justify-center w-full sm:w-auto sm:ml-4"
+                  href="mailto:your-email@example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Learn more
+                  {/* <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> */}
+                  Email us
                 </a>
               </div>
             </div>
