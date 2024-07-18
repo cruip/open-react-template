@@ -57,9 +57,11 @@ export default function Hero() {
               className="text-xl text-gray-400 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
+              style={{ color: "black" }}
             >
-              Our landing page template works on all devices, so you only have
-              to set it up once, and get beautiful results forever.
+              Effortlessly create a stunning landing page that looks amazing on
+              any device with our template. Set it up once and enjoy timeless
+              beauty across all screens.
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">

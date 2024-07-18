@@ -53,7 +53,7 @@ export default function Features() {
                   strokeWidth="2"
                 />
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Web Development</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -94,7 +94,7 @@ export default function Features() {
                   strokeLinecap="square"
                 />
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Salesforce B2C</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -146,7 +146,7 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">AWS,Azure & GCP setup</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -191,7 +191,7 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Sharepoint Developmet</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -233,7 +233,7 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">App Development</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -282,7 +282,7 @@ export default function Features() {
                   />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Instant Features</h4>
+              <h4 className="h4 mb-2">Devops</h4>
               <p className="text-lg text-gray-400 text-center">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
