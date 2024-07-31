@@ -20,15 +20,15 @@ module.exports = {
           900: '#151719',
         },
         purple: {
-          100: '#F4F4FF',
-          200: '#E2E1FF',
-          300: '#CBCCFF',
-          400: '#ABABFF',
-          500: '#8D8DFF',
-          600: '#5D5DFF',
-          700: '#4B4ACF',
-          800: '#38379C',
-          900: '#262668',
+          "100": "#8ec6e7",  // Very Light Tint
+          "200": "#7fbedd",  // Light Tint
+          "300": "#68adcc",  // Light
+          "400": "#63a2c5",  // Medium Light
+          "500": "#5a9abd",  // Base Color
+          "600": "#4a8cae",  // Medium Dark
+          "700": "#4b80a8",  // Dark
+          "800": "#23597f",  // Darker
+          "900": "#1c4c72"   // Very Dark
         },
       },
       spacing: {
