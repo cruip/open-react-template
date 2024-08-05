@@ -17,6 +17,7 @@
     "next": "^14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-modal": "^3.16.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

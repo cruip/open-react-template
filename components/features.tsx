@@ -1,19 +1,42 @@
+'use client'
+import FormModal from '../components/form'
+import { useState } from 'react'
+
 export default function Features() {
-  return (
-    <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+    const [modalIsOpen, setModalIsOpen] = useState(false)
 
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Our Expertise: Comprehensive Mobile App Solutions</h2>
-            <p className="text-xl text-gray-400">Discover our range of services, designed to ensure your success.</p>
-          </div>
+    const openModal = () => {
+        setModalIsOpen(true)
+    }
 
-          {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
+    const closeModal = () => {
+        setModalIsOpen(false)
+    }
 
-            {/* 1st item - iOS App Development */}
+    return (
+        <section>
+            <FormModal isOpen={modalIsOpen} onRequestClose={closeModal} />
+            <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                <div className="py-12 md:py-20">
+                    {/* Section header */}
+                    <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                        <h2 className="h2 mb-4">
+                            Our Expertise: Comprehensive Mobile App Solutions
+                        </h2>
+                        <p className="text-xl text-gray-400">
+                            Discover our range of services, from
+                            high-performance mobile apps to innovative POS and
+                            healthcare solutions, designed to ensure your
+                            success.
+                        </p>
+                    </div>
+
+                    {/* Items */}
+                    <div
+                        className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none"
+                        data-aos-id-blocks
+                    >
+                        {/* 1st item - iOS App Development */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
               <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <rect className="fill-current text-purple-600" width="64" height="64" rx="32" />
@@ -115,16 +138,22 @@ export default function Features() {
           <h4 className="h4 text-center mb-2">App Store Deployment</h4>
           <p className="text-lg text-gray-400 text-center">Full support for launching your app on the App Store, including submission and approval processes.</p>
         </div>
-
-      </div>
-
-    </div>
-  </div>
-  <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-    <div data-aos="fade-up" data-aos-delay="800">
-      <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0 rounded" href="#0">Start Your Project Today</a>
-    </div>
-  </div>
-</section>
-  )
+                    </div>
+                </div>
+            </div>
+            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <a
+                        className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0 rounded"
+                        href="#0"
+                        onClick={openModal}
+                    >
+                        Start Your Project Todays
+                    </a>
+                </div>
+            </div>
+            <br />
+            <br />
+        </section>
+    )
 }
