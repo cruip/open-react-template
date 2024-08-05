@@ -15,6 +15,7 @@
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
     "next": "^14.0.4",
+    "nodemailer": "^6.9.14",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-modal": "^3.16.1",

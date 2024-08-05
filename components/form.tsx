@@ -15,7 +15,6 @@ interface FormData {
     projectDetails: string
     budget: string
     deadline: string
-    file: File | null
 }
 
 const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
@@ -25,9 +24,12 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
         projectTitle: '',
         projectDetails: '',
         budget: '',
-        deadline: '',
-        file: null,
+        deadline: ''
     })
+
+    const [isLoading, setIsLoading] = useState(false)
+
+    const [notification, setNotification] = useState<{ message: string; type: 'success' | 'error' } | null>(null)
 
     const handleChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,17 +38,40 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
         setFormData({ ...formData, [name]: value })
     }
 
-    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files) {
-            setFormData({ ...formData, file: e.target.files[0] })
-        }
-    }
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // Handle form submission logic here
-        console.log('Form submitted:', formData)
-        onRequestClose()
+        setIsLoading(true)
+        setNotification(null)
+        try {
+            const response = await fetch('/api/mail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            setIsLoading(false)
+            if (response.ok) {
+                setNotification({ message: 'Email sent successfully!', type: 'success' })
+                setFormData({
+                    name: '',
+                    email: '',
+                    projectTitle: '',
+                    projectDetails: '',
+                    budget: '',
+                    deadline: '',
+                })
+                console.log('Email sent successfully')
+                onRequestClose()
+            } else {
+                setNotification({ message: 'Error submitting form, try again later', type: 'error' })
+                console.error('Error sending email')
+            }
+        } catch (error) {
+            setIsLoading(false)
+            setNotification({ message: 'Error submitting form, try again later', type: 'error' })
+            console.error('Error:', error)
+        }
     }
 
     const customStyles = {
@@ -66,6 +91,11 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
                 <h2 className="text-2xl font-bold mb-4 text-gray-600 text-center">
                     Start Your Project Today
                 </h2>
+                {notification && (
+                    <div className={`my-2 p-2 rounded ${notification.type === 'success' ? 'text-green-800 bg-green-200' : 'text-red-800 bg-red-200'} text-center`}>
+                        {notification.message}
+                    </div>
+                )}
                 <form onSubmit={handleSubmit} className="space-y-2">
                     <div>
                         <label
@@ -98,7 +128,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm gray-700"
+                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-gray-700"
                         />
                     </div>
                     <div>
@@ -115,7 +145,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
                             value={formData.projectTitle}
                             onChange={handleChange}
                             required
-                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm gray-700"
+                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-gray-700"
                         />
                     </div>
                     <div>
@@ -131,7 +161,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
                             value={formData.projectDetails}
                             onChange={handleChange}
                             required
-                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm gray-700"
+                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-gray-700"
                         ></textarea>
                     </div>
                     <div>
@@ -148,7 +178,7 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
                             value={formData.budget}
                             onChange={handleChange}
                             required
-                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm gray-700"
+                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-gray-700"
                         />
                     </div>
                     <div>
@@ -165,15 +195,16 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onRequestClose }) => {
                             value={formData.deadline}
                             onChange={handleChange}
                             required
-                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm gray-700"
+                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm text-gray-700"
                         />
                     </div>
                     <br />
                     <button
                         type="submit"
+                        disabled={isLoading}
                         className="w-full bg-purple-600 text-white py-2 rounded-md shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                     >
-                        Submit
+                        {isLoading ? 'Submitting...' : 'Submit'}
                     </button>
                 </form>
                 <button
