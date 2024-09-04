@@ -34,6 +34,10 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
+	    <ul className="flex grow justifiy-end flex-wrap items-center">
+		<li className="ml-3">Home</li>
+		<li className="ml-3">About</li>
+	    </ul>
           </nav>
 
           <MobileMenu />
