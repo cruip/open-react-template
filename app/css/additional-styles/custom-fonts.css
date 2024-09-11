@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Nacelle";
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("fonts/nacelle-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nacelle";
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+  src: url("fonts/nacelle-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nacelle";
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+  src: url("fonts/nacelle-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nacelle";
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+  src: url("fonts/nacelle-semibolditalic.woff2") format("woff2");
+}

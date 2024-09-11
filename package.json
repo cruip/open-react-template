@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.17",
-    "@types/node": "^20.10.4",
+    "@headlessui/react": "^2.1.3",
+    "@types/node": "^22.5.0",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
     "aos": "^3.0.0-beta.6",
     "next": "^14.0.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
