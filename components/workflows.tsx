@@ -1,28 +1,31 @@
 import Image from "next/image";
 import WorflowImg01 from "@/public/images/workflow-01.png";
 import WorflowImg02 from "@/public/images/workflow-02.png";
-import WorflowImg03 from "@/public/images/workflow-03.png";
+import WorflowImg03 from "@/public/images/Workflow-03.png";
 import Spotlight from "@/components/spotlight";
 
 export default function Workflows() {
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="events">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
         <div className="pb-12 md:pb-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                Tailored Workflows
+                Past Events
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Map your product journey
+              Milestones and Events
             </h2>
             <p className="text-lg text-indigo-200/65">
-              Simple and elegant interface to start collaborating with your team
-              in minutes. It seamlessly integrates with your code and your
-              favorite programming languages.
+              Discover the diverse range of events we’ve hosted, from hands-on
+              WiFi hacking workshops to interactive hacktivities and engaging
+              talks. Our past events highlight our commitment to practical
+              learning and community engagement in cybersecurity. Dive into our
+              event archive to see how we've fostered skill development and
+              shared knowledge through dynamic and impactful experiences.
             </p>
           </div>
           {/* Spotlight items */}
@@ -33,23 +36,6 @@ export default function Workflows() {
               href="#0"
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-                {/* Arrow */}
-                <div
-                  className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
-                  aria-hidden="true"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={9}
-                    height={8}
-                    fill="none"
-                  >
-                    <path
-                      fill="#F4F4F5"
-                      d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
-                    />
-                  </svg>
-                </div>
                 {/* Image */}
                 <Image
                   className="inline-flex"
@@ -63,13 +49,14 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Built-in Tools
+                        Seminar
                       </span>
                     </span>
                   </div>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    Hacktivities: A hands-on cybersecurity event featuring live
+                    hacking demos and interactive challenges, designed to
+                    enhance practical skills and foster community engagement.
                   </p>
                 </div>
               </div>
@@ -80,23 +67,6 @@ export default function Workflows() {
               href="#0"
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-                {/* Arrow */}
-                <div
-                  className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
-                  aria-hidden="true"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={9}
-                    height={8}
-                    fill="none"
-                  >
-                    <path
-                      fill="#F4F4F5"
-                      d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
-                    />
-                  </svg>
-                </div>
                 {/* Image */}
                 <Image
                   className="inline-flex"
@@ -110,13 +80,15 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Scale Instantly
+                        Workshop
                       </span>
                     </span>
                   </div>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    WiFi Hacking Workshop: A practical session focused on
+                    uncovering vulnerabilities in wireless networks. Attendees
+                    learned techniques for securing WiFi networks and tested
+                    their skills in real-world scenarios.
                   </p>
                 </div>
               </div>
@@ -127,23 +99,6 @@ export default function Workflows() {
               href="#0"
             >
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-                {/* Arrow */}
-                <div
-                  className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
-                  aria-hidden="true"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={9}
-                    height={8}
-                    fill="none"
-                  >
-                    <path
-                      fill="#F4F4F5"
-                      d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
-                    />
-                  </svg>
-                </div>
                 {/* Image */}
                 <Image
                   className="inline-flex"
@@ -157,13 +112,14 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Tailored Flows
+                        Seminar
                       </span>
                     </span>
                   </div>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    Cyber Talks 2024: A keynote by a top cybersecurity engineer
+                    and bug bounty hunter, sharing expert insights and practical
+                    tips in the field.
                   </p>
                 </div>
               </div>
