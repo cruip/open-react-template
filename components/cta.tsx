@@ -23,8 +23,18 @@ export default function Cta() {
               className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
               data-aos="fade-up"
             >
-              Join the content-first platform
+              Join Our Slack Community
             </h2>
+              <p
+                className="mb-8 text-l text-indigo-200/65"
+                data-aos="fade-up"
+                data-aos-delay={200}
+              >
+                We’re in early development, working hard to build a platform where founders and ideators can exchange valuable feedback and refine their ideas with the help of like-minded entrepreneurs. Join our Slack community now to be part of the first wave and get priority access to post your ideas when we launch.              </p>
+              {/* <p className="text-lg text-indigo-200/65">
+                We provide tech-first solutions that empower decision-makers to
+                build healthier and happier workspaces from anywhere in the world.
+              </p> */}
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
               <div data-aos="fade-up" data-aos-delay={400}>
                 <a
@@ -32,7 +42,7 @@ export default function Cta() {
                   href="#0"
                 >
                   <span className="relative inline-flex items-center">
-                    Start Building
+                    Join Us
                     <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
@@ -40,12 +50,12 @@ export default function Cta() {
                 </a>
               </div>
               <div data-aos="fade-up" data-aos-delay={600}>
-                <a
+                {/* <a
                   className="btn relative w-full bg-gradient-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"
                   href="#0"
                 >
                   Schedule Demo
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

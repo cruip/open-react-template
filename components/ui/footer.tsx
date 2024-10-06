@@ -4,8 +4,8 @@ import FooterIllustration from "@/public/images/footer-illustration.svg";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+    <footer className="justify-center items-center min-h-[200px] bg-gray-800">
+      <div className="justify-center relative mx-auto max-w-6xl px-4 sm:px-6 text-center">
         {/* Footer illustration */}
         <div
           className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
           {/* 1st block */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">Product</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -73,9 +73,9 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           {/* 2nd block */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">Company</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -119,9 +119,9 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           {/* 3rd block */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -149,9 +149,9 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           {/* 4th block */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">
               Content Library
             </h3>
@@ -197,13 +197,13 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           {/* 5th block */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
+          <div className=" item-center col-span-2 md:col-span-4 lg:col-span-1 lg:text-right justify-center">
             <div className="mb-3">
               <Logo />
             </div>
-            <div className="text-sm">
+            <div className="text-sm justify-center">
               <p className="mb-3 text-indigo-200/65">
                 © Cruip.com
                 <span className="text-gray-700"> · </span>
@@ -214,7 +214,7 @@ export default function Footer() {
                   Terms
                 </a>
               </p>
-              <ul className="inline-flex gap-1">
+              <ul className="inline-flex gap-1 justify-center">
                 <li>
                   <a
                     className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
