@@ -1,33 +1,34 @@
 import VideoThumb from "@/public/images/hero-image-01.jpg";
 import ModalVideo from "@/components/modal-video";
+import Image from "next/image";
 
 export default function HeroHome() {
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1100px] px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <h1
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
+              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.forest.200),theme(colors.gray.50),theme(colors.forest.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-5 font-menda text-4xl font-medium text-transparent md:text-5xl"
               data-aos="fade-up"
             >
-              AI-driven tools for product teams
+              Empowering Your Business with
+              Cutting-Edge Digital Solutions
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-xl text-indigo-200/65"
+                className="mb-8 text-xl text-forest-200/65 font-normal"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                We specialize in web and mobile development, systems integration and digital marketing to help businesses thrive in today’s fast-paced digital world.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay={400}>
                   <a
-                    className="btn group mb-4 w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn group mb-4 w-full bg-gradient-to-t from-forest-600 to-forest-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
@@ -50,15 +51,14 @@ export default function HeroHome() {
             </div>
           </div>
 
-          <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1104}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="videos//video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
-          />
+          <div className="flex justifyx-center" data-aos="fade-up">
+            <Image
+              src={'/images/Illustration.png'}
+              width={2000}
+              height={-1}
+              alt="Features"
+            />
+          </div>
         </div>
       </div>
     </section>

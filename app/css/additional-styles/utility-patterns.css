@@ -47,7 +47,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .form-checkbox,
 .form-radio {
-  @apply text-indigo-500;
+  @apply text-forest-500;
 }
 
 .form-checkbox {

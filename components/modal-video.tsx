@@ -46,7 +46,7 @@ export default function ModalVideo({
 
       {/* Video thumbnail */}
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-none focus-visible:ring focus-visible:ring-indigo-200"
+        className="group relative flex items-center justify-center rounded-2xl focus:outline-none focus-visible:ring focus-visible:ring-forest-200"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -54,7 +54,7 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
+        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-gray-900 before:via-forest-500/20 before:to-gray-900">
           <Image
             className="opacity-50 grayscale"
             src={thumb}
@@ -88,8 +88,8 @@ export default function ModalVideo({
                   y2={20}
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#6366F1" />
-                  <stop offset={1} stopColor="#6366F1" stopOpacity=".72" />
+                  <stop stopColor="#00A270" />
+                  <stop offset={1} stopColor="#00A270" stopOpacity=".72" />
                 </linearGradient>
               </defs>
             </svg>

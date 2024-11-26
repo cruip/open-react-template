@@ -34,9 +34,139 @@ const nacelle = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-nacelle",
+  variable: "--font-raleway",
   display: "swap",
 });
+
+
+export const mendaFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/Menda Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Menda Semibold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Menda Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Menda Extrabold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Menda Black.ttf",
+      weight: "900",
+      style: "normal",
+    }
+  ],
+  variable: "--font-menda",
+  display: "swap",
+})
+
+export const ralewayFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/Raleway-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-ThinItalic.ttf",
+      weight: "100",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-ExtraLightItalic.ttf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-SemiBoldItalic.ttf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-ExtraBoldItalic.ttf",
+      weight: "800",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Raleway-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Raleway-BlackItalic.ttf",
+      weight: "900",
+      style: "italic",
+    }
+  ],
+  variable: "--font-raleway",
+  display: "swap",
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -51,7 +181,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
+        className={`${inter.variable} ${nacelle.variable} ${mendaFont.variable} ${ralewayFont.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />

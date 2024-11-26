@@ -30,7 +30,7 @@ export default function PageIllustration({
           >
             <Image
               className="max-w-none"
-              src={BlurredShapeGray}
+              src={"/logo.svg"}
               width={760}
               height={668}
               alt="Blurred shape"

@@ -29,3 +29,51 @@
   font-display: fallback;
   src: url("fonts/nacelle-semibolditalic.woff2") format("woff2");
 }
+
+
+
+/* styles/fonts.css */
+@font-face {
+  font-family: 'Menda';
+  src: url('/fonts/Menda Medium.otf') format('opentype'),
+       url('/fonts/Menda Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/fonts/Menda Semibold.otf') format('opentype'),
+       url('/fonts/Menda Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/fonts/Menda Bold.otf') format('opentype'),
+       url('/fonts/Menda Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/fonts/Menda Extrabold.otf') format('opentype'),
+       url('/fonts/Menda Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/fonts/Menda Black.otf') format('opentype'),
+       url('/fonts/Menda Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
