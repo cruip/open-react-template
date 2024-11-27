@@ -108,7 +108,7 @@ export default function WhyChooseUs() {
               </div>
               <p className="text-forest-200/65">
                 From consultation to deployment and beyond, we offer comprehensive IT support to ensure your digital solutions
-                perform at their best. We're with you every step of the way
+                perform at their best. We&apos;re with you every step of the way
               </p>
             </article>
 
@@ -155,7 +155,7 @@ export default function WhyChooseUs() {
                 href="#0"
               >
                 <span className="relative inline-flex items-center">
-                  Let's work together {" "}
+                  Let&apos;s work together{" "}
                   <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                     -&gt;
                   </span>

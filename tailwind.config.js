@@ -52,5 +52,6 @@ module.exports = {
       },
     },
   },
+  /* eslint-disable @typescript-eslint/no-require-imports */
   plugins: [require("@tailwindcss/forms")],
 };

@@ -70,7 +70,7 @@ export default function SignIn() {
           </form>
           {/* Bottom link */}
           <div className="mt-6 text-center text-sm text-forest-200/65">
-            Don't you have an account?{" "}
+            Don&apos;t you have an account?{" "}
             <Link className="font-medium text-forest-500" href="/signup">
               Sign Up
             </Link>

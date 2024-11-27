@@ -1,7 +1,7 @@
 "use client";
 
 import useMasonry from "@/utils/useMasonry";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 const testimonials = [
   {
