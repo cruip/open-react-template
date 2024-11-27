@@ -50,7 +50,7 @@ export default function Workflows() {
                       <span className="bg-gradient-to-r from-forest-500 to-forest-200 bg-clip-text text-transparent">Ayse</span>
                     </span>
                   </div>
-                  <p className="text-forest-200/65">
+                  <p className="text-white/85">
                     A cross-platform app for concert-goers to discover events, manage tickets, and chat in-app. Built with React
                     Native and integrated with TicketMaster API, Firebase, and UCLA OAuth. Includes a React.js/Node.js web
                     counterpart.
@@ -88,7 +88,7 @@ export default function Workflows() {
                       <span className="bg-gradient-to-r from-forest-500 to-forest-200 bg-clip-text text-transparent">Zeal</span>
                     </span>
                   </div>
-                  <p className="text-forest-200/65">
+                  <p className="text-white/85">
                     Zeal is a full-stack platform revolutionizing healthcare with AI-driven solutions. Built with Next.js, React,
                     and Node.js, it features a responsive, user-friendly interface for seamless navigation.
                   </p>
@@ -127,7 +127,7 @@ export default function Workflows() {
                       </span>
                     </span>
                   </div>
-                  <p className="text-forest-200/65">
+                  <p className="text-white/85">
                     A cryptocurrency portfolio platform for tracking, analyzing, and optimizing assets, with real-time tracking,
                     customizable dashboards, payment integrations (PayPal, Stripe, Coinbase), and CI/CD pipelines.
                   </p>
@@ -166,7 +166,7 @@ export default function Workflows() {
                       </span>
                     </span>
                   </div>
-                  <p className="text-forest-200/65">
+                  <p className="text-white/85">
                     A car detailing platform with a booking system, multi-location pricing, payment gateways, Google Calendar
                     sync, and PWA capabilities. Includes admin panel for service and user management.
                   </p>
@@ -205,7 +205,7 @@ export default function Workflows() {
                       </span>
                     </span>
                   </div>
-                  <p className="text-forest-200/65">
+                  <p className="text-white/85">
                     A map creation tool with Google Maps API, AWS S3 storage, team collaboration, and PDF exports. Includes tiered
                     subscriptions via Stripe and Prisma ORM for efficient data handling
                   </p>
@@ -244,7 +244,7 @@ export default function Workflows() {
                       </span>
                     </span>
                   </div>
-                  <p className="text-forest-200/65">
+                  <p className="text-white/85">
                     A Learning Management System (LMS) with past papers, revision notes, and tutor access. Features include
                     role-based access, payment options, and responsive, SEO-optimized design.
                   </p>

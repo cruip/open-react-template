@@ -95,7 +95,7 @@ export default function Testimonials() {
   const masonryContainer = useMasonry();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <div className="mx-auto max-w-[1440px] px-4 sm:px-6">
       {/* Section header */}
       <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
         {/* Section header */}

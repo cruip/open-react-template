@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function HeroHome() {
   return (
     <section>
-      <div className="mx-auto max-w-[1100px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <h1
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.forest.200),theme(colors.gray.50),theme(colors.forest.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-5 font-menda text-4xl font-medium text-transparent md:text-5xl"
+              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.forest.200),theme(colors.gray.50),theme(colors.forest.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-5 font-menda text-4xl font-medium text-transparent md:text-5xl max-w-5xl mx-auto"
               data-aos="fade-up"
             >
               Empowering Your Business with
@@ -25,11 +25,12 @@ export default function HeroHome() {
               </p>
             </div>
 
-            <div className="flex justifyx-center" data-aos="fade-up">
+            <div className="max-w-[1440px] w-full" data-aos="fade-up">
               <Image
                 src={'/images/Illustration.png'}
-                width={2000}
-                height={-1}
+                width={1623}
+                height={538}
+                layout="responsive"
                 alt="Features"
               />
             </div>

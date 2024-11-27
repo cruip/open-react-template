@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-menda font-semibold text-[1rem] text-gray-200">Agile Development Processes</h3>
                 <h4 className="font-raleway font-normal text-[1rem] text-forest-700">Speed, flexibility, and innovation</h4>
               </div>
-              <p className="text-forest-200/65">
+              <p className="text-white/85">
                 At Lumunate, we combine innovation with expertise to deliver IT solutions tailored to your unique business needs.
                 From responsive web applications to seamless systems integration, we turn ideas into impactful digital
                 experiences.
@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-menda font-semibold text-[1rem] text-gray-200">Flexible Workflow Management</h3>
                 <h4 className="font-raleway font-normal text-[1rem] text-forest-700">Workflows tailored to your business</h4>
               </div>
-              <p className="text-forest-200/65">
+              <p className="text-white/85">
                 Whether you’re a solopreneur or an enterprise, our solutions streamline your workflows, enabling teams to
                 collaborate seamlessly and achieve more in less time.
               </p>
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-menda font-semibold text-[1rem] text-gray-200">Results-Oriented Approach</h3>
                 <h4 className="font-raleway font-normal text-[1rem] text-forest-700">Your success is our priority</h4>
               </div>
-              <p className="text-forest-200/65">
+              <p className="text-white/85">
                 At Lumunate, we don’t just build solutions; we deliver measurable results. Our team works with you to understand
                 your objectives, ensuring every project aligns with your vision and drives success.
               </p>
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-menda font-semibold text-[1rem] text-gray-200">End-to-End IT Support</h3>
                 <h4 className="font-raleway font-normal text-[1rem] text-forest-700">Support at every step.</h4>
               </div>
-              <p className="text-forest-200/65">
+              <p className="text-white/85">
                 From consultation to deployment and beyond, we offer comprehensive IT support to ensure your digital solutions
                 perform at their best. We&apos;re with you every step of the way
               </p>
@@ -124,7 +124,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-menda font-semibold text-[1rem] text-gray-200">Enterprise-Grade Cloud Solutions</h3>
                 <h4 className="font-raleway font-normal text-[1rem] text-forest-700">Innovation in the cloud.</h4>
               </div>
-              <p className="text-forest-200/65">
+              <p className="text-white/85">
                 Accelerate your digital transformation with our secure and scalable cloud services. We build cloud-native
                 applications and optimize infrastructure to meet the demands of your business.
               </p>
@@ -142,7 +142,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-menda font-semibold text-[1rem] text-gray-200">Advanced Data Security</h3>
                 <h4 className="font-raleway font-normal text-[1rem] text-forest-700">Your data, protected.</h4>
               </div>
-              <p className="text-forest-200/65">
+              <p className="text-white/85">
                 Trust Lumunate to safeguard your sensitive information. We implement robust security protocols and compliance
                 standards, ensuring your data is secure in every project we handle.
               </p>
