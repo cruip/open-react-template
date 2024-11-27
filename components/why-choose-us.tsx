@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
             </h2>
           </div>
           {/* Items */}
-          <div className="mx-auto grid max-w-sm gap-2 sm:max-w-none sm:grid-cols-3 md:gap-x-12 md:gap-y-16 lg:grid-cols-[auto_1px_auto_1px_auto] bg-[linear-gradient(88.12deg,rgba(17,39,24,0.48)_3.17%,rgba(33,55,31,0.2304)_52.41%,rgba(17,39,24,0.48)_94.35%)] py-20 px-8 border-[1px] border-[#374151] rounded-2xl">
+          <div className="mx-auto grid max-w-sm gap-2 sm:max-w-none sm:grid-cols-[auto_1px_auto] md:gap-x-12 md:gap-y-16 lg:grid-cols-[auto_1px_auto_1px_auto] bg-[linear-gradient(88.12deg,rgba(17,39,24,0.48)_3.17%,rgba(33,55,31,0.2304)_52.41%,rgba(17,39,24,0.48)_94.35%)] py-20 px-8 border-[1px] border-[#374151] rounded-2xl">
             <article>
               <svg className="mb-3 fill-forest-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
                 <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z" />
@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
               </p>
             </article>
 
-            <div className="w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
+            <div className="hidden sm:block w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
 
             <article>
               <svg className="mb-3 fill-forest-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
               </p>
             </article>
 
-            <div className="w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
+            <div className="lg:block sm:hidden w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
 
             <article>
               <svg className="mb-3 fill-forest-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
@@ -85,6 +85,8 @@ export default function WhyChooseUs() {
                 your objectives, ensuring every project aligns with your vision and drives success.
               </p>
             </article>
+
+            <div className="lg:hidden sm:block w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
 
             <article>
               <svg className="mb-3 fill-forest-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
@@ -110,7 +112,7 @@ export default function WhyChooseUs() {
               </p>
             </article>
 
-            <div className="w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
+            <div className="lg:block sm:hidden w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
 
             <article>
               <svg className="mb-3 fill-forest-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
@@ -128,7 +130,7 @@ export default function WhyChooseUs() {
               </p>
             </article>
 
-            <div className="w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
+            <div className="hidden sm:block w-[1px] h-full bg-[linear-gradient(to_bottom,theme(colors.forest.900),theme(colors.forest.700),theme(colors.forest.900))]"></div>
 
             <article>
               <svg className="mb-3 fill-forest-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
@@ -153,7 +155,7 @@ export default function WhyChooseUs() {
                 href="#0"
               >
                 <span className="relative inline-flex items-center">
-                  Schedule an Appointment {" "}
+                  Let's work together {" "}
                   <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                     -&gt;
                   </span>
