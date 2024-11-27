@@ -1,15 +1,9 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import Header from "@/components/ui/header";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const nacelle = localFont({
   src: [
@@ -39,7 +33,7 @@ const nacelle = localFont({
 });
 
 
-export const mendaFont = localFont({
+const mendaFont = localFont({
   src: [
     {
       path: "../public/fonts/Menda Medium.ttf",
@@ -71,7 +65,7 @@ export const mendaFont = localFont({
   display: "swap",
 })
 
-export const ralewayFont = localFont({
+const ralewayFont = localFont({
   src: [
     {
       path: "../public/fonts/Raleway-Thin.ttf",
@@ -181,7 +175,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${nacelle.variable} ${mendaFont.variable} ${ralewayFont.variable} bg-black font-inter text-base text-gray-200 antialiased`}
+        className={`${nacelle.variable} ${mendaFont.variable} ${ralewayFont.variable} bg-black font-raleway text-base text-gray-200 antialiased`}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />
