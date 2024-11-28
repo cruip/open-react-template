@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-black px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-sm">
+        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-forest-900/10 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-sm">
           {/* Site branding */}
           <div className="flex flex-1 items-center">
             <Logo />
@@ -15,16 +15,16 @@ export default function Header() {
 
           <ul className="sm:flex items-center justify-end md:gap-10 gap-6 hidden">
             <li>
-              <Link href="#">About</Link>
+              <Link href="#" className="hover:text-forest-600 duration-200">About</Link>
             </li>
             <li>
-              <Link href="#">Services</Link>
+              <Link href="#" className="hover:text-forest-600 duration-200">Services</Link>
             </li>
             <li>
-              <Link href="#">Testimonials</Link>
+              <Link href="#" className="hover:text-forest-600 duration-200">Testimonials</Link>
             </li>
             <li>
-              <Link href="#">Contact</Link>
+              <Link href="#" className="hover:text-forest-600 duration-200">Contact</Link>
             </li>
           </ul>
 

@@ -5,3 +5,8 @@
 @import "additional-styles/utility-patterns.css";
 @import "additional-styles/theme.css";
 @import "tailwindcss/utilities";
+
+
+* {
+  box-sizing: border-box;
+}

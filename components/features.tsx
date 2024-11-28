@@ -15,12 +15,12 @@ export default function Features() {
         <Image className="max-w-none" src={BlurredShape} width={760} height={668} alt="Blurred shape" />
       </div>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6">
-        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+        <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-forest-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-forest-200/50">
-              <span className="inline-flex bg-gradient-to-r from-forest-500 to-forest-200 bg-clip-text text-transparent">
-                Services{" "}
+              <span className="inline-flex bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
+                Services
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.forest.200),theme(colors.gray.50),theme(colors.forest.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-menda text-3xl font-medium text-transparent md:text-4xl">
@@ -49,8 +49,22 @@ export default function Features() {
               <p className="text-forest-200/65">
                 Delivering visually appealing, user-friendly and extensive web applications is at the core of what we do. From
                 custom web applications to landing pages, our services include UX/UI design, fullstack development, SEO
-                optimization and cross-browser compatibility{" "}
+                optimization and cross-browser compatibility
               </p>
+              <div className="flex gap-3 flex-wrap mt-4">
+                <Image src={'/images/icons/react-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/vuejs-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/angular-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/nextjs-original.svg'} width={60} height={30} alt="Icon" />
+                <Image src={'/images/icons/nuxtjs-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/nestjs-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/nodejs-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/laravel-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/rust-original.svg'} width={50} height={30} alt="Icon" className="invert" />
+                <Image src={'/images/icons/go-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/rails-plain.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/flask-original.svg'} width={50} height={30} alt="Icon" className="invert" />
+              </div>
             </article>
             <article>
             <Image className="mb-2" src={'/images/icons/mobile-programming.svg'} width={29} height={24} alt="Web Development and Design" /> 
@@ -58,8 +72,16 @@ export default function Features() {
               <p className="text-forest-200/65">
                 We create scalable, intuitive and high-performance mobile applications for iOS, Android or cross-platform use.
                 Whether it&apos;s a customer-facing app or a business tool, we design, develop and deploy apps, that deliver
-                seamless user experiences{" "}
+                seamless user experiences
               </p>
+
+              <div className="flex gap-3 mt-4 flex-wrap">
+                <Image src={'/images/icons/react-native.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/kotlin-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/flutter-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/swift-original.svg'} width={50} height={30} alt="Icon" />
+              </div>
+
             </article>
             <article>
             <Image className="mb-2" src={'/images/icons/data.svg'} width={29} height={24} alt="Web Development and Design" /> 
@@ -68,6 +90,14 @@ export default function Features() {
                 Streamline your operations with custom API development and systems integration. We connect your existing tools,
                 applications and platforms, enabling seamless data flow, automation and improved operational efficiency.{" "}
               </p>
+
+              <div className="flex gap-5 flex-wrap">
+                <Image src={'/images/icons/mendix.svg'} width={80} height={30} alt="Icon" />
+                <Image src={'/images/icons/outsystems.svg'} width={80} height={30} alt="Icon" />
+                <Image src={'/images/icons/appian.svg'} width={80} height={30} alt="Icon" />
+                <Image src={'/images/icons/salesforce-original.svg'} width={70} height={30} alt="Icon" />
+              </div>
+
             </article>
             <article>
             <Image className="mb-2" src={'/images/icons/Lock-Cloud.svg'} width={29} height={24} alt="Web Development and Design" /> 
@@ -76,6 +106,14 @@ export default function Features() {
                 We help businesses with cloud migration, infrastructure optimization and digital transformation strategies, while
                 ensuring scalability, security and performance.{" "}
               </p>
+
+              <div className="flex gap-3 mt-4 flex-wrap">
+                <Image src={'/images/icons/amazonwebservices-original-wordmark.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/linode.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/azure-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/googlecloud-original.svg'} width={50} height={30} alt="Icon" />
+              </div>
+
             </article>
             <article>
             <Image className="mb-2" src={'/images/icons/megaphone.svg'} width={29} height={24} alt="Web Development and Design" /> 
@@ -92,6 +130,16 @@ export default function Features() {
                 From WordPress and Shopify to Drupal and Joomla, we offer seamless integrations, tailored e-commerce solutions and
                 much more.
               </p>
+
+              <div className="flex gap-3 mt-4 flex-wrap">
+                <Image src={'/images/icons/joomla.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/hubspot.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/wordpress-original.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/woo-commerce.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/webflow.svg'} width={50} height={30} alt="Icon" />
+                <Image src={'/images/icons/drupal.svg'} width={50} height={30} alt="Icon" />
+              </div>
+
             </article>
           </div>
         </div>

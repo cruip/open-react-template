@@ -60,17 +60,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden h-32">
+      <div className="relative w-full overflow-hidden h-56">
         <Image
           src={'/footer-image.jpeg'}
           width={2000}
           height={32}
           alt="Footer Image"
-          className="object-center"
+          className="object-cover object-center h-full"
         />
 
-        <div className="absolute bottom-0 left-0 w-full h-32 flex justify-center">
-          <Image src={'/logo.svg'} width={250} height={-1} alt="Footer logo" className="object-center" /> 
+        <div className="absolute bottom-0 left-0 w-full flex justify-center my-auto h-full">
+          <Image src={'/logo.svg'} width={350} height={-1} alt="Footer logo" className="object-center" /> 
         </div>
       </div>
     </footer>

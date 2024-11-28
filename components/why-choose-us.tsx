@@ -15,11 +15,11 @@ export default function WhyChooseUs() {
         <Image className="max-w-none" src={BlurredShape} width={760} height={668} alt="Blurred shape" />
       </div>
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6">
-        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+        <div className=" py-12 md:py-20"> 
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-forest-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-forest-200/50">
-              <span className="inline-flex bg-gradient-to-r from-forest-500 to-forest-200 bg-clip-text text-transparent">
+              <span className="inline-flex bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
                 About Us
               </span>
             </div>
@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
             </h2>
           </div>
           {/* Items */}
-          <div className="mx-auto grid max-w-sm gap-2 sm:max-w-none sm:grid-cols-[auto_1px_auto] md:gap-x-12 md:gap-y-16 lg:grid-cols-[auto_1px_auto_1px_auto] bg-[linear-gradient(88.12deg,rgba(43,43,43,0.48)_3.17%,rgba(127,136,126,0.2304)_52.41%,rgba(43,43,43,0.48)_94.35%)] py-20 px-8 border-[1px] border-[#374151] rounded-2xl">   
+          <div className="mx-auto grid max-w-sm gap-2 sm:max-w-none sm:grid-cols-[auto_1px_auto] md:gap-x-12 md:gap-y-16 lg:grid-cols-[auto_1px_auto_1px_auto] bg-[linear-gradient(88.12deg,rgba(43,43,43,0.35)_3.17%,rgba(127,136,126,0.16)_52.41%,rgba(43,43,43,0.35)_94.35%)] py-20 px-8 border-[1px] border-[#374151] rounded-2xl">   
             <article>
               <Image className="mb-2" src={'/images/icons/Frame 2.svg'} width={29} height={29} alt="Web Development and Design" />
 
@@ -120,8 +120,9 @@ export default function WhyChooseUs() {
           <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center font-raleway mt-8">
             <div data-aos="fade-up" data-aos-delay={400}>
               <a
-                className="btn group mb-4 w-full bg-gradient-to-t from-forest-600 to-forest-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto rounded-full px-16"
-                href="#0"
+                className="btn group mb-4 w-auto bg-gradient-to-t from-forest-600 to-forest-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 rounded-full px-16"
+                href="https://calendly.com/saad-b-javaid22/consultation"
+                target="_blank"
               >
                 <span className="relative inline-flex items-center">
                   Let&apos;s work together{" "}
