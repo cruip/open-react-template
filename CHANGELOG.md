@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [4.1.0] - 2024-12-08
+
+- Update dependencies + Upgrade to Next.js 15
+
 ## [4.0.0] - 2024-09-11
 
 Redesign the entire template
