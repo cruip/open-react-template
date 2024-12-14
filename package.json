@@ -9,15 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@headlessui/react": "^2.1.3",
+    "@mui/material": "^6.2.0",
+    "@tanstack/react-query": "^5.62.7",
     "@types/node": "^22.5.0",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
     "aos": "^3.0.0-beta.6",
+    "connectkit": "^1.8.2",
     "next": "15.0.4",
+    "package.json": "^2.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "wagmi": "^2.14.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

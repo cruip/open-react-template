@@ -1,0 +1,8 @@
+.label {
+  @apply text-xl text-white;
+}
+
+.input {
+  @apply mt-2;
+  @apply flex flex-col gap-4;
+}
