@@ -62,7 +62,7 @@ export default function ContactForm() {
 
                     <div className="flex items-center">
 
-                        <img src="/images/logos/dify.png" alt="Email" className="mr-2" />
+                        <img src="/images/icons/mail-outline.svg" alt="Email" className="mr-4" style={{ width: '1rem', height: '1rem' }} />
 
                         <span>marketing@luminate.com</span>
 
@@ -70,7 +70,7 @@ export default function ContactForm() {
 
                     <div className="flex items-center">
 
-                        <img src="/images/icons/Android-Phone-1.svg" alt="Phone" className="mr-2" />
+                        <img src="/images/icons/phone-flip.svg" alt="Email" className="mr-4" style={{ width: '1rem', height: '1rem' }} />
 
                         <span>+92 3361000001</span>
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
 
                     <div className="flex items-center">
 
-                        <img src="/images/icons/green.svg" alt="Location" className="mr-2" />
+                        <img src="/images/icons/location-pin.svg" alt="Email" className="mr-4" style={{ width: '1rem', height: '1rem' }} />
 
                         <span>Islamabad, Pakistan</span>
 
@@ -96,9 +96,9 @@ export default function ContactForm() {
 
                 </h2>
 
-                <form onSubmit={handleSubmit(onSubmit)} style={{display: 'flex', flexDirection: 'column'}}>
-                    <div style={{marginBottom: '15px'}}>
-                        <label style={{color: 'white', marginBottom: '5px'}}>Name</label>
+                <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ color: 'white', marginBottom: '5px' }}>Name</label>
                         <input
                             type="text"
                             placeholder="Name"
@@ -113,11 +113,11 @@ export default function ContactForm() {
                                 boxShadow: '0 -3px 5px rgba(0, 162, 112, 0.5), 0 3px 5px rgba(0, 162, 112, 0.5)',
                             }}
                         />
-                        {errors.name && <p style={{color: 'red'}}>{errors.name.message}</p>}
+                        {errors.name && <p style={{ color: 'red' }}>{errors.name.message}</p>}
                     </div>
 
-                    <div style={{marginBottom: '15px'}}>
-                        <label style={{color: 'white', marginBottom: '5px'}}>Email</label>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ color: 'white', marginBottom: '5px' }}>Email</label>
                         <input
                             type="email"
                             placeholder="Email"
@@ -132,11 +132,11 @@ export default function ContactForm() {
                                 boxShadow: '0 -3px 5px rgba(0, 162, 112, 0.5), 0 3px 5px rgba(0, 162, 112, 0.5)',
                             }}
                         />
-                        {errors.email && <p style={{color: 'red'}}>{errors.email.message}</p>}
+                        {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
                     </div>
 
-                    <div style={{marginBottom: '15px'}}>
-                        <label style={{color: 'white', marginBottom: '5px'}}>Message</label>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ color: 'white', marginBottom: '5px' }}>Message</label>
                         <textarea
                             placeholder="Message"
                             {...register("message")}
@@ -150,16 +150,16 @@ export default function ContactForm() {
                                 boxShadow: '0 -3px 5px rgba(0, 162, 112, 0.5), 0 3px 5px rgba(0, 162, 112, 0.5)',
                             }}
                         />
-                        {errors.message && <p style={{color: 'red'}}>{errors.message.message}</p>}
+                        {errors.message && <p style={{ color: 'red' }}>{errors.message.message}</p>}
                     </div>
 
 
 
-                <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center font-raleway mt-8">
+                    <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center font-raleway mt-8">
 
-                    <div data-aos="fade-up" data-aos-delay={400}>
+                        <div data-aos="fade-up" data-aos-delay={400}>
 
-                        <button type="submit"
+                            <button type="submit"
                                 className="btn group mb-4 w-auto bg-gradient-to-t from-forest-600 to-forest-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 rounded-full px-16">
 
                                 <span className="relative inline-flex items-center">
@@ -175,19 +175,19 @@ export default function ContactForm() {
 
                                 </span>
 
-                        </button>
+                            </button>
+
+                        </div>
 
                     </div>
 
-                </div>
+                </form>
 
-            </form>
+            </div>
 
         </div>
 
-</div>
-
-)
-    ;
+    )
+        ;
 
 }
