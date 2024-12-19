@@ -58,7 +58,7 @@ export default function Features() {
             />
           </div>
           {/* Items */}
-          <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-2  ">
+          <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-2 pl-9">
             <article>
               <svg
                 className="mb-3 fill-indigo-500"

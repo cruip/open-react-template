@@ -8,14 +8,15 @@ import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 
 export const config =createConfig(
       getDefaultConfig({
-        chains : [polygon,polygonAmoy],
+        chains : [polygonAmoy,polygon],
         transports: {
-          [polygon.id]: http(
-            `https://polygon-mainnet.g.alchemy.com/v2/7PW6w16NTzgdT0NiWUFLJxLUL5XHGTMz`
-          ),
           [polygonAmoy.id]: http(
             `https://polygon-amoy.g.alchemy.com/v2/gOdtC9qkQfB5fq8LsaEiXDJyCWnEXXzd`
           ),
+          [polygon.id]: http(
+            `https://polygon-mainnet.g.alchemy.com/v2/7PW6w16NTzgdT0NiWUFLJxLUL5XHGTMz`
+          ),
+          
         },
         walletConnectProjectId: " 7PW6w16NTzgdT0NiWUFLJxLUL5XHGTMz",
       })

@@ -17,14 +17,17 @@
     "@types/node": "^22.5.0",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
+    "@wagmi/core": "^2.16.0",
     "aos": "^3.0.0-beta.6",
     "connectkit": "^1.8.2",
+    "ethers": "5.7.2",
     "next": "15.0.4",
     "package.json": "^2.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "typescript": "^5.3.3",
-    "wagmi": "^2.14.1"
+    "viem": "^2.21.55",
+    "wagmi": "^2.14.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

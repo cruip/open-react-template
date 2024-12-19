@@ -1,20 +1,73 @@
 "use client"
 
 import { Step, StepContent, StepLabel, Stepper, Typography, StepIconProps } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "../css/additional-styles/register.module.css";
 import { Web3Provider } from "@/components/web3/Web3Provider";
 import { ConnectButton } from "@/components/web3/customConnectBtn";
+import {contractAddress,usdtAddress , contractABI} from "../../components/web3/helperContract";
+import { config } from "@/components/web3/Web3Provider";
+import { writeContract } from "wagmi/actions";
+import { erc20Abi,getAddress,isAddress,parseUnits } from "viem";
 
 function Register() {
   const [activeStep, setActiveStep] = useState(0);
+  const [amount,setAmount]=useState(10);
+  const[reffralId,setReffralId]=useState("")
+
+  async function registerUser(amount: number, reffralId: string){
+    if (!amount || amount <= 0) {
+      console.error("Amount must be greater than 0");
+      return;
+    }
+    if (!reffralId) {
+      console.error("Referral ID is required");
+      return;
+    }
+    try {
+      const result = await writeContract(config, {
+        address: contractAddress,
+        abi: contractABI,
+        functionName: "register",
+        args: [ parseUnits(amount.toString(),18) , getAddress(reffralId)],
+      });
+      console.log("Transaction successful:", result);
+    } catch (error) {
+      console.error("Transaction failed:", error);
+    }
+  }
+  async function approveToken(amount: number) {
+    try {
+      const result = await writeContract(config,{
+        address: usdtAddress, 
+        abi: erc20Abi, 
+        functionName: "approve",
+        args: [contractAddress , parseUnits(amount.toString(),18)], 
+      });
+      console.log("Approval successful:", result);
+    } catch (error) {
+      console.error("Approval failed:", error);
+    }
+  }
+
+  async function handleAmount(e:React.ChangeEvent<any>){
+    let amt=Number(e.target.value)
+    setAmount(amt)
+    console.log(amount)
+    
+  }
+  async function handleReffralId(e:React.ChangeEvent<any>){
+    let rfrid=e.target.value
+    setReffralId(String(rfrid))
+    console.log(reffralId)
+  }
+
 
   const CustomStepIcon = (props: StepIconProps) => {
     const { active, completed, icon } = props;
 
     return (
       <div
-      className=""
         style={{
           width: 24,
           height: 24,
@@ -35,6 +88,13 @@ function Register() {
       </div>
     );
   };
+  React.useEffect(() => {
+    console.log("Amount updated:", amount);
+  }, [amount]);
+  
+  React.useEffect(() => {
+    console.log("Referral ID updated:", reffralId);
+  }, [reffralId]);
 
   return (
     <main className={"mx-auto max-w-screen-xl"}>
@@ -77,12 +137,24 @@ function Register() {
               <Typography className="mb-1 block text-sm font-medium text-indigo-200/65">
                 Approve the amount for it
               </Typography>
+
+              <input onChange={
+                (e)=> handleAmount(e)
+              } 
+              className="form-input w-full" value={amount}/>
+              <button
+                className="btn btn-primary"
+                onClick={() => approveToken(amount)}
+              >
+                Approve
+              </button>
               <button
                 className={"btn btn-primary"}
                 onClick={() => setActiveStep(2)}
               >
                 Continue
               </button>
+
             </StepContent>
           </Step>
 
@@ -94,6 +166,10 @@ function Register() {
               <Typography className="mb-1 block text-sm font-medium text-indigo-200/65">
                 Do you have a referral?
               </Typography>
+              <input onChange={
+                (e)=> handleReffralId(e)
+              } 
+              className="form-input w-full" value={reffralId}/>
               <button
                 className={"btn btn-primary mt-3"}
                 onClick={() => setActiveStep(3)}
@@ -108,13 +184,10 @@ function Register() {
               <span className={styles.label}>Register</span>
             </StepLabel>
             <StepContent>
-              <Typography className={styles.description}>
-                Enter your username
-              </Typography>
               <button
                 type="submit"
-                className={"btn btn-primary mt-3"}
-                onClick={() => alert("Registered!")}
+                className="btn bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] py-[10px] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+                onClick={() => registerUser(amount,reffralId)}
               >
                 Register
               </button>
