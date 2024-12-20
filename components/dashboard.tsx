@@ -1,13 +1,21 @@
 import { useAccount } from "wagmi";
-import { readContract } from "@wagmi/core";
-import { contractAddress, contractABI } from "./web3/helperContract";
+import { writeContract,readContract } from "@wagmi/core";
+import { contractAddress,usdtAddress, contractABI } from "./web3/helperContract";
 import { config } from "./web3/Web3Provider";
 import { useState, useEffect } from "react";
+import UpgradePlanModal from "./upgradeplan";
+import { erc20Abi,parseUnits } from "viem";
+
 
 function Dashboard() {
   const { address, isConnecting, isDisconnected } = useAccount();
   const [userInfo, setUserInfo] = useState<Record<string, any> | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   async function getUserInfo() {
     try {
@@ -24,6 +32,48 @@ function Dashboard() {
     } catch (err) {
       console.error("Error fetching user info:", err);
       setError("Failed to fetch user information");
+    }
+  }
+
+
+
+  async function approveToken(amount: number) {
+    try {
+      const result = await writeContract(config,{
+        address: usdtAddress, 
+        abi: erc20Abi, 
+        functionName: "approve",
+        args: [contractAddress , parseUnits(amount.toString(),18)], 
+      });
+      console.log("Approval successful:", result);
+    } catch (error) {
+      console.error("Approval failed:", error);
+    }
+  }
+
+
+
+  async function handleUpgrade(amount: string) {
+    if (!address || !amount) {
+      setError("Invalid amount or address");
+      return;
+    }
+    try {
+    const tx = await writeContract(config, {
+        abi: contractABI,
+        address: contractAddress,
+        functionName: "upgradePlan",
+        args: [parseUnits(amount.toString(),18)],
+      });
+
+      console.log("Transaction sent:", tx);
+      // Optionally, wait for confirmation
+      await tx.wait();
+      console.log("Transaction confirmed");
+      setIsModalOpen(false);
+    } catch (err) {
+      console.error("Error upgrading plan:", err);
+      setError("Failed to upgrade plan. Please try again.");
     }
   }
 
@@ -71,12 +121,14 @@ function Dashboard() {
                   {String(value)}
                 </span>
               </li>
-            ))}
-          </ul>
+            
+                ))}
+            </ul>
+            {isModalOpen && <UpgradePlanModal />}
         </div>
-      )}
-    </div>
-  );
-}
+        )}
+        </div>
+    );
+    }
 
 export default Dashboard;
