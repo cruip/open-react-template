@@ -12,6 +12,7 @@ function Dashboard() {
   const [userInfo, setUserInfo] = useState<Record<string, any> | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [withdrawMessage, setWithdrawMessage] = useState<string | null>(null);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -75,6 +76,25 @@ function Dashboard() {
     }
   }
 
+
+  async function withdrawInterest() {
+    try {
+      if (!address) return;
+
+      const tx = await writeContract(config, {
+        abi: contractABI,
+        address: contractAddress,
+        functionName: "withdrawInterest", 
+      });
+
+      console.log("Withdrawal successful:", tx);
+      setWithdrawMessage("🎉 Success! Your interest has been withdrawn and added to your GWT balance. Keep building your wealth!");
+    } catch (err) {
+      console.error("Error withdrawing interest:", err);
+      setWithdrawMessage("❌ Not Eligible: You need to wait to withdraw again.");
+    }
+  }
+
   useEffect(() => {
     if (address) {
       getUserInfo();
@@ -122,9 +142,43 @@ function Dashboard() {
             
                 ))}
             </ul>
+            <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9 mt-9">upgrade Your Wealth Plan</h3>
+            <ul>
+              <li className="mb-5 text-xl text-indigo-200/65">&#8226; Every upgrade and withdrawal brings you closer to your financial goals.</li>
+              <li className="mb-5 text-xl text-indigo-200/65">&#8226; Enhance your journey to financial growth by upgrading your plan!</li>
+              <li className="mb-5 text-xl text-indigo-200/65">&#8226; Increase your entry amount to unlock higher levels and maximize your rewards.</li>
+            </ul>
             {isModalOpen && <UpgradePlanModal />}
         </div>
         )}
+        <div className="p-8 rounded-lg shadow-lg">
+          <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9">
+            Withdraw your rewards
+          </h3>
+          <ul >
+           <li className="mb-5 text-xl text-indigo-200/65">&#8226; Claim the interest you’ve earned on your GWT tokens! </li>
+            <li className="mb-5 text-xl text-indigo-200/65">&#8226; Withdrawals are available once a month to keep your earnings growing.</li>
+          </ul>
+            <div className="text-center">
+              <button
+                onClick={withdrawInterest}
+                className="w-full py-3 bg-indigo-600 text-white rounded-lg mt-6 hover:bg-indigo-500 transition duration-200"
+              >
+                Claim Interest💰 
+              </button>
+              {withdrawMessage && (
+                <p
+                  className={`mt-4 text-center ${
+                    withdrawMessage.includes("success")
+                      ? "text-green-400"
+                      : "text-red-400"
+                  }`}
+                >
+                  {withdrawMessage}
+                </p>
+              )}
+          </div>
+          </div>
         </div>
     );
     }

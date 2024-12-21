@@ -58,7 +58,7 @@ const UpgradePlanModal = () => {
         onClick={toggleModal}
         className="w-full py-3 bg-indigo-600 text-white rounded-lg mt-6 hover:bg-indigo-500 transition duration-200"
       >
-        Upgrade Plan
+        Upgrade Plan 🚀
       </button>
 
       {isModalOpen && (
