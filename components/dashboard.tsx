@@ -28,7 +28,7 @@ function Dashboard() {
         args: [address],
       });
 
-      setUserInfo(user);
+      setUserInfo(user as Record<string,any>);
     } catch (err) {
       console.error("Error fetching user info:", err);
       setError("Failed to fetch user information");
