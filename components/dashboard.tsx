@@ -5,6 +5,7 @@ import { config } from "./web3/Web3Provider";
 import { useState, useEffect } from "react";
 import UpgradePlanModal from "./upgradeplan";
 import { erc20Abi,parseUnits } from "viem";
+import toast from "react-hot-toast";
 
 
 function Dashboard() {
@@ -102,7 +103,7 @@ function Dashboard() {
   }, [address]);
 
   return (
-    <div className="py-12 md:py-20 mx-auto max-w-6xl px-4 sm:px-6">
+    <div className="py-4 md:py-20 mx-auto max-w-6xl px-4 sm:px-6">
       {isConnecting && (
         <p className="animate-gradient bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 bg-clip-text text-transparent text-center text-4xl md:text-5xl font-bold">
           Connecting...
@@ -144,7 +145,7 @@ function Dashboard() {
             </ul>
             <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9 mt-9">upgrade Your Wealth Plan</h3>
             <ul>
-              <li className="mb-5 text-xl text-indigo-200/65">&#8226; Every upgrade and withdrawal brings you closer to your financial goals.</li>
+              <li className="mb-5 text-xl text-indigo-200/65">&#8226; Every upgrade brings you closer to your financial goals.</li>
               <li className="mb-5 text-xl text-indigo-200/65">&#8226; Enhance your journey to financial growth by upgrading your plan!</li>
               <li className="mb-5 text-xl text-indigo-200/65">&#8226; Increase your entry amount to unlock higher levels and maximize your rewards.</li>
             </ul>

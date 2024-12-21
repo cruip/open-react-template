@@ -8,6 +8,7 @@ function RegisterPage(){
   return(
   <Web3Provider>
       <Register/>
-  </Web3Provider>)
+  </Web3Provider>
+  )
 }
 export default RegisterPage;

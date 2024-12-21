@@ -110,7 +110,7 @@ const UpgradePlanModal = () => {
       
               {activeStep === 0 && (
                 <div className=" rounded-lg p-8 shadow-md text-center">
-                  <h3 className="animate-gradient bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 bg-clip-text text-transparent text-center text-3xl md:text-5xl font-bold mb-2">
+                  <h3 className="animate-gradient bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 bg-clip-text text-transparent text-center text-2xl md:text-3xl font-bold mb-2">
                     Approve the Amount
                   </h3>
                   <input
@@ -131,7 +131,7 @@ const UpgradePlanModal = () => {
 
               {/* Step 2: Confirm Upgrade */}
               {activeStep === 1 && (
-                <div className="bg-indigo-700/50 rounded-lg p-8 shadow-md text-center">
+                <div className="rounded-lg p-8 shadow-md text-center">
                   <h3 className="animate-gradient bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 bg-clip-text text-transparent text-center text-3xl md:text-5xl font-bold mb-2">
                     Confirm the Upgrade
                   </h3>

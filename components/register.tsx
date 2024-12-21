@@ -8,11 +8,16 @@ import { config } from "@/components/web3/Web3Provider";
 import { writeContract,readContract} from "wagmi/actions";
 import { erc20Abi,getAddress,parseUnits } from "viem";
 import { useAccount } from "wagmi";
+import toast from "react-hot-toast";
 
 function Register() {
   const [activeStep, setActiveStep] = useState(0);
   const [amount,setAmount]=useState(10);
   const[reffralId,setReffralId]=useState("")
+  const { address, isConnecting, isDisconnected } = useAccount();
+  const [connectError,setConnectError]=useState("")
+  const[approveError,setApproveError]=useState("")
+  
 
   async function registerUser(amount: number, reffralId: string){
     if (!amount || amount <= 10) {
@@ -44,8 +49,10 @@ function Register() {
         args: [contractAddress , parseUnits(amount.toString(),18)], 
       });
       console.log("Approval successful:", result);
+      
     } catch (error) {
       console.error("Approval failed:", error);
+      
     }
   }
 
@@ -93,6 +100,27 @@ function Register() {
       setActiveStep(3); 
   }
 }
+async function handleConnectBTN(){
+  if(!address){
+    setConnectError("wallet is not connected");
+    toast.error("you have to connect your wallet to go to the next step!")
+    return;
+  }else{
+    setConnectError("");
+    setActiveStep(1)
+    
+  }
+}
+async function handleApproveContinue(){
+  if (!amount || amount<10 ){
+    setApproveError("you cant enter with less than 10 USDT")
+    toast.error("you cant enter with less than 10 USDT")
+    return;
+  }else{
+    setApproveError("")
+    setActiveStep(2)
+  }
+}
 
   const CustomStepIcon = (props: StepIconProps) => {
     const { active, completed, icon } = props;
@@ -133,7 +161,7 @@ function Register() {
         <div className={"py-4"}>
           <span className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">Register</span>
           <br />
-          <span>Please connect your wallet and then go through the register process</span>
+          <span>Please connect your wallet and then go through the registeration process</span>
         </div>
 
         <Stepper activeStep={activeStep} orientation="vertical">
@@ -149,7 +177,7 @@ function Register() {
                 <ConnectButton/>
               <button
                 className={"btn btn-primary w-full mt-3"}
-                onClick={() => setActiveStep(1)}
+                onClick={handleConnectBTN}
               >
                 Continue
               </button>
@@ -178,7 +206,7 @@ function Register() {
               </button>
               <button
                 className={"btn btn-primary"}
-                onClick={() => setActiveStep(2)}
+                onClick={handleApproveContinue}
               >
                 Continue
               </button>
