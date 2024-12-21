@@ -47,7 +47,7 @@ export default function HeroHome() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                Where Networks Flourish, and Rewards Flow Infinitely.
+                Where Networks Flourish , and Rewards Flow Infinitely.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                   <ConnectButton/> 
