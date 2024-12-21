@@ -67,8 +67,6 @@ function Dashboard() {
       });
 
       console.log("Transaction sent:", tx);
-      // Optionally, wait for confirmation
-      await tx.wait();
       console.log("Transaction confirmed");
       setIsModalOpen(false);
     } catch (err) {
