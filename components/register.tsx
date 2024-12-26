@@ -17,15 +17,12 @@ function Register() {
   const { address, isConnecting, isDisconnected } = useAccount();
   const [connectError,setConnectError]=useState("")
   const[approveError,setApproveError]=useState("")
+  const [showReferralInput, setShowReferralInput] = useState(false);
   
 
   async function registerUser(amount: number, reffralId: string){
     if (!amount || amount <= 10) {
       console.error("Amount must be greater than 10");
-      return;
-    }
-    if (!reffralId) {
-      console.error("Referral ID is required");
       return;
     }
     try {
@@ -71,6 +68,10 @@ function Register() {
   const [referralError, setReferralError] = useState<string | null>(null);
 
    async function isValidReffralId(){
+    if (reffralId == "0x0000000000000000000000000000000000000000"){ 
+      setIsUser(true);
+      return true;
+    }else{
     try {
         const isuser = await readContract(config, {
           abi: contractABI,
@@ -85,6 +86,7 @@ function Register() {
         setIsUser(false);
         return false;
       }
+    }
   }
   async function handleReferralContinue() {
     if (!reffralId) {
@@ -222,10 +224,31 @@ async function handleApproveContinue(){
               <Typography className="mb-1 block text-sm font-medium text-indigo-200/65">
                 Do you have a referral?
               </Typography>
-              <input onChange={
-                (e)=> handleReffralId(e)
-              } 
-              className="form-input w-full" value={reffralId}/>
+              <div className="flex items-center gap-4 mb-4">
+                <button
+                  className={`btn ${showReferralInput ? "btn-primary" : "btn-secondary"}`}
+                  onClick={() => setShowReferralInput(true)}
+                >
+                  Yes
+                </button>
+                <button
+                  className={`btn ${!showReferralInput ? "btn-primary" : "btn-secondary"}`}
+                  onClick={() => {
+                    setShowReferralInput(false);
+                    setReffralId("0x0000000000000000000000000000000000000000"); 
+                  }}
+                >
+                  No
+                </button>
+              </div>
+              {showReferralInput && (
+                <input
+                  onChange={(e) => handleReffralId(e)}
+                  className="form-input w-full"
+                  value={reffralId}
+                  placeholder="Enter referral ID"
+                />
+              )}
               {referralError && (
                 <Typography className="text-red-500 text-sm mt-1">
                     {referralError}

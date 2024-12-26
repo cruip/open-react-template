@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import UpgradePlanModal from "./upgradeplan";
 import { erc20Abi,parseUnits } from "viem";
 import toast from "react-hot-toast";
+import Tree from "react-d3-tree";
 
 
 function Dashboard() {
@@ -95,6 +96,38 @@ function Dashboard() {
       setWithdrawMessage("❌ Not Eligible: You need to wait to withdraw again.");
     }
   }
+  const formatTokens = (value: string) => {
+    const numberValue = parseFloat(value);
+    return numberValue/10**18;
+
+  };
+  const formatTime = (timestamp: string) => {
+    const date = new Date(parseInt(timestamp) * 1000); 
+    return new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(date);
+  };
+  const treeData = {
+    name: "You",
+    children: [
+      {
+        name: "Referral 1",
+        children: [
+          { name: "Sub-referral 1" },
+          { name: "Sub-referral 2" },
+        ],
+      },
+      {
+        name: "Referral 2",
+        children: [{ name: "Sub-referral 3" }],
+      },
+    ],
+  };
 
   useEffect(() => {
     if (address) {
@@ -137,12 +170,30 @@ function Dashboard() {
               >
                 <span className="font-semibold text-indigo-300">{key}:</span>
                 <span className="mt-1 sm:mt-0 sm:ml-4 text-indigo-100">
-                  {String(value)}
+                {
+                  key.toLowerCase().includes("time")
+                    ? formatTime(String(value))
+                    : key.toLowerCase().includes("token")
+                    ? formatTokens(String(value))
+                    : key.toLowerCase().includes("reward")
+                    ? formatTokens(String(value))
+                    : key.toLowerCase().includes("amount")
+                    ? formatTokens(String(value))
+                    : key.toLowerCase().includes("last")
+                    ? formatTime(String(value))
+                    : String(value)
+                  }
                 </span>
               </li>
             
                 ))}
             </ul>
+            <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9 mt-9">
+                Referral Tree
+              </h3>
+              <div className="w-full bg-white p-5 h-[500px]">
+                <Tree data={treeData} orientation="vertical" />
+              </div>
             <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9 mt-9">upgrade Your Wealth Plan</h3>
             <ul>
               <li className="mb-5 text-xl text-indigo-200/65">&#8226; Every upgrade brings you closer to your financial goals.</li>

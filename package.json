@@ -24,6 +24,7 @@
     "next": "15.0.4",
     "package.json": "^2.0.1",
     "react": "19.0.0",
+    "react-d3-tree": "^3.6.2",
     "react-dom": "19.0.0",
     "react-hot-toast": "^2.4.1",
     "typescript": "^5.3.3",
