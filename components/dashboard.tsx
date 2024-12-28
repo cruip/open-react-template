@@ -112,22 +112,7 @@ function Dashboard() {
       second: "2-digit",
     }).format(date);
   };
-  const treeData = {
-    name: "You",
-    children: [
-      {
-        name: "Referral 1",
-        children: [
-          { name: "Sub-referral 1" },
-          { name: "Sub-referral 2" },
-        ],
-      },
-      {
-        name: "Referral 2",
-        children: [{ name: "Sub-referral 3" }],
-      },
-    ],
-  };
+
 
   useEffect(() => {
     if (address) {
@@ -188,12 +173,9 @@ function Dashboard() {
             
                 ))}
             </ul>
-            <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9 mt-9">
-                Referral Tree
-              </h3>
-              <div className="w-full bg-white p-5 h-[500px]">
-                <Tree data={treeData} orientation="vertical" />
-              </div>
+
+            
+
             <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-200 text-center mb-9 mt-9">upgrade Your Wealth Plan</h3>
             <ul>
               <li className="mb-5 text-xl text-indigo-200/65">&#8226; Every upgrade brings you closer to your financial goals.</li>
@@ -212,6 +194,21 @@ function Dashboard() {
             <li className="mb-5 text-xl text-indigo-200/65">&#8226; Withdrawals are available once a month to keep your earnings growing.</li>
           </ul>
             <div className="text-center">
+
+            <ul className="space-y-4">
+              <span className="mb-5 text-xl text-indigo-200/65">Next withdraw: </span>
+            {userInfo && Object.entries(userInfo).map(([key, value]) => (
+              
+                <span key={key} className="mb-5 text-xl text-indigo-200/65">
+                {
+                  key.toLowerCase().includes("lastwithdrawal")
+                    ?  formatTime(String(value+BigInt(2592000)))
+                    : null
+                  }
+                </span>           
+                ))}
+              </ul>
+
               <button
                 onClick={withdrawInterest}
                 className="w-full py-3 bg-indigo-600 text-white rounded-lg mt-6 hover:bg-indigo-500 transition duration-200"
