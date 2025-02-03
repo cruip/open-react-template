@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## [5.0.0] - 2025-02-04
+
+- Updgrade to Tailwind v4
+- Update dependencies
+
 ## [4.1.0] - 2024-12-08
 
 - Update dependencies + Upgrade to Next.js 15

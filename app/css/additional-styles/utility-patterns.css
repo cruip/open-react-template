@@ -1,23 +1,23 @@
 /* Buttons */
 .btn,
 .btn-sm {
-  @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all;
 }
 
 .btn {
-  @apply px-4 py-[11px];
+    @apply px-4 py-[11px];
 }
 
 .btn-sm {
-  @apply px-3 py-[7px];
+    @apply px-3 py-[7px];
 }
 
 /* Forms */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+    -webkit-appearance: none;
 }
 
 .form-input,
@@ -26,30 +26,30 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-  @apply border border-gray-700 bg-gray-900/50 focus:border-gray-600 focus:ring-0 focus:ring-offset-0;
+    @apply border border-gray-700 bg-gray-900/50 focus:border-gray-600 focus:ring-0 focus:ring-offset-0;
 }
 
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select {
-  @apply rounded-lg px-4 py-2.5 text-sm text-gray-200;
+    @apply rounded-lg px-4 py-2.5 text-sm text-gray-200;
 }
 
 .form-input,
 .form-textarea {
-  @apply placeholder-gray-600;
+    @apply placeholder-gray-600;
 }
 
 .form-select {
-  @apply pr-10;
+    @apply pr-10;
 }
 
 .form-checkbox,
 .form-radio {
-  @apply text-indigo-500;
+    @apply text-indigo-500;
 }
 
 .form-checkbox {
-  @apply rounded;
+    @apply rounded-xs;
 }

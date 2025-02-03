@@ -46,7 +46,7 @@ export default function ModalVideo({
 
       {/* Video thumbnail */}
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-none focus-visible:ring focus-visible:ring-indigo-200"
+        className="group relative flex items-center justify-center rounded-2xl focus:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -54,7 +54,7 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
+        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
           <Image
             className="opacity-50 grayscale"
             src={thumb}
@@ -110,13 +110,13 @@ export default function ModalVideo({
       >
         <DialogBackdrop
           transition
-          className="fixed inset-0 z-[99999] bg-black/70 transition-opacity duration-300 ease-out data-[closed]:opacity-0"
+          className="fixed inset-0 z-99999 bg-black/70 transition-opacity duration-300 ease-out data-closed:opacity-0"
         />
-        <div className="fixed inset-0 z-[99999] flex px-4 py-6 sm:px-6">
+        <div className="fixed inset-0 z-99999 flex px-4 py-6 sm:px-6">
           <div className="mx-auto flex h-full max-w-6xl items-center">
             <DialogPanel
               transition
-              className="aspect-video max-h-full w-full overflow-hidden rounded-2xl bg-black shadow-2xl duration-300 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+              className="aspect-video max-h-full w-full overflow-hidden rounded-2xl bg-black shadow-2xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
             >
               <video
                 ref={videoRef}

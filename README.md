@@ -4,6 +4,8 @@
 
 **Open** is a **free React / Next.js landing page template built with Tailwind CSS** for developers/makers who want to create a quick and professional landing page for their open source projects, SaaS products, online services, and more.
 
+**UPDATE 2025-02-04** Added Tailwind v4 support!
+
 Use it for whatever you want, and be sure to reach us out on [Twitter](https://twitter.com/Cruip_com) if you build anything cool/useful with it.
 
 Created and maintained with ❤️ by [Cruip.com](https://cruip.com).
@@ -35,9 +37,9 @@ First, run the development server:
 ```bash
 npm run dev
 # or
-yarn dev
+pnpm dev (recommended)
 # or
-pnpm dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
