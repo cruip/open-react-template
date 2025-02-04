@@ -45,6 +45,7 @@
   --text-7xl--letter-spacing: -0.0268em;
 
   --animate-shine: shine 5s ease-in-out 500ms infinite;
+  --animate-gradient: gradient 6s linear infinite;
 
   @keyframes shine {
     0% {
