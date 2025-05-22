@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import Header from "@/components/ui/header";
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -48,6 +47,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
   return (
     <html lang="en">
       <body
