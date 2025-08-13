@@ -13,16 +13,14 @@ export default function Workflows() {
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                Tailored Workflows
+                Nuestros productos
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Map your product journey
+              Visibilidad y eficacia por encima de todo
             </h2>
             <p className="text-lg text-indigo-200/65">
-              Simple and elegant interface to start collaborating with your team
-              in minutes. It seamlessly integrates with your code and your
-              favorite programming languages.
+              Tenemos una línea clara de pensamiento: productos con propósito. Buscamos simplificar tus operaciones de gestión de datos, desarrollando soluciones inteligentes que se integran a tu flujo de trabajo actual y sistemas existentes. Tú te dedicas a lo que mejor sabes hacer, y nosotros nos encargamos de que todo funcione sin problemas.
             </p>
           </div>
           {/* Spotlight items */}
@@ -63,13 +61,13 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Built-in Tools
+                        Cybersecurity
                       </span>
                     </span>
                   </div>
+                  <h3 style={{ fontSize: "20px" }}>SignalShield® Suite</h3>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                  SignalShield® es nuestra suite de ciberseguridad modular, capaz de prevenir, detectar y responder a amenazas, protegiendo servidores, instancias en la nube y sistemas industriales.
                   </p>
                 </div>
               </div>
@@ -110,13 +108,13 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Scale Instantly
+                        Telecommunications
                       </span>
                     </span>
                   </div>
+                  <h3 style={{ fontSize: "20px" }}>SignalNOC® Suite</h3>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    SignalNOC® es nuestra suite de observabilidad y operación de redes, con visibilidad en tiempo real y acciones automatizadas que aseguran continuidad y performance en todo tu entorno.
                   </p>
                 </div>
               </div>
@@ -157,13 +155,13 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Tailored Flows
+                        Data Management
                       </span>
                     </span>
                   </div>
+                  <h3 style={{ fontSize: "20px" }}>SignalAI® Copilots</h3>
                   <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
+                    Copilots de IA que accionan tus datos con un Data Lake central para ingesta y storage, elevando la calidad, la seguridad y el rendimiento de punta a punta..
                   </p>
                 </div>
               </div>
