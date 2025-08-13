@@ -1,6 +1,7 @@
 import Logo from "./logo";
 import Image from "next/image";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
+import LogoSystems from "./logoSystems";
 
 export default function Footer() {
   return (
@@ -201,18 +202,12 @@ export default function Footer() {
           {/* 5th block */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
             <div className="mb-3">
-              <Logo />
+              <LogoSystems />
             </div>
             <div className="text-sm">
               <p className="mb-3 text-indigo-200/65">
-                © Cruip.com
+                © 2025 Metalbit Systems.
                 <span className="text-gray-700"> · </span>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms
-                </a>
               </p>
               <ul className="inline-flex gap-1">
                 <li>
