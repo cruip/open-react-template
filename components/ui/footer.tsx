@@ -4,7 +4,7 @@ import FooterIllustration from "@/public/images/footer-illustration.svg";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="relative bg-gray-900 text-gray-300">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Footer illustration */}
         <div
@@ -19,249 +19,66 @@ export default function Footer() {
             alt="Footer illustration"
           />
         </div>
-        <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
-          {/* 1st block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Integrations
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Pricing &amp; Plans
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Changelog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Our method
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  User policy
-                </a>
-              </li>
-            </ul>
+
+        <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+          {/* Logo & Contact */}
+          <div className="space-y-4">
+            <Logo />
+            <p className="text-sm">
+              📧 Email:{" "}
+              <a
+                href="mailto:info@primequality.com"
+                className="text-indigo-400 hover:text-indigo-500"
+              >
+                info@primequality.com
+              </a>
+            </p>
+            <p className="text-sm">
+              📞 Phone:{" "}
+              <a
+                href="tel:+901234567890"
+                className="text-indigo-400 hover:text-indigo-500"
+              >
+                +90 123 456 7890
+              </a>
+            </p>
+            <p className="text-sm">🏢 Address: Prime Quality Services, Istanbul, Turkey</p>
           </div>
-          {/* 2nd block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Diversity &amp; Inclusion
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Financial statements
-                </a>
-              </li>
-            </ul>
+
+          {/* Social Media */}
+          <div className="flex items-center space-x-4">
+            <a
+              className="text-indigo-500 hover:text-indigo-400"
+              href="#"
+              aria-label="Twitter"
+            >
+              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4 1s-1.85 1.1-3.2 1.37A4.52 4.52 0 0 0 16.1 0c-2.54 0-4.6 2.1-4.6 4.7 0 .37.04.73.12 1.08C7.69 5.9 4.07 4.06 1.64 1.15a4.58 4.58 0 0 0-.62 2.37c0 1.63.83 3.08 2.1 3.93A4.52 4.52 0 0 1 1 7.7v.06c0 2.28 1.63 4.18 3.77 4.62a4.5 4.5 0 0 1-2.08.08 4.52 4.52 0 0 0 4.22 3.17A9.06 9.06 0 0 1 0 19.54 12.8 12.8 0 0 0 7 21c8.38 0 12.95-7.05 12.95-13.17 0-.2 0-.39-.01-.58A9.34 9.34 0 0 0 24 3z" />
+              </svg>
+            </a>
+            <a
+              className="text-indigo-500 hover:text-indigo-400"
+              href="#"
+              aria-label="LinkedIn"
+            >
+              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.3 0 6.3 3.5 6.3 8V24h-5v-7.7c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4v7.8h-5V8z" />
+              </svg>
+            </a>
+            <a
+              className="text-indigo-500 hover:text-indigo-400"
+              href="#"
+              aria-label="GitHub"
+            >
+              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.84 10.91.57.1.78-.25.78-.56v-2.02c-3.19.69-3.87-1.54-3.87-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.95.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.2-3.08-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.77.11 3.06.75.8 1.2 1.82 1.2 3.08 0 4.41-2.68 5.39-5.24 5.67.41.35.78 1.04.78 2.11v3.12c0 .31.2.67.79.56A11.52 11.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z" />
+              </svg>
+            </a>
           </div>
-          {/* 3rd block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Community
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms of service
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Report a vulnerability
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 4th block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">
-              Content Library
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Templates
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Knowledge base
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Learn
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Cookie manager
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 5th block */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
-            <div className="mb-3">
-              <Logo />
-            </div>
-            <div className="text-sm">
-              <p className="mb-3 text-indigo-200/65">
-                © Cruip.com
-                <span className="text-gray-700"> · </span>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms
-                </a>
-              </p>
-              <ul className="inline-flex gap-1">
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Twitter"
-                  >
-                    <svg
-                      className="h-8 w-8 fill-current"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Medium"
-                  >
-                    <svg
-                      className="h-8 w-8 fill-current"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M23 8H9a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1Zm-1.708 3.791-.858.823a.251.251 0 0 0-.1.241V18.9a.251.251 0 0 0 .1.241l.838.823v.181h-4.215v-.181l.868-.843c.085-.085.085-.11.085-.241v-4.887l-2.41 6.131h-.329l-2.81-6.13V18.1a.567.567 0 0 0 .156.472l1.129 1.37v.181h-3.2v-.181l1.129-1.37a.547.547 0 0 0 .146-.472v-4.749a.416.416 0 0 0-.138-.351l-1-1.209v-.181H13.8l2.4 5.283 2.122-5.283h2.971l-.001.181Z" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Github"
-                  >
-                    <svg
-                      className="h-8 w-8 fill-current"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+
+          {/* Copyright */}
+          <div className="text-sm lg:text-right">
+            <p>© 2025 Prime Quality Services. All rights reserved.</p>
           </div>
         </div>
       </div>
