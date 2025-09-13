@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import useMasonry from "@/utils/useMasonry";
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/magicui/marquee";
 import Image, { StaticImageData } from "next/image";
 import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
 import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
@@ -130,12 +132,18 @@ export default function Testimonials() {
             <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-gray-800/40 p-1">
               {/* Button #1 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${category === 1 ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${
+                  category === 1
+                    ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    : "opacity-65 transition-opacity hover:opacity-90"
+                }`}
                 aria-pressed={category === 1}
                 onClick={() => setCategory(1)}
               >
                 <svg
-                  className={`fill-current ${category === 1 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${
+                    category === 1 ? "text-indigo-500" : "text-gray-600"
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -146,12 +154,18 @@ export default function Testimonials() {
               </button>
               {/* Button #2 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${category === 2 ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${
+                  category === 2
+                    ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    : "opacity-65 transition-opacity hover:opacity-90"
+                }`}
                 aria-pressed={category === 2}
                 onClick={() => setCategory(2)}
               >
                 <svg
-                  className={`fill-current ${category === 2 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${
+                    category === 2 ? "text-indigo-500" : "text-gray-600"
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -162,12 +176,18 @@ export default function Testimonials() {
               </button>
               {/* Button #3 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${category === 3 ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${
+                  category === 3
+                    ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    : "opacity-65 transition-opacity hover:opacity-90"
+                }`}
                 aria-pressed={category === 3}
                 onClick={() => setCategory(3)}
               >
                 <svg
-                  className={`fill-current ${category === 3 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${
+                    category === 3 ? "text-indigo-500" : "text-gray-600"
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -178,12 +198,18 @@ export default function Testimonials() {
               </button>
               {/* Button #4 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${category === 4 ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${
+                  category === 4
+                    ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    : "opacity-65 transition-opacity hover:opacity-90"
+                }`}
                 aria-pressed={category === 4}
                 onClick={() => setCategory(4)}
               >
                 <svg
-                  className={`fill-current ${category === 4 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${
+                    category === 4 ? "text-indigo-500" : "text-gray-600"
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -194,12 +220,18 @@ export default function Testimonials() {
               </button>
               {/* Button #5 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${category === 5 ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200 ${
+                  category === 5
+                    ? "relative bg-linear-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-indigo-500/0),--theme(--color-indigo-500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    : "opacity-65 transition-opacity hover:opacity-90"
+                }`}
                 aria-pressed={category === 5}
                 onClick={() => setCategory(5)}
               >
                 <svg
-                  className={`fill-current ${category === 5 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${
+                    category === 5 ? "text-indigo-500" : "text-gray-600"
+                  }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -212,17 +244,27 @@ export default function Testimonials() {
           </div>
 
           {/* Cards */}
-          <div
-            className="mx-auto grid max-w-sm items-start gap-6 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3"
-            ref={masonryContainer}
-          >
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="group">
-                <Testimonial testimonial={testimonial} category={category}>
-                  {testimonial.content}
-                </Testimonial>
+          <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden rounded-2xl">
+            {/* Top gradient overlay */}
+            <div className="pointer-events-none absolute rounded-2xl top-0 left-0 h-5 w-full bg-gradient-to-b from-[#070F2B] to-transparent z-10" />
+
+            {/* Bottom gradient overlay */}
+            <div className="pointer-events-none absolute rounded-2xl bottom-0 left-0 h-5 w-full bg-gradient-to-t from-[#070F2B] to-transparent z-10" />
+
+            <Marquee reverse pauseOnHover vertical className="[--duration:15s]">
+              <div
+                className="mx-auto grid max-w-sm items-start gap-6 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3"
+                ref={masonryContainer}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="group">
+                    <Testimonial testimonial={testimonial} category={category}>
+                      {testimonial.content}
+                    </Testimonial>
+                  </div>
+                ))}
               </div>
-            ))}
+            </Marquee>
           </div>
         </div>
       </div>
@@ -248,7 +290,9 @@ export function Testimonial({
 }) {
   return (
     <article
-      className={`relative rounded-2xl bg-linear-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 p-5 backdrop-blur-xs transition-opacity before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] ${!testimonial.categories.includes(category) ? "opacity-30" : ""}`}
+      className={`relative rounded-2xl bg-linear-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 p-5 backdrop-blur-xs transition-opacity before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] ${
+        !testimonial.categories.includes(category) ? "opacity-30" : ""
+      }`}
     >
       <div className="flex flex-col gap-4">
         <div>
