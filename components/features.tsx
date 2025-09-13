@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import FeaturesImage from "@/public/images/features.png";
+import { motion } from "motion/react";
 
 export default function Features() {
   return (
@@ -59,7 +62,16 @@ export default function Features() {
           </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
-            <article>
+            <motion.article
+              whileHover={{
+                scale: 1.1,
+                // Will be used when gesture starts
+                transition: { duration: 0.5 },
+              }}
+              // Will be used when gesture ends
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl border p-4 border-neutral-600 hover:border-indigo-400"
+            >
               <svg
                 className="mb-3 fill-indigo-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +91,17 @@ export default function Features() {
                 Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security.
               </p>
-            </article>
-            <article>
+            </motion.article>
+            <motion.article
+              whileHover={{
+                scale: 1.1,
+                // Will be used when gesture starts
+                transition: { duration: 0.5 },
+              }}
+              // Will be used when gesture ends
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl border p-4 border-neutral-600 hover:border-indigo-400"
+            >
               <svg
                 className="mb-3 fill-indigo-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +118,17 @@ export default function Features() {
                 Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security.
               </p>
-            </article>
-            <article>
+            </motion.article>
+            <motion.article
+              whileHover={{
+                scale: 1.1,
+                // Will be used when gesture starts
+                transition: { duration: 0.5 },
+              }}
+              // Will be used when gesture ends
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl border p-4 border-neutral-600 hover:border-indigo-400"
+            >
               <svg
                 className="mb-3 fill-indigo-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,8 +148,17 @@ export default function Features() {
                 Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security.
               </p>
-            </article>
-            <article>
+            </motion.article>
+            <motion.article
+              whileHover={{
+                scale: 1.1,
+                // Will be used when gesture starts
+                transition: { duration: 0.5 },
+              }}
+              // Will be used when gesture ends
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl border p-4 border-neutral-600 hover:border-indigo-400"
+            >
               <svg
                 className="mb-3 fill-indigo-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -144,8 +183,17 @@ export default function Features() {
                 Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security.
               </p>
-            </article>
-            <article>
+            </motion.article>
+            <motion.article
+              whileHover={{
+                scale: 1.1,
+                // Will be used when gesture starts
+                transition: { duration: 0.5 },
+              }}
+              // Will be used when gesture ends
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl border p-4 border-neutral-600 hover:border-indigo-400"
+            >
               <svg
                 className="mb-3 fill-indigo-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,8 +213,17 @@ export default function Features() {
                 Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security.
               </p>
-            </article>
-            <article>
+            </motion.article>
+            <motion.article
+              whileHover={{
+                scale: 1.1,
+                // Will be used when gesture starts
+                transition: { duration: 0.5 },
+              }}
+              // Will be used when gesture ends
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl border p-4 border-neutral-600 hover:border-indigo-400"
+            >
               <svg
                 className="mb-3 fill-indigo-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +243,7 @@ export default function Features() {
                 Track progress across custom flows for your team. Find the right
                 balance for the user, privacy and security.
               </p>
-            </article>
+            </motion.article>
           </div>
         </div>
       </div>

@@ -14,6 +14,8 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "aos": "3.0.0-beta.6",
+    "framer-motion": "^12.23.12",
+    "motion": "^12.23.12",
     "next": "15.1.6",
     "react": "19.0.0",
     "react-dom": "19.0.0",
