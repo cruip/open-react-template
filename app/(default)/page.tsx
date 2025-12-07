@@ -1,13 +1,18 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Drone Based Services",
+  description: "Professional drone services for aerial photography, surveying, inspection, and more. Safe, accurate inspections in the harshest environments.",
 };
 
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
-import Workflows from "@/components/workflows";
-import Features from "@/components/features";
+import Services from "@/components/services";
+import WhyChoose from "@/components/why-choose";
+import Industries from "@/components/industries";
+import Products from "@/components/products";
+import Statistics from "@/components/statistics";
+import Projects from "@/components/projects";
 import Testimonials from "@/components/testimonials";
+import Contact from "@/components/contact";
 import Cta from "@/components/cta";
 
 export default function Home() {
@@ -15,9 +20,14 @@ export default function Home() {
     <>
       <PageIllustration />
       <Hero />
-      <Workflows />
-      <Features />
+      <Services />
+      <WhyChoose />
+      <Industries />
+      <Products />
+      <Statistics />
+      <Projects />
       <Testimonials />
+      <Contact />
       <Cta />
     </>
   );

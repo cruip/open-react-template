@@ -22,89 +22,81 @@ export default function Footer() {
         <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
           {/* 1st block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
+            <h3 className="text-sm font-medium text-cadet-blue">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Features
+                  Facade Inspections
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Integrations
+                  Construction Monitoring
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Pricing &amp; Plans
+                  Topographic Surveying
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Changelog
+                  Thermal Inspections
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Our method
+                  3D Modeling & BIM
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  User policy
+                  Roof Inspections
                 </a>
               </li>
             </ul>
           </div>
           {/* 2nd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Company</h3>
+            <h3 className="text-sm font-medium text-cadet-blue">Company</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  About us
+                  About SRAB
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Diversity &amp; Inclusion
+                  Our Team
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
                   Careers
@@ -112,88 +104,88 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Financial statements
+                  News
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
+                  href="#0"
+                >
+                  Contact Us
                 </a>
               </li>
             </ul>
           </div>
           {/* 3rd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Resources</h3>
+            <h3 className="text-sm font-medium text-cadet-blue">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Community
+                  Case Studies
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Terms of service
+                  FAQ
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Report a vulnerability
+                  Safety Guidelines
                 </a>
               </li>
             </ul>
           </div>
           {/* 4th block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">
-              Content Library
+            <h3 className="text-sm font-medium text-cadet-blue">
+              Contact
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Templates
+                  Get a Quote
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Tutorials
+                  Schedule Demo
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Knowledge base
+                  Support
                 </a>
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
-                  Learn
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Cookie manager
+                  Partnerships
                 </a>
               </li>
             </ul>
@@ -204,11 +196,11 @@ export default function Footer() {
               <Logo />
             </div>
             <div className="text-sm">
-              <p className="mb-3 text-indigo-200/65">
-                © Cruip.com
-                <span className="text-gray-700"> · </span>
+              <p className="mb-3 text-cadet-blue/65">
+                © SRAB Drone Services
+                <span className="text-[#3a4a55]"> · </span>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-cadet-blue/65 transition hover:text-warm-sand"
                   href="#0"
                 >
                   Terms
@@ -217,7 +209,7 @@ export default function Footer() {
               <ul className="inline-flex gap-1">
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-warm-sand transition hover:text-cadet-blue"
                     href="#0"
                     aria-label="Twitter"
                   >
@@ -232,31 +224,33 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-warm-sand transition hover:text-cadet-blue"
                     href="#0"
-                    aria-label="Medium"
+                    aria-label="LinkedIn"
                   >
                     <svg
                       className="h-8 w-8 fill-current"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="M23 8H9a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1Zm-1.708 3.791-.858.823a.251.251 0 0 0-.1.241V18.9a.251.251 0 0 0 .1.241l.838.823v.181h-4.215v-.181l.868-.843c.085-.085.085-.11.085-.241v-4.887l-2.41 6.131h-.329l-2.81-6.13V18.1a.567.567 0 0 0 .156.472l1.129 1.37v.181h-3.2v-.181l1.129-1.37a.547.547 0 0 0 .146-.472v-4.749a.416.416 0 0 0-.138-.351l-1-1.209v-.181H13.8l2.4 5.283 2.122-5.283h2.971l-.001.181Z" />
+                      <path d="M23.3 8H8.7c-.4 0-.7.3-.7.7v14.7c0 .3.3.6.7.6h14.7c.4 0 .7-.3.7-.7V8.7c-.1-.4-.4-.7-.8-.7zM12.7 21.6h-2.3V14h2.4v7.6h-.1zM11.6 13c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4-.1.7-.7 1.4-1.4 1.4zm10 8.6h-2.4v-3.7c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.8h-2.4V14h2.3v1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4.2h.1z" />
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-warm-sand transition hover:text-cadet-blue"
                     href="#0"
-                    aria-label="Github"
+                    aria-label="Instagram"
                   >
                     <svg
                       className="h-8 w-8 fill-current"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
+                      <circle cx="20.145" cy="11.892" r="1" />
+                      <path d="M16 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" />
+                      <path d="M20 24h-8c-2.056 0-4-1.944-4-4v-8c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zm-8-14c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2v-8c0-.935-1.065-2-2-2h-8z" />
                     </svg>
                   </a>
                 </li>

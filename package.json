@@ -14,7 +14,8 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "aos": "3.0.0-beta.6",
-    "next": "^15.1.9",
+    "next": "^16.0.7",
+    "qrcode.react": "^4.2.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "typescript": "^5.7.3"

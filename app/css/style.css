@@ -11,6 +11,12 @@
 @theme {
   --font-inter: var(--font-inter), sans-serif;
   --font-nacelle: var(--font-nacelle), sans-serif;
+  --font-tektur: var(--font-tektur), sans-serif;
+
+  /* SRAB Brand Colors */
+  --color-charcoal-blue: #2b3943;
+  --color-cadet-blue: #9bacbc;
+  --color-warm-sand: #cca989;
 
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5384;

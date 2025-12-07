@@ -7,13 +7,14 @@ import Image from "next/image";
 import SecondaryIllustration from "@/public/images/secondary-illustration.svg";
 
 interface ModalVideoProps {
-  thumb: StaticImageData;
+  thumb: StaticImageData | string;
   thumbWidth: number;
   thumbHeight: number;
   thumbAlt: string;
   video: string;
-  videoWidth: number;
-  videoHeight: number;
+  videoWidth?: number;
+  videoHeight?: number;
+  isYouTube?: boolean;
 }
 
 export default function ModalVideo({
@@ -22,11 +23,11 @@ export default function ModalVideo({
   thumbHeight,
   thumbAlt,
   video,
-  videoWidth,
-  videoHeight,
+  isYouTube = false,
 }: ModalVideoProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   return (
     <div className="relative">
@@ -46,7 +47,7 @@ export default function ModalVideo({
 
       {/* Video thumbnail */}
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200"
+        className="group relative flex w-full items-center justify-center rounded-2xl focus:outline-hidden focus-visible:ring-3 focus-visible:ring-warm-sand/50"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -54,18 +55,20 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
+        <figure className="relative w-full overflow-hidden rounded-2xl">
           <Image
-            className="opacity-50 grayscale"
+            className="w-full h-auto object-cover"
             src={thumb}
             width={thumbWidth}
             height={thumbHeight}
             priority
             alt={thumbAlt}
           />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-charcoal-blue/30 transition-opacity group-hover:bg-charcoal-blue/20" />
         </figure>
         {/* Play icon */}
-        <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
+        <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-charcoal-blue before:duration-300 group-hover:before:scale-110">
           <span className="relative flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -88,15 +91,15 @@ export default function ModalVideo({
                   y2={20}
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stopColor="#6366F1" />
-                  <stop offset={1} stopColor="#6366F1" stopOpacity=".72" />
+                  <stop stopColor="#cca989" />
+                  <stop offset={1} stopColor="#9bacbc" stopOpacity=".72" />
                 </linearGradient>
               </defs>
             </svg>
-            <span className="text-sm font-medium leading-tight text-gray-300">
+            <span className="text-sm font-medium leading-tight text-cadet-blue">
               Watch Demo
-              <span className="text-gray-600"> - </span>
-              3:47
+              <span className="text-cadet-blue/50"> - </span>
+              Drone Inspection
             </span>
           </span>
         </span>
@@ -104,7 +107,7 @@ export default function ModalVideo({
       {/* End: Video thumbnail */}
 
       <Dialog
-        initialFocus={videoRef}
+        initialFocus={isYouTube ? iframeRef : videoRef}
         open={modalOpen}
         onClose={() => setModalOpen(false)}
       >
@@ -112,24 +115,46 @@ export default function ModalVideo({
           transition
           className="fixed inset-0 z-99999 bg-black/70 transition-opacity duration-300 ease-out data-closed:opacity-0"
         />
-        <div className="fixed inset-0 z-99999 flex px-4 py-6 sm:px-6">
-          <div className="mx-auto flex h-full max-w-6xl items-center">
-            <DialogPanel
-              transition
-              className="aspect-video max-h-full w-full overflow-hidden rounded-2xl bg-black shadow-2xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
+        <div className="fixed inset-0 z-99999 flex items-center justify-center p-2 sm:p-4 md:p-8">
+          <DialogPanel
+            transition
+            className="w-full max-w-6xl overflow-hidden rounded-2xl bg-black shadow-2xl duration-300 ease-out data-closed:scale-95 data-closed:opacity-0"
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 z-10 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
+              aria-label="Close video"
             >
-              <video
-                ref={videoRef}
-                width={videoWidth}
-                height={videoHeight}
-                loop
-                controls
-              >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </DialogPanel>
-          </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              {isYouTube ? (
+                <iframe
+                  ref={iframeRef}
+                  src={modalOpen ? `${video}?autoplay=1&rel=0&modestbranding=1` : ""}
+                  title="Drone Building Inspection"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                />
+              ) : (
+                <video
+                  ref={videoRef}
+                  className="absolute top-0 left-0 w-full h-full object-contain"
+                  loop
+                  controls
+                  autoPlay
+                >
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </div>
+          </DialogPanel>
         </div>
       </Dialog>
     </div>
