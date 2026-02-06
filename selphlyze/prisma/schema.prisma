@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model TestSession {
+  id            String   @id @default(cuid())
+  selfCode      String   @unique
+  demographics  Json     // Store age, gender, country
+  answers       Json     // Store array of selected options
+  questionTimes Json     // Store response times for each question
+  totalTime     Int      // Total test duration in milliseconds
+  analysis      Json?    // Store AI analysis results
+  ipAddress     String?  // For analytics (anonymized)
+  userAgent     String?  // Browser info for analytics
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("test_sessions")
+}
+
+model Analytics {
+  id               String   @id @default(cuid())
+  event            String   // e.g., "test_started", "test_completed", "modal_opened"
+  sessionId        String?  // Reference to TestSession if applicable
+  demographics     Json?    // Age, gender, country for aggregated analytics
+  metadata         Json?    // Additional event-specific data
+  timestamp        DateTime @default(now())
+
+  @@map("analytics")
+}
+
+model UserFeedback {
+  id         String   @id @default(cuid())
+  sessionId  String?  // Reference to TestSession
+  rating     Int      // 1-5 star rating
+  feedback   String?  // Optional text feedback
+  createdAt  DateTime @default(now())
+
+  @@map("user_feedback")
+}
