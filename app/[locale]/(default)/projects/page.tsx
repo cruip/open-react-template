@@ -2,163 +2,170 @@
 
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const projectsData = {
   en: [
     {
-      id: "riverside-hq",
-      title: "Riverside Corporate HQ",
-      tag: "Commercial",
-      location: "Business Bay, Dubai",
+      id: "regional-content-messaging",
+      title: "Regional Content & Messaging Overhaul",
+      tag: "Content Services",
+      location: "Multi-market rollout",
       year: "2024",
-      client: "Regional Operations Group",
-      scope: "Full fit-out, MEP, interior design",
-      area: "12,500 sq ft",
-      duration: "6 months",
-      image: "/images/projects/riverside-hq.jpg",
-      description: "A high-performance workplace designed for a regional operations team. The project involved complete interior fit-out, mechanical and electrical systems installation, and bespoke joinery across three floors.",
+      client: "Regional Retail Group",
+      scope: "Content strategy, messaging framework, campaign content",
+      volume: "6 markets, 40+ assets/month",
+      duration: "5 months",
+      image: "/images/projects/content-strategy.jpg",
+      description:
+        "A ground-up content overhaul for a retail group expanding across six markets. We rebuilt the messaging framework from scratch, aligned every campaign brief to one voice, and stood up a repeatable content pipeline the internal team now runs independently.",
       highlights: [
-        "Open-plan workstations for 150+ staff",
-        "Executive boardroom with AV integration",
-        "Breakout zones and collaborative spaces",
-        "Energy-efficient LED lighting and HVAC",
+        "Unified messaging framework across all markets",
+        "Monthly campaign content calendar and briefs",
+        "Project and case-study storytelling for sales",
+        "Internal handover with content playbook",
       ],
     },
     {
-      id: "marina-residences",
-      title: "Marina Residences Fit-Out",
-      tag: "Residential",
-      location: "Dubai Marina",
+      id: "digital-platform-build",
+      title: "Full-Stack Digital Platform Build",
+      tag: "Digital Solutions",
+      location: "Cairo, Egypt",
       year: "2024",
-      client: "Private Client",
-      scope: "Luxury interior fit-out",
-      area: "4,200 sq ft",
-      duration: "4 months",
-      image: "/images/projects/marina-residences.jpg",
-      description: "Luxury interior delivery with premium finishes and coordinated MEP. The residence features custom millwork, marble flooring, smart home automation, and a fully integrated kitchen and bathroom package.",
+      client: "B2B Distribution Company",
+      scope: "Website, e-commerce store, ERP + CRM integration",
+      volume: "3 systems, single sign-on",
+      duration: "7 months",
+      image: "/images/projects/digital-solutions.jpg",
+      description:
+        "A complete digital backbone for a distribution company still running on spreadsheets. We delivered a public website, a B2B ordering storefront, and connected both to a new ERP and CRM so sales, inventory, and customer data finally live in one place.",
       highlights: [
-        "Custom Italian marble flooring",
-        "Smart home automation system",
-        "Designer kitchen with integrated appliances",
-        "Spa-inspired master bathroom",
+        "Corporate website and B2B e-commerce store",
+        "ERP system for inventory and operations",
+        "CRM system for the sales team",
+        "Smart landing pages for lead generation",
       ],
     },
     {
-      id: "northgate-retail",
-      title: "Northgate Retail Pavilion",
-      tag: "Retail",
-      location: "Al Barsha, Dubai",
+      id: "corporate-rebrand",
+      title: "Corporate Rebrand & Identity System",
+      tag: "Brand & Design",
+      location: "Cairo, Egypt",
       year: "2023",
-      client: "Northgate Properties",
-      scope: "Shell & core, fit-out",
-      area: "8,000 sq ft",
+      client: "Financial Services Firm",
+      scope: "Visual identity, brand guidelines, collateral suite",
+      volume: "Full identity system",
       duration: "3 months",
-      image: "/images/projects/northgate-retail.jpg",
-      description: "A fast-track retail shell and fit-out delivered on a compressed schedule. The project included structural modifications, glazing, MEP rough-in, and final fit-out for a flagship retail space.",
+      image: "/images/projects/brand-identity.jpg",
+      description:
+        "A full identity system built for a financial services firm outgrowing its original logo. The engagement covered brand strategy, mark design, a documented guideline set, and every piece of collateral the team touches day to day.",
       highlights: [
-        "Full-height structural glass facade",
-        "Custom display fixtures and shelving",
-        "Integrated point-of-sale systems",
-        "Brand-compliant interior design",
+        "Complete visual identity and brand guidelines",
+        "Social media content design templates",
+        "Digital and print advertising assets",
+        "Corporate brochures and company profile",
       ],
     },
     {
-      id: "askar-logistics",
-      title: "Askar Logistics Facility",
-      tag: "Industrial",
-      location: "Al Quoz, Dubai",
+      id: "tender-qualification-program",
+      title: "Government Tender Qualification Program",
+      tag: "Tenders & Contracts",
+      location: "Cairo, Egypt",
       year: "2023",
-      client: "Askar Logistics LLC",
-      scope: "Warehouse construction, MEP",
-      area: "25,000 sq ft",
-      duration: "8 months",
-      image: "/images/projects/askar-logistics.jpg",
-      description: "Robust operational space designed for storage, flow, and maintenance access. The facility includes a warehouse, office mezzanine, loading docks, and a dedicated maintenance workshop.",
+      client: "Industrial Supply Company",
+      scope: "Vendor qualification, tender tracking, proposal prep",
+      volume: "12 government tenders",
+      duration: "Ongoing retainer",
+      image: "/images/projects/tenders-contracts.jpg",
+      description:
+        "An ongoing engagement qualifying an industrial supplier as an approved government vendor and managing its tender pipeline end to end — from opportunity tracking through technical and financial proposal submission and post-award dues recovery.",
       highlights: [
-        "High-bay warehouse with racking system",
-        "Office mezzanine with meeting rooms",
-        "Loading docks with levelers",
-        "Maintenance workshop with overhead crane",
+        "Vendor qualification and compliance documentation",
+        "Continuous tracking of relevant government tenders",
+        "Technical and financial proposal preparation",
+        "Post-award government dues recovery support",
       ],
     },
   ],
   ar: [
     {
-      id: "riverside-hq",
-      title: "المقر الرئيسي - ريفرسايد",
-      tag: "تجاري",
-      location: "الخليج التجاري، دبي",
+      id: "regional-content-messaging",
+      title: "إعادة هيكلة المحتوى والرسائل الإقليمية",
+      tag: "خدمات المحتوى",
+      location: "طرح متعدد الأسواق",
       year: "2024",
-      client: "مجموعة العمليات الإقليمية",
-      scope: "تشطيب كامل، كهروميكانيك، تصميم داخلي",
-      area: "12,500 قدم مربع",
-      duration: "6 أشهر",
-      image: "/images/projects/riverside-hq.jpg",
-      description: "مساحة عمل عالية الأداء صممت لفريق العمليات الإقليمي. شمل المشروع تشطيباً داخلياً كاملاً، وتركيب أنظمة ميكانيكية وكهربائية، ونجارة مخصصة في ثلاثة طوابق.",
+      client: "مجموعة تجزئة إقليمية",
+      scope: "استراتيجية المحتوى، إطار الرسائل، محتوى الحملات",
+      volume: "6 أسواق، أكثر من 40 مادة شهرياً",
+      duration: "5 أشهر",
+      image: "/images/projects/content-strategy.jpg",
+      description:
+        "إعادة هيكلة كاملة للمحتوى لمجموعة تجزئة تتوسع في ستة أسواق. أعدنا بناء إطار الرسائل من الصفر، ووحّدنا صوت كل موجز حملة، وأسسنا خط إنتاج محتوى متكرر يديره الفريق الداخلي الآن باستقلالية.",
       highlights: [
-        "محطات عمل مفتوحة لأكثر من 150 موظفاً",
-        "قاعة مجلس إدارة مع تكامل سمعي بصري",
-        "مناطق استراحة ومساحات تعاونية",
-        "إضاءة LED موفرة للطاقة وتكييف",
+        "إطار رسائل موحد عبر جميع الأسواق",
+        "تقويم ومواجيز محتوى حملات شهرية",
+        "صياغة قصص المشاريع ودراسات الحالة لفريق المبيعات",
+        "تسليم داخلي مع دليل عمل للمحتوى",
       ],
     },
     {
-      id: "marina-residences",
-      title: "تجهيز مرسى السكنية",
-      tag: "سكني",
-      location: "مرسى دبي",
+      id: "digital-platform-build",
+      title: "بناء منصة رقمية متكاملة",
+      tag: "الحلول الرقمية",
+      location: "القاهرة، مصر",
       year: "2024",
-      client: "عميل خاص",
-      scope: "تشطيب داخلي فاخر",
-      area: "4,200 قدم مربع",
-      duration: "4 أشهر",
-      image: "/images/projects/marina-residences.jpg",
-      description: "تسليم داخلي فاخر مع تشطيبات مميزة وتنسيق كامل للأنظمة. يتميز السكن بأعمال نجارة مخصصة، وأرضيات رخامية، وأتمتة منزلية ذكية، ومطبخ وحمامات متكاملة.",
+      client: "شركة توزيع بين الشركات",
+      scope: "موقع إلكتروني، متجر إلكتروني، تكامل ERP وCRM",
+      volume: "3 أنظمة، تسجيل دخول موحد",
+      duration: "7 أشهر",
+      image: "/images/projects/digital-solutions.jpg",
+      description:
+        "بنية رقمية كاملة لشركة توزيع كانت لا تزال تعتمد على جداول البيانات. سلّمنا موقعاً إلكترونياً، ومتجراً للطلبات بين الشركات، وربطنا كليهما بنظام ERP وCRM جديدين حتى تجتمع بيانات المبيعات والمخزون والعملاء أخيراً في مكان واحد.",
       highlights: [
-        "أرضيات رخام إيطالي مخصصة",
-        "نظام أتمتة منزلية ذكي",
-        "مطبخ مصمم مع أجهزة مدمجة",
-        "حمام رئيسي مستوحى من المنتجعات",
+        "موقع إلكتروني للشركة ومتجر إلكتروني بين الشركات",
+        "نظام ERP لإدارة المخزون والعمليات",
+        "نظام CRM لفريق المبيعات",
+        "صفحات هبوط ذكية لتوليد العملاء المحتملين",
       ],
     },
     {
-      id: "northgate-retail",
-      title: "منصة نورث جيت للتجزئة",
-      tag: "تجزئة",
-      location: "البرشاء، دبي",
+      id: "corporate-rebrand",
+      title: "إعادة تصميم الهوية المؤسسية",
+      tag: "الهوية والتصميم",
+      location: "القاهرة، مصر",
       year: "2023",
-      client: "شركة نورث جيت العقارية",
-      scope: "هيكل أساسي وتشطيب",
-      area: "8,000 قدم مربع",
+      client: "شركة خدمات مالية",
+      scope: "الهوية البصرية، دليل العلامة التجارية، مواد الشركة",
+      volume: "نظام هوية متكامل",
       duration: "3 أشهر",
-      image: "/images/projects/northgate-retail.jpg",
-      description: "مشروع سريع التنفيذ مع تشطيب داخلي في جدول زمني مضغوط. تضمن المشروع تعديلات هيكلية، وزجاج واجهات، وتجهيزات كهروميكانيكية، وتشطيب نهائي لمساحة تجارية رئيسية.",
+      image: "/images/projects/brand-identity.jpg",
+      description:
+        "نظام هوية متكامل لشركة خدمات مالية تجاوز نموها شعارها الأصلي. شمل المشروع استراتيجية العلامة التجارية، تصميم الشعار، دليل موثق للهوية، وكل مادة تسويقية يتعامل معها الفريق يومياً.",
       highlights: [
-        "واجهة زجاجية هيكلية بارتفاع كامل",
-        "تركيبات عرض وأرفف مخصصة",
-        "أنظمة نقاط بيع متكاملة",
-        "تصميم داخلي متوافق مع العلامة التجارية",
+        "هوية بصرية كاملة ودليل علامة تجارية",
+        "قوالب تصميم محتوى منصات التواصل",
+        "مواد إعلانية رقمية ومطبوعة",
+        "بروشورات الشركة والملف التعريفي",
       ],
     },
     {
-      id: "askar-logistics",
-      title: "منشأة عسكر اللوجستية",
-      tag: "صناعي",
-      location: "القوز، دبي",
+      id: "tender-qualification-program",
+      title: "برنامج تأهيل المناقصات الحكومية",
+      tag: "المناقصات والعقود",
+      location: "القاهرة، مصر",
       year: "2023",
-      client: "شركة عسكر للخدمات اللوجستية",
-      scope: "بناء مستودع، كهروميكانيك",
-      area: "25,000 قدم مربع",
-      duration: "8 أشهر",
-      image: "/images/projects/askar-logistics.jpg",
-      description: "مساحة تشغيلية قوية مصممة للتخزين والتدفق والصيانة. تشمل المنشأة مستودعاً، وميزانين مكتبي، وأرصفة تحميل، وورشة صيانة مخصصة.",
+      client: "شركة توريدات صناعية",
+      scope: "تأهيل الموردين، متابعة المناقصات، إعداد العروض",
+      volume: "12 مناقصة حكومية",
+      duration: "تعاقد مستمر",
+      image: "/images/projects/tenders-contracts.jpg",
+      description:
+        "تعاقد مستمر لتأهيل مورد صناعي كمورد حكومي معتمد وإدارة خط مناقصاته من الألف إلى الياء — من متابعة الفرص وحتى تقديم العروض الفنية والمالية واسترداد المستحقات بعد الترسية.",
       highlights: [
-        "مستودع عالي الارتفاع مع نظام رفوف",
-        "ميزانين مكتبي مع غرف اجتماعات",
-        "أرصفة تحميل مع موازنات",
-        "ورشة صيانة مع رافعة علوية",
+        "تأهيل الموردين وتوثيق الامتثال",
+        "متابعة مستمرة للمناقصات ذات الصلة",
+        "إعداد العروض الفنية والمالية",
+        "دعم استرداد المستحقات الحكومية بعد الترسية",
       ],
     },
   ],
@@ -191,10 +198,14 @@ export default function ProjectsPage() {
     <div className="pt-24 md:pt-32">
       {/* Hero section */}
       <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute -left-40 -top-40 -z-10 h-[600px] w-[600px] rounded-full opacity-20 blur-3xl" 
-          style={{ background: "radial-gradient(circle, var(--color-royal), transparent 70%)" }} 
+        <div
+          className="pointer-events-none absolute -left-40 -top-40 -z-10 h-[600px] w-[600px] rounded-full opacity-20 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, var(--color-royal), transparent 70%)",
+          }}
         />
-        
+
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
           <motion.div
             className="mx-auto max-w-3xl text-center"
@@ -210,8 +221,8 @@ export default function ProjectsPage() {
             </h1>
             <p className="mt-4 text-lg leading-8 text-navy/75 dark:text-paper/75">
               {isArabic
-                ? "نفخر بتقديم مجموعة من مشاريعنا المختارة التي تعكس خبرتنا والتزامنا بالجودة."
-                : "We take pride in presenting a selection of our projects that reflect our expertise and commitment to quality."}
+                ? "نماذج من مشاريعنا عبر المحتوى، الحلول الرقمية، الهوية، والمناقصات — تعكس خبرتنا كشريك تشغيلي متكامل."
+                : "A selection of work across content, digital solutions, brand, and tenders — reflecting our role as a full operational partner."}
             </p>
           </motion.div>
         </div>
@@ -258,27 +269,35 @@ export default function ProjectsPage() {
                 <div className="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-6 dark:border-line-dark">
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-royal dark:text-gold">
-                      {isArabic ? "الموقع" : "Location"}
+                      {isArabic ? "العميل" : "Client"}
                     </span>
-                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">{project.location}</p>
+                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">
+                      {project.client}
+                    </p>
                   </div>
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-royal dark:text-gold">
                       {isArabic ? "السنة" : "Year"}
                     </span>
-                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">{project.year}</p>
+                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">
+                      {project.year}
+                    </p>
                   </div>
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-royal dark:text-gold">
-                      {isArabic ? "المساحة" : "Area"}
+                      {isArabic ? "النطاق" : "Volume"}
                     </span>
-                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">{project.area}</p>
+                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">
+                      {project.volume}
+                    </p>
                   </div>
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-royal dark:text-gold">
                       {isArabic ? "المدة" : "Duration"}
                     </span>
-                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">{project.duration}</p>
+                    <p className="mt-1 text-sm text-navy/80 dark:text-paper/80">
+                      {project.duration}
+                    </p>
                   </div>
                 </div>
 
@@ -289,9 +308,22 @@ export default function ProjectsPage() {
                   </span>
                   <ul className="mt-2 space-y-1">
                     {project.highlights.map((highlight) => (
-                      <li key={highlight} className="flex items-start gap-2 text-sm text-navy/70 dark:text-paper/70">
-                        <svg className="mt-0.5 h-4 w-4 shrink-0 text-royal dark:text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round" />
+                      <li
+                        key={highlight}
+                        className="flex items-start gap-2 text-sm text-navy/70 dark:text-paper/70"
+                      >
+                        <svg
+                          className="mt-0.5 h-4 w-4 shrink-0 text-royal dark:text-gold"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
                         {highlight}
                       </li>

@@ -12,61 +12,67 @@ export default function Testimonials() {
   const projects = isArabic
     ? [
         {
-          title: "المكتب الرئيسي Riverside",
-          tag: "تجاري",
-          blurb: "مكتب عالي الأداء لفريق عمليات إقليمي.",
-          image: "/images/projects/riverside-hq.jpg",
+          title: "إعادة هيكلة المحتوى والرسائل الإقليمية",
+          tag: "خدمات المحتوى",
+          blurb:
+            "إعادة بناء إطار الرسائل وخط إنتاج المحتوى لمجموعة تجزئة تتوسع في ست أسواق.",
+          image: "/images/projects/content-strategy.jpg",
           color: "from-royal/30 to-blue-500/20",
         },
         {
-          title: "تشطيب Marina Residences",
-          tag: "سكني",
-          blurb: "تسليم داخلي فاخر مع تشطيبات مميزة وتنسيق لأنظمة المرافق.",
-          image: "/images/projects/marina-residences.jpg",
+          title: "بناء منصة رقمية متكاملة",
+          tag: "الحلول الرقمية",
+          blurb: "موقع إلكتروني، متجر إلكتروني، وتكامل كامل مع أنظمة ERP وCRM.",
+          image: "/images/projects/digital-solutions.jpg",
           color: "from-gold/30 to-amber-500/20",
         },
         {
-          title: "قبة Northgate للتجزئة",
-          tag: "تجزئة",
-          blurb: "مشروع سريع التنفيذ مع تشطيب داخلي في جدول زمني مضغوط.",
-          image: "/images/projects/northgate-retail.jpg",
+          title: "إعادة تصميم الهوية المؤسسية",
+          tag: "الهوية والتصميم",
+          blurb: "نظام هوية بصرية متكامل ودليل علامة تجارية لشركة خدمات مالية.",
+          image: "/images/projects/brand-identity.jpg",
           color: "from-emerald-500/20 to-teal-500/20",
         },
         {
-          title: "مرفق Askar اللوجستي",
-          tag: "صناعي",
-          blurb: "مساحة تشغيلية قوية مصممة لتسهيل التخزين والتدفق والصيانة.",
-          image: "/images/projects/askar-logistics.jpg",
+          title: "برنامج تأهيل المناقصات الحكومية",
+          tag: "المناقصات والعقود",
+          blurb:
+            "تأهيل مورد صناعي كمورد حكومي معتمد وإدارة خط مناقصاته بالكامل.",
+          image: "/images/projects/tenders-contracts.jpg",
           color: "from-slate-500/20 to-gray-500/20",
         },
       ]
     : [
         {
-          title: "Riverside Corporate HQ",
-          tag: "Commercial",
-          blurb: "A high-performance workplace for a regional operations team.",
-          image: "/images/projects/riverside-hq.jpg",
+          title: "Regional Content & Messaging Overhaul",
+          tag: "Content Services",
+          blurb:
+            "Rebuilt messaging framework and content pipeline for a retail group expanding across six markets.",
+          image: "/images/projects/content-strategy.jpg",
           color: "from-royal/30 to-blue-500/20",
         },
         {
-          title: "Marina Residences Fit-Out",
-          tag: "Residential",
-          blurb: "Luxury interior delivery with premium finishes and coordinated MEP.",
-          image: "/images/projects/marina-residences.jpg",
+          title: "Full-Stack Digital Platform Build",
+          tag: "Digital Solutions",
+          blurb:
+            "Website, e-commerce store, and full ERP + CRM integration for a B2B distribution company.",
+          image: "/images/projects/digital-solutions.jpg",
           color: "from-gold/30 to-amber-500/20",
         },
         {
-          title: "Northgate Retail Pavilion",
-          tag: "Retail",
-          blurb: "A fast-track retail shell and fit-out delivered on a compressed schedule.",
-          image: "/images/projects/northgate-retail.jpg",
+          title: "Corporate Rebrand & Identity System",
+          tag: "Brand & Design",
+          blurb:
+            "Full visual identity system and brand guidelines for a growing financial services firm.",
+          image: "/images/projects/brand-identity.jpg",
           color: "from-emerald-500/20 to-teal-500/20",
         },
         {
-          title: "Askar Logistics Facility",
-          tag: "Industrial",
-          blurb: "Robust operational space designed for storage, flow, and maintenance access.",
-          image: "/images/projects/askar-logistics.jpg",
+          title: "Government Tender Qualification Program",
+          tag: "Tenders & Contracts",
+          blurb:
+            "Vendor qualification and end-to-end tender pipeline management for an industrial supplier.",
+          image: "/images/projects/tenders-contracts.jpg",
           color: "from-slate-500/20 to-gray-500/20",
         },
       ];
@@ -88,7 +94,10 @@ export default function Testimonials() {
     },
   };
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
     const target = document.getElementById(targetId);
@@ -100,10 +109,17 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="projects" className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+    <section
+      id="projects"
+      className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24"
+    >
       {/* Background decoration */}
-      <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-96 -translate-x-1/2 rounded-full opacity-10 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--color-royal), transparent 70%)" }}
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-96 -translate-x-1/2 rounded-full opacity-10 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, var(--color-royal), transparent 70%)",
+        }}
       />
 
       <motion.div
@@ -135,7 +151,9 @@ export default function Testimonials() {
             whileHover={{ y: -8, transition: { duration: 0.2 } }}
             className="group relative rounded-3xl border border-line overflow-hidden bg-white shadow-sm transition-all hover:border-royal/30 hover:shadow-xl dark:border-line-dark dark:bg-navy-deep/80 dark:hover:border-gold/30"
           >
-            <div className={`relative h-52 w-full overflow-hidden bg-gradient-to-br ${project.color} dark:opacity-80`}>
+            <div
+              className={`relative h-52 w-full overflow-hidden bg-gradient-to-br ${project.color} dark:opacity-80`}
+            >
               <Image
                 src={project.image}
                 alt={project.title}
@@ -144,7 +162,7 @@ export default function Testimonials() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               {/* Hover overlay with view button */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <a
@@ -174,8 +192,18 @@ export default function Testimonials() {
                 className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-royal transition hover:text-royal-light dark:text-gold dark:hover:text-gold-light group/link"
               >
                 {isArabic ? "عرض المشروع" : "View project"}
-                <svg className="h-4 w-4 transition-transform group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  className="h-4 w-4 transition-transform group-hover/link:translate-x-1"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    d="M5 12h14M12 5l7 7-7 7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </a>
             </div>
