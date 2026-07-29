@@ -1,54 +1,129 @@
-import Image from "next/image";
-import BlurredShape from "@/public/images/blurred-shape.svg";
+"use client";
+
+import { FormEvent, useState } from "react";
+import { useParams } from "next/navigation";
+import emailjs from "@emailjs/browser";
+import { siteConfig } from "@/config/site";
 
 export default function Cta() {
+  const params = useParams<{ locale?: string }>();
+  const locale = params?.locale === "ar" ? "ar" : "en";
+  const isArabic = locale === "ar";
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("sending");
+
+    const form = event.currentTarget;
+    try {
+      await emailjs.sendForm(
+        siteConfig.emailJs.serviceId,
+        siteConfig.emailJs.templateId,
+        form,
+        siteConfig.emailJs.publicKey,
+      );
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
-    <section className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-24 ml-20 -translate-x-1/2"
-        aria-hidden="true"
-      >
-        <Image
-          className="max-w-none"
-          src={BlurredShape}
-          width={760}
-          height={668}
-          alt="Blurred shape"
-        />
-      </div>
-      <div className="max-w6xl mx-auto px-4 sm:px-6">
-        <div className="bg-linear-to-r from-transparent via-gray-800/50 py-12 md:py-20">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
-              data-aos="fade-up"
-            >
-              Join the content-first platform
+    <section
+      id="contact"
+      className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24"
+    >
+      <div className="rounded-[2rem] border border-line bg-white p-8 shadow-sm dark:border-line-dark dark:bg-navy-deep/80 md:p-10">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div data-aos="fade-right">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-royal dark:text-gold">
+              {isArabic ? "تواصل معنا" : "Let's talk"}
+            </p>
+            <h2 className="mt-3 font-nacelle text-3xl font-semibold text-navy dark:text-paper md:text-4xl">
+              {isArabic ? "أخبرنا عن مشروعك." : "Tell us about your project."}
             </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay={400}>
-                <a
-                  className="btn group mb-4 w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                  href="#0"
-                >
-                  <span className="relative inline-flex items-center">
-                    Start Building
-                    <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-                      -&gt;
-                    </span>
-                  </span>
-                </a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay={600}>
-                <a
-                  className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"
-                  href="#0"
-                >
-                  Schedule Demo
-                </a>
-              </div>
+            <p className="mt-4 text-lg leading-8 text-navy/75 dark:text-paper/75">
+              {isArabic
+                ? "أرسل النموذج وسنعود إليك خلال يوم عمل واحد على الأقل."
+                : "Fill in the form and our team will get back to you within one business day."}
+            </p>
+            <div className="mt-8 space-y-3 text-sm text-navy/70 dark:text-paper/70">
+              <p>{siteConfig.phone}</p>
+              <p>{siteConfig.email}</p>
+              <p>{siteConfig.address}</p>
             </div>
           </div>
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+            data-aos="fade-left"
+          >
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="flex flex-col text-sm font-medium text-navy dark:text-paper">
+                <span className="mb-2">
+                  {isArabic ? "الاسم الكامل" : "Full name"}
+                </span>
+                <input
+                  required
+                  name="from_name"
+                  className="rounded-xl border border-line bg-paper-soft px-4 py-3 outline-none ring-0 dark:border-line-dark dark:bg-navy-deep/70"
+                />
+              </label>
+              <label className="flex flex-col text-sm font-medium text-navy dark:text-paper">
+                <span className="mb-2">
+                  {isArabic ? "البريد الإلكتروني" : "Email address"}
+                </span>
+                <input
+                  required
+                  type="email"
+                  name="reply_to"
+                  className="rounded-xl border border-line bg-paper-soft px-4 py-3 outline-none ring-0 dark:border-line-dark dark:bg-navy-deep/70"
+                />
+              </label>
+            </div>
+            <label className="flex flex-col text-sm font-medium text-navy dark:text-paper">
+              <span className="mb-2">
+                {isArabic ? "تفاصيل المشروع" : "Project details"}
+              </span>
+              <textarea
+                required
+                name="message"
+                rows={6}
+                className="rounded-xl border border-line bg-paper-soft px-4 py-3 outline-none ring-0 dark:border-line-dark dark:bg-navy-deep/70"
+              />
+            </label>
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="rounded-full bg-gold px-6 py-3 font-semibold text-white transition hover:bg-gold-light disabled:opacity-70"
+            >
+              {status === "sending"
+                ? isArabic
+                  ? "جارٍ الإرسال…"
+                  : "Sending…"
+                : isArabic
+                  ? "إرسال الرسالة"
+                  : "Send message"}
+            </button>
+            {status === "success" && (
+              <p className="text-sm text-royal dark:text-gold">
+                {isArabic
+                  ? "تم إرسال الرسالة — سنعاود التواصل قريبًا."
+                  : "Message sent — we’ll be in touch shortly."}
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-red-600">
+                {isArabic
+                  ? "حدث خطأ. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة."
+                  : "Something went wrong. Please try again or email us directly."}
+              </p>
+            )}
+          </form>
         </div>
       </div>
     </section>
