@@ -56,6 +56,77 @@
     "p4_title": "Government Tender Qualification Program",
     "p4_tag": "Tenders & Contracts"
   },
+  "servicesData": {
+    "eyebrow": "What we do",
+    "title": "Six services, one accountable team.",
+    "items": {
+      "s1": {
+        "title": "Content Services",
+        "body": "Content strategy, marketing messaging, and campaign content that gets read.",
+        "image": "/images/services/general-contracting.jpg"
+      },
+      "s2": {
+        "title": "Digital Solutions",
+        "body": "Websites, online stores, ERP and CRM systems, and smart landing pages.",
+        "image": "/images/services/interior-design.jpg"
+      },
+      "s3": {
+        "title": "Brand & Creative Design",
+        "body": "Visual identity, digital and print ads, and corporate collateral.",
+        "image": "/images/services/mep.jpg"
+      },
+      "s4": {
+        "title": "Training & Development",
+        "body": "Government platform training, sales coaching, and digital marketing upskilling.",
+        "image": "/images/services/procurement.jpg"
+      },
+      "s5": {
+        "title": "HR Enablement",
+        "body": "Recruitment, hiring support, HR operations, and government platform management.",
+        "image": "/images/services/retail.jpg"
+      },
+      "s6": {
+        "title": "Tender & Contract Management",
+        "body": "Vendor qualification, tender tracking, and technical/financial proposal preparation.",
+        "image": "/images/services/support.jpg"
+      }
+    }
+  },
+  "projectsData": {
+    "eyebrow": "Recent work",
+    "title": "Selected projects.",
+    "view": "View project",
+    "items": {
+      "p1": {
+        "title": "Regional Content & Messaging Overhaul",
+        "tag": "Content Services",
+        "blurb": "Rebuilt messaging framework and content pipeline for a retail group expanding across six markets.",
+        "image": "/images/projects/riverside-hq.jpg",
+        "color": "from-royal/30 to-blue-500/20"
+      },
+      "p2": {
+        "title": "Full-Stack Digital Platform Build",
+        "tag": "Digital Solutions",
+        "blurb": "Website, e-commerce store, and full ERP + CRM integration for a B2B distribution company.",
+        "image": "/images/projects/marina-residences.jpg",
+        "color": "from-gold/30 to-amber-500/20"
+      },
+      "p3": {
+        "title": "Corporate Rebrand & Identity System",
+        "tag": "Brand & Design",
+        "blurb": "Full visual identity system and brand guidelines for a growing financial services firm.",
+        "image": "/images/projects/northgate-retail.jpg",
+        "color": "from-emerald-500/20 to-teal-500/20"
+      },
+      "p4": {
+        "title": "Government Tender Qualification Program",
+        "tag": "Tenders & Contracts",
+        "blurb": "Vendor qualification and end-to-end tender pipeline management for an industrial supplier.",
+        "image": "/images/projects/askar-logistics.jpg",
+        "color": "from-slate-500/20 to-gray-500/20"
+      }
+    }
+  },
   "contact": {
     "eyebrow": "Let's talk",
     "title": "Tell us what you need built.",

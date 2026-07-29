@@ -1,0 +1,353 @@
+# Decap CMS Configuration
+# 
+# Two backend options:
+# 1. github backend (default) — Requires a GitHub OAuth App. Set GITHUB_CLIENT_ID 
+#    and GITHUB_CLIENT_SECRET as environment variables in your hosting dashboard.
+# 2. git-gateway — Works with Netlify Identity. Enable Netlify Identity + Git Gateway
+#    in your Netlify site settings.
+#
+# Using option 1 (github) by default. To switch to git-gateway, replace 
+# `backend` section with: backend: { name: "git-gateway" }
+
+backend:
+  name: github
+  repo: poula00saber/open-react-template
+  branch: main
+  base_url: https://api.github.com
+  # For local development, use:
+  # local_backend: true
+
+# When using github backend, you need a GitHub OAuth App:
+# 1. Go to GitHub Settings → Developer settings → OAuth Apps → New OAuth App
+# 2. Set Homepage URL to your site URL (e.g., https://your-site.com)
+# 3. Set Authorization callback URL to: https://api.github.com/oauth/authorize
+# 4. Copy Client ID and Client Secret
+# 5. Add as env vars: GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET in your hosting dashboard
+# 
+# For Vercel: https://vercel.com/docs/projects/environment-variables
+# For Netlify: https://docs.netlify.com/environment-variables/overview/
+
+publish_mode: editorial_workflow
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "siteContent"
+    label: "Site Content"
+    description: "Edit all site text content (English)"
+    files:
+      - name: "en"
+        label: "English"
+        file: "messages/en.json"
+        fields:
+          - { label: "Nav — About", name: "nav.about", widget: "string" }
+          - { label: "Nav — Services", name: "nav.services", widget: "string" }
+          - { label: "Nav — Projects", name: "nav.projects", widget: "string" }
+          - { label: "Nav — Contact", name: "nav.contact", widget: "string" }
+          - { label: "Nav — CTA Button", name: "nav.cta", widget: "string" }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "CTA Primary", name: "cta_primary", widget: "string" }
+              - { label: "CTA Secondary", name: "cta_secondary", widget: "string" }
+              - { label: "Stat 1", name: "stat_1", widget: "string" }
+              - { label: "Stat 2", name: "stat_2", widget: "string" }
+              - { label: "Stat 3", name: "stat_3", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Point 1 Title", name: "point_1_title", widget: "string" }
+              - { label: "Point 1 Body", name: "point_1_body", widget: "text" }
+              - { label: "Point 2 Title", name: "point_2_title", widget: "string" }
+              - { label: "Point 2 Body", name: "point_2_body", widget: "text" }
+              - { label: "Point 3 Title", name: "point_3_title", widget: "string" }
+              - { label: "Point 3 Body", name: "point_3_body", widget: "text" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Name Label", name: "name", widget: "string" }
+              - { label: "Email Label", name: "email", widget: "string" }
+              - { label: "Message Label", name: "message", widget: "string" }
+              - { label: "Submit Button", name: "submit", widget: "string" }
+              - { label: "Sending Text", name: "sending", widget: "string" }
+              - { label: "Success Text", name: "success", widget: "string" }
+              - { label: "Error Text", name: "error", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Rights Text", name: "rights", widget: "string" }
+              - { label: "Quick Links Title", name: "quicklinks", widget: "string" }
+              - { label: "Contact Info Title", name: "contactinfo", widget: "string" }
+
+      - name: "ar"
+        label: "Arabic"
+        file: "messages/ar.json"
+        fields:
+          - { label: "التنقل — من نحن", name: "nav.about", widget: "string" }
+          - { label: "التنقل — خدماتنا", name: "nav.services", widget: "string" }
+          - { label: "التنقل — مشاريعنا", name: "nav.projects", widget: "string" }
+          - { label: "التنقل — تواصل معنا", name: "nav.contact", widget: "string" }
+          - { label: "التنقل — زر العرض", name: "nav.cta", widget: "string" }
+          - label: "قسم البطل"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "النص العلوي", name: "eyebrow", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص الفرعي", name: "subtitle", widget: "text" }
+              - { label: "الزر الرئيسي", name: "cta_primary", widget: "string" }
+              - { label: "الزر الثانوي", name: "cta_secondary", widget: "string" }
+              - { label: "الإحصاء 1", name: "stat_1", widget: "string" }
+              - { label: "الإحصاء 2", name: "stat_2", widget: "string" }
+              - { label: "الإحصاء 3", name: "stat_3", widget: "string" }
+          - label: "قسم من نحن"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "النص العلوي", name: "eyebrow", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "المحتوى", name: "body", widget: "text" }
+              - { label: "النقطة 1 عنوان", name: "point_1_title", widget: "string" }
+              - { label: "النقطة 1 نص", name: "point_1_body", widget: "text" }
+              - { label: "النقطة 2 عنوان", name: "point_2_title", widget: "string" }
+              - { label: "النقطة 2 نص", name: "point_2_body", widget: "text" }
+              - { label: "النقطة 3 عنوان", name: "point_3_title", widget: "string" }
+              - { label: "النقطة 3 نص", name: "point_3_body", widget: "text" }
+          - label: "قسم الاتصال"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "النص العلوي", name: "eyebrow", widget: "string" }
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص الفرعي", name: "subtitle", widget: "text" }
+              - { label: "حقل الاسم", name: "name", widget: "string" }
+              - { label: "حقل البريد", name: "email", widget: "string" }
+              - { label: "حقل الرسالة", name: "message", widget: "string" }
+              - { label: "زر الإرسال", name: "submit", widget: "string" }
+              - { label: "نص الإرسال", name: "sending", widget: "string" }
+              - { label: "نص النجاح", name: "success", widget: "string" }
+              - { label: "نص الخطأ", name: "error", widget: "string" }
+          - label: "التذييل"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "نص الحقوق", name: "rights", widget: "string" }
+              - { label: "عنوان الروابط", name: "quicklinks", widget: "string" }
+              - { label: "عنوان الاتصال", name: "contactinfo", widget: "string" }
+
+  - name: "servicesData"
+    label: "Services (Homepage Cards)"
+    description: "Edit the 6 service cards on the homepage"
+    files:
+      - name: "en-services"
+        label: "English"
+        file: "messages/en.json"
+        fields:
+          - { label: "Section Eyebrow", name: "servicesData.eyebrow", widget: "string" }
+          - { label: "Section Title", name: "servicesData.title", widget: "string" }
+          - label: "Service 1"
+            name: "servicesData.items.s1"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image Path", name: "image", widget: "string" }
+          - label: "Service 2"
+            name: "servicesData.items.s2"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image Path", name: "image", widget: "string" }
+          - label: "Service 3"
+            name: "servicesData.items.s3"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image Path", name: "image", widget: "string" }
+          - label: "Service 4"
+            name: "servicesData.items.s4"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image Path", name: "image", widget: "string" }
+          - label: "Service 5"
+            name: "servicesData.items.s5"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image Path", name: "image", widget: "string" }
+          - label: "Service 6"
+            name: "servicesData.items.s6"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image Path", name: "image", widget: "string" }
+
+      - name: "ar-services"
+        label: "Arabic"
+        file: "messages/ar.json"
+        fields:
+          - { label: "عنوان القسم", name: "servicesData.eyebrow", widget: "string" }
+          - { label: "عنوان القسم الرئيسي", name: "servicesData.title", widget: "string" }
+          - label: "الخدمة 1"
+            name: "servicesData.items.s1"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص", name: "body", widget: "text" }
+              - { label: "رابط الصورة", name: "image", widget: "string" }
+          - label: "الخدمة 2"
+            name: "servicesData.items.s2"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص", name: "body", widget: "text" }
+              - { label: "رابط الصورة", name: "image", widget: "string" }
+          - label: "الخدمة 3"
+            name: "servicesData.items.s3"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص", name: "body", widget: "text" }
+              - { label: "رابط الصورة", name: "image", widget: "string" }
+          - label: "الخدمة 4"
+            name: "servicesData.items.s4"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص", name: "body", widget: "text" }
+              - { label: "رابط الصورة", name: "image", widget: "string" }
+          - label: "الخدمة 5"
+            name: "servicesData.items.s5"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص", name: "body", widget: "text" }
+              - { label: "رابط الصورة", name: "image", widget: "string" }
+          - label: "الخدمة 6"
+            name: "servicesData.items.s6"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "النص", name: "body", widget: "text" }
+              - { label: "رابط الصورة", name: "image", widget: "string" }
+
+  - name: "projectsData"
+    label: "Projects (Homepage Cards)"
+    description: "Edit the 4 project cards on the homepage"
+    files:
+      - name: "en-projects"
+        label: "English"
+        file: "messages/en.json"
+        fields:
+          - { label: "Section Eyebrow", name: "projectsData.eyebrow", widget: "string" }
+          - { label: "Section Title", name: "projectsData.title", widget: "string" }
+          - { label: "View Button", name: "projectsData.view", widget: "string" }
+          - label: "Project 1"
+            name: "projectsData.items.p1"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Image", name: "image", widget: "string" }
+          - label: "Project 2"
+            name: "projectsData.items.p2"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Image", name: "image", widget: "string" }
+          - label: "Project 3"
+            name: "projectsData.items.p3"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Image", name: "image", widget: "string" }
+          - label: "Project 4"
+            name: "projectsData.items.p4"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Image", name: "image", widget: "string" }
+
+      - name: "ar-projects"
+        label: "Arabic"
+        file: "messages/ar.json"
+        fields:
+          - { label: "عنوان القسم", name: "projectsData.eyebrow", widget: "string" }
+          - { label: "عنوان القسم الرئيسي", name: "projectsData.title", widget: "string" }
+          - { label: "زر العرض", name: "projectsData.view", widget: "string" }
+          - label: "المشروع 1"
+            name: "projectsData.items.p1"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "الوصف", name: "blurb", widget: "text" }
+              - { label: "الصورة", name: "image", widget: "string" }
+          - label: "المشروع 2"
+            name: "projectsData.items.p2"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "الوصف", name: "blurb", widget: "text" }
+              - { label: "الصورة", name: "image", widget: "string" }
+          - label: "المشروع 3"
+            name: "projectsData.items.p3"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "الوصف", name: "blurb", widget: "text" }
+              - { label: "الصورة", name: "image", widget: "string" }
+          - label: "المشروع 4"
+            name: "projectsData.items.p4"
+            widget: "object"
+            fields:
+              - { label: "العنوان", name: "title", widget: "string" }
+              - { label: "الوسم", name: "tag", widget: "string" }
+              - { label: "الوصف", name: "blurb", widget: "text" }
+              - { label: "الصورة", name: "image", widget: "string" }
+
+  - name: "detailedProjects"
+    label: "Detailed Projects (Full Page)"
+    description: "Edit the detailed project cards on /projects page"
+    folder: "app/[locale]/(default)/projects"
+    create: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Year", name: "year", widget: "string" }
+      - { label: "Client", name: "client", widget: "string" }
+      - { label: "Scope", name: "scope", widget: "string" }
+      - { label: "Area", name: "area", widget: "string" }
+      - { label: "Duration", name: "duration", widget: "string" }
+      - { label: "Image", name: "image", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Highlights", name: "highlights", widget: "list", field: { label: "Highlight", name: "highlight", widget: "string" } }
