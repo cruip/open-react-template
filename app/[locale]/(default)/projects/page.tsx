@@ -16,7 +16,7 @@ const projectsData = {
       scope: "Content strategy, messaging framework, campaign content",
       volume: "6 markets, 40+ assets/month",
       duration: "5 months",
-      image: "/images/projects/content-strategy.jpg",
+      image: "/images/projects/content-messaging.jpg",
       description:
         "A ground-up content overhaul for a retail group expanding across six markets. We rebuilt the messaging framework from scratch, aligned every campaign brief to one voice, and stood up a repeatable content pipeline the internal team now runs independently.",
       highlights: [
@@ -36,7 +36,7 @@ const projectsData = {
       scope: "Website, e-commerce store, ERP + CRM integration",
       volume: "3 systems, single sign-on",
       duration: "7 months",
-      image: "/images/projects/digital-solutions.jpg",
+      image: "/images/projects/digital-platform.jpg",
       description:
         "A complete digital backbone for a distribution company still running on spreadsheets. We delivered a public website, a B2B ordering storefront, and connected both to a new ERP and CRM so sales, inventory, and customer data finally live in one place.",
       highlights: [
@@ -56,7 +56,7 @@ const projectsData = {
       scope: "Visual identity, brand guidelines, collateral suite",
       volume: "Full identity system",
       duration: "3 months",
-      image: "/images/projects/brand-identity.jpg",
+      image: "/images/projects/corporate-rebrand.jpg",
       description:
         "A full identity system built for a financial services firm outgrowing its original logo. The engagement covered brand strategy, mark design, a documented guideline set, and every piece of collateral the team touches day to day.",
       highlights: [
@@ -76,7 +76,7 @@ const projectsData = {
       scope: "Vendor qualification, tender tracking, proposal prep",
       volume: "12 government tenders",
       duration: "Ongoing retainer",
-      image: "/images/projects/tenders-contracts.jpg",
+      image: "/images/projects/tender-qualification.jpg",
       description:
         "An ongoing engagement qualifying an industrial supplier as an approved government vendor and managing its tender pipeline end to end — from opportunity tracking through technical and financial proposal submission and post-award dues recovery.",
       highlights: [
@@ -98,7 +98,7 @@ const projectsData = {
       scope: "استراتيجية المحتوى، إطار الرسائل، محتوى الحملات",
       volume: "6 أسواق، أكثر من 40 مادة شهرياً",
       duration: "5 أشهر",
-      image: "/images/projects/content-strategy.jpg",
+      image: "/images/projects/content-messaging.jpg",
       description:
         "إعادة هيكلة كاملة للمحتوى لمجموعة تجزئة تتوسع في ستة أسواق. أعدنا بناء إطار الرسائل من الصفر، ووحّدنا صوت كل موجز حملة، وأسسنا خط إنتاج محتوى متكرر يديره الفريق الداخلي الآن باستقلالية.",
       highlights: [
@@ -118,7 +118,7 @@ const projectsData = {
       scope: "موقع إلكتروني، متجر إلكتروني، تكامل ERP وCRM",
       volume: "3 أنظمة، تسجيل دخول موحد",
       duration: "7 أشهر",
-      image: "/images/projects/digital-solutions.jpg",
+      image: "/images/projects/digital-platform.jpg",
       description:
         "بنية رقمية كاملة لشركة توزيع كانت لا تزال تعتمد على جداول البيانات. سلّمنا موقعاً إلكترونياً، ومتجراً للطلبات بين الشركات، وربطنا كليهما بنظام ERP وCRM جديدين حتى تجتمع بيانات المبيعات والمخزون والعملاء أخيراً في مكان واحد.",
       highlights: [
@@ -138,7 +138,7 @@ const projectsData = {
       scope: "الهوية البصرية، دليل العلامة التجارية، مواد الشركة",
       volume: "نظام هوية متكامل",
       duration: "3 أشهر",
-      image: "/images/projects/brand-identity.jpg",
+      image: "/images/projects/corporate-rebrand.jpg",
       description:
         "نظام هوية متكامل لشركة خدمات مالية تجاوز نموها شعارها الأصلي. شمل المشروع استراتيجية العلامة التجارية، تصميم الشعار، دليل موثق للهوية، وكل مادة تسويقية يتعامل معها الفريق يومياً.",
       highlights: [
@@ -158,7 +158,7 @@ const projectsData = {
       scope: "تأهيل الموردين، متابعة المناقصات، إعداد العروض",
       volume: "12 مناقصة حكومية",
       duration: "تعاقد مستمر",
-      image: "/images/projects/tenders-contracts.jpg",
+      image: "/images/projects/tender-qualification.jpg",
       description:
         "تعاقد مستمر لتأهيل مورد صناعي كمورد حكومي معتمد وإدارة خط مناقصاته من الألف إلى الياء — من متابعة الفرص وحتى تقديم العروض الفنية والمالية واسترداد المستحقات بعد الترسية.",
       highlights: [

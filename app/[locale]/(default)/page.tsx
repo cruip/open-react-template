@@ -6,9 +6,9 @@ import Testimonials from "@/components/testimonials";
 import Cta from "@/components/cta";
 
 export const metadata = {
-  title: "DAV | Business Development & Enablement",
+  title: "DAM | Business Development & Enablement",
   description:
-    "DAV is a multidisciplinary business development partner delivering content, digital solutions, brand identity, training, HR enablement, and tender management.",
+    "DAM is a multidisciplinary business development partner delivering content, digital solutions, brand identity, training, HR enablement, and tender management.",
 };
 
 export default function Home() {

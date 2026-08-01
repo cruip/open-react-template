@@ -63,32 +63,32 @@
       "s1": {
         "title": "خدمات المحتوى",
         "body": "استراتيجيات المحتوى، صياغة الرسائل التسويقية، ومحتوى الحملات الإعلانية.",
-        "image": "/images/services/general-contracting.jpg"
+        "image": "/images/services/content-services.jpg"
       },
       "s2": {
         "title": "الحلول الرقمية",
         "body": "مواقع إلكترونية، متاجر، أنظمة ERP وCRM، وصفحات هبوط ذكية.",
-        "image": "/images/services/interior-design.jpg"
+        "image": "/images/services/digital-solutions.jpg"
       },
       "s3": {
         "title": "الهوية والتصميم الإبداعي",
         "body": "هوية بصرية متكاملة، إعلانات رقمية ومطبوعة، وملفات الشركات.",
-        "image": "/images/services/mep.jpg"
+        "image": "/images/services/brand-design.jpg"
       },
       "s4": {
         "title": "التدريب والتطوير",
         "body": "التدريب على المنصات الحكومية، تدريب فرق المبيعات، ومهارات التسويق الرقمي.",
-        "image": "/images/services/procurement.jpg"
+        "image": "/images/services/training-development.jpg"
       },
       "s5": {
         "title": "تمكين الموارد البشرية",
         "body": "الاستقطاب والتوظيف، إدارة عمليات الموارد البشرية، والمنصات الحكومية.",
-        "image": "/images/services/retail.jpg"
+        "image": "/images/services/hr-enablement.jpg"
       },
       "s6": {
         "title": "إدارة المناقصات والعقود",
         "body": "تأهيل الموردين، متابعة المناقصات، وإعداد العروض الفنية والمالية.",
-        "image": "/images/services/support.jpg"
+        "image": "/images/services/tender-contracts.jpg"
       }
     }
   },
@@ -101,28 +101,28 @@
         "title": "إعادة هيكلة المحتوى والرسائل الإقليمية",
         "tag": "خدمات المحتوى",
         "blurb": "إعادة بناء إطار الرسائل وخط إنتاج المحتوى لمجموعة تجزئة تتوسع في ست أسواق.",
-        "image": "/images/projects/riverside-hq.jpg",
+        "image": "/images/projects/content-messaging.jpg",
         "color": "from-royal/30 to-blue-500/20"
       },
       "p2": {
         "title": "بناء منصة رقمية متكاملة",
         "tag": "الحلول الرقمية",
         "blurb": "موقع إلكتروني، متجر إلكتروني، وتكامل كامل مع أنظمة ERP وCRM.",
-        "image": "/images/projects/marina-residences.jpg",
+        "image": "/images/projects/digital-platform.jpg",
         "color": "from-gold/30 to-amber-500/20"
       },
       "p3": {
         "title": "إعادة تصميم الهوية المؤسسية",
         "tag": "الهوية والتصميم",
         "blurb": "نظام هوية بصرية متكامل ودليل علامة تجارية لشركة خدمات مالية.",
-        "image": "/images/projects/northgate-retail.jpg",
+        "image": "/images/projects/corporate-rebrand.jpg",
         "color": "from-emerald-500/20 to-teal-500/20"
       },
       "p4": {
         "title": "برنامج تأهيل المناقصات الحكومية",
         "tag": "المناقصات والعقود",
         "blurb": "تأهيل مورد صناعي كمورد حكومي معتمد وإدارة خط مناقصاته بالكامل.",
-        "image": "/images/projects/askar-logistics.jpg",
+        "image": "/images/projects/tender-qualification.jpg",
         "color": "from-slate-500/20 to-gray-500/20"
       }
     }

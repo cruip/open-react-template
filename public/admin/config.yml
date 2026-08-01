@@ -334,20 +334,19 @@ collections:
               - { label: "الوصف", name: "blurb", widget: "text" }
               - { label: "الصورة", name: "image", widget: "string" }
 
-  - name: "detailedProjects"
-    label: "Detailed Projects (Full Page)"
-    description: "Edit the detailed project cards on /projects page"
-    folder: "app/[locale]/(default)/projects"
-    create: false
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    description: "Write and manage blog posts. Each post is a Markdown file with frontmatter."
+    folder: "content/blog"
+    create: true
+    identifier_field: "slug"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Tag", name: "tag", widget: "string" }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Year", name: "year", widget: "string" }
-      - { label: "Client", name: "client", widget: "string" }
-      - { label: "Scope", name: "scope", widget: "string" }
-      - { label: "Area", name: "area", widget: "string" }
-      - { label: "Duration", name: "duration", widget: "string" }
-      - { label: "Image", name: "image", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Highlights", name: "highlights", widget: "list", field: { label: "Highlight", name: "highlight", widget: "string" } }
+      - { label: "Title (English)", name: "title_en", widget: "string" }
+      - { label: "Title (Arabic)", name: "title_ar", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly identifier (e.g., 'welcome-to-dam')" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Cover Image", name: "cover_image", widget: "image", hint: "Choose an image from the media library" }
+      - { label: "Excerpt (English)", name: "excerpt_en", widget: "text", hint: "Short summary shown on the blog listing page" }
+      - { label: "Excerpt (Arabic)", name: "excerpt_ar", widget: "text", hint: "ملخص قصير يظهر في صفحة قائمة المدونة" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Full post content. Write in Markdown." }

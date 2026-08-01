@@ -63,32 +63,32 @@
       "s1": {
         "title": "Content Services",
         "body": "Content strategy, marketing messaging, and campaign content that gets read.",
-        "image": "/images/services/general-contracting.jpg"
+        "image": "/images/services/content-services.jpg"
       },
       "s2": {
         "title": "Digital Solutions",
         "body": "Websites, online stores, ERP and CRM systems, and smart landing pages.",
-        "image": "/images/services/interior-design.jpg"
+        "image": "/images/services/digital-solutions.jpg"
       },
       "s3": {
         "title": "Brand & Creative Design",
         "body": "Visual identity, digital and print ads, and corporate collateral.",
-        "image": "/images/services/mep.jpg"
+        "image": "/images/services/brand-design.jpg"
       },
       "s4": {
         "title": "Training & Development",
         "body": "Government platform training, sales coaching, and digital marketing upskilling.",
-        "image": "/images/services/procurement.jpg"
+        "image": "/images/services/training-development.jpg"
       },
       "s5": {
         "title": "HR Enablement",
         "body": "Recruitment, hiring support, HR operations, and government platform management.",
-        "image": "/images/services/retail.jpg"
+        "image": "/images/services/hr-enablement.jpg"
       },
       "s6": {
         "title": "Tender & Contract Management",
         "body": "Vendor qualification, tender tracking, and technical/financial proposal preparation.",
-        "image": "/images/services/support.jpg"
+        "image": "/images/services/tender-contracts.jpg"
       }
     }
   },
@@ -101,28 +101,28 @@
         "title": "Regional Content & Messaging Overhaul",
         "tag": "Content Services",
         "blurb": "Rebuilt messaging framework and content pipeline for a retail group expanding across six markets.",
-        "image": "/images/projects/riverside-hq.jpg",
+        "image": "/images/projects/content-messaging.jpg",
         "color": "from-royal/30 to-blue-500/20"
       },
       "p2": {
         "title": "Full-Stack Digital Platform Build",
         "tag": "Digital Solutions",
         "blurb": "Website, e-commerce store, and full ERP + CRM integration for a B2B distribution company.",
-        "image": "/images/projects/marina-residences.jpg",
+        "image": "/images/projects/digital-platform.jpg",
         "color": "from-gold/30 to-amber-500/20"
       },
       "p3": {
         "title": "Corporate Rebrand & Identity System",
         "tag": "Brand & Design",
         "blurb": "Full visual identity system and brand guidelines for a growing financial services firm.",
-        "image": "/images/projects/northgate-retail.jpg",
+        "image": "/images/projects/corporate-rebrand.jpg",
         "color": "from-emerald-500/20 to-teal-500/20"
       },
       "p4": {
         "title": "Government Tender Qualification Program",
         "tag": "Tenders & Contracts",
         "blurb": "Vendor qualification and end-to-end tender pipeline management for an industrial supplier.",
-        "image": "/images/projects/askar-logistics.jpg",
+        "image": "/images/projects/tender-qualification.jpg",
         "color": "from-slate-500/20 to-gray-500/20"
       }
     }

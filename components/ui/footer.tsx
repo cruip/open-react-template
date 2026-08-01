@@ -55,8 +55,8 @@ export default function Footer() {
               href="/"
               className="inline-flex items-center gap-2"
             >
-              <span className="text-lg font-bold uppercase tracking-[0.3em] text-navy dark:text-paper">
-                DAV
+              <span className={`text-lg font-bold uppercase tracking-[0.3em] ${isArabic ? 'text-gold' : 'text-navy dark:text-paper'}`}>
+                {isArabic ? "دعم" : "DAM"}
               </span>
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-6 text-navy/60 dark:text-paper/60">
@@ -134,10 +134,10 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="text-xs text-navy/50 dark:text-paper/50">
-            &copy; {new Date().getFullYear()} DAV. {isArabic ? "جميع الحقوق محفوظة." : "All rights reserved."}
+            &copy; {new Date().getFullYear()} {isArabic ? "دعم" : "DAM"}. {isArabic ? "جميع الحقوق محفوظة." : "All rights reserved."}
           </p>
           <p className="text-xs text-navy/40 dark:text-paper/40">
-            {isArabic ? "تصميم وتطوير DAV" : "Designed & built by DAV"}
+            {isArabic ? "تصميم وتطوير دعم" : "Designed & built by DAM"}
           </p>
         </motion.div>
       </div>

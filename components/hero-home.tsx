@@ -142,7 +142,7 @@ export default function HeroHome() {
             <div className="rounded-[2rem] border border-line bg-white p-8 shadow-xl dark:border-line-dark dark:bg-navy-deep/80">
               <div className="rounded-[1.5rem] border border-line bg-paper-soft p-6 dark:border-line-dark dark:bg-navy-deep/70">
                 <p className="text-sm font-semibold uppercase tracking-[0.3em] text-royal dark:text-gold">
-                  {isArabic ? "نموذج DAV للتسليم" : "DAV delivery model"}
+                  {isArabic ? "نموذج DAM للتسليم" : "DAM delivery model"}
                 </p>
                 <ul className="mt-6 space-y-4 text-sm leading-7 text-navy/80 dark:text-paper/80">
                   {[

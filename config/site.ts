@@ -1,10 +1,10 @@
 export const siteConfig = {
-  companyName: "DAV",
-  companyNameAr: "ديف",
-  tagline: "Structural design and contracting partner",
-  taglineAr: "شريك المقاولات والتصميم الإنشائي",
+  companyName: "DAM",
+  companyNameAr: "دعم",
+  tagline: "Business development & enablement partner",
+  taglineAr: "شريك التطوير والتمكين التجاري",
   phone: "+971 4 123 4567",
-  email: "hello@davbuilds.com",
+  email: "hello@dambuilds.com",
   address: "Abu Dhabi, UAE",
   addressAr: "أبوظبي، الإمارات العربية المتحدة",
   emailJs: {

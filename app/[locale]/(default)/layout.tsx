@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import PageBackground from "@/components/ui/page-background";
 
 // Import messages statically so they're available at runtime
 import enMessages from "@/messages/en.json";
@@ -35,9 +36,11 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <div dir={dir} lang={locale} className="min-h-screen">
-        <Header />
-        <main className="relative flex grow flex-col">{children}</main>
-        <Footer />
+        <PageBackground>
+          <Header />
+          <main className="relative flex grow flex-col">{children}</main>
+          <Footer />
+        </PageBackground>
       </div>
     </NextIntlClientProvider>
   );

@@ -20,7 +20,7 @@ This project uses **Decap CMS** (formerly Netlify CMS) to let you edit site cont
 
 1. Go to GitHub Settings → Developer settings → OAuth Apps → **New OAuth App**
 2. Fill in:
-   - **Application name**: `DAV CMS`
+   - **Application name**: `DAM CMS`
    - **Homepage URL**: `https://your-site.com` (or `http://localhost:3000` for dev)
    - **Authorization callback URL**: `https://api.github.com/oauth/authorize`
 3. Click **Register application**
@@ -67,5 +67,5 @@ For local testing, you can use Decap's local backend:
 ## Important Notes
 
 - **SVG icons** in the Services section are hardcoded in `components/features.tsx` — they cannot be edited via the CMS. Only the text (title, body) and image paths are editable.
-- **Image paths** in the CMS should be relative to `/public/images/` (e.g., `/images/services/general-contracting.jpg`)
+- **Image paths** in the CMS should be relative to `/public/images/` (e.g., `/images/services/content-services.jpg`)
 - The **Detailed Projects** collection (for the `/projects` page) is read-only from the CMS since the data is hardcoded in `app/[locale]/(default)/projects/page.tsx`
