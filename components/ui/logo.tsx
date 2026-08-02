@@ -26,25 +26,21 @@ export default function Logo() {
       className="inline-flex shrink-0 items-center gap-3"
       aria-label="DAM"
     >
-      {mounted ? (
-        <Image
-          src={logoSrc}
-          alt="DAM Logo"
-          width={72}
-          height={32}
-          className="h-8 w-auto object-contain"
-          style={{ width: "auto", height: "auto" }}
-          priority
-        />
-      ) : (
-        <div className="h-8 w-16 bg-navy/10 dark:bg-paper/10 rounded" />
-      )}
+      <Image
+        src={logoSrc}
+        alt="DAM Logo"
+        width={144}
+        height={64}
+        className="h-8 w-auto object-contain"
+        sizes="144px"
+        priority
+      />
       {isArabic ? (
         <span className="text-sm font-bold uppercase tracking-[0.3em] text-gold">
           دعم
         </span>
       ) : (
-        <span className="text-sm font-semibold uppercase tracking-[0.3em] text-navy dark:text-paper">
+        <span className="hidden text-sm font-semibold uppercase tracking-[0.3em] text-navy dark:text-paper sm:inline">
           DAM
         </span>
       )}

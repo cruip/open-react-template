@@ -34,7 +34,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages} timeZone="Africa/Cairo">
       <div dir={dir} lang={locale} className="min-h-screen">
         <PageBackground>
           <Header />

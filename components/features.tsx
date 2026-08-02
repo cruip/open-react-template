@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 
 // Icons stay hardcoded — they're SVG JSX, not editable text content.
@@ -31,6 +32,8 @@ const serviceKeys = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;
 
 export default function Features() {
   const t = useTranslations("servicesData");
+  const params = useParams<{ locale?: string }>();
+  const isRTL = params?.locale === "ar";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -89,29 +92,39 @@ export default function Features() {
           <motion.article
             key={key}
             variants={cardVariants}
-            whileHover={{ y: -8, transition: { duration: 0.2 } }}
-            className="group rounded-2xl border border-line overflow-hidden bg-white shadow-sm transition-all hover:border-royal/30 hover:shadow-lg dark:border-line-dark dark:bg-navy-deep/80 dark:hover:border-gold/30"
+            whileHover={{ y: -10, scale: 1.02, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }}
+            className="group relative rounded-2xl border border-line overflow-hidden bg-white shadow-sm transition-all duration-300 hover:border-royal/40 hover:shadow-2xl hover:shadow-royal/10 dark:border-line-dark dark:bg-navy-deep/80 dark:hover:border-gold/40 dark:hover:shadow-gold/10"
           >
+            {/* Shimmer sweep on hover */}
+            <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full dark:via-gold/10" />
+
             <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-royal/20 to-gold/20 dark:from-gold/10 dark:to-royal/10">
               <Image
                 src={t(`items.${key}.image`)}
                 alt={t(`items.${key}.title`)}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-1"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-royal/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-gold/10" />
             </div>
             <div className="p-6">
-              <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-royal/10 text-royal dark:bg-gold/10 dark:text-gold">
+              <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-royal/10 text-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-royal group-hover:text-white dark:bg-gold/10 dark:text-gold dark:group-hover:bg-gold dark:group-hover:text-navy-deep">
                 {icons[i]}
               </div>
-              <h3 className="font-semibold text-navy dark:text-paper">
+              <h3 className="font-semibold text-navy transition-colors duration-300 group-hover:text-royal dark:text-paper dark:group-hover:text-gold">
                 {t(`items.${key}.title`)}
               </h3>
               <p className="mt-3 text-sm leading-7 text-navy/70 dark:text-paper/70">
                 {t(`items.${key}.body`)}
               </p>
+              <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-royal opacity-0 translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 dark:text-gold">
+                <span>{t("learn_more")}</span>
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d={isRTL ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
             </div>
           </motion.article>
         ))}
