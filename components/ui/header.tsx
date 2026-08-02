@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./logo";
 import ThemeToggle from "./theme-toggle";
@@ -14,16 +14,43 @@ interface NavItem {
   isPage?: boolean;
 }
 
+type ScrollState = "top" | "compact" | "hidden";
+
+// ---- Scroll thresholds (px) ----
+const TOP_SCROLL_THRESHOLD = 10; // scrollY <= this → "top" size
+const COMPACT_SCROLL_THRESHOLD = 120; // scrollY > this → can be "compact" or "hidden"
+
+// ---- Sizing (px) ----
+const TOP_MIN_HEIGHT = 104;
+const TOP_PADDING = 30;
+const COMPACT_MIN_HEIGHT = 56;
+const COMPACT_PADDING = 8;
+
+// ---- Logo scale ----
+const TOP_LOGO_SCALE = 1.8;
+const COMPACT_LOGO_SCALE = 1;
+
+// ---- Transition durations (seconds) ----
+const RESIZE_TRANSITION_S = 0.4; // top ↔ compact
+const HIDE_TRANSITION_S = 0.25; // compact ↔ hidden (snappier)
+
+// Shared easing signature used across the site
+const EASE = [0.25, 0.1, 0.25, 1] as const;
+
 export default function Header() {
   const params = useParams<{ locale?: string }>();
   const pathname = usePathname();
   const locale = params?.locale === "ar" ? "ar" : "en";
   const isArabic = locale === "ar";
   const [activeSection, setActiveSection] = useState("");
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollState, setScrollState] = useState<ScrollState>("top");
+  const prevScrollY = useRef(0);
+  const scrollDirection = useRef<"up" | "down">("down");
+  const rafId = useRef<number | null>(null);
 
-  const isHomePage = !pathname.includes("/projects") && !pathname.includes("/blog");
+  const isHomePage =
+    !pathname.includes("/projects") && !pathname.includes("/blog");
 
   const items: NavItem[] = isArabic
     ? [
@@ -45,12 +72,11 @@ export default function Header() {
         { href: `/${locale}/blog`, label: "Blog", isPage: true },
       ];
 
+  // Section highlight tracking
   useEffect(() => {
     if (!isHomePage) return;
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
 
+    const handleScroll = () => {
       const sections = ["about", "services", "projects", "contact"];
       const scrollPos = window.scrollY + 120;
 
@@ -71,29 +97,74 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
+  // Combined scroll handler: size states + direction-aware hide/show
+  // Same behavior on ALL pages — home, projects, blog, etc.
+  useEffect(() => {
+    setScrollState("top");
+
+    const handleScroll = () => {
+      // Throttle with a single rAF frame
+      if (rafId.current !== null) return;
+      rafId.current = requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+
+        // Track direction
+        if (currentY > prevScrollY.current) {
+          scrollDirection.current = "down";
+        } else if (currentY < prevScrollY.current) {
+          scrollDirection.current = "up";
+        }
+
+        prevScrollY.current = currentY;
+
+        // Three explicit states — same on every page
+        if (currentY <= TOP_SCROLL_THRESHOLD) {
+          setScrollState("top");
+        } else if (currentY > COMPACT_SCROLL_THRESHOLD) {
+          if (scrollDirection.current === "down" && !mobileMenuOpen) {
+            setScrollState("hidden");
+          } else {
+            setScrollState("compact");
+          }
+        } else {
+          // Between threshold and hero-bottom → transition zone, keep visible
+          setScrollState("compact");
+        }
+
+        rafId.current = null;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId.current !== null) cancelAnimationFrame(rafId.current);
+    };
+  }, [mobileMenuOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setMobileMenuOpen(false);
-    
+
     if (href.includes("/projects") || href.includes("/blog")) {
       return;
     }
-    
+
     e.preventDefault();
-    
+
     const hashIndex = href.indexOf("#");
     if (hashIndex === -1) {
       window.location.href = href;
       return;
     }
-    
+
     const basePath = href.substring(0, hashIndex);
     const targetId = href.substring(hashIndex + 1);
-    
+
     if (basePath && basePath !== window.location.pathname) {
       window.location.href = href;
       return;
     }
-    
+
     const target = document.getElementById(targetId);
     if (target) {
       const offset = 100;
@@ -102,39 +173,54 @@ export default function Header() {
     }
   };
 
-  const isCompact = !isHomePage || isScrolled;
+  // Never hide the navbar while the mobile drawer is open
+  const effectiveState: ScrollState =
+    mobileMenuOpen && scrollState === "hidden" ? "compact" : scrollState;
+
+  const isTop = effectiveState === "top";
+  const isCompact = effectiveState === "compact";
+  const isHidden = effectiveState === "hidden";
+
+  const minHeight = isTop ? TOP_MIN_HEIGHT : COMPACT_MIN_HEIGHT;
+  const padding = isTop ? TOP_PADDING : COMPACT_PADDING;
+  const logoScale = isTop ? TOP_LOGO_SCALE : COMPACT_LOGO_SCALE;
 
   return (
     <motion.header
       className="fixed left-0 right-0 top-0 z-50 w-full"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={{ y: 0, opacity: 1 }}
+      animate={{
+        y: isHidden ? "-100%" : 0,
+      }}
+      transition={{ duration: HIDE_TRANSITION_S, ease: "easeOut" }}
+      style={{ pointerEvents: isHidden ? "none" : "auto" }}
+      aria-hidden={isHidden}
+      tabIndex={isHidden ? -1 : undefined}
     >
       <motion.div
         className={`w-full border-b backdrop-blur transition-all duration-300 ${
-          isScrolled
-            ? "border-line/80 bg-paper/95 shadow-sm dark:border-line-dark/60 dark:bg-navy-deep/95"
-            : "border-transparent bg-transparent"
+          isTop
+            ? "border-transparent bg-transparent"
+            : "border-line/80 bg-paper/90 shadow-sm dark:border-line-dark/60 dark:bg-navy-deep/90"
         }`}
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <motion.div
             className="flex items-center justify-between gap-3"
             animate={{
-              minHeight: isCompact ? 56 : 80,
-              paddingTop: isCompact ? 8 : 16,
-              paddingBottom: isCompact ? 8 : 16,
+              minHeight,
+              paddingTop: padding,
+              paddingBottom: padding,
             }}
-            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: RESIZE_TRANSITION_S, ease: EASE }}
           >
             <div className="flex flex-1 items-center">
               <motion.div
                 animate={{
-                  scale: isCompact ? 1 : 1.2,
+                  scale: logoScale,
                 }}
-                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-                style={{ transformOrigin: 'left center' }}
+                transition={{ duration: RESIZE_TRANSITION_S, ease: EASE }}
+                style={{ transformOrigin: "left center" }}
               >
                 <Logo />
               </motion.div>
@@ -184,7 +270,7 @@ export default function Header() {
             <div className="flex flex-1 items-center justify-end gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
-              
+
               {/* Mobile Menu Toggle */}
               <button
                 type="button"

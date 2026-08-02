@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 // Icons stay hardcoded — they're SVG JSX, not editable text content.
 // Order must match s1-s6 in messages/*.json → servicesData.items
@@ -30,27 +31,114 @@ const icons = [
 
 const serviceKeys = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;
 
+// ---- Config ----
+const AUTOPLAY_INTERVAL_MS = 5500;
+const EASE = [0.25, 0.1, 0.25, 1] as const;
+
 export default function Features() {
   const t = useTranslations("servicesData");
   const params = useParams<{ locale?: string }>();
-  const isRTL = params?.locale === "ar";
+  const isArabic = params?.locale === "ar";
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(1); // 1 = forward, -1 = backward
+  const [paused, setPaused] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  const total = serviceKeys.length;
+
+  // Detect prefers-reduced-motion
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReduceMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  const goTo = useCallback(
+    (target: number) => {
+      setIndex((current) => {
+        const next = ((target % total) + total) % total;
+        setDirection(target > current ? 1 : target < current ? -1 : 0);
+        return next;
+      });
     },
+    [total]
+  );
+
+  const next = useCallback(() => {
+    setIndex((current) => {
+      setDirection(isArabic ? -1 : 1);
+      return (current + 1) % total;
+    });
+  }, [total, isArabic]);
+
+  const prev = useCallback(() => {
+    setIndex((current) => {
+      setDirection(isArabic ? 1 : -1);
+      return (current - 1 + total) % total;
+    });
+  }, [total, isArabic]);
+
+  // Autoplay — pauses on manual interaction, disables entirely for reduced motion
+  useEffect(() => {
+    if (reduceMotion) return;
+
+    const startTimer = () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      if (paused) return;
+      timerRef.current = setTimeout(next, AUTOPLAY_INTERVAL_MS);
+    };
+
+    startTimer();
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [index, paused, next, reduceMotion]);
+
+  // Pause autoplay while the user is hovering the slider
+  const handleMouseEnter = () => setPaused(true);
+  const handleMouseLeave = () => setPaused(false);
+
+  // ---- Swipe on touch ----
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null;
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
-    },
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = (e.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
+    const threshold = 60;
+    if (Math.abs(delta) < threshold) return;
+
+    if (delta < 0) {
+      next();
+    } else {
+      prev();
+    }
+    touchStartX.current = null;
   };
+
+  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById("contact");
+    if (target) {
+      const offset = 100;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
+  const key = serviceKeys[index];
+  const imgSrc = t(`items.${key}.image`);
+  const title = t(`items.${key}.title`);
+  const body = t(`items.${key}.body`);
+
+  const number = String(index + 1).padStart(2, "0");
 
   return (
     <section
@@ -61,8 +149,7 @@ export default function Features() {
       <div
         className="pointer-events-none absolute left-0 top-1/3 -z-10 h-80 w-80 rounded-full opacity-10 blur-3xl"
         style={{
-          background:
-            "radial-gradient(circle, var(--color-gold), transparent 70%)",
+          background: "radial-gradient(circle, var(--color-gold), transparent 70%)",
         }}
       />
 
@@ -81,54 +168,144 @@ export default function Features() {
         </h2>
       </motion.div>
 
-      <motion.div
-        className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
+      {/* ── Split-panel Slider ── */}
+      <div
+        className="group relative mt-12 overflow-hidden rounded-3xl border border-line bg-navy shadow-xl transition-all duration-500 hover:border-gold/40 hover:shadow-2xl hover:shadow-gold/20 dark:border-line-dark dark:bg-navy-deep dark:hover:border-gold/30 dark:hover:shadow-gold/10"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        dir={isArabic ? "rtl" : "ltr"}
       >
-        {serviceKeys.map((key, i) => (
-          <motion.article
-            key={key}
-            variants={cardVariants}
-            whileHover={{ y: -10, scale: 1.02, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }}
-            className="group relative rounded-2xl border border-line overflow-hidden bg-white shadow-sm transition-all duration-300 hover:border-royal/40 hover:shadow-2xl hover:shadow-royal/10 dark:border-line-dark dark:bg-navy-deep/80 dark:hover:border-gold/40 dark:hover:shadow-gold/10"
+        {/* Golden shimmer sweep on hover */}
+        <div className="pointer-events-none absolute inset-0 z-20 -translate-x-full bg-gradient-to-r from-transparent via-gold/10 to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-full" />
+        <AnimatePresence initial={false} custom={direction} mode="popLayout">
+          <motion.div
+            key={serviceKeys[index]}
+            custom={direction}
+            initial={
+              reduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, x: direction >= 0 ? "100%" : "-100%" }
+            }
+            animate={{ opacity: 1, x: 0 }}
+            exit={
+              reduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, x: direction >= 0 ? "-100%" : "100%" }
+            }
+            transition={{ duration: reduceMotion ? 0.3 : 0.55, ease: EASE }}
+            className="grid md:grid-cols-[1fr_1.1fr]"
           >
-            {/* Shimmer sweep on hover */}
-            <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full dark:via-gold/10" />
+            {/* ── Content panel (navy) ── */}
+            <div className="relative flex flex-col justify-between bg-navy p-8 transition-colors duration-500 group-hover:bg-navy-light/5 md:p-12 dark:bg-navy-deep dark:group-hover:bg-navy-deep/80">
+              {/* Slide index — small, gold, top-left */}
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-semibold tracking-widest text-gold/70 transition-colors duration-300 group-hover:text-gold">
+                  {number}/{String(total).padStart(2, "0")}
+                </span>
+              </div>
 
-            <div className="relative h-40 w-full overflow-hidden bg-gradient-to-br from-royal/20 to-gold/20 dark:from-gold/10 dark:to-royal/10">
-              <Image
-                src={t(`items.${key}.image`)}
-                alt={t(`items.${key}.title`)}
-                fill
-                className="object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-1"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute inset-0 bg-royal/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-gold/10" />
-            </div>
-            <div className="p-6">
-              <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-royal/10 text-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-royal group-hover:text-white dark:bg-gold/10 dark:text-gold dark:group-hover:bg-gold dark:group-hover:text-navy-deep">
-                {icons[i]}
+              {/* Icon badge */}
+              <div className="mt-8 flex h-9 w-9 items-center justify-center rounded-xl bg-gold/10 text-gold transition-all duration-300 group-hover:scale-110 group-hover:bg-gold/20 group-hover:shadow-lg group-hover:shadow-gold/20">
+                {icons[index]}
               </div>
-              <h3 className="font-semibold text-navy transition-colors duration-300 group-hover:text-royal dark:text-paper dark:group-hover:text-gold">
-                {t(`items.${key}.title`)}
+
+              {/* Title */}
+              <h3 className="mt-5 font-nacelle text-3xl font-semibold leading-tight text-white transition-colors duration-300 group-hover:text-gold-light md:text-4xl">
+                {title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-navy/70 dark:text-paper/70">
-                {t(`items.${key}.body`)}
+
+              {/* Gold rule divider — expands on hover */}
+              <div className="mt-4 h-0.5 w-10 bg-gold transition-all duration-500 group-hover:w-16 group-hover:shadow-md group-hover:shadow-gold/30" />
+
+              {/* Body */}
+              <p className="mt-5 max-w-md text-base leading-8 text-white/75 transition-colors duration-300 group-hover:text-white/90">
+                {body}
               </p>
-              <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-royal opacity-0 translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 dark:text-gold">
-                <span>{t("learn_more")}</span>
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d={isRTL ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} strokeLinecap="round" strokeLinejoin="round" />
+
+              {/* Learn more link */}
+              <a
+                href="#contact"
+                onClick={handleScrollToContact}
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-all duration-300 hover:gap-3 hover:text-gold-light group/link"
+              >
+                {t("learn_more")}
+                <svg className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d={isArabic ? "M19 12H5M12 19l-7-7 7-7" : "M5 12h14M12 5l7 7-7 7"} strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
+              </a>
+
+              {/* Navigation controls row — anchored at bottom of content panel */}
+              <div className="mt-10 flex items-center gap-3">
+                {/* Previous arrow — subtle */}
+                <button
+                  type="button"
+                  onClick={prev}
+                  aria-label={isArabic ? "السابق" : "Previous service"}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70 transition-all duration-300 hover:border-gold hover:text-gold hover:scale-105 active:scale-95"
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d={isArabic ? "M9 5l7 7-7 7" : "M15 19l-7-7 7-7"} strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+
+                {/* Line indicators */}
+                <div className="flex items-center gap-1.5">
+                  {serviceKeys.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      aria-label={`${isArabic ? "الخدمة" : "Service"} ${i + 1}`}
+                      aria-current={i === index}
+                      onClick={() => goTo(i)}
+                      className={`h-0.5 rounded-full transition-all duration-300 ${
+                        i === index
+                          ? "w-5 bg-gold"
+                          : "w-4 bg-white/25 hover:bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Next arrow — emphasized gold */}
+                <button
+                  type="button"
+                  onClick={next}
+                  aria-label={isArabic ? "التالي" : "Next service"}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-gold transition-all duration-300 hover:bg-gold/20 hover:scale-105 active:scale-95"
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d={isArabic ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7"} strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
               </div>
             </div>
-          </motion.article>
-        ))}
-      </motion.div>
+
+            {/* ── Image panel ── */}
+            <div className="relative h-64 overflow-hidden md:h-auto md:min-h-[480px]">
+              <Image
+                src={imgSrc}
+                alt={title}
+                fill
+                priority={index === 0}
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 55vw"
+              />
+              {/* Golden tint overlay on hover */}
+              <div className="absolute inset-0 bg-gold/0 transition-colors duration-500 group-hover:bg-gold/10" />
+              {/* Horizontal gradient fade from navy into transparent where panels meet */}
+              <div
+                className={`absolute inset-0 ${
+                  isArabic
+                    ? "bg-gradient-to-l from-navy via-navy/40 to-transparent dark:from-navy-deep dark:via-navy-deep/40"
+                    : "bg-gradient-to-r from-navy via-navy/40 to-transparent dark:from-navy-deep dark:via-navy-deep/40"
+                }`}
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </section>
   );
 }
