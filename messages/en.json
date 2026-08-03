@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Get a proposal"
+  },
+  "hero": {
+    "eyebrow": "Business development & enablement partner",
+    "title": "We build businesses that scale.",
+    "subtitle": "Content, brand, digital systems, talent, and government relations — one partner handling the operations behind your growth.",
+    "cta_primary": "Start a project",
+    "cta_secondary": "View our work",
+    "stat_1": "12+ Years delivering",
+    "stat_2": "180+ Projects completed",
+    "stat_3": "40+ Specialists on team"
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "title": "The team behind the parts of the business that don't run themselves.",
+    "body": "We're a multidisciplinary team of strategists, designers, developers, and operations specialists who handle the work that keeps a business moving — content, brand, systems, hiring, and paperwork with government platforms. Clients come to us because it's easier to have one accountable partner than six separate vendors.",
+    "point_1_title": "One partner, six disciplines",
+    "point_1_body": "Content, design, digital, HR, training, and tenders — under a single point of contact.",
+    "point_2_title": "Built on real platforms",
+    "point_2_body": "ERP, CRM, government portals — we implement the systems your team will actually use daily.",
+    "point_3_title": "Compliance handled",
+    "point_3_body": "Vendor qualification, tender documentation, and government dues — tracked so nothing slips."
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Six services, one accountable team.",
+    "s1_title": "Content Services",
+    "s1_body": "Content strategy, marketing messaging, campaign content, and project storytelling that gets read.",
+    "s2_title": "Digital Solutions",
+    "s2_body": "Websites, online stores, ERP and CRM systems, and high-converting smart landing pages.",
+    "s3_title": "Brand & Creative Design",
+    "s3_body": "Visual identity, social content design, digital and print ads, and corporate collateral.",
+    "s4_title": "Training & Development",
+    "s4_body": "Government platform training, sales and customer service coaching, and digital marketing upskilling.",
+    "s5_title": "HR Enablement",
+    "s5_body": "Recruitment, hiring support, HR operations, and government platform and certificate management.",
+    "s6_title": "Tender & Contract Management",
+    "s6_body": "Vendor qualification, tender tracking, proposal preparation, and government dues recovery."
+  },
+  "projects": {
+    "eyebrow": "Recent work",
+    "title": "Selected projects.",
+    "view": "View project",
+    "p1_title": "Regional Content & Messaging Overhaul",
+    "p1_tag": "Content Services",
+    "p2_title": "Full-Stack Digital Platform Build",
+    "p2_tag": "Digital Solutions",
+    "p3_title": "Corporate Rebrand & Identity System",
+    "p3_tag": "Brand & Design",
+    "p4_title": "Government Tender Qualification Program",
+    "p4_tag": "Tenders & Contracts"
+  },
+  "servicesData": {
+    "eyebrow": "What we do",
+    "title": "Six services, one accountable team.",
+    "learn_more": "Learn more",
+    "items": {
+      "s1": {
+        "title": "Content Services",
+        "body": "Content strategy, marketing messaging, and campaign content that gets read.",
+        "image": "/images/services/content-services.jpg"
+      },
+      "s2": {
+        "title": "Digital Solutions",
+        "body": "Websites, online stores, ERP and CRM systems, and smart landing pages.",
+        "image": "/images/services/digital-solutions.jpg"
+      },
+      "s3": {
+        "title": "Brand & Creative Design",
+        "body": "Visual identity, digital and print ads, and corporate collateral.",
+        "image": "/images/services/brand-design.jpg"
+      },
+      "s4": {
+        "title": "Training & Development",
+        "body": "Government platform training, sales coaching, and digital marketing upskilling.",
+        "image": "/images/services/training-development.jpg"
+      },
+      "s5": {
+        "title": "HR Enablement",
+        "body": "Recruitment, hiring support, HR operations, and government platform management.",
+        "image": "/images/services/hr-enablement.jpg"
+      },
+      "s6": {
+        "title": "Tender & Contract Management",
+        "body": "Vendor qualification, tender tracking, and technical/financial proposal preparation.",
+        "image": "/images/services/tender-contracts.jpg"
+      }
+    }
+  },
+  "projectsData": {
+    "eyebrow": "Recent work",
+    "title": "Selected projects.",
+    "view": "View project",
+    "items": {
+      "p1": {
+        "title": "Regional Content & Messaging Overhaul",
+        "tag": "Content Services",
+        "blurb": "Rebuilt messaging framework and content pipeline for a retail group expanding across six markets.",
+        "image": "/images/projects/content-messaging.jpg",
+        "color": "from-royal/30 to-blue-500/20"
+      },
+      "p2": {
+        "title": "Full-Stack Digital Platform Build",
+        "tag": "Digital Solutions",
+        "blurb": "Website, e-commerce store, and full ERP + CRM integration for a B2B distribution company.",
+        "image": "/images/projects/digital-platform.jpg",
+        "color": "from-gold/30 to-amber-500/20"
+      },
+      "p3": {
+        "title": "Corporate Rebrand & Identity System",
+        "tag": "Brand & Design",
+        "blurb": "Full visual identity system and brand guidelines for a growing financial services firm.",
+        "image": "/images/projects/corporate-rebrand.jpg",
+        "color": "from-emerald-500/20 to-teal-500/20"
+      },
+      "p4": {
+        "title": "Government Tender Qualification Program",
+        "tag": "Tenders & Contracts",
+        "blurb": "Vendor qualification and end-to-end tender pipeline management for an industrial supplier.",
+        "image": "/images/projects/tender-qualification.jpg",
+        "color": "from-slate-500/20 to-gray-500/20"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Let's talk",
+    "title": "Tell us what you need built.",
+    "subtitle": "Fill in the form and our team will get back to you within one business day.",
+    "name": "Full name",
+    "email": "Email address",
+    "message": "Project details",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Message sent — we'll be in touch shortly.",
+    "error": "Something went wrong. Please try again or email us directly."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "quicklinks": "Quick links",
+    "contactinfo": "Contact"
+  }
+}

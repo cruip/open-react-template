@@ -1,269 +1,145 @@
-import Logo from "./logo";
-import Image from "next/image";
-import FooterIllustration from "@/public/images/footer-illustration.svg";
+"use client";
+
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { motion } from "framer-motion";
+import { siteConfig } from "@/config/site";
 
 export default function Footer() {
+  const params = useParams<{ locale?: string }>();
+  const locale = params?.locale === "ar" ? "ar" : "en";
+  const isArabic = locale === "ar";
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const target = document.getElementById(targetId);
+    if (target) {
+      const offset = 100;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
+  const quickLinks = isArabic
+    ? [
+        { href: "#about", label: "من نحن" },
+        { href: "#services", label: "الخدمات" },
+        { href: "#projects", label: "مشاريعنا" },
+        { href: "#contact", label: "تواصل معنا" },
+      ]
+    : [
+        { href: "#about", label: "About" },
+        { href: "#services", label: "Services" },
+        { href: "#projects", label: "Projects" },
+        { href: "#contact", label: "Contact" },
+      ];
+
   return (
-    <footer>
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Footer illustration */}
-        <div
-          className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
-          aria-hidden="true"
-        >
-          <Image
-            className="max-w-none"
-            src={FooterIllustration}
-            width={1076}
-            height={378}
-            alt="Footer illustration"
-          />
-        </div>
-        <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
-          {/* 1st block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Integrations
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Pricing &amp; Plans
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Changelog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Our method
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  User policy
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 2nd block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Diversity &amp; Inclusion
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Financial statements
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 3rd block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Community
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms of service
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Report a vulnerability
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 4th block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">
-              Content Library
+    <footer className="relative border-t border-line bg-paper-soft/80 dark:border-line-dark dark:bg-navy-deep/90">
+      {/* Background decoration */}
+      <div className="pointer-events-none absolute left-0 top-0 -z-10 h-32 w-32 rounded-full opacity-10 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--color-royal), transparent 70%)" }}
+      />
+
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Brand */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2"
+            >
+              <span className={`text-lg font-bold uppercase tracking-[0.3em] ${isArabic ? 'text-gold' : 'text-navy dark:text-paper'}`}>
+                {isArabic ? "دعم" : "DAM"}
+              </span>
+            </Link>
+            <p className="mt-3 max-w-xs text-sm leading-6 text-navy/60 dark:text-paper/60">
+              {isArabic
+                ? "شريكك الهندسي والتصميمي في أعمال التشييد والتطوير."
+                : "Your structural & design partner in construction and development."}
+            </p>
+          </motion.div>
+
+          {/* Quick links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy dark:text-paper">
+              {isArabic ? "روابط سريعة" : "Quick links"}
             </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Templates
-                </a>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-sm text-navy/70 transition hover:text-royal dark:text-paper/70 dark:hover:text-gold"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Contact info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy dark:text-paper">
+              {isArabic ? "معلومات الاتصال" : "Contact info"}
+            </h3>
+            <ul className="space-y-3 text-sm text-navy/70 dark:text-paper/70">
+              <li className="flex items-center gap-2">
+                <svg className="h-4 w-4 shrink-0 text-royal dark:text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>{siteConfig.phone}</span>
               </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Tutorials
-                </a>
+              <li className="flex items-center gap-2">
+                <svg className="h-4 w-4 shrink-0 text-royal dark:text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>{siteConfig.email}</span>
               </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Knowledge base
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Learn
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Cookie manager
-                </a>
+              <li className="flex items-start gap-2">
+                <svg className="mt-0.5 h-4 w-4 shrink-0 text-royal dark:text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>{siteConfig.address}</span>
               </li>
             </ul>
-          </div>
-          {/* 5th block */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
-            <div className="mb-3">
-              <Logo />
-            </div>
-            <div className="text-sm">
-              <p className="mb-3 text-indigo-200/65">
-                © Cruip.com
-                <span className="text-gray-700"> · </span>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms
-                </a>
-              </p>
-              <ul className="inline-flex gap-1">
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Twitter"
-                  >
-                    <svg
-                      className="h-8 w-8 fill-current"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Medium"
-                  >
-                    <svg
-                      className="h-8 w-8 fill-current"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M23 8H9a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1Zm-1.708 3.791-.858.823a.251.251 0 0 0-.1.241V18.9a.251.251 0 0 0 .1.241l.838.823v.181h-4.215v-.181l.868-.843c.085-.085.085-.11.085-.241v-4.887l-2.41 6.131h-.329l-2.81-6.13V18.1a.567.567 0 0 0 .156.472l1.129 1.37v.181h-3.2v-.181l1.129-1.37a.547.547 0 0 0 .146-.472v-4.749a.416.416 0 0 0-.138-.351l-1-1.209v-.181H13.8l2.4 5.283 2.122-5.283h2.971l-.001.181Z" />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Github"
-                  >
-                    <svg
-                      className="h-8 w-8 fill-current"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          </motion.div>
         </div>
+
+        {/* Bottom bar */}
+        <motion.div
+          className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-line pt-6 dark:border-line-dark md:flex-row"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <p className="text-xs text-navy/50 dark:text-paper/50">
+            &copy; {new Date().getFullYear()} {isArabic ? "دعم" : "DAM"}. {isArabic ? "جميع الحقوق محفوظة." : "All rights reserved."}
+          </p>
+          <p className="text-xs text-navy/40 dark:text-paper/40">
+            {isArabic ? "تصميم وتطوير دعم" : "Designed & built by DAM"}
+          </p>
+        </motion.div>
       </div>
     </footer>
   );

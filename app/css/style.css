@@ -1,8 +1,10 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Additional styles */
-@import './additional-styles/utility-patterns.css' layer(components);
-@import './additional-styles/theme.css';
+@import "./additional-styles/utility-patterns.css" layer(components);
+@import "./additional-styles/theme.css";
 
 @plugin "@tailwindcss/forms" {
   strategy: base;
@@ -11,6 +13,18 @@
 @theme {
   --font-inter: var(--font-inter), sans-serif;
   --font-nacelle: var(--font-nacelle), sans-serif;
+  --font-alexandria: var(--font-alexandria), sans-serif;
+
+  --color-navy: #16213e;
+  --color-navy-deep: #0e1526;
+  --color-royal: #304ffe;
+  --color-royal-light: #5c74ff;
+  --color-gold: #d99028;
+  --color-gold-light: #e8ac57;
+  --color-paper: #faf7f2;
+  --color-paper-soft: #f1ece3;
+  --color-line: #e8e8e8;
+  --color-line-dark: rgba(250, 247, 242, 0.12);
 
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5384;
@@ -74,20 +88,28 @@
   }
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+:root {
+  color-scheme: light;
+}
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-alexandria), sans-serif;
+}
+
 @layer base {
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-line, currentColor);
   }
 }
