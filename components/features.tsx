@@ -259,9 +259,10 @@ export default function Features() {
           <Image
             src={imgSrc}
             alt={title}
-            fill
+            width={1200}
+            height={900}
             priority={itemIndex === 0}
-            className="object-cover"
+            className="h-full w-full object-cover"
             sizes="(max-width: 768px) 100vw, 55vw"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-navy/10 transition-colors duration-700 group-hover/card:to-gold/10" />
