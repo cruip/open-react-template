@@ -50,7 +50,7 @@ export default function HeroHome() {
               className="pb-5 font-nacelle text-4xl font-semibold leading-tight text-navy md:text-5xl dark:text-paper"
             >
               {isArabic ? (
-                <>نُبني ما <span className="gradient-text">يُدوم</span>.</>
+                <>نبني ما <span className="gradient-text">يُدوم</span>.</>
               ) : (
                 <>We build what <span className="gradient-text">lasts</span>.</>
               )}
